@@ -5,7 +5,7 @@ import color from '../../Config/Color';
 export const Header = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Headline};
-    color:${color.header};
+    color:${color.font1};
 
     @media(max-width:576px) {
         font-size: ${FontSize.MHeadline};
@@ -27,7 +27,8 @@ export const Header = styled.div`
 export const Title = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Title};
-    color:${color.header};
+    color:${color.font1};
+
     @media(max-width:576px) {
         font-size: ${FontSize.MTitle};
     }
@@ -48,7 +49,8 @@ export const Title = styled.div`
 export const Subtitle = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Subtitle};
-    color:${color.header};
+    color:${color.font1};
+    
     @media(max-width:576px) {
         font-size: ${FontSize.MSubtitle};
     }
@@ -70,7 +72,7 @@ export const Subtitle = styled.div`
 export const Paragraph = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Paragraph};
-    color:${color.header};
+    color:${color.font1};
 
     @media(max-width:576px) {
         font-size: ${FontSize.MParagrash};
@@ -86,12 +88,17 @@ export const Paragraph = styled.div`
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         font-size: ${FontSize.MParagrash};
+    }
+`
+
+export const BrownParagraph = styled(Paragraph)`
+    color:${color.font2};
 `
 
 export const Small = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Small};
-    color:${color.name};
+    color:${color.font1};
 
     @media(max-width:576px) {
         font-size: ${FontSize.MSmall};
@@ -110,10 +117,14 @@ export const Small = styled.div`
     } 
 `
 
+export const BrownSmall = styled(Small)`
+    color:${color.font2};
+`
+
 export const Small2 = styled.div`
     font-family:${FontFamily};
     font-size: ${FontSize.Small2};
-    color:${color.name};
+    color:${color.font1};
 
     @media(max-width:576px) {
         font-size: ${FontSize.MSmall2};
