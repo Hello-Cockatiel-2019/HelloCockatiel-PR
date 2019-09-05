@@ -1,24 +1,18 @@
-const QuarkFonts = {
-    Subtitle: '30px',
+const FontSize = {
+    Headline : '36px',
+    Title: '30px',
+    Subtitle: '28px',
     Paragraph: '20px',
     Small: '18px',
-    MParagraph: '18px',
-    MSmall: '14px'
-}
-export const PaaymaayFonts = {
-    Headline : '40px',
-    Subtitle: '36px',
-    Paragraph: '34px',
-    Small: '20px',
-    MHeadline:'30px',
-    MSubtitle: '28px',
-    MParagraph: '24px',
-    MSmall:'14px'
+    Small2: '16px',
+    MHeadline: '28px',
+    MTitle: '24px',
+    MSubtitle: '18px',
+    MParagraph: '16px',
+    MSmall: '14px',
+    MSmall2: '12px'
 }
 
-export const FontFamily = {
-    QuarkFonts : 'Quark',
-    PaaymaayFonts : 'Paaymaay'
-}
+export const FontFamily = 'Quark'
 
-export default QuarkFonts
+export default FontSize
