@@ -5,25 +5,24 @@ const Qwood = styled.div `
     background-color :#DB9B51;
     width: 462px;
     height: 38px;
-    font-family: quark bold;
     padding-left:0.7em;
+    padding-top:0.3em;
 `
 const Awood = styled.div `
     background-color:#987245;
     width: 462px;
+    padding-top:0.5em;
     padding-bottom: 1em;
     padding-left:0.7em;
-    font-family: quark bold;
 `
 
 export default class Woodsign extends Component {
     render() {
         return (
-            <React.Fragment>
+                <div className="d-flex flex-column">
                 <Qwood>Q: {this.props.q}</Qwood>
                 <Awood>A: {this.props.a}</Awood>
-
-            </React.Fragment>
+                </div>
         )
     }
 }
