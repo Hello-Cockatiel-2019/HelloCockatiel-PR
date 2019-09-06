@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Background = styled.div`
-    background-image:url(${props => props.bgImgURL});
+    background-image:url('/images/Background/${props => props.bgImgURL}');
     min-height: 100vh;
     background-repeat:no-repeat;
     background-position: center;
