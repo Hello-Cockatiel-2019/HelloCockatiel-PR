@@ -4,7 +4,6 @@ import 'jquery/dist/jquery.min'
 import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
-import SideBar from './Sidebar'
 
 export default class componentName extends Component {
     render() {
@@ -13,7 +12,7 @@ export default class componentName extends Component {
                 <GlobalStyle />
                 <div className="container-fluid">
                     <div className="row">
-                        <SideBar />
+                        Hello World
                     </div>
                 </div>
             </React.Fragment>
