@@ -1,26 +1,22 @@
 import React, { Component } from 'react'
-import webfont from 'webfontloader';
-
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min'
 import 'bootstrap/dist/js/bootstrap.min'
 
-import SideBar from './Sidebar';
-
-
-webfont({
-    files: "../../../public/fonts/Quark-Bold.otf",
-    fontName: "Quark",
-});
+import GlobalStyle from './GlobalStyle'
+import SideBar from './Sidebar'
 
 export default class componentName extends Component {
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row">
-                    <SideBar />
+            <React.Fragment>
+                <GlobalStyle />
+                <div className="container-fluid">
+                    <div className="row">
+                        <SideBar />
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
