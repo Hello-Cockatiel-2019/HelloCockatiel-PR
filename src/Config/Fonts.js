@@ -13,6 +13,4 @@ const FontSize = {
     MSmall2: '12px'
 }
 
-export const FontFamily = 'Quark'
-
 export default FontSize

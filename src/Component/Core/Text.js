@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import FontSize ,{ FontFamily } from '../../Config/Fonts';
+import FontSize from '../../Config/Fonts';
 import color from '../../Config/Color';
 
 export const Header = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Headline};
     color:${color.font1};
 
@@ -25,7 +24,6 @@ export const Header = styled.div`
 `
 
 export const Title = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Title};
     color:${color.font1};
 
@@ -47,7 +45,6 @@ export const Title = styled.div`
 `
 
 export const Subtitle = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Subtitle};
     color:${color.font1};
     
@@ -70,7 +67,6 @@ export const Subtitle = styled.div`
 `
 
 export const Paragraph = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Paragraph};
     color:${color.font1};
 
@@ -96,7 +92,6 @@ export const BrownParagraph = styled(Paragraph)`
 `
 
 export const Small = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Small};
     color:${color.font1};
 
@@ -122,7 +117,6 @@ export const BrownSmall = styled(Small)`
 `
 
 export const Small2 = styled.div`
-    font-family:${FontFamily};
     font-size: ${FontSize.Small2};
     color:${color.font1};
 
