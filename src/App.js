@@ -1,9 +1,9 @@
 import React from 'react';
-import Main from '../src/Component/Core/App'
+import Index from './Component/Core/index.js'
 
 function App() {
   return (
-    <Main />
+    <Index />
   );
 }
 
