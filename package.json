@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "HelloCockateil",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,8 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2"
   },
   "scripts": {
@@ -34,8 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "webfont": "^9.0.0"
   }
 }
