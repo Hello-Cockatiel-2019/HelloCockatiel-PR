@@ -24,18 +24,6 @@ const SideBarSection = styled.div`
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         display:none!important;
     } 
-    /* @media only screen and (min-width: 1024px) and (max-height: 768px) {
-        transform:translateY(70%);
-    }
-    @media only screen and (min-width: 1030px) and (max-height: 768px) {
-        transform:translateY(100%);
-    } */
-    /* @media only screen and (min-width: 1194px) and (max-height: 835px) {
-        transform:translateY(80%);
-    }
-    @media only screen and (min-width: 1197px) and (max-height: 835px) {
-        transform:translateY(100%);
-    } */
 `
 
 export default class SideBar extends Component {
