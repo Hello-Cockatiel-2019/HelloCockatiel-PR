@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Header from './Header';
 
 const SideBarSection = styled.div`
-    transform:translateY(50%);
+    transform:translateY(60%);
 
     @media(max-width:576px) {
         display:none!important;
