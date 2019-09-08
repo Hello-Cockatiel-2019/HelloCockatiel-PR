@@ -14,11 +14,13 @@ const Where1 = styled.div `
     width:109px;
     height: 32px;
   }
+  @media(min-width:576px) {
+    width:153px;
+    height: 45px;
+      }
   @media (min-width:768px) {
-    
-    width:97px;
-    height: 30px;
-    
+    width:204px;
+    height: 60px;
   }
   @media (min-width:960px) {
     
@@ -35,8 +37,8 @@ const Where1 = styled.div `
     background-image: url(/images/Objects/arrowplate3.png);
     background-repeat: no-repeat;
     background-size:100%;
-    // padding-left:2em;
-    // margin-left:0.1em;
+    padding-top:0.4em;
+    padding-left:0.4em;
     // box-shadow:0 5px 5px black;
     
 `
@@ -44,15 +46,20 @@ const Sit = styled.div `
     @media(min-width:320px) {
         width:131px;
         height: 38px;
+        padding-top:0.06em;
       }
       @media (min-width:410px) {
         width:168px;
         height: 49px;
+        padding-top:0.2em;
+      }
+      @media(min-width:576px) {
+        width:236px;
+        height: 69px;
       }
       @media (min-width:768px) {
-        width:132px;
-        height: 73px;
-        
+        width:315px;
+        height: 92px;
       }
       @media (min-width:960px) {
         width:165px;
@@ -65,14 +72,19 @@ const Sit = styled.div `
         background-image: url(/images/Objects/arrowplate2.png);
         background-repeat: no-repeat;
         background-size:100%;
-        // padding-left:2em;
-        // margin-left:0.1em;
+        padding-top:0.3em;
+        padding-left:0.4em;
         // box-shadow:0 5px 5px black;
     `
 
 const Text= styled(Small) `
-    // transform: translateY(50%);
-    
+     /* transform: translateY(10%); */
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+        font-size:28px;
+      }
+      @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        font-size: 16px;
+    } 
 `
 
 
