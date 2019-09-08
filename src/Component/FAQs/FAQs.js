@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import Woodsign from './Woodsign'
-import styled from 'styled-components'
 
-const Sdiv = styled.div `
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        
-    }
-`
 export default class FAQs extends Component {
     state = {
         data:[
@@ -44,7 +38,7 @@ export default class FAQs extends Component {
 }
     render() {
         return (
-               <div className="row">
+               <React.Fragment>
                    {
                         this.state.data.map((QA,i) => {
                         return (
@@ -54,7 +48,7 @@ export default class FAQs extends Component {
                             )
                         })
                     }
-               </div>
+               </React.Fragment>
         )
     }
 }
