@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import dayjs from 'dayjs'
 
 import Header from './Header';
+import Register from './Register';
+
+// const datenow = dayjs().format()
+const datenow = dayjs('2019-09-26')
+// const datenow = dayjs('2019-10-01')
+const dateStartResgis = dayjs('2019-09-25')
+const dateEndRegis = dayjs('2019-09-30')
 
 const SideBarSection = styled.div`
     transform:translateY(60%);
@@ -26,12 +34,30 @@ const SideBarSection = styled.div`
     } 
 `
 
+const RegiserButton = styled(SideBarSection)`
+    transform:translate(-15%,20%);
+    visibility:${
+                    (dateStartResgis.isAfter(datenow) ? 'hidden'
+                        : dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible'
+                        : 'hidden')
+               } ;
+`
+
+
 export default class SideBar extends Component {
     render() {
         return (
-            <SideBarSection className="d-flex align-items-start flex-column ml-5">
-                <Header />
-            </SideBarSection>
+            <div className="container-fluid">
+                <div className="row justify-content-between">
+                    <SideBarSection className="col-2 d-inline-flex  flex-column ml-5">
+                        <Header />
+                    </SideBarSection>
+                    <RegiserButton className="col-3 col-xl-2 d-inline-flex">
+                        <Register />
+                    </RegiserButton>
+                </div>
+            </div>
+
         )
     }
 }
