@@ -40,10 +40,10 @@ const Header = (props) => {
       {
         text.map((data, i) => {
           return (
-            <div className="mb-5">
+            <div className="mb-5" key={i}>
               <Button className="btn pb-4 pt-4" key={i}>
-                <A href={data.link} >
-                  <Title>
+                <A href={data.link} key={i}>
+                  <Title key={i}>
                     {data.text}
                   </Title>
                 </A>
