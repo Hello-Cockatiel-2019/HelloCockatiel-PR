@@ -36,10 +36,7 @@ const SideBarSection = styled.div`
 
 const RegiserButton = styled(SideBarSection)`
     transform:translate(-15%,20%);
-    visibility:${
-                    (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible'
-                        : 'hidden')
-               } ;
+    visibility:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible' : 'hidden') };
 `
 
 
