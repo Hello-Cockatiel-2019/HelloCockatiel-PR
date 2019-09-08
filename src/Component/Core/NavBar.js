@@ -44,7 +44,7 @@ const RegiserButton = styled(SideBarSection)`
 `
 
 
-export default class SideBar extends Component {
+export default class NavBar extends Component {
     render() {
         return (
             <div className="container-fluid">
