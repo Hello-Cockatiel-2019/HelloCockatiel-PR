@@ -8,8 +8,10 @@ import 'jquery/dist/jquery.min'
 import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
-import FAQs from '../FAQs/FAQs'
 import { BrownSmall } from './Text'
+
+// import FAQs from '../FAQs'
+import NavBar from './NavBar'
 
 export default class Index extends Component {
     render() {
@@ -26,14 +28,15 @@ export default class Index extends Component {
                 <GlobalStyle />
                 <div className="container-fluid">
                     <div className="row justify-content-center">
-                        <Slider {...settings}>
+                        {/* <Slider {...settings}>
                             <div>
                                 <BrownSmall> 55 </BrownSmall>
                             </div>
                             <div>
                                 <FAQs />
                             </div>
-                        </Slider>
+                        </Slider> */}
+                        <NavBar />
                     </div>
                 </div>
             </React.Fragment>
