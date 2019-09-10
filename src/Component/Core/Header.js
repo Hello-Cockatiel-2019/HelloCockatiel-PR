@@ -1,9 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import dayjs from 'dayjs'
 
 import color from '../../Config/Color'
 import { Mobile } from './Hidden'
 import { Title } from './Text'
+
+// const datenow = dayjs().format()
+const datenow = dayjs('2019-09-26')
+// const datenow = dayjs('2019-10-01')
+const dateStartResgis = dayjs('2019-09-25')
+const dateEndRegis = dayjs('2019-09-30')
 
 const Button = styled.button`
   background-image:url('/images/Objects/plate-d2.png');
@@ -47,6 +54,8 @@ const A = styled.a`
 const Hr = styled(Mobile)`
   background-color:${color.font1};
   border: solid ${color.font1} 1px;
+  visibility:${dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible'
+                : props => props.visible <=1  ? 'visible' : 'hidden'};
 `
 
 const text = [
@@ -65,6 +74,7 @@ const text = [
 ] 
 
 const Header = (props) => {
+  console.log(dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow))
   return (
     <React.Fragment>
       {/* <Hr /> */}
@@ -79,7 +89,7 @@ const Header = (props) => {
                   </Title>
                 </A>
               </Button>
-              <Hr />
+              <Hr visible={i}/>
             </div>
           )
         })
