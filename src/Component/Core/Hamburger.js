@@ -8,8 +8,8 @@ export const HamburgerDiv = styled.div`
     top: 3vh;
     right: 5vw;
     z-index: 1;
-    padding-top:18px;
-    padding-left:15px;
+    padding-top:19px;
+    padding-left:14px;
     background-color:${color.Wood5};
     background-size:cover;
     border-radius:30px;
