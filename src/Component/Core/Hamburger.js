@@ -10,7 +10,7 @@ export const HamburgerDiv = styled.div`
     z-index: 1;
     padding-top:18px;
     padding-left:15px;
-    background-color:${color.Wood2};
+    background-color:${color.Wood5};
     background-size:cover;
     border-radius:30px;
     width: 60px;
@@ -50,7 +50,7 @@ export const HamburgerDiv = styled.div`
       height: 4px;
       margin-bottom: 5px;
       position: relative;
-      background: ${color.font2};
+      background: ${color.font1};
       border-radius: 3px;
       z-index: 1;
       transform-origin: 4px 0px;
@@ -74,7 +74,7 @@ export const HamburgerDiv = styled.div`
     {
         opacity: 1;
         transform: rotate(45deg) translate(5px, -1px);
-        background: ${color.font2};
+        background: ${color.font1};
     }
 
     & input:checked ~ span:nth-last-child(3)
@@ -96,7 +96,7 @@ export const HamburgerDiv = styled.div`
       height:auto;
       box-shadow: 0px 0px 10px #000000;
       border-radius: 30px;
-      background: ${color.Wood4};
+      background: ${color.Wood6};
       list-style-type: none;
     
       transform-origin: 100% 0%;
