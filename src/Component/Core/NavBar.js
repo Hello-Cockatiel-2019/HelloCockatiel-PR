@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import dayjs from 'dayjs'
 
-import Header from './Header';
+
+import NavButton from './NavButton';
 import Register from './Register';
+import { datenow , dateStartResgis , dateEndRegis } from './Day'
 import { Desktop , Mobile } from './Hidden'
 import { HamburgerDiv } from './Hamburger'
-
-// const datenow = dayjs().format()
-const datenow = dayjs('2019-09-26')
-// const datenow = dayjs('2019-10-01')
-const dateStartResgis = dayjs('2019-09-25')
-const dateEndRegis = dayjs('2019-09-30')
-
-
 
 const SideBarSection = styled.div`
     transform:translateY(60%);
@@ -47,7 +40,7 @@ export default class NavBar extends Component {
                 <Desktop className="container-fluid">
                 <div className="row justify-content-between">
                     <SideBarSection className="col-2 d-inline-flex flex-column ml-5">
-                        <Header />
+                        <NavButton />
                     </SideBarSection>
                     <RegiserButton className="col-3 col-xl-2 d-inline-flex">
                         {/* <DivVinea>
@@ -64,11 +57,13 @@ export default class NavBar extends Component {
                     <div className="row justify-content-end">
                     <HamburgerDiv>
                             <input type="checkbox" />
+                             {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
+                             {/* Hamburger  */}
                             <ul id="menu" className="p-4 ">
-                                <Header />
+                                <NavButton />
                                 <MRegiserButton className="text-center mt-3">
                                     <Register />
                                 </MRegiserButton>
