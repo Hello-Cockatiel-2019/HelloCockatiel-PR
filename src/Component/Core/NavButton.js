@@ -1,46 +1,47 @@
 import React from 'react'
 import styled from 'styled-components'
-import dayjs from 'dayjs'
 
-import color from '../../Config/Color'
+import { datenow, dateStartResgis, dateEndRegis } from './Day'
 import { Mobile } from './Hidden'
 import { Title } from './Text'
-
-// const datenow = dayjs().format()
-const datenow = dayjs('2019-09-26')
-// const datenow = dayjs('2019-10-01')
-const dateStartResgis = dayjs('2019-09-25')
-const dateEndRegis = dayjs('2019-09-30')
+import color from '../../Config/Color'
 
 const Button = styled.button`
-  background-image:url('/images/Objects/plate-d2.png');
+  background-image:url('/images/Objects/plate-d3.png');
   background-repeat:no-repeat;
   background-size:100%;
   height:auto;
   width:180px;
+  visibility: ${props => props.visibleButton === 3 ? 'hidden' : 'visible'} ;
    @media(max-width:576px) {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     }
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         width:auto;
         background-image:url('');
+        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
     } 
 `
 const A = styled.a`
@@ -55,7 +56,7 @@ const Hr = styled(Mobile)`
   background-color:${color.font1};
   border: solid ${color.font1} 1px;
   visibility:${dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible'
-                : props => props.visible <=1  ? 'visible' : 'hidden'};
+                : props => props.visibleHr <=2  ? 'visible' : 'hidden'};
 `
 
 const text = [
@@ -70,10 +71,14 @@ const text = [
   {
     text: "FAQs",
     link: "FAQs"
+  },
+  {
+    text: "Contact",
+    link: "http://www.faceboook.com"
   }
 ] 
 
-const Header = (props) => {
+const NavButton = (props) => {
   console.log(dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow))
   return (
     <React.Fragment>
@@ -82,14 +87,14 @@ const Header = (props) => {
         text.map((data, i) => {
           return (
             <div className="mb-lg-5 text-center" key={i}>
-              <Button className="btn pb-4 pt-4" key={i}>
+              <Button className="btn pb-4 pt-4" visibleButton={i} key={i}>
                 <A href={data.link} key={i}>
                   <Title key={i}>
                     {data.text}
                   </Title>
                 </A>
               </Button>
-              <Hr visible={i}/>
+              <Hr visibleHr={i}/>
             </div>
           )
         })
@@ -99,4 +104,4 @@ const Header = (props) => {
   )
 }
 
-export default Header
+export default NavButton
