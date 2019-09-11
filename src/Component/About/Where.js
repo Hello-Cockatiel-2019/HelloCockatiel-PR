@@ -37,7 +37,6 @@ const Where1 = styled.div `
     background-image: url(/images/Objects/arrowplate3.png);
     background-repeat: no-repeat;
     background-size:100%;
-    
     padding-left:0.4em;
 `
 const Sit = styled.div `
@@ -84,6 +83,7 @@ const Text= styled(Small) `
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         font-size: 16px;
     } 
+    letter-spacing: 0.05em;
 `
 const WhereIs = styled.div `
 float: right;

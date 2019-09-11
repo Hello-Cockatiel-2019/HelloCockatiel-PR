@@ -60,7 +60,8 @@ const Plate = styled.div`
       margin-left:0em;
       background-size:100%; 
       background-repeat: no-repeat;
-      size:100%;   
+      size:100%;
+         
 `
 const Title = styled(Subtitle)`
       @media(min-width:320px) {
@@ -93,7 +94,7 @@ const Title = styled(Subtitle)`
         padding-top:1.5em;
         font-size:23px;
       }
-      text-shadow:0 5px 5px black;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `
 const Content = styled(Paragraph)`
       @media(min-width:320px) {
@@ -119,6 +120,8 @@ const Content = styled(Paragraph)`
         margin-left:50px;
         margin-top:24px;
       }
+      line-height: 27px;
+letter-spacing: 0.05em;
 `
 const AboutBox = () => (
 <div class="conteiner">
