@@ -7,8 +7,6 @@ const color = {
     Wood2 : '#DB9B51',
     Wood3 : '#987245',
     Wood4 : '#655542',
-    Wood5 : '#CA965A',
-    Wood6 : '#73553A',
     font1 : '#FFFFFF',
     font2 : '#3D3030'
 }
