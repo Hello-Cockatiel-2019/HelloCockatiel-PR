@@ -20,6 +20,12 @@ export const Desktop = styled.div`
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         display:none!important;
     } 
+    @media(orientation:portrait) and (max-width: 319px){
+        display:none!important;
+    }
+    @media(orientation:landscape) and (max-height: 550px){
+        display:none!important;
+    }
 `
 export const Mobile = styled.div`
     display: none;
