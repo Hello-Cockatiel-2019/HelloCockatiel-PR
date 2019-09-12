@@ -82,7 +82,6 @@ const NavButton = (props) => {
   console.log(dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow))
   return (
     <React.Fragment>
-      {/* <Hr /> */}
       {
         text.map((data, i) => {
           return (
