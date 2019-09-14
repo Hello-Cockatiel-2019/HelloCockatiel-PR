@@ -1,7 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Header } from './Text'
+import { datenow, dateStartResgis, dateEndRegis } from './Day'
+
+const mobileShadow = css`
+  box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+`
 
 const Button = styled.button`
     background-image: url('/images/Objects/frame.png');
@@ -10,23 +15,24 @@ const Button = styled.button`
     height:90px;
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-     @media(max-width:576px) {
-      box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+    display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
+    @media(max-width:576px) {
+      ${ mobileShadow }
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+      ${ mobileShadow }
     }
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-      box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+      ${ mobileShadow }
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-       box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+       ${ mobileShadow }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+      ${ mobileShadow }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-      box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
+      ${ mobileShadow }
     } 
 `
 

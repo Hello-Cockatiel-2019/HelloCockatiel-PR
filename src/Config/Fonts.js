@@ -8,7 +8,7 @@ const FontSize = {
     MHeadline: '28px',
     MTitle: '24px',
     MSubtitle: '18px',
-    MParagraph: '16px',
+    MParagraph: '14px',
     MSmall: '14px',
     MSmall2: '12px'
 }
