@@ -41,6 +41,15 @@ const IFbg = styled.div`
         width:28em;
         height:12em;
     }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+        width:30em;
+        height:10em;
+        margin-left:6.5em;
+    }
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        width:28em;
+        height:10em;
+    }
 `
 const Bird = styled.img`
     padding-left:2em;
@@ -65,7 +74,12 @@ const Bird = styled.img`
         margin-left:13em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
-        margin-left:1.5em;
+        margin-left:23em;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait){
+        margin-left:21em;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 `
 const Frame = styled.img`
@@ -91,12 +105,13 @@ const Frame = styled.img`
         padding-top:4.4em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
-        margin-left:3.5em;
+        margin-left:23em;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait){
+        margin-left:21em;
     }
 `
 const Text = styled(Small)`
-    font-family: Quark;
-    font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.05em;
     position:absolute;
@@ -126,8 +141,8 @@ const Text = styled(Small)`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait){
         line-height: 25px;
         margin-top:1em;
-        margin-left:4em;
-        padding-right:13em;
+        margin-left:-4em;
+        padding-right:21em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
         line-height: 25px;
@@ -138,8 +153,8 @@ const Text = styled(Small)`
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
         line-height: 25px;
         margin-top:1em;
-        margin-left:7em;
-        padding-right:20em;
+        margin-left:-3em;
+        padding-right:30em;
     }
     @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape){
         line-height: 25px;
@@ -147,10 +162,20 @@ const Text = styled(Small)`
         margin-left:1em;
         padding-right:9em;
     }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+        line-height: 25px;
+        margin-top:2em;
+        margin-left:5em;
+        padding-right:10em;
+    }
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        line-height: 25px;
+        margin-top:0.5em;
+        margin-left:1em;
+        padding-right:7em;
+    }
 `
 const Topic = styled(Small2)`
-    font-family: Quark;
-    font-size: 16px;
     line-height: 22px;
     text-align: center;
     letter-spacing: 0.05em;
@@ -172,11 +197,14 @@ const Topic = styled(Small2)`
         margin-top:-0.1em;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait){
-        margin-left:1.5em;
+        margin-left:27em;
         margin-top:0.3em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        margin-left:3.5em;
+        margin-left:29.5em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+        margin-left:1.5em;
     }
 `
 
