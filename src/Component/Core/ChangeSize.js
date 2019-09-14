@@ -28,7 +28,7 @@ const Minicon = styled.div`
 
 const index = () => (
     <Minicon>
-        <img src="/images/Objects/rotate.png" width="100px"/>
+        <img src="/images/Objects/rotate.png" width="100px" alt="ChangeSize" />
         <BrownParagraph className="text-center mt-3">กรุณาปรับจอด้วยครับ</BrownParagraph>
     </Minicon>
 )
