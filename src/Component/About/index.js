@@ -1,91 +1,102 @@
-import React, {
-    Component
-} from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
 import Where from './Where'
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import {
-    Paragraph,
-    Subtitle
-} from '../Core/Text'
+import {Paragraph,Subtitle} from '../Core/Text'
 
-const Plate = styled.div `
-    
+const Plate = styled.div`
     @media(min-width:320px) {
         background-image: url(/images/Objects/small-plate.png);
         width:263px;
         height: 218px;
+        margin-left:1.5em;
       }
+      @media(min-width:375px) {
+        background-image: url(/images/Objects/small-plate.png);
+        width:263px;
+        height: 218px;
+        margin-left:3.2em;
+        }
       @media (min-width:410px) {
         background-image: url(/images/Objects/small-plate.png);
         width:300px;
         height: 250px;
+        margin-left:3.5em;
       }
       @media(min-width:576px) {
         background-image: url(/images/Objects/small-plate.png);
         width:421px;
-        height: 250px;
+        height:351 px;
+        margin-left:6.25em;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         background-image: url(/images/Objects/small-plate.png);
         width:562px;
         height: 469px;
+        margin-left:5em;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
         background-image: url(/images/Objects/big-platebird.png);
         width:383px;
         height: 240px;
       }
-    
-      
+      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+        background-image: url(/images/Objects/small-plate.png);
+        width:508px;
+        height: 423px;
+        margin-left:10em;
+      }
       @media (min-width:960px) {
         background-image: url(/images/Objects/big-platebird.png);
         width:478px;
         height: 300px;
-        
       }
       @media(min-width:1024px) {
         background-image: url(/images/Objects/big-platebird.png);
         width:510px;
         height: 320px;
       }
+      margin-left:0em;
       background-size:100%; 
       background-repeat: no-repeat;
       size:100%;
-      background-size:100%; 
-      background-repeat: no-repeat;
-      size:100%;
-      
+         
 `
-const Title = styled(Subtitle)
-`
+const Title = styled(Subtitle)`
       @media(min-width:320px) {
-        margin-top:5px;
+        padding-top:.25em;
       }
       @media (min-width:410px) {
-        margin-top:7px;
+        padding-top:.4em;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        margin-top:13px;
+        padding-top:.5em;
         font-size:30px;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
-        margin-top:27px;
+        padding-top:1.5em;
+      }
+      @media only screen and (min-width: 768px) and (max-height: 635px) and (orientation: landscape)  {
+        padding-top:.8em;
+        font-size:25px;
+      }
+      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+        padding-top:.3em;
+        font-size:30px;
       }
       @media (min-width:960px) {
         margin-left:1px;
-        margin-top:29px;
+        padding-top:1.1em;
       }
       @media(min-width:1024px) {
         margin-left:3px;
-        margin-top:34px;
+        padding-top:1.5em;
         font-size:23px;
       }
-      text-shadow:0 5px 5px black;
-      `
-
-const Content = styled(Paragraph)
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `
+const Content = styled(Paragraph)`
       @media(min-width:320px) {
         margin-left:30px;
         margin-top:5px;
@@ -95,8 +106,11 @@ const Content = styled(Paragraph)
         margin-top:10px;
       }
       @media (min-width:768px) {
-        margin-left:56px;
-        margin-top:22px;
+        margin-left:65px;
+        margin-top:28px;
+      }
+      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+        font-size:28px;
       }
       @media (min-width:960px) {
         margin-left:44px;
@@ -106,36 +120,31 @@ const Content = styled(Paragraph)
         margin-left:50px;
         margin-top:24px;
       }
-      
-      `
-
-
+      line-height: 27px;
+letter-spacing: 0.05em;
+`
 const AboutBox = () => (
-
-    <
-    div class = "d-flex flex-column" >
-
-    <
-    Plate >
-    <
-    Title className = "text-center" >
-    About us <
-    /Title>
-
-    <
-    Content >
-    text <
-    /Content> < /
-    Plate > <
-    Where / >
-    <
-    /div>
+<div class="conteiner">
+  <div class="row align-items-end">
+  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+    <Plate>
+      <Title className = "text-center" >
+        About us 
+      </Title>
+      <Content >
+          text  
+      </Content> 
+    </Plate>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+    <Where/>
+  </div>
+  </div>
+</div>
+   
 )
-
 export default class About extends Component {
     render() {
-        return ( <
-            AboutBox / >
-        )
+        return ( < AboutBox / > )
     }
 }

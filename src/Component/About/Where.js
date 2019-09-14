@@ -5,12 +5,12 @@ import { Small } from '../Core/Text'
 
 const Where1 = styled.div `
 @media(min-width:320px) {
-    
+  padding-top:0.2em;
     width:85px;
     height: 25px;
   }
   @media (min-width:410px) {
-    
+    padding-top:0.4em;
     width:109px;
     height: 32px;
   }
@@ -21,26 +21,46 @@ const Where1 = styled.div `
   @media (min-width:768px) {
     width:204px;
     height: 60px;
+    padding-top:0.6em;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    background-image: url(/images/Objects/arrowplate3.png);
+    width:204px;
+    height: 60px;
+    padding-top:0.6em;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
+    background-image: url(/images/Objects/arrowplate4.png);
+    width:204px;
+    height: 142px;
+    padding-top:4em;
+  }
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+    background-image: url(/images/Objects/arrowplate3.png);
+    width:204px;
+    height: 60px;
+    padding-top:0.6em;
+  }
+  
   @media (min-width:960px) {
-    
-    width:121px;
-    height: 37px;
-    
+    background-image: url(/images/Objects/arrowplate4.png);
+    width:142px;
+    height: 99px;
+    padding-top:4em;
   }
   @media(min-width:1024px) {
-    
-    width:129px;
-    height: 39px;
+    background-image: url(/images/Objects/arrowplate4.png);
+    padding-top:0.4em;
+    width:142px;
+    height: 99px;
+    padding-top:4em;
   }
   
     background-image: url(/images/Objects/arrowplate3.png);
     background-repeat: no-repeat;
     background-size:100%;
-    padding-top:0.4em;
-    padding-left:0.4em;
-    // box-shadow:0 5px 5px black;
-    
+    padding-left:1.5em;
+    margin-left:0.2em
 `
 const Sit = styled.div `
     @media(min-width:320px) {
@@ -72,27 +92,50 @@ const Sit = styled.div `
         background-image: url(/images/Objects/arrowplate2.png);
         background-repeat: no-repeat;
         background-size:100%;
-        padding-top:0.3em;
-        padding-left:0.4em;
-        // box-shadow:0 5px 5px black;
+        padding-left:1.3em;
+        margin-top:.7em;
     `
-
 const Text= styled(Small) `
-     /* transform: translateY(10%); */
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+      font-size:28px;
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
         font-size:28px;
-      }
+    }
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         font-size: 16px;
     } 
+    letter-spacing: 0.05em;
+`
+const WhereIs = styled.div `
+float: right;
+@media(min-width:320px) {
+  margin-top:3em;
+  margin-right:1em;
+  }
+
+  @media (min-width:768px) {
+    margin-top:3em;
+    margin-right:2em;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    margin-top:5em;
+    margin-right:2.5em;
+  }
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+    margin-top:5em;
+    margin-right:3.5em;
+  }
+  @media (min-width:960px) {
+    margin-top:3em;
+    margin-left:2em;
+  }
 `
 
-
-export default class Where extends Component{
-    render() {
-        return (
-
-            <div class="d-flex flex-column justify-content-around">
+export default class Where extends Component {
+  render() {
+    return (
+      <WhereIs>
                 <Where1>
                     <Text>
                     สถานที่จัด
@@ -104,7 +147,7 @@ export default class Where extends Component{
                     สารสนเทศ
                     </Text>
                 </Sit>
-            </div>
-        )
-    }
+            </WhereIs>
+    )
+  }
 }
