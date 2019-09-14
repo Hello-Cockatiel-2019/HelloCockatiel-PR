@@ -12,30 +12,16 @@ import { BrownSmall } from './Text'
 
 // import FAQs from '../FAQs'
 import NavBar from './NavBar'
+import ChangeSize from './ChangeSize'
 
 export default class Index extends Component {
     render() {
-        const settings = {
-            dots: true,
-            fade: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        };
         return (
             <React.Fragment>
                 <GlobalStyle />
+                <ChangeSize />
                 <div className="container-fluid">
                     <div className="row justify-content-center">
-                        {/* <Slider {...settings}>
-                            <div>
-                                <BrownSmall> 55 </BrownSmall>
-                            </div>
-                            <div>
-                                <FAQs />
-                            </div>
-                        </Slider> */}
                         <NavBar />
                     </div>
                 </div>
