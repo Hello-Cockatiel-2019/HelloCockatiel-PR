@@ -60,7 +60,7 @@ const Where1 = styled.div `
     background-repeat: no-repeat;
     background-size:100%;
     padding-left:1.5em;
-    margin-left:0.2em
+    margin-left:0.2em;
 `
 const Sit = styled.div `
     @media(min-width:320px) {

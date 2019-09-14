@@ -4,7 +4,6 @@ import Where from './Where'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import {Paragraph,Subtitle} from '../Core/Text'
-import Background from '../Core/Background';
 
 const Plate = styled.div`
     @media(min-width:320px) {
@@ -131,9 +130,9 @@ const Content = styled(Paragraph)`
 letter-spacing: 0.05em;
 `
 const AboutBox = () => (
-<div class="conteiner">
-  <div class="row align-items-end">
-  <div class="col-sm-12 col-md-12 col-lg-8">
+<div className="conteiner">
+  <div className="row align-items-end">
+  <div className="col-sm-12 col-md-12 col-lg-8">
     <Plate>
       <Title className = "text-center" >
         About us 
@@ -143,7 +142,7 @@ const AboutBox = () => (
       </Content> 
     </Plate>
   </div>
-  <div class="col-sm-12 col-md-12 col-lg-4">
+  <div className="col-sm-12 col-md-12 col-lg-4">
     <Where/>
   </div>
   </div>
