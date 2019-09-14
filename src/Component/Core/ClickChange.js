@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import About from '../About'
-import FAQs from '../FAQs/FAQs'
+import FAQs from '../FAQs'
+import Major from '../Major'
 
 const Div = styled.div`
     display: ${props => props.display};
@@ -21,7 +22,7 @@ export default class ClickChage extends Component {
 
     state ={    
         key : 0,
-        text : [<About />,<FAQs />]
+        text : [<Major />,<About />,<FAQs />]
     }
    
     render() {
@@ -40,5 +41,4 @@ export default class ClickChage extends Component {
         )
     }
 }
-// {a === 1 && <a />}
 
