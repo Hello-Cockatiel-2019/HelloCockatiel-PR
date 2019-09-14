@@ -31,6 +31,20 @@ const RegPlate = styled.div `
     box-shadow: black 2px 2px 5px;
     padding-top:2.3em;
     margin-top:1em;
+    margin-left:1em;
+    @media only screen and (max-width:320px) {
+        margin-left:0em;
+        width:225px;
+        height:100px;
+    }
+`
+
+const RespPad = styled.div `
+@media only screen and (max-width:320px) {
+        margin-left:2em;
+        width:80px;
+        height:1px;
+    }
 `
 export default class Home extends Component {
     render() {
@@ -44,11 +58,11 @@ export default class Home extends Component {
                 <a href="#"><Woodplate source="Group 5.png"><Title>ข้อมูลโครงการ</Title></Woodplate></a>
                 <div className="col-5"></div>
                 <div className="col-5"></div>
-                <a href="#"><Woodplate source="Group 6.png"><Title>ข้อมูลโครงการ</Title></Woodplate></a>
+               <RespPad></RespPad><a href="#"><Woodplate source="Group 6.png"><Title>ข้อมูลโครงการ</Title></Woodplate></a>
                 <a href="#"><Woodplate source="Group 7.png"><Title>FAQs</Title></Woodplate></a>
-                <div className="col-5"></div>
+                <div className="col-4"></div>
                 <div className="col-2"></div>
-               <div className="col-6"><RegPlate source="frame.png"><Header>Register</Header></RegPlate></div>
+               <div className="col-6"><a href="#"><RegPlate source="frame.png"><Header>Register</Header></RegPlate></a></div>
                 </div>
             
         )
