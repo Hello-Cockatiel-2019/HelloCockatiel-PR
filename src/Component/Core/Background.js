@@ -172,7 +172,6 @@ position: absolute;
     max-width: 7%;
     bottom:7%;
   }
-  }
   @media(min-width:1024px) {
     left: 24%;
     max-width: 10%;
@@ -213,7 +212,6 @@ position: absolute;
     max-width: 7%;
     bottom:7%;
     visibility: visible;
-  }
   }
   @media(min-width:1024px) {
     left: 32%;
