@@ -5,10 +5,10 @@ import GM from './GM';
 import IF from './IF';
 import Spacing from './Spacing';
 
-export default class Major extends Component {
+export default class index extends Component {
   render() {
     return (
-      <div className="container">
+        <div className="container">
         <div className="row">
           <div className="col">
             <Spacing />
