@@ -11,7 +11,7 @@ import Register from './Register';
 import ClickChage from './ClickChange';
 
 const SideBarSection = styled.div`
-    transform :  translateY(50%);
+    transform :  translateY(65%);
     
 `
 
@@ -20,11 +20,7 @@ const RegiserButton = styled.div`
 `
 
 export default class NavBar extends Component {
-
-    componentDidMount() {
         
-    }
-
     state = {
         id: 0
     }
@@ -50,6 +46,7 @@ export default class NavBar extends Component {
                     </div>
                 </Desktop>
                 <Mobile className="container-fluid">
+                    <ClickChage keyid={this.state.id} />
                     <div className="row justify-content-end">
                         <HamburgerDiv>
                             <input type="checkbox" />
