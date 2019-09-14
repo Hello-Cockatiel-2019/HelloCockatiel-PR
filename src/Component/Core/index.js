@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import Slider from "react-slick"
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min'
 import 'bootstrap/dist/js/bootstrap.min'
