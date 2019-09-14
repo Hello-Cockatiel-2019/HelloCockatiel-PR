@@ -47,7 +47,6 @@ const Bird = styled.img`
     padding-left:2em;
     padding-top:0.7em;
     width:7.5em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     @media (max-width: 320px){
         width:6em;
         margin-top:-0.3em;
@@ -74,7 +73,6 @@ const Frame = styled.img`
     z-index: 2;
     padding-top:6.2em;
     margin-left:-5.7em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     @media (max-width: 320px){
         width:4.5em;
         margin-left:-4.2em;
