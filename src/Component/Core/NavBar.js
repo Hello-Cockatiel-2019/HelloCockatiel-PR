@@ -2,71 +2,64 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 
-import NavButton from './NavButton';
-import Register from './Register';
-import { datenow , dateStartResgis , dateEndRegis } from './Day'
-import { Desktop , Mobile } from './Hidden'
+
+import { Desktop, Mobile } from './Hidden'
 import { HamburgerDiv } from './Hamburger'
 
+import NavButton from './NavButton';
+import Register from './Register';
+import ClickChage from './ClickChange';
+
 const SideBarSection = styled.div`
-    transform:translateY(60%);
-    background-image:url();
-    background-repeat:no-repeat;
-    background-position-x:40%;
+    transform :  translateY(65%);
+    
 `
 
-const RegiserButton = styled(SideBarSection)`
+const RegiserButton = styled.div`
     transform:translate(-20%,20%);
-    background-image:unset;
-    visibility:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible' : 'hidden')};
 `
-const MRegiserButton = styled.div`
-    display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
-`
-
-const DivVinea = styled.div`
-    transform:translate(50%,-70%);
-
-`
-const DivVineb = styled.div`
-
-`
-
 
 export default class NavBar extends Component {
+        
+    state = {
+        id: 0
+    }
+
+    changeClick = (i) => {
+        this.setState({
+            id: i
+        })
+    }
+
     render() {
         return (
             <React.Fragment>
                 <Desktop className="container-fluid">
-                <div className="row justify-content-between">
-                    <SideBarSection className="col-2 d-inline-flex flex-column ml-5">
-                        <NavButton />
-                    </SideBarSection>
-                    <RegiserButton className="col-3 col-xl-2 d-inline-flex">
-                        {/* <DivVinea>
-                            <img src="/images/Objects/vine-a.png"  />
-                        </DivVinea>
-                        <DivVineb>
-                            <img src="/images/Objects/vine-b.png"  />
-                        </DivVineb> */}
-                        <Register />
-                    </RegiserButton>
-                </div>
+                    <div className="row justify-content-between">
+                        <SideBarSection className="col-2 d-inline-flex flex-column ml-5">
+                            <NavButton changeClick={this.changeClick} />
+                        </SideBarSection>
+                        <ClickChage keyid={this.state.id} />
+                        <RegiserButton className="col-3 col-xl-2 d-inline-flex">
+                            <Register />
+                        </RegiserButton>
+                    </div>
                 </Desktop>
                 <Mobile className="container-fluid">
+                    <ClickChage keyid={this.state.id} />
                     <div className="row justify-content-end">
-                    <HamburgerDiv>
+                        <HamburgerDiv>
                             <input type="checkbox" />
-                             {/* Hamburger  */}
+                            {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
-                             {/* Hamburger  */}
+                            {/* Hamburger  */}
                             <ul id="menu" className="p-4 ">
-                                <NavButton />
-                                <MRegiserButton className="text-center mt-3">
+                                <NavButton changeClick={this.changeClick} />
+                                <div className="text-center mt-3">
                                     <Register />
-                                </MRegiserButton>
+                                </div>
                             </ul>
                         </HamburgerDiv>
                     </div>
