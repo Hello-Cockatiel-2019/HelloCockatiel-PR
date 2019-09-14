@@ -23,21 +23,44 @@ const Where1 = styled.div `
     height: 60px;
     padding-top:0.6em;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    background-image: url(/images/Objects/arrowplate3.png);
+    width:204px;
+    height: 60px;
+    padding-top:0.6em;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
+    background-image: url(/images/Objects/arrowplate4.png);
+    width:204px;
+    height: 142px;
+    padding-top:4em;
+  }
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+    background-image: url(/images/Objects/arrowplate3.png);
+    width:204px;
+    height: 60px;
+    padding-top:0.6em;
+  }
   
   @media (min-width:960px) {
-    width:121px;
-    height: 37px;
+    background-image: url(/images/Objects/arrowplate4.png);
+    width:142px;
+    height: 99px;
+    padding-top:4em;
   }
   @media(min-width:1024px) {
+    background-image: url(/images/Objects/arrowplate4.png);
     padding-top:0.4em;
-    width:129px;
-    height: 39px;
+    width:142px;
+    height: 99px;
+    padding-top:4em;
   }
   
     background-image: url(/images/Objects/arrowplate3.png);
     background-repeat: no-repeat;
     background-size:100%;
-    padding-left:0.4em;
+    padding-left:1.5em;
+    margin-left:0.2em
 `
 const Sit = styled.div `
     @media(min-width:320px) {
@@ -69,8 +92,7 @@ const Sit = styled.div `
         background-image: url(/images/Objects/arrowplate2.png);
         background-repeat: no-repeat;
         background-size:100%;
-        padding-top:0.3em;
-        padding-left:0.4em;
+        padding-left:1.3em;
         margin-top:.7em;
     `
 const Text= styled(Small) `
