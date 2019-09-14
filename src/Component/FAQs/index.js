@@ -38,7 +38,7 @@ export default class FAQs extends Component {
 }
     render() {
         return (
-               <React.Fragment>
+               <div className="row">
                    {
                         this.state.data.map((QA,i) => {
                         return (
@@ -48,7 +48,7 @@ export default class FAQs extends Component {
                             )
                         })
                     }
-               </React.Fragment>
+               </div>
         )
     }
 }

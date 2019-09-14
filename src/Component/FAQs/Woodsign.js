@@ -8,11 +8,10 @@ const Qwood = styled(BrownParagraph) `
     height: 38px;
     padding-left:0.7em;
     padding-top:0.3em;
-    margin-top: 0.5em;
     box-shadow: 5px 5px 8px black;
     @media only screen and (max-width:1024px) {
         width: 370px;
-        margin:0.3em 2em 0em 2em;
+        margin:0em 2em 0em 2em;
     }
 `
 const Awood = styled(Paragraph)`
@@ -20,7 +19,7 @@ const Awood = styled(Paragraph)`
     width: 462px;
     padding-top:0.5em;
     padding-bottom: 1em;
-    padding-left:0.7em;
+    padding-left:0.2em;
     margin-bottom: 3em;
     box-shadow: 5px 5px 8px black;
     @media only screen and (max-width:1024px) {
@@ -33,10 +32,10 @@ const Awood = styled(Paragraph)`
 export default class Woodsign extends Component {
     render() {
         return (
-                <div className="d-flex flex-column"> 
+                <React.Fragment> 
                 <Qwood>Q: {this.props.q}</Qwood>
                 <Awood>A: {this.props.a}</Awood>
-                </div>
+                </React.Fragment>
         )
     }
 }
