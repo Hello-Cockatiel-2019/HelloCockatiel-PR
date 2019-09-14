@@ -11,13 +11,13 @@ const Div = styled.div`
 
 export default class ClickChage extends Component {
     
-    componentDidMount(){
-        this.setState((props) => {
-            return {
+    componentDidUpdate(prevProps){
+        if(prevProps.keyid !== this.props.keyid){
+            this.setState({
                 key: this.props.keyid
-            };
-        })
-    }  
+            })
+        }
+    }
 
     state ={    
         key : 0,

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 
-import { Desktop , Mobile } from './Hidden'
+import { Desktop, Mobile } from './Hidden'
 import { HamburgerDiv } from './Hamburger'
 
 import NavButton from './NavButton';
@@ -20,8 +20,9 @@ const RegiserButton = styled.div`
 `
 
 export default class NavBar extends Component {
-   
-    componentDidMount(){
+
+    componentDidMount() {
+        
     }
 
     state = {
@@ -29,40 +30,36 @@ export default class NavBar extends Component {
     }
 
     changeClick = (i) => {
-        if(i!==this.state.id){
-            console.log("i from props" + i)
-                this.setState({
-                    id: i
-                })
-            console.log("id from state" + this.state.id)
-        }
+        this.setState({
+            id: i
+        })
     }
 
     render() {
         return (
             <React.Fragment>
                 <Desktop className="container-fluid">
-                <div className="row justify-content-between">
-                    <SideBarSection className="col-2 d-inline-flex flex-column ml-5">
-                        <NavButton changeClick={this.changeClick} />
-                    </SideBarSection>
-                    <ClickChage keyid={this.state.id} />
-                    <RegiserButton className="col-3 col-xl-2 d-inline-flex">
-                        <Register />
-                    </RegiserButton>
-                </div>
+                    <div className="row justify-content-between">
+                        <SideBarSection className="col-2 d-inline-flex flex-column ml-5">
+                            <NavButton changeClick={this.changeClick} />
+                        </SideBarSection>
+                        <ClickChage keyid={this.state.id} />
+                        <RegiserButton className="col-3 col-xl-2 d-inline-flex">
+                            <Register />
+                        </RegiserButton>
+                    </div>
                 </Desktop>
                 <Mobile className="container-fluid">
                     <div className="row justify-content-end">
-                    <HamburgerDiv>
+                        <HamburgerDiv>
                             <input type="checkbox" />
-                             {/* Hamburger  */}
+                            {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
-                             {/* Hamburger  */}
+                            {/* Hamburger  */}
                             <ul id="menu" className="p-4 ">
-                                <NavButton changeClick={this.changeClick}  />
+                                <NavButton changeClick={this.changeClick} />
                                 <div className="text-center mt-3">
                                     <Register />
                                 </div>

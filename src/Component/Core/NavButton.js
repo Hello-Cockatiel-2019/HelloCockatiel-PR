@@ -20,22 +20,22 @@ const Button = styled.div`
   width:180px;
   display: ${props => props.displayButton === 3 ? 'none' : 'block'} ;
     @media(max-width:576px) {
-        ${ NavMobile }
+        ${ NavMobile}
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        ${ NavMobile }
+        ${ NavMobile}
     }
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-        ${ NavMobile }
+        ${ NavMobile}
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-        ${ NavMobile }
+        ${ NavMobile}
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        ${ NavMobile }
+        ${ NavMobile}
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        ${ NavMobile }
+        ${ NavMobile}
     } 
 `
 const A = styled.a`
@@ -50,12 +50,12 @@ const Hr = styled(Mobile)`
   background-color:${color.font1};
   border: solid ${color.font1} 1px;
   visibility:${dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'visible'
-                : props => props.visibleHr <=2  ? 'visible' : 'hidden'};
+    : props => props.visibleHr <= 2 ? 'visible' : 'hidden'};
 `
 
 export default class componentName extends Component {
   state = {
-    buttondata : [
+    buttondata: [
       {
         text: "สาขาที่รับสมัคร",
         link: "#Majors"
@@ -72,11 +72,14 @@ export default class componentName extends Component {
         text: "Contact",
         link: "http://www.faceboook.com"
       }
-    ] 
+    ]
   }
 
-  handleClick = (i) => {
-    this.props.changeClick(i);
+  handleClick = async (i) => {
+    let number = await i
+    if (number >= 0) {
+      this.props.changeClick(number);
+    }
   }
 
   render() {
@@ -86,10 +89,10 @@ export default class componentName extends Component {
           this.state.buttondata.map((data, i) => {
             return (
               <div className="mb-lg-5 text-center" key={i}>
-                <Button className="btn pb-4 pt-4" 
-                        key={i} 
-                        displayButton={i} 
-                        onClick={() => this.handleClick(i)}>
+                <Button className="btn pb-4 pt-4"
+                  key={i}
+                  displayButton={i}
+                  onClick={() => this.handleClick(i)}>
                   <A href={data.link} key={i}>
                     <Title key={i}>
                       {data.text}
