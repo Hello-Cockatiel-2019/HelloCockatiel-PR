@@ -4,7 +4,7 @@ import { Paragraph, BrownParagraph } from '../Core/Text'
 
 const Qwood = styled(BrownParagraph) `
     background-color :#DB9B51;
-    width: 462px;
+    width: 450px;
     height: 38px;
     padding-left:0.7em;
     padding-top:0.3em;
@@ -16,7 +16,7 @@ const Qwood = styled(BrownParagraph) `
 `
 const Awood = styled(Paragraph)`
     background-color:#987245;
-    width: 462px;
+    width: 450px;
     padding-top:0.5em;
     padding-bottom: 1em;
     padding-left:0.2em;
