@@ -8,7 +8,7 @@ import Spacing from './Spacing';
 export default class Major extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col">
             <Spacing />
