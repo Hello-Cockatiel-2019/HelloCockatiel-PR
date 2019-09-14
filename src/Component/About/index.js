@@ -4,36 +4,37 @@ import Where from './Where'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import {Paragraph,Subtitle} from '../Core/Text'
+import Background from '../Core/Background';
 
 const Plate = styled.div`
     @media(min-width:320px) {
         background-image: url(/images/Objects/small-plate.png);
-        width:263px;
-        height: 218px;
-        margin-left:1.5em;
+        width:260px;
+        height: 290px;
+        margin-left:1.8em;
       }
       @media(min-width:375px) {
         background-image: url(/images/Objects/small-plate.png);
-        width:263px;
-        height: 218px;
+        width:271px;
+        height: 302px;
         margin-left:3.2em;
         }
       @media (min-width:410px) {
         background-image: url(/images/Objects/small-plate.png);
-        width:300px;
-        height: 250px;
+        width:309px;
+        height: 344px;
         margin-left:3.5em;
       }
       @media(min-width:576px) {
         background-image: url(/images/Objects/small-plate.png);
-        width:421px;
-        height:351 px;
+        width:434px;
+        height:484 px;
         margin-left:6.25em;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         background-image: url(/images/Objects/small-plate.png);
-        width:562px;
-        height: 469px;
+        width:579px;
+        height: 645px;
         margin-left:5em;
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
@@ -43,8 +44,8 @@ const Plate = styled.div`
       }
       @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
         background-image: url(/images/Objects/small-plate.png);
-        width:508px;
-        height: 423px;
+        width:523px;
+        height: 583px;
         margin-left:10em;
       }
       @media (min-width:960px) {
@@ -56,6 +57,12 @@ const Plate = styled.div`
         background-image: url(/images/Objects/big-platebird.png);
         width:510px;
         height: 320px;
+      }
+      @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation:portrait)  {
+        background-image: url(/images/Objects/small-plate.png);
+        width:523px;
+        height: 583px;
+        margin-left:10em;
       }
       margin-left:0em;
       background-size:100%; 
@@ -126,7 +133,7 @@ letter-spacing: 0.05em;
 const AboutBox = () => (
 <div class="conteiner">
   <div class="row align-items-end">
-  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+  <div class="col-sm-12 col-md-12 col-lg-8">
     <Plate>
       <Title className = "text-center" >
         About us 
@@ -136,7 +143,7 @@ const AboutBox = () => (
       </Content> 
     </Plate>
   </div>
-  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+  <div class="col-sm-12 col-md-12 col-lg-4">
     <Where/>
   </div>
   </div>
@@ -145,6 +152,9 @@ const AboutBox = () => (
 )
 export default class About extends Component {
     render() {
-        return ( < AboutBox / > )
+        return (
+          <AboutBox/>
+  
+           )
     }
 }
