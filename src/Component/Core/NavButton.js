@@ -1,47 +1,41 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 
 import { datenow, dateStartResgis, dateEndRegis } from './Day'
 import { Mobile } from './Hidden'
 import { Title } from './Text'
 import color from '../../Config/Color'
 
-const Button = styled.button`
+const NavMobile = css`
+  width:auto;
+  background-image:url('');
+  display: block;
+`
+
+const Button = styled.div`
   background-image:url('/images/Objects/plate-d3.png');
   background-repeat:no-repeat;
   background-size:100%;
   height:auto;
   width:180px;
-  visibility: ${props => props.visibleButton === 3 ? 'hidden' : 'visible'} ;
-   @media(max-width:576px) {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+  display: ${props => props.displayButton === 3 ? 'none' : 'block'} ;
+    @media(max-width:576px) {
+        ${ NavMobile }
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+        ${ NavMobile }
     }
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+        ${ NavMobile }
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+        ${ NavMobile }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+        ${ NavMobile }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        width:auto;
-        background-image:url('');
-        visibility: ${props => props.visibleButton === 3 ? 'visible' : 'visible'} ;
+        ${ NavMobile }
     } 
 `
 const A = styled.a`
@@ -59,48 +53,56 @@ const Hr = styled(Mobile)`
                 : props => props.visibleHr <=2  ? 'visible' : 'hidden'};
 `
 
-const text = [
-  {
-    text: "สาขาที่รับสมัคร",
-    link: "Major"
-  }, 
-  {
-    text: "ข้อมูลโครงการ",
-    link: "About"
-  }, 
-  {
-    text: "FAQs",
-    link: "FAQs"
-  },
-  {
-    text: "Contact",
-    link: "http://www.faceboook.com"
-  }
-] 
-
-const NavButton = (props) => {
-  console.log(dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow))
-  return (
-    <React.Fragment>
+export default class componentName extends Component {
+  state = {
+    buttondata : [
       {
-        text.map((data, i) => {
-          return (
-            <div className="mb-lg-5 text-center" key={i}>
-              <Button className="btn pb-4 pt-4" visibleButton={i} key={i}>
-                <A href={data.link} key={i}>
-                  <Title key={i}>
-                    {data.text}
-                  </Title>
-                </A>
-              </Button>
-              <Hr visibleHr={i}/>
-            </div>
-          )
-        })
+        text: "สาขาที่รับสมัคร",
+        link: "#Majors"
+      },
+      {
+        text: "ข้อมูลโครงการ",
+        link: "#About"
+      },
+      {
+        text: "FAQs",
+        link: "#FAQs"
+      },
+      {
+        text: "Contact",
+        link: "http://www.faceboook.com"
       }
-    </React.Fragment>
-      
-  )
-}
+    ] 
+  }
 
-export default NavButton
+  handleClick = (i) => {
+    this.props.changeClick(i);
+  }
+
+  render() {
+    return (
+      <React.Fragment >
+        {
+          this.state.buttondata.map((data, i) => {
+            return (
+              <div className="mb-lg-5 text-center" key={i}>
+                <Button className="btn pb-4 pt-4" 
+                        key={i} 
+                        displayButton={i} 
+                        onClick={() => this.handleClick(i)}>
+                  <A href={data.link} key={i}>
+                    <Title key={i}>
+                      {data.text}
+                    </Title>
+                  </A>
+                </Button>
+                <Hr visibleHr={i} />
+              </div>
+            )
+          })
+        }
+      </React.Fragment>
+
+    )
+  }
+}
