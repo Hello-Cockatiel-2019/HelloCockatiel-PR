@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Register from '../Core/Register'
-import {Title, Header} from '../Core/Text'
+import { Title } from '../Core/Text'
 
 const Woodplate = styled.div `
     background-image: url('/images/Objects/${props => props.source}');
@@ -39,6 +39,7 @@ const RegPlate = styled.div `
         height:100px;
     }
 `
+
 const A = styled.a`
   text-decoration:none;;
 
@@ -97,13 +98,16 @@ export default class Home extends Component {
                     {
                         this.state.plate.map((data,i) => {
                             return (
-                                <button className={`d-flex col-12 btn ${data.class}`} key={i} onClick={() => this.handleCilck(i)}>
-                                    <A href={data.link} key={i}>
-                                        <Woodplate source={data.imgURL}>
-                                            <Title>{data.text}</Title>
-                                        </Woodplate>
-                                    </A>
-                                </button>
+                                <div className={`d-inline-flex col-12 ${data.class}`}>
+                                    <button className="btn" key={i} onClick={() => this.handleCilck(i)}>
+                                        <A href={data.link} key={i}>
+                                            <Woodplate source={data.imgURL}>
+                                                <Title>{data.text}</Title>
+                                            </Woodplate>
+                                        </A>
+                                    </button>
+                                </div>
+                               
                             )
                         })
                     }
