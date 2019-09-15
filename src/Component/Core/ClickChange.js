@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import { Desktop ,Mobile } from '../Core/Hidden'
+import Home from '../Home'
 import About from '../About'
 import FAQs from '../FAQs'
 import Major from '../Major'
@@ -22,21 +24,35 @@ export default class ClickChage extends Component {
 
     state ={    
         key : 0,
-        text : [<Major />,<About />,<FAQs />]
+        DesktopComponent : [<Major />,<About />,<FAQs />],
+        MobileComponent : [<Home />,<Major />,<About />,<FAQs />]
     }
    
     render() {
         return (
             <React.Fragment>
-            {
-                this.state.text.map((data, i) => {
-                    return (
-                        <Div key={i} display={this.state.key===i?'block':'none'}>
-                          {data}
-                        </Div>
-                    )
-                })
-            }
+            <Desktop>
+                {
+                    this.state.DesktopComponent.map((data, i) => {
+                        return (
+                            <Div key={i} display={this.state.key===i?'block':'none'}>
+                              {data}
+                            </Div>
+                        )
+                    })
+                }
+            </Desktop>
+            <Mobile>
+                {
+                    this.state.MobileComponent.map((data, i) => {
+                        return (
+                            <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
+                                {data}
+                            </Div>
+                        )
+                    })
+                }
+            </Mobile>
             </React.Fragment>
         )
     }
