@@ -98,7 +98,7 @@ export default class Home extends Component {
                     {
                         this.state.plate.map((data,i) => {
                             return (
-                                <div className={`d-inline-flex col-12 ${data.class}`}>
+                                <div className={`d-inline-flex col-12 ${data.class}`} key={i}>
                                     <button className="btn" key={i} onClick={() => this.handleCilck(i)}>
                                         <A href={data.link} key={i}>
                                             <Woodplate source={data.imgURL}>
