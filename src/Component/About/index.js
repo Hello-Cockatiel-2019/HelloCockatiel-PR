@@ -104,43 +104,62 @@ const Title = styled(Subtitle)`
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `
 const Content = styled(Paragraph)`
+overflow:scroll;
       @media(min-width:320px) {
+        font-size:15px;
         margin-left:30px;
+        margin-right:30px
         margin-top:5px;
+        height:15em;
       }
-      @media (min-width:410px) {
-        margin-left:35px;
+      @media(min-width:320px) {
         margin-top:10px;
       }
+      @media (min-width:410px) {
+        font-size:18px;
+        margin-left:35px;
+        margin-right:35px
+        margin-top:10px;
+        height:15em;
+      }
       @media (min-width:768px) {
+        font-size:20px;
         margin-left:65px;
+        margin-right:65px
+        height:20em;
         margin-top:28px;
       }
-      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-        font-size:28px;
-      }
+      // @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+      //   font-size:20px;
+      // }
       @media (min-width:960px) {
         margin-left:44px;
+        margin-right:44px
+        height:10em;
         margin-top:20px;
       }
       @media(min-width:1024px) {
         margin-left:50px;
+        margin-right:50px
+        
         margin-top:24px;
       }
       line-height: 27px;
 letter-spacing: 0.05em;
 `
 const AboutBox = () => (
-  <div className="conteiner">
-    <div className="row align-items-end">
+<div className="container">
+<div className="row align-items-end">
       <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
       <div className="col-sm-12 col-md-12 col-lg-8">
-        <Plate>
-          <Title className = "text-center" >
-            About us 
-          </Title>
+    <Plate>
+      <Title className = "text-center" >
+        About us 
+      </Title>
           <Content >
-              text  
+          Hello World Cockatiel เป็นโครงการที่จัดขึ้นเพื่อแบ่งปันความรู้ทางด้านการสร้างเว็บไซต์ โดยจะมีการจัดการเรียนการสอนให้กับนักศึกษาที่เข้าร่วมโครงการ โดยแบ่งเป็น 4 สาขา ได้แก่ Front-End, Infra, Design, และ Game 
+   นอกจากนี้ ในช่วงท้ายของโครงการ นักศึกษาที่เข้าร่วมโครงการในแต่ละสาขา จะได้มาร่วมกันทำโปรเจคสร้างเว็บไซต์ที่เกิดขึ้นจากความสามารถของตัวนักศึกษาเอง 
+   Hello World Cockatiel มาในธีมของการอนุรักษ์ธรรมชาติ โดยมี mascot เป็น Cockatiel นกแก้วที่น่ารัก เลี้ยงง่าย และอยากรู้อยากเห็นที่เปรียบเสมือนนักศึกษาที่ ร่วมโครงการที่พร้อมจะรับ ความรู้ใหม่ ๆ ตลอดเวลา
           </Content> 
         </Plate>
       </div>
@@ -149,6 +168,7 @@ const AboutBox = () => (
       </div>
     </div>
   </div>
+ 
    
 )
 export default class About extends Component {
