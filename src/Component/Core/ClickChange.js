@@ -18,6 +18,9 @@ const PositionDesktop = styled(Desktop)`
 const HomeDiv = styled.div`
     transform:translateY(5%);
     display : ${props => props.homedisplay ? props.homedisplay : 'display'};
+    @media screen and (max-width:320px) {
+        transform:translateY(0%);
+    }
 `
 
 const MobileDiv = styled.div`

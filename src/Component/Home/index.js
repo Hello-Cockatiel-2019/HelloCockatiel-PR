@@ -13,31 +13,49 @@ const Woodplate = styled.div `
     padding-right: 1em;
     margin-left:2em;
     margin-right:1em;
+    
 `
-const HeadLogo = styled.img `
-    width:72%;
+
+const HeadLogo = styled.img`
+    width:90%;
+    @media screen and (max-width:320px) {
+        width:85%;
+    }
+`
+
+const MenuDiv = styled.div`
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        padding-left:5em;
+        padding-right:5em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+        padding-left:5em;
+        padding-right:5em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+        padding-left:10em;
+        padding-right:10em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+        padding-left:10em;
+        padding-right:10em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        padding-left:10em;
+        padding-right:10em;
+    } 
+`
+
+const LogoDiv = styled.div`
+    @media screen and (max-width:375px) {
+        margin-top:-50px;
+        margin-bottom:0;
+    }
 `
 
 const Facebook = styled.img `
     width: 44px;
     margin-top:.3em;
-`
-
-const RegPlate = styled.div `
-    background-image: url('/images/Objects/${props => props.source}');
-    background-repeat: no-repeat;
-    width:233px;
-    height:107px;
-    text-align:center;
-    box-shadow: black 2px 2px 5px;
-    padding-top:2.3em;
-    margin-top:1em;
-    margin-left:1em;
-    @media only screen and (max-width:320px) {
-        margin-left:0em;
-        width:225px;
-        height:100px;
-    }
 `
 
 const A = styled.a`
@@ -48,11 +66,9 @@ const A = styled.a`
   }
 `
 
-const RespPad = styled.div `
-@media only screen and (max-width:320px) {
-        margin-left:2em;
-        width:80px;
-        height:1px;
+const RegisDiv = styled.div `
+    @media only screen and (max-width:320px) {
+        margin-top:0px!important;
     }
 `
 export default class Home extends Component {
@@ -89,31 +105,35 @@ export default class Home extends Component {
     render() {
         return (
                 <div className="row">
-                        <div className="col-10"></div>
-                        <div className="col-2">
+                    <div className="col-12 d-flex justify-content-end ">
+                        <A href="https://www.facebook.com/PzVPS/">
                             <Facebook src="/images/Objects/facebook.png" />
-                        </div>
-                    <div className="col-2"></div>
-                        <HeadLogo src="/images/Objects/logo.png" />
-                    {
-                        this.state.plate.map((data,i) => {
-                            return (
-                                <div className={`d-inline-flex col-12 ${data.class}`} key={i}>
-                                    <button className="btn" key={i} onClick={() => this.handleCilck(i)}>
-                                        <A href={data.link} key={i}>
-                                            <Woodplate source={data.imgURL}>
-                                                <Title>{data.text}</Title>
-                                            </Woodplate>
-                                        </A>
-                                    </button>
-                                </div>
-                               
-                            )
-                        })
-                    }
-                    <div className="mt-5 col-12 d-flex justify-content-center">
-                            <Register />
+                        </A>
                     </div>
+                    <LogoDiv className="col-12 d-flex justify-content-center">
+                        <HeadLogo src="/images/Objects/logo.png" />
+                    </LogoDiv>
+                    <MenuDiv>
+                        {
+                            this.state.plate.map((data,i) => {
+                                return (
+                                    <div className={`d-inline-flex col-12 ${data.class}`} key={i}>
+                                        <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
+                                            <A href={data.link} key={i}>
+                                                <Woodplate source={data.imgURL}>
+                                                    <Title>{data.text}</Title>
+                                                </Woodplate>
+                                            </A>
+                                        </button>
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </MenuDiv>
+                    <RegisDiv className="mt-3 mt-sm-5 col-12 d-flex justify-content-center">
+                        <Register />
+                    </RegisDiv>
                 </div>
             
         )
