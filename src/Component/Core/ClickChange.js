@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { Desktop ,Mobile } from '../Core/Hidden'
+import { HamburgerDiv } from './Hamburger'
+
+import NavButton from './NavButton';
+import Register from './Register';
 import Home from '../Home'
 import About from '../About'
 import FAQs from '../FAQs'
@@ -17,8 +21,11 @@ const HomeDiv = styled.div`
 `
 
 const MobileDiv = styled.div`
-    transform:translateY(25%);
     display : ${props => props.mobiledisplay ? props.mobiledisplay : 'none'};
+`
+
+const MobileMap = styled.div`
+    transform:translateY(20%);
 `
 
 const Div = styled.div`
@@ -50,6 +57,14 @@ export default class ClickChage extends Component {
             homedisplay: 'none'
         })
     }
+
+    handleCilck = async (i) => {
+        let number = await i
+        if (number >= 0) {
+            this.props.clickMobile(number);
+        }
+    }
+    
     render() {
         return (
             <React.Fragment>
@@ -69,15 +84,33 @@ export default class ClickChage extends Component {
                     <Home clickHome={this.clickHome} />
                 </HomeDiv>
                 <MobileDiv mobiledisplay={this.state.mobiledisplay}>
-                    {
-                        this.state.MobileComponent.map((data, i) => {
-                            return (
-                                <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
-                                    {data}
-                                </Div>
-                            )
-                        })
-                    }
+                    <div className="row justify-content-end">
+                        <HamburgerDiv>
+                            <input type="checkbox" />
+                            {/* Hamburger  */}
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            {/* Hamburger  */}
+                            <ul id="menu" className="p-4 ">
+                                <NavButton changeClick={this.handleCilck}/>
+                                <div className="d-flex justify-content-center mt-3">
+                                    <Register />
+                                </div>
+                            </ul>
+                        </HamburgerDiv>
+                    </div>
+                    <MobileMap>
+                        {
+                            this.state.MobileComponent.map((data, i) => {
+                                return (
+                                    <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
+                                        {data}
+                                    </Div>
+                                )
+                            })
+                        }
+                    </MobileMap>
                 </MobileDiv>
             </Mobile>
             </React.Fragment>

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 
 import { Desktop, Mobile } from './Hidden'
-import { HamburgerDiv } from './Hamburger'
 
 import NavButton from './NavButton';
 import Register from './Register';
@@ -27,10 +26,10 @@ export default class NavBar extends Component {
 
     changeClick = (i) => {
         this.setState({
-            id: i
+            id: i,
         })
     }
-
+    
     render() {
         return (
             <React.Fragment>
@@ -46,23 +45,7 @@ export default class NavBar extends Component {
                     </div>
                 </Desktop>
                 <Mobile>
-                    <ClickChage keyid={this.state.id} />
-                    <div className="row justify-content-end">
-                        <HamburgerDiv>
-                            <input type="checkbox" />
-                            {/* Hamburger  */}
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            {/* Hamburger  */}
-                            <ul id="menu" className="p-4 ">
-                                <NavButton changeClick={this.changeClick} />
-                                <div className="text-center mt-3">
-                                    <Register />
-                                </div>
-                            </ul>
-                        </HamburgerDiv>
-                    </div>
+                    <ClickChage keyid={this.state.id} clickMobile={this.changeClick} />
                 </Mobile>
             </React.Fragment>
 
