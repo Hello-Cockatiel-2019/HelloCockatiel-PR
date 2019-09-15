@@ -43,8 +43,9 @@ export default class ClickChage extends Component {
         homedisplay: 'block'
     }
    
-    showPage = () => {
+    clickHome = (i) => {
         this.setState({
+            key: i,
             mobiledisplay:'block',
             homedisplay: 'none'
         })
@@ -64,8 +65,8 @@ export default class ClickChage extends Component {
                 }
             </PositionDesktop>
             <Mobile>
-                <HomeDiv onClick={() => this.showPage()} homedisplay={this.state.homedisplay} >
-                    <Home />
+                <HomeDiv homedisplay={this.state.homedisplay} >
+                    <Home clickHome={this.clickHome} />
                 </HomeDiv>
                 <MobileDiv mobiledisplay={this.state.mobiledisplay}>
                     {
