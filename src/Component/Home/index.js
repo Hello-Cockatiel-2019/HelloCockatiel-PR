@@ -106,7 +106,7 @@ export default class Home extends Component {
         return (
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end ">
-                        <A href="https://www.facebook.com/PzVPS/">
+                        <A href="https://www.facebook.com/ThisPz">
                             <Facebook src="/images/Objects/facebook.png" />
                         </A>
                     </div>

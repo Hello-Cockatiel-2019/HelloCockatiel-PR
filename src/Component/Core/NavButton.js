@@ -70,7 +70,7 @@ export default class componentName extends Component {
       },
       {
         text: "Contact",
-        link: "http://www.faceboook.com"
+        link: "https://www.facebook.com/ThisPz"
       }
     ]
   }
