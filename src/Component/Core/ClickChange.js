@@ -7,9 +7,22 @@ import About from '../About'
 import FAQs from '../FAQs'
 import Major from '../Major'
 
+const PositionDesktop = styled(Desktop)`
+    transform:translateY(50%);
+`
+
+const HomeDiv = styled.div`
+    transform:translateY(5%);
+    display : ${props => props.homedisplay ? props.homedisplay : 'display'};
+`
+
+const MobileDiv = styled.div`
+    transform:translateY(25%);
+    display : ${props => props.mobiledisplay ? props.mobiledisplay : 'none'};
+`
+
 const Div = styled.div`
     display: ${props => props.display};
-    transform:translateY(50%);
 `
 
 export default class ClickChage extends Component {
@@ -25,13 +38,21 @@ export default class ClickChage extends Component {
     state ={    
         key : 0,
         DesktopComponent : [<Major />,<About />,<FAQs />],
-        MobileComponent : [<Home />,<Major />,<About />,<FAQs />]
+        MobileComponent: [<Major />, <About />, <FAQs />],
+        mobiledisplay:'none',
+        homedisplay: 'block'
     }
    
+    showPage = () => {
+        this.setState({
+            mobiledisplay:'block',
+            homedisplay: 'none'
+        })
+    }
     render() {
         return (
             <React.Fragment>
-            <Desktop>
+            <PositionDesktop>
                 {
                     this.state.DesktopComponent.map((data, i) => {
                         return (
@@ -41,17 +62,22 @@ export default class ClickChage extends Component {
                         )
                     })
                 }
-            </Desktop>
+            </PositionDesktop>
             <Mobile>
-                {
-                    this.state.MobileComponent.map((data, i) => {
-                        return (
-                            <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
-                                {data}
-                            </Div>
-                        )
-                    })
-                }
+                <HomeDiv onClick={() => this.showPage()} homedisplay={this.state.homedisplay} >
+                    <Home />
+                </HomeDiv>
+                <MobileDiv mobiledisplay={this.state.mobiledisplay}>
+                    {
+                        this.state.MobileComponent.map((data, i) => {
+                            return (
+                                <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
+                                    {data}
+                                </Div>
+                            )
+                        })
+                    }
+                </MobileDiv>
             </Mobile>
             </React.Fragment>
         )
