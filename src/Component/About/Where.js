@@ -100,12 +100,13 @@ const Text= styled(Small) `
       font-size:28px;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-        font-size:28px;
+      font-size:28px;
     }
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        font-size: 16px;
+      font-size: 16px;
     } 
     letter-spacing: 0.05em;
+    margin-bottom: -0.4em;
 `
 const WhereIs = styled.div `
 float: right;
@@ -136,18 +137,20 @@ export default class Where extends Component {
   render() {
     return (
       <WhereIs>
-                <Where1>
-                    <Text>
-                    สถานที่จัด
-                    </Text>
-                </Where1>
-                <Sit>
-                    <Text>
-                    คณะเทคโนโลยี<br/>
-                    สารสนเทศ
-                    </Text>
-                </Sit>
-            </WhereIs>
+        <Where1>
+          <Text>
+          สถานที่จัด
+          </Text>
+        </Where1>
+        <Sit>
+          <Text>
+            คณะเทคโนโลยี
+          </Text>
+          <Text>
+            สารสนเทศ
+          </Text>
+        </Sit>
+      </WhereIs>
     )
   }
 }
