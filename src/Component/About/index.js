@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import Where from './Where'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import {Paragraph,Subtitle} from '../Core/Text'
+
+import MobileHeader from '../Core/MobileHeader';
+import Where from './Where'
 
 const Plate = styled.div`
     @media(min-width:320px) {
@@ -130,23 +131,24 @@ const Content = styled(Paragraph)`
 letter-spacing: 0.05em;
 `
 const AboutBox = () => (
-<div className="conteiner">
-  <div className="row align-items-end">
-  <div className="col-sm-12 col-md-12 col-lg-8">
-    <Plate>
-      <Title className = "text-center" >
-        About us 
-      </Title>
-      <Content >
-          text  
-      </Content> 
-    </Plate>
+  <div className="conteiner">
+    <div className="row align-items-end">
+      <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
+      <div className="col-sm-12 col-md-12 col-lg-8">
+        <Plate>
+          <Title className = "text-center" >
+            About us 
+          </Title>
+          <Content >
+              text  
+          </Content> 
+        </Plate>
+      </div>
+      <div className="col-sm-12 col-md-12 col-lg-4">
+        <Where/>
+      </div>
+    </div>
   </div>
-  <div className="col-sm-12 col-md-12 col-lg-4">
-    <Where/>
-  </div>
-  </div>
-</div>
    
 )
 export default class About extends Component {

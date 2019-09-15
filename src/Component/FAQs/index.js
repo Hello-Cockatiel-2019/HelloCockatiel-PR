@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import MobileHeader from '../Core/MobileHeader';
 import Woodsign from './Woodsign'
 
 export default class FAQs extends Component {
@@ -39,6 +41,7 @@ export default class FAQs extends Component {
     render() {
         return (
                <div className="row">
+                    <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
                    {
                         this.state.data.map((QA,i) => {
                         return (

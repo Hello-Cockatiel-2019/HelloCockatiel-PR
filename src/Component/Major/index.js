@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import MobileHeader from '../Core/MobileHeader';
 import FE from './FE';
 import DS from './DS';
 import GM from './GM';
@@ -10,6 +12,7 @@ export default class index extends Component {
     return (
         <div className="container">
         <div className="row">
+          <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" /> 
           <div className="col">
             <Spacing />
             <FE />
