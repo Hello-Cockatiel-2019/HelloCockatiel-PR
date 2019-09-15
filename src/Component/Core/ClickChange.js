@@ -47,8 +47,7 @@ export default class ClickChage extends Component {
 
     state ={    
         key : 0,
-        DesktopComponent : [<Major />,<About />,<FAQs />],
-        MobileComponent: [<Major />, <About />, <FAQs />],
+        Component: [<About />,<Major />,<FAQs />],
         mobiledisplay:'none',
         homedisplay: 'block'
     }
@@ -73,7 +72,7 @@ export default class ClickChage extends Component {
             <React.Fragment>
             <PositionDesktop>
                 {
-                    this.state.DesktopComponent.map((data, i) => {
+                    this.state.Component.map((data, i) => {
                         return (
                             <Div key={i} display={this.state.key===i?'block':'none'}>
                               {data}
@@ -105,7 +104,7 @@ export default class ClickChage extends Component {
                     </div>
                     <MobileMap>
                         {
-                            this.state.MobileComponent.map((data, i) => {
+                            this.state.Component.map((data, i) => {
                                 return (
                                     <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
                                         {data}

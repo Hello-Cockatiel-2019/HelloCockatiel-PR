@@ -57,12 +57,12 @@ export default class componentName extends Component {
   state = {
     buttondata: [
       {
-        text: "สาขาที่รับสมัคร",
-        link: "#Majors"
-      },
-      {
         text: "ข้อมูลโครงการ",
         link: "#About"
+      },
+      {
+        text: "สาขาที่รับสมัคร",
+        link: "#Majors"
       },
       {
         text: "FAQs",

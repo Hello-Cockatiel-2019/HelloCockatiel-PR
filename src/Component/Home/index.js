@@ -24,6 +24,7 @@ const HeadLogo = styled.img`
 `
 
 const MenuDiv = styled.div`
+
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         padding-left:5em;
         padding-right:5em;
@@ -44,6 +45,9 @@ const MenuDiv = styled.div`
         padding-left:10em;
         padding-right:10em;
     } 
+    @media screen and (max-width:320px) {
+        margin-top:-20px;
+    }
 `
 
 const LogoDiv = styled.div`
@@ -67,7 +71,7 @@ const A = styled.a`
 `
 
 const RegisDiv = styled.div `
-    @media only screen and (max-width:320px) {
+    @media only screen and (max-width:360px) {
         margin-top:0px!important;
     }
 `
@@ -75,16 +79,17 @@ export default class Home extends Component {
     state = {
         plate : [
             {
-                imgURL:'Group 5.png',
-                text: 'สาขาที่รับสมัคร',
+                
+                imgURL: 'Group 6.png',
+                text: 'ข้อมูลโครงการ',
                 class: 'justify-content-start',
-                link: "#Majors"
+                link: "#About"
             },
             {
-                imgURL:'Group 6.png',
-                text: 'ข้อมูลโครงการ',
+                imgURL: 'Group 5.png',
+                text: 'สาขาที่รับสมัคร',
                 class: 'justify-content-end',
-                link: "#About"
+                link: "#Majors"
             },
             {
                 imgURL:'Group 7.png',
