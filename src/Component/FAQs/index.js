@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-
+import styled from 'styled-components'
 import MobileHeader from '../Core/MobileHeader';
 import Woodsign from './Woodsign'
 
+const Sdiv = styled.div `
+    transform: translate(20%,-33%);
+`
 export default class FAQs extends Component {
     state = {
         data:[
@@ -14,7 +17,7 @@ export default class FAQs extends Component {
         {
             q: "ไข่กับไก้อะไรเกิดก่อนกันอ่ะคับ",
             a: "แมวค้าบ",
-            class: "d-block col-lg-5 col-md-10 col-sm-12"
+            class: "d-block col-lg-4 col-md-10 col-sm-12"
         },
         {
             q: "วาดรูปไม่เป็นเข้าได้ม้าย",
@@ -40,7 +43,7 @@ export default class FAQs extends Component {
 }
     render() {
         return (
-               <div className="row">
+               <Sdiv className="row">
                     <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
                    {
                         this.state.data.map((QA,i) => {
@@ -51,7 +54,7 @@ export default class FAQs extends Component {
                             )
                         })
                     }
-               </div>
+               </Sdiv>
         )
     }
 }
