@@ -7,22 +7,22 @@ export default class FAQs extends Component {
         {
             q: "ไข่กับไก่อะไรเกิดก่อนกันอ่ะคับ",
             a: "ไดโนเสาร์ค้าบ",
-            class: "d-block col-lg-5 col-md-11 col-sm-12"
+            class: "d-block col-lg-5 col-md-10 col-sm-12"
         },
         {
             q: "ไข่กับไก้อะไรเกิดก่อนกันอ่ะคับ",
             a: "แมวค้าบ",
-            class: "d-block col-lg-5 col-md-11 col-sm-12"
+            class: "d-block col-lg-5 col-md-10 col-sm-12"
         },
         {
             q: "วาดรูปไม่เป็นเข้าได้ม้าย",
-            a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถถ",
-            class: "d-block col-lg-5 col-md-11 col-sm-12"
+            a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถ",
+            class: "d-block col-lg-5 col-md-10 col-sm-12"
         },
         {
             q: "what",
             a: "WHAT",
-            class: "d-block col-lg-5 col-md-11 col-sm-12"
+            class: "d-block col-lg-5 col-md-10 col-sm-12"
         },
         {
             q: "what",
