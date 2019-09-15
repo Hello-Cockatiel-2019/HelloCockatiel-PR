@@ -4,7 +4,7 @@ import color from '../../Config/Color'
 
 export const HamburgerDiv = styled.div`
     display: block;
-    position: relative;
+    position: absolute;
     top: 3vh;
     right: 5vw;
     z-index: 1;
@@ -16,6 +16,9 @@ export const HamburgerDiv = styled.div`
     width: 60px;
     height: 60px;
     user-select: none;
+    @media(max-width:320px) {
+        right: 1vw;
+      }
     & a
     {
       text-decoration: none;
@@ -91,18 +94,25 @@ export const HamburgerDiv = styled.div`
     & ul
     {
       position: absolute;
-      margin: 50px 0 -70vw -70vw;
+      top:10vh;
+      left:-65vw;
       width: 300px;
       height:auto;
       box-shadow: 0px 0px 10px #000000;
       border-radius: 30px;
       background: ${color.Wood6};
       list-style-type: none;
-    
-      transform-origin: 100% 0%;
-      transform: translate(150%, 0%);
-    
+      
+      transform-origin: 0% 0%;
+      transform: translate(-220%, 0);
+  
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      @media(max-width:320px) {
+        width:250px;
+        top:3vh;
+        left:-79vw;
+      }
+
     }
 
     & ul li

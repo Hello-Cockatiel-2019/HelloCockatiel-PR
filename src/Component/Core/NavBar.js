@@ -45,7 +45,7 @@ export default class NavBar extends Component {
                         </RegiserButton>
                     </div>
                 </Desktop>
-                <Mobile className="container-fluid">
+                <Mobile>
                     <ClickChage keyid={this.state.id} />
                     <div className="row justify-content-end">
                         <HamburgerDiv>
