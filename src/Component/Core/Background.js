@@ -280,7 +280,9 @@ export default class background extends Component {
 
   componentDidUpdate(nextProps, prevProps) {
     if (this.state.blur !== this.props.BgBlur) {
-      this.ChangeBlur();
+          this.setState({
+        blur: this.props.BgBlur
+      })
     }
   }
 
