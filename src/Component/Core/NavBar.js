@@ -46,7 +46,6 @@ export default class NavBar extends Component {
         
     state = {
         id: 0,
-        // blur: 0
     }
 
     changeClick = (i) => {
@@ -55,19 +54,19 @@ export default class NavBar extends Component {
         })
     }
 
-    // ChangeBlur = (i) => {
-    //     this.setState({
-    //         blur: i
-    //     })
-    //     this.ChangeBlurtoparent(this.state.blur)
-    // }
+    ChangeBlur = async (i) => {
+        let number = await i
+        if (number >= 0) {
+            this.ChangeBlurtoparent(i)
+        }
+    }
 
-    // ChangeBlurtoparent = async (i) => {
-    //     let number = await i
-    //     if (number >= 0) {
-    //         this.props.Blur(number);
-    //     }
-    // }
+    ChangeBlurtoparent = async (i) => {
+        let number = await i
+        if (number >= 0) {
+            this.props.Blur(number);
+        }
+    }
 
     render() {
         return (
@@ -92,7 +91,7 @@ export default class NavBar extends Component {
                     <ClickChange 
                         keyid={this.state.id} 
                         clickMobile={this.changeClick} 
-                        // BgBlur={this.Changeblur}  
+                        blurCallBack={this.ChangeBlur}  
                     />
                 </Mobile>
             </React.Fragment>

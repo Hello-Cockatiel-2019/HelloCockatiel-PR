@@ -264,12 +264,33 @@ position: absolute;
 `
 
 const Bg = styled.div`
-background-color:#FFFBC2;
+  background-color:#FFFBC2;
+  filter:blur(${props => props.blur }px);
 `
 export default class background extends Component {
+  
+  // componentDidMount(){
+  //   if (this.props.BgBlur !== this.state.BgBlur) {
+  //     this.setState({
+  //       blur: this.props.BgBlur
+  //     })
+  //     console.log(5)
+  //   }
+  // }
+
+  componentDidUpdate(nextProps, prevProps) {
+    if (this.state.blur !== this.props.BgBlur) {
+      this.ChangeBlur();
+    }
+  }
+
+  state = {
+    blur: 0
+  }
+  
   render () {
     return (
-      <Bg className="text-align-center">
+      <Bg className="text-align-center" blur={this.state.blur}>
         <Bird1 bgImgURL='../Objects/b1.png' />
         <Bird2 bgImgURL='../Objects/b2.png' />
         <Shadow bgImgURL='bg3.png' />
