@@ -6,19 +6,19 @@ import Woodsign from './Woodsign'
 const Sdiv = styled.div `
     transform: translate(0%,8%);
     @media only screen and (max-width:1024px) {
-        transform: translate(15%,0%);
+        transform: translate(7%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(28%,-10%);
+        transform: translate(27%,25%);
     }
     @media (max-width:500px) {
-        transform: translate(5%,-8%);
+        transform: translate(9%,30%);
     }
     @media (max-width:400px) {
-        transform: translate(6%,-10%);
+        transform: translate(6%,33%);
     }
     @media (max-width:320px) {
-        transform: translate(5%,-14%);
+        transform: translate(5%,33.5%);
     }
 `
 export default class FAQs extends Component {
@@ -59,7 +59,7 @@ export default class FAQs extends Component {
     render() {
         return (
             <React.Fragment>
-            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
+            {/* <MobileHeader text="FAQs" HeaderURl="plate-m3.png" />  */}
                <Sdiv className="row m-0 p-0">
                    {
                         this.state.data.map((QA,i) => {
