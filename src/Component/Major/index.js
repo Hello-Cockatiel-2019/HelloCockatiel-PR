@@ -5,29 +5,27 @@ import Field from './Field'
 
 const Div = styled.div `
     transform: translate(7%,0%);
-    @media (max-width:320px){
-      transform: translate(-6%,0%);
-    }
-    @media (max-width:375px){
-      transform: translate(-7%,12%);
-    }
     @media (max-width:420px){
       transform: translate(-7%,12%);
+    }
+    @media (max-width:380px){
+      transform: translate(-7%,12%);
+    }
+    @media (max-width:325px){
+      transform: translate(-6%,0%);
     }
 `
 
 const Div1 = styled.div `
-    /* padding-left:${props => props.mrl === 1 ? '0em' 
-                : props.mrl === 3? '0em' : '0'}; */
     padding-top:2em;
     padding-left:2em;
-    @media (max-width:320px){
-      padding-top:0.5em;
-    }
-    @media (max-width:375px){
-      padding-top:0.5em;
-    }
     @media (max-width:420px){
+      padding-top:0.5em;
+    }
+    @media (max-width:380px){
+      padding-top:0.5em;
+    }
+    @media (max-width:325px){
       padding-top:0.5em;
     }
 `
