@@ -13,7 +13,7 @@ const HeaderDiv = styled.div`
     padding-top: 60px;
     padding-left: ${props => props.pl === 'FAQs' ? '50px' : '10px'};
     /* transform: translate(30vw,-15vh); */
-    transform: translate(0%,-45%);
+    /* transform: translate(0%,-45%); */
 `
 
 const MobileHeader = (props) => {
