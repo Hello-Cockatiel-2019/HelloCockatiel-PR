@@ -9,7 +9,10 @@ const Box = styled.div`
     border-radius: 30px;
     width:65em;
     height: 12em;
-    
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        width:54em;
+        height:11em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:45em;
         height:11em;
@@ -52,6 +55,13 @@ const TextContent = styled(Small) `
     color:${color.font2};
     line-height: 25px;
     letter-spacing: 0.05em;
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        line-height: 20px;
+        margin-top:-6.5em;
+        padding-left:7em;
+        padding-right:1em;
+        font-size:1.2em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-7em;
@@ -113,6 +123,13 @@ const TextTopic = styled(Small2) `
     margin-top:-2em;
     padding-left:${props => props.topic === 0 ? '2.8em' 
                 : props.topic === 1? '3.4em': '3.7em'};
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        padding-left:${props => props.topic === 0 ? '1.9em' 
+                : props.topic === 1? '2.5em'
+                : props.topic === 3? '2.7em'
+                : '2.8em'};
+        margin-top:-1.8em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         padding-left:${props => props.topic === 0 ? '4.3em' 
                 : props.topic === 1? '5em'
@@ -185,6 +202,11 @@ const Frame = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        width:24%;
+        margin-top:6.8em;
+        margin-left:-5.8em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:19%;
         margin-top:6.5em;
@@ -236,6 +258,11 @@ const Bird = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
     border-radius:100px;
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        width:22%;
+        margin-top:-1.8em;
+        margin-left:1.5em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:18%;
         margin-top:-1.6em;
