@@ -56,8 +56,7 @@ const LogoDiv = styled.div`
         transform: translateY(-7vh);
     }
     @media screen and (max-width:320px) {
-        margin-top:-50px;
-        margin-bottom:0;
+        transform: translateY(-4vh);
     }
 `
 
@@ -93,6 +92,7 @@ const WoodDiv = styled.div`
             props.mt === 1 ? -40 : -10}px
     }
     @media screen and (max-width:320px) {
+        transform: translateY(-15%);
         margin-top:${props => props.mt===0 ? 0 :
                 props.mt === 1 ? -40 : -10}px;
     }
@@ -101,7 +101,6 @@ export default class Home extends Component {
     state = {
         plate : [
             {
-                
                 imgURL: 'Group 6.png',
                 text: 'ข้อมูลโครงการ',
                 class: 'justify-content-start',
