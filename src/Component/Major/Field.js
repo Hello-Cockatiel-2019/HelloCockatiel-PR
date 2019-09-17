@@ -9,6 +9,10 @@ const Box = styled.div`
     border-radius: 30px;
     width:65em;
     height: 12em;
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        width:45em;
+        height:9em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         width:25em;
         height:9em;
@@ -35,6 +39,13 @@ const TextContent = styled(Small) `
     color:${color.font2};
     line-height: 25px;
     letter-spacing: 0.05em;
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        line-height: 17px;
+        margin-top:-6.5em;
+        padding-left:7em;
+        padding-right:1em;
+        font-size:1em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-8em;
@@ -68,6 +79,13 @@ const TextTopic = styled(Small2) `
     margin-top:-2em;
     padding-left:${props => props.topic === 0 ? '2.8em' 
                 : props.topic === 1? '3.4em': '3.7em'};
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        padding-left:${props => props.topic === 0 ? '1.9em' 
+                : props.topic === 1? '2.5em'
+                : props.topic === 3? '2.7em'
+                : '2.8em'};
+        margin-top:-1.8em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         padding-left:${props => props.topic === 0 ? '3.1em' 
                 : props.topic === 1? '3.7em'
@@ -109,6 +127,11 @@ const Frame = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        width:24%;
+        margin-top:5.3em;
+        margin-left:-4.8em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         width:17%;
         margin-top:6em;
@@ -140,6 +163,11 @@ const Bird = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
     border-radius:100px;
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        width:22%;
+        margin-top:-2em;
+        margin-left:1.5em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         width:18%;
         margin-top:-0.9em;
