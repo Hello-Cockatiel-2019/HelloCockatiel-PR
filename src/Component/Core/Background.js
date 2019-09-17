@@ -9,23 +9,25 @@ const Background = styled.div`
     background-attachment: fixed;
     padding:0;
     margin:0;
+    left:0;
 `
 const Grass = styled(Background)`
 position: absolute;
   z-index: -2;
   width:100%;
+  bottom:0;
   @media (min-width:320px) {
-    transform: translate(0,32%);
+    transform: translate(0,40%);
     background-size:190%;
   }
   @media (min-width:412px) {
     transform: translate(0,40%);
     background-size:190%;
   }
-  @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
-    transform: translate(0,32%);
-    background-size:190%;
-  }
+  // @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
+  //   transform: translate(0,32%);
+  //   background-size:190%;
+  // }
   @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
     transform: translate(0,32%);
     background-size:190%;
