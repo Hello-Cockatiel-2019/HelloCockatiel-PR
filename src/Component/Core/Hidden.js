@@ -34,10 +34,13 @@ export const Desktop = styled.div`
     @media(orientation:landscape) and (max-height: 550px){
         ${ displayNone }
     }
+    @media (max-width: 834px){
+        ${ displayNone }
+    }
 `
 export const Mobile = styled.div`
     display: none;
-     @media(max-width:576px) {
+     @media(max-width:834px) {
         ${ displayBlock }
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
