@@ -5,7 +5,7 @@ import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
     transform: translate(0%,8%);
-    @media only screen and (max-width:1024px) {
+    @media (max-width:1024px) {
         transform: translate(7%,0%);
     }
     @media (max-width:768px) {
@@ -20,13 +20,16 @@ const Sdiv = styled.div `
     @media (max-width:320px) {
         transform: translate(5%,-14%);
     }
+    @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
+        transform: translate(14%,9%);
+    }
 `
 const HeaderDiv = styled.div `
     @media only screen and (max-width:1024px) {
         transform: translate(0%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(0%,0%);
+        transform: translate(0%,-25%);
     }
     @media (max-width:500px) {
         transform: translate(0%,-50%);
