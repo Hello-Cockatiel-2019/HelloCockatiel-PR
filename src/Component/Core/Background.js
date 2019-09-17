@@ -12,28 +12,35 @@ const Background = styled.div`
     left:0;
 `
 const Grass = styled(Background)`
-position: absolute;
+position: fixed;
   z-index: -2;
   width:100%;
-  bottom:0;
+  bottom:auto;
   @media (min-width:320px) {
     transform: translate(0,40%);
     background-size:190%;
   }
-  @media (min-width:412px) {
+  @media (min-width:414px) {
     transform: translate(0,40%);
     background-size:190%;
   }
-  // @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
-  //   transform: translate(0,32%);
-  //   background-size:190%;
-  // }
-  @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
-    transform: translate(0,32%);
+  @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
+    transform: translate(0,42%);
     background-size:190%;
   }
+  @media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait)  {
+    transform: translate(0,40%);
+    background-size:190%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
+    transform: translate(0,41%);
+    background-size:190%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait)  {
+    transform: translate(0,40%);
+  }
   @media (min-width:768px) {
-    transform: translate(0,32%);
+    transform: translate(0,40%);
   background-size:130%;
   }
   @media (min-width:834px) {
@@ -43,25 +50,28 @@ position: absolute;
   transform: translate(0,32%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
-    transform: translate(0,30%);
+    transform: translate(0,40%);
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-    transform: translate(0,34%);
+    transform: translate(0,43%);
   }
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
-    transform: translate(0,30%);
+    transform: translate(0,38%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
-    transform: translate(0,34%);
+    transform: translate(0,43%);
   }
   @media only screen and (min-width: 1467px) and (max-height: 1024px) and (orientation: landscape)  {
     transform: translate(0,36%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(0,34%);
+    transform: translate(0,43%);
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
-    transform: translate(0,30%);
+    transform: translate(0,38%);
+  }
+  @media only screen and (min-width: 1536px) and (max-height: 722px) and (orientation: landscape)  {
+    transform: translate(0,36%);
   }
 `
 const Tree = styled(Background)`
@@ -72,28 +82,28 @@ const Tree = styled(Background)`
   width:100%;
   position: fixed;
   @media (min-width:320px) {
-    background-size: 280%;
+    background-size: 270%;
   }
   @media (min-width:412px) {
-    background-size:300%;
+    background-size:260%;
   }
   @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
-    background-size:320%;
+    background-size:330%;
   }
   @media only screen and (max-height: 667px) and (min-width: 375px) and (orientation: portrait){
     background-size: 270%;
   }
-  @media only screen and (min-width: 414px) and (max-height: 7360px) and (orientation: portrait)  {
-    background-size:260%;
-  }
   @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
-    background-size:320%;
+    background-size:325%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 812px) and (orientation: portrait)  {
+    background-size:290%;
   }
   @media (min-width:768px) {
   background-size:200%;
   }
   @media (min-width:1024px) {
-  background-size: 110%;
+  background-size: 100%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
   background-size: 215%;
@@ -109,42 +119,42 @@ const Shadow = styled(Background)`
 position: absolute;
 z-index: -5;
 background-repeat:no-repeat;
-background-size: 100%;
-width:100%;
-position: fixed;
-@media (min-width:320px) {
-  background-size: 280%;
-}
-@media (min-width:412px) {
-  background-size:300%;
-}
-@media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
-  background-size:320%;
-}
-@media only screen and (max-height: 667px) and (min-width: 375px) and (orientation: portrait){
-  background-size: 270%;
-}
-@media only screen and (min-width: 414px) and (max-height: 7360px) and (orientation: portrait)  {
-  background-size:260%;
-}
-@media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
-  background-size:320%;
-}
-@media (min-width:768px) {
-background-size:200%;
-}
-@media (min-width:1024px) {
-background-size: 110%;
-}
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-background-size: 215%;
-}
-@media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-background-size: 225%;
-}
-@media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
-background-size: 220%;
-}
+  background-size: 100%;
+  width:100%;
+  position: fixed;
+  @media (min-width:320px) {
+    background-size: 290%;
+  }
+  @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
+    background-size:350%;
+  }
+  @media only screen and (max-height: 667px) and (min-width: 375px) and (orientation: portrait){
+    background-size: 270%;
+  }
+  @media only screen and (max-height: 667px) and (min-width: 375px) and (orientation: portrait){
+    background-size: 290%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
+    background-size:347%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 736x) and (orientation: portrait)  {
+    background-size:290%;
+  }
+  @media (min-width:768px) {
+  background-size:210%;
+  }
+  @media (min-width:1024px) {
+  background-size: 100%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+  background-size: 230%;
+  }
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
+  background-size: 245%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
+  background-size: 245%;
+  }
 `
 
 const Bird1 = styled.img`
