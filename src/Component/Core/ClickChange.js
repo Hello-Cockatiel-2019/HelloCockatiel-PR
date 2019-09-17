@@ -29,6 +29,7 @@ const MobileDiv = styled.div`
 
 const MobileMap = styled.div`
     transform:translateY(20%);
+    filter: blur(${props => props.blur}px);
 `
 
 const Div = styled.div`
@@ -49,7 +50,8 @@ export default class ClickChage extends Component {
         key : 0,
         Component: [<About />,<Major />,<FAQs />],
         mobiledisplay:'none',
-        homedisplay: 'block'
+        homedisplay: 'block',
+        blur: 0
     }
    
     clickHome = (i) => {
@@ -60,13 +62,33 @@ export default class ClickChage extends Component {
         })
     }
 
+    ChangeBlur = () => {
+        if (this.state.blur === 0) {
+            this.setState({
+                blur: 2
+            })
+            this.sendBlur(this.state.blur)
+        } else {
+            this.setState({
+                blur: 0
+            })
+            this.sendBlur(this.state.blur)
+        }
+    }
+
     handleCilck = async (i) => {
         let number = await i
         if (number >= 0) {
             this.props.clickMobile(number);
         }
     }
-    
+
+
+    sendBlur = (i) => {
+        this.props.blurCallBack(i);
+    }
+
+
     render() {
         return (
             <React.Fragment>
@@ -75,7 +97,7 @@ export default class ClickChage extends Component {
                     this.state.Component.map((data, i) => {
                         return (
                             <Div key={i} display={this.state.key===i?'block':'none'}>
-                              {data}
+                                {data}
                             </Div>
                         )
                     })
@@ -87,26 +109,30 @@ export default class ClickChage extends Component {
                 </HomeDiv>
                 <MobileDiv mobiledisplay={this.state.mobiledisplay}>
                     <div className="row justify-content-end">
-                        <HamburgerDiv>
-                            <input type="checkbox" />
+                        <HamburgerDiv >
+                            <input type="checkbox" onClick={this.ChangeBlur}/>
                             {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
                             {/* Hamburger  */}
-                            <ul id="menu" className="p-4 ">
-                                <NavButton changeClick={this.handleCilck}/>
-                                <div className="d-flex justify-content-center mt-3">
-                                    <Register />
-                                </div>
+                            <ul className="p-4 ">
+                                <li>
+                                    <NavButton changeClick={this.handleCilck} />
+                                </li>
+                                <li>
+                                    <div className="d-flex justify-content-center mt-3">
+                                        <Register />
+                                    </div>
+                                </li>
                             </ul>
                         </HamburgerDiv>
                     </div>
-                    <MobileMap>
+                    <MobileMap blur={this.state.blur}>
                         {
                             this.state.Component.map((data, i) => {
                                 return (
-                                    <Div key={i} display={this.state.key === i ? 'block' : 'none'}>
+                                    <Div key={i} display={this.state.key === i ? 'block' : 'none'} >
                                         {data}
                                     </Div>
                                 )
