@@ -9,10 +9,12 @@ import Major from '../Major'
 
 const PositionDesktop = styled(Desktop)`
     transform:translateY(50%);
+    overflow:hidden;
 `
 
 const MobileDiv = styled.div`
     display : ${props => props.mobiledisplay ? props.mobiledisplay : 'none'};
+    overflow:hidden;
 `
 
 const MobileMap = styled.div`
