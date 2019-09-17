@@ -9,18 +9,36 @@ const Sdiv = styled.div `
         transform: translate(7%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(27%,25%);
+        transform: translate(28%,-3%);
     }
     @media (max-width:500px) {
-        transform: translate(9%,30%);
+        transform: translate(7%,-10%);
     }
     @media (max-width:400px) {
-        transform: translate(6%,33%);
+        transform: translate(6%,-12%);
     }
     @media (max-width:320px) {
-        transform: translate(5%,29%);
+        transform: translate(5%,-14%);
     }
 `
+const HeaderDiv = styled.div `
+    @media only screen and (max-width:1024px) {
+        transform: translate(0%,0%);
+    }
+    @media (max-width:768px) {
+        transform: translate(0%,0%);
+    }
+    @media (max-width:500px) {
+        transform: translate(0%,-50%);
+    }
+    @media (max-width:400px) {
+        transform: translate(0%,-50%);
+    }
+    @media (max-width:320px) {
+        transform: translate(0%,-45%);
+    }
+`
+
 export default class FAQs extends Component {
     state = {
         data:[
@@ -59,7 +77,9 @@ export default class FAQs extends Component {
     render() {
         return (
             <React.Fragment>
-            {/* <MobileHeader text="FAQs" HeaderURl="plate-m3.png" />  */}
+                <HeaderDiv>
+            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
+            </HeaderDiv>
                <Sdiv className="row m-0 p-0">
                    {
                         this.state.data.map((QA,i) => {

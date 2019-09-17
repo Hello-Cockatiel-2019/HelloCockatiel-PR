@@ -11,16 +11,28 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:260px;
         height: 290px;
+<<<<<<< HEAD
+=======
+        margin-left:0.8em;
+>>>>>>> develop
       }
       @media(min-width:375px) {
         background-image: url(/images/Objects/small-plate.png);
         width:271px;
         height: 302px;
+<<<<<<< HEAD
+=======
+        margin-left:1.5em;
+>>>>>>> develop
         }
       @media (min-width:410px) {
         background-image: url(/images/Objects/small-plate.png);
         width:309px;
         height: 344px;
+<<<<<<< HEAD
+=======
+        margin-left:1.8em;
+>>>>>>> develop
       }
       @media(min-width:576px) {
         background-image: url(/images/Objects/small-plate.png);
@@ -31,6 +43,11 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:579px;
         height: 645px;
+<<<<<<< HEAD
+=======
+        margin-left:4em;
+        transform: translate(0px,-50px);
+>>>>>>> develop
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
         background-image: url(/images/Objects/big-platebird.png);
@@ -56,6 +73,11 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:523px;
         height: 583px;
+<<<<<<< HEAD
+=======
+        margin-left:0em;
+        transform:translate(0px, 45px);
+>>>>>>> develop
       }
       margin-left:0em;
       background-size:100%; 
@@ -163,11 +185,30 @@ grid-template-columns: none;
 const LayoutWhere = styled.div`
 align-self:end;
 `
+const HeaderDiv = styled.div `
+    @media only screen and (max-width:1024px) {
+        transform: translate(210%,-15%);
+    }
+    @media (max-width:768px) {
+        transform: translate(155%,-100%);
+    }
+    @media (max-width:500px) {
+        transform: translate(57%,-50%)
+    }
+    @media (max-width:400px) {
+        transform: translate(45%,-38%);
+    }
+    @media (max-width:320px) {
+        transform: translate(30%,-35%);
+    }
+`
 
 const AboutBox = () => (
 <div className="row m-0">
+  <HeaderDiv>
   <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
-  <Layout className="container m-0">
+  </HeaderDiv>
+  <Layout class="container m-0">
     
     <Plate>
         <Title className = "text-center" >

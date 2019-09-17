@@ -51,9 +51,12 @@ const MenuDiv = styled.div`
 `
 
 const LogoDiv = styled.div`
+    transform: translateY(-7vh);
     @media screen and (max-width:375px) {
-        margin-top:-50px;
-        margin-bottom:0;
+        transform: translateY(-7vh);
+    }
+    @media screen and (max-width:320px) {
+        transform: translateY(-4vh);
     }
 `
 
@@ -71,15 +74,33 @@ const A = styled.a`
 `
 
 const RegisDiv = styled.div `
-    @media only screen and (max-width:360px) {
+    @media only screen and (max-width:420px) {
+        margin-top: -3vh!important;
+    }
+    @media only screen and (max-width:380px) {
+        margin-top: -5vh!important;
+    }
+    @media only screen and (max-width:320px) {
         margin-top:0px!important;
+    }
+`
+
+const WoodDiv = styled.div`
+    @media screen and (max-width:420px) {
+        transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+            props.mt === 1 ? -40 : -10}px
+    }
+    @media screen and (max-width:320px) {
+        transform: translateY(-15%);
+        margin-top:${props => props.mt===0 ? 0 :
+                props.mt === 1 ? -40 : -10}px;
     }
 `
 export default class Home extends Component {
     state = {
         plate : [
             {
-                
                 imgURL: 'Group 6.png',
                 text: 'ข้อมูลโครงการ',
                 class: 'justify-content-start',
@@ -122,7 +143,7 @@ export default class Home extends Component {
                         {
                             this.state.plate.map((data,i) => {
                                 return (
-                                    <div className={`d-inline-flex col-12 ${data.class}`} key={i}>
+                                    <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
                                         <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
                                             <A href={data.link} key={i}>
                                                 <Woodplate source={data.imgURL}>
@@ -130,7 +151,7 @@ export default class Home extends Component {
                                                 </Woodplate>
                                             </A>
                                         </button>
-                                    </div>
+                                    </WoodDiv>
 
                                 )
                             })
