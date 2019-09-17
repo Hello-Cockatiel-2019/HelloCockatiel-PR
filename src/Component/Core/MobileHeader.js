@@ -12,13 +12,14 @@ const HeaderDiv = styled.div`
     margin: 0;
     padding-top: 60px;
     padding-left: ${props => props.pl === 'FAQs' ? '50px' : '10px'};
-    transform: translate(30vw,-15vh);
+    /* transform: translate(30vw,-15vh); */
+    transform: translate(0%,-45%);
 `
 
 const MobileHeader = (props) => {
   return (
     <Mobile>
-    <div className="col-12 d-flex justify-content-center">
+    <div className="col-12 d-flex  justify-content-center">
       <HeaderDiv HeaderURl={ props.HeaderURl } pl={ props.text }>
         <Header>
           { props.text }
