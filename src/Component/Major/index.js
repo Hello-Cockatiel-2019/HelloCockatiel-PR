@@ -3,25 +3,47 @@ import styled from 'styled-components'
 import MobileHeader from '../Core/MobileHeader';
 import Field from './Field'
 
-const Div = styled.div `
+const AllContent = styled.div `
     transform: translate(7%,0%);
+    @media (max-width:770px) and (orientation: portrait){
+      transform: translate(-25%,-15%);
+    }
     @media (max-width:420px){
-      transform: translate(-7%,12%);
+      transform: translate(-7%,-20%);
     }
     @media (max-width:380px){
-      transform: translate(-7%,12%);
+      transform: translate(-7%,-20%);
     }
     @media (max-width:325px){
-      transform: translate(-6%,0%);
+      transform: translate(-6%,-25%);
     }
 `
 
-const Div1 = styled.div `
+const Header = styled.div `
+    @media (max-width:770px) and (orientation: portrait){
+      transform: translate(0%,-60%);
+    }
+    @media (max-width:420px){
+      transform: translate(0%,-60%);
+    }
+    @media (max-width:380px){
+      transform: translate(0%,-60%);
+    }
+    @media (max-width:325px){
+      transform: translate(0%,-60%);
+    }
+`
+
+const SpaceBySpace = styled.div `
     padding-top:2em;
     padding-left:2em;
+    @media (max-width:770px) and (orientation: portrait){
+      padding-top:2em;
+    }
     @media (max-width:420px){
       padding-top:0.5em;
     }
+    
     @media (max-width:380px){
       padding-top:0.5em;
     }
@@ -58,7 +80,7 @@ export default class index extends Component {
       },
       {
         topic: "Game",
-        content: "ในสาขานี้จะพาไปทำความรู้จักกับ Game ให้มากขึ้น และได้ลองสร้าง Game สำหรับ เล่นบนหน้าเว็บด้วย โดยีตั้งแต่พื้นฐาน การใช้งาน Git การใช้ Command Line เบื้องต้น การวาง Object ใส่ Animation และได้เรียนรู้องค์ประกอบอื่น ๆ อีก มากมาย",
+        content: "ในสาขานี้จะพาไปทำความรู้จักกับ Game ให้มากขึ้น และได้ลองสร้าง Game สำหรับ เล่นบนหน้าเว็บด้วย โดยตั้งแต่พื้นฐาน การใช้งาน Git การใช้ Command Line เบื้องต้น การวาง Object ใส่ Animation และได้เรียนรู้องค์ประกอบอื่น ๆ อีก มากมาย",
         imgbird : "c4.png",
         imgframe : "frame.png",
         class : "justify-content-end",
@@ -69,12 +91,14 @@ export default class index extends Component {
   render() {
     return (
       <React.Fragment>
-           {/* <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" />   */}
-           <Div className="row">
+        <Header>
+          <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" />
+        </Header>
+           <AllContent className="row">
                {
                     this.state.data.map((TC,i) => {
                     return (
-                        <Div1 className={`d-flex col-lg-6 col-md-6 col-12 ${TC.class}`} mrl={i} key={i} > 
+                        <SpaceBySpace className={`d-flex col-lg-6 col-md-12 col-12 ${TC.class}`} mrl={i} key={i} > 
                             <Field 
                               topic={TC.topic} 
                               content={TC.content} 
@@ -83,11 +107,11 @@ export default class index extends Component {
                               imgframe={TC.imgframe}
                               keytopic={i}
                               />
-                        </Div1>
+                        </SpaceBySpace>
                         )
                     })
                 }
-           </Div>
+           </AllContent>
       </React.Fragment>
 
     )
