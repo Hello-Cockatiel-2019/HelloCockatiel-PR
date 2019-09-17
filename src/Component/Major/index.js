@@ -5,6 +5,9 @@ import Field from './Field'
 
 const AllContent = styled.div `
     transform: translate(7%,0%);
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
+    transform: translate(10%,10%);
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     transform: translate(24%,0%);
     grid-template-columns: none;
@@ -64,6 +67,9 @@ const Header = styled.div `
 const SpaceBySpace = styled.div `
     padding-top:2em;
     padding-left:2em;
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+      padding-top:1em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
       padding-top:2em;
     }
