@@ -18,7 +18,7 @@ const Sdiv = styled.div `
         transform: translate(6%,33%);
     }
     @media (max-width:320px) {
-        transform: translate(5%,33.5%);
+        transform: translate(5%,29%);
     }
 `
 export default class FAQs extends Component {
