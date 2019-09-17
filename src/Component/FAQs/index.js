@@ -15,10 +15,10 @@ const Sdiv = styled.div `
         transform: translate(9%,30%);
     }
     @media (max-width:400px) {
-        transform: translate(6%,0%);
+        transform: translate(6%,-10%);
     }
     @media (max-width:320px) {
-        transform: translate(5%,33.5%);
+        transform: translate(5%,-14%);
     }
 `
 export default class FAQs extends Component {
@@ -59,7 +59,7 @@ export default class FAQs extends Component {
     render() {
         return (
             <React.Fragment>
-            {/* <MobileHeader text="FAQs" HeaderURl="plate-m3.png" />  */}
+            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
                <Sdiv className="row m-0 p-0">
                    {
                         this.state.data.map((QA,i) => {
