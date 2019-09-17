@@ -4,7 +4,7 @@ import MobileHeader from '../Core/MobileHeader';
 import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
-    transform: translate(20%,-33%);
+    transform: translate(0%,5%);
 `
 export default class FAQs extends Component {
     state = {
@@ -17,7 +17,7 @@ export default class FAQs extends Component {
         {
             q: "ไข่กับไก้อะไรเกิดก่อนกันอ่ะคับ",
             a: "แมวค้าบ",
-            class: "d-block col-lg-4 col-md-10 col-sm-12"
+            class: "d-block col-lg-5 col-md-10 col-sm-12"
         },
         {
             q: "วาดรูปไม่เป็นเข้าได้ม้าย",
@@ -43,8 +43,9 @@ export default class FAQs extends Component {
 }
     render() {
         return (
+            <React.Fragment>
+            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
                <Sdiv className="row">
-                    <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
                    {
                         this.state.data.map((QA,i) => {
                         return (
@@ -55,6 +56,7 @@ export default class FAQs extends Component {
                         })
                     }
                </Sdiv>
+               </React.Fragment>
         )
     }
 }
