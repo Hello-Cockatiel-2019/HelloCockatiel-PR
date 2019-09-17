@@ -4,11 +4,12 @@ import { Paragraph, BrownParagraph } from '../Core/Text'
 
 const Qwood = styled(BrownParagraph) `
     background-color :#DB9B51;
-    width: 450px;
+    width: 400px;
     height: 38px;
     padding-left:0.7em;
     padding-top:0.3em;
     box-shadow: 5px 5px 8px black;
+    margin: 0em 0em 0em 5em;
     @media only screen and (max-width:1024px) {
         width: 360px;
         margin:0em 2em 0em 2em;
@@ -24,12 +25,12 @@ const Qwood = styled(BrownParagraph) `
 `
 const Awood = styled(Paragraph)`
     background-color:#987245;
-    width: 450px;
+    width: 400px;
     padding-top:0.5em;
     padding-bottom: 1em;
     padding-left:0.7em;
-    margin-bottom: 3em;
     box-shadow: 5px 5px 8px black;
+    margin: 0em 30em 3em 5em;
     @media only screen and (max-width:1024px) {
         width: 360px;
         margin:0em 2em 2em 2em;

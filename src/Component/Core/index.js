@@ -6,9 +6,10 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
 
-import Background from './Background'
 import NavBar from './NavBar'
 import ChangeSize from './ChangeSize'
+
+
 
 export default class Index extends Component {
     state = {
@@ -26,11 +27,8 @@ export default class Index extends Component {
             <React.Fragment>
                 <GlobalStyle />
                 <ChangeSize />
-                <Background BgBlur={this.state.blur} />
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        <NavBar Blur={this.ChangeBlur}/>
-                    </div>
+                <div className="container-fluid p-0">
+                    <NavBar Blur={this.ChangeBlur} />
                 </div>
             </React.Fragment>
         )

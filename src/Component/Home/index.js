@@ -116,7 +116,7 @@ export default class Home extends Component {
                         </A>
                     </div>
                     <LogoDiv className="col-12 d-flex justify-content-center">
-                        <HeadLogo src="/images/Objects/logo.png" />
+                        <HeadLogo src="/images/Objects/Logo.png" />
                     </LogoDiv>
                     <MenuDiv>
                         {
