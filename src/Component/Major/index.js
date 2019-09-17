@@ -4,12 +4,12 @@ import MobileHeader from '../Core/MobileHeader';
 import Field from './Field'
 
 const Div = styled.div `
-    transform: translate(0%,0%);
+    transform: translate(15%,0%);
 `
 
 const Div1 = styled.div `
-    padding-left:${props => props.mrl === 0 ? '0em' 
-                : props.mrl === 2? '0em' : '0'};
+    padding-left:${props => props.mrl === 1 ? '2em' 
+                : props.mrl === 3? '2em' : '0'};
     padding-top:2em;
 `
 export default class index extends Component {
@@ -20,6 +20,7 @@ export default class index extends Component {
           content: "ในสาขานี้จะเริ่มสอนตั้งแต่พื้นฐาน HTML CSS และ JavaScript และยังลงลึกไปถึงการเขียนโค้ดที่เป็นระเบียบและง่ายต่อการใช้งาน นอกจากนี้ยังสอนการนำ Git มาใช้งานเพื่อ ช่วยให้การสร้างเว็บไซต์ของเราสะดวกยิ่งขึ้น",
           imgbird : "c1.png",
           imgframe : "frame.png",
+          class : "justify-content-center",
           color: "#D8C355"
       },
       {
@@ -27,6 +28,7 @@ export default class index extends Component {
         content: "ในสาขานี้จะไปลงลึกเกี่ยวกับ วิธีการและ ขั้นตอนในการ Design หน้าเว็บไซต์ให้ เหมาะสมและน่าใช้งาน โดยจะเริ่มปูพื้นฐาน ตั้งแต่ องค์ประกอบของศิลป์ ลิขสิทธิ์ การ Drawing UX/UI ไปจนถึงการทำ Prototype ของงาน",
         imgbird : "c2.png",
         imgframe : "frame.png",
+        class : "justify-content-end",
           color: "#DB9B51"
       },
       {
@@ -34,6 +36,7 @@ export default class index extends Component {
         content: "ในสาขานี้จะสอนตั้งแต่หลักการการ วางโครงสร้างพื้นฐานที่เป็นส่วนสำคัญของการสร้างและพัฒนาเว็บไซต์ของเรา ให้สามารถเข้าถึงได้จากทั่วโลก นอกจากนี้ยังมีการสอนการใช้เครื่องมือ และเรียนรู้การ Deploy เว็บไซต์ด้วยนะ",
         imgbird : "c3.png",
         imgframe : "frame.png",
+        class : "justify-content-center",
           color: "#ACA89C"
       },
       {
@@ -41,6 +44,7 @@ export default class index extends Component {
         content: "ในสาขานี้จะพาไปทำความรู้จักกับ Game ให้มากขึ้น และได้ลองสร้าง Game สำหรับ เล่นบนหน้าเว็บด้วย โดยีตั้งแต่พื้นฐาน การใช้งาน Git การใช้ Command Line เบื้องต้น การวาง Object ใส่ Animation และได้เรียนรู้องค์ประกอบอื่น ๆ อีก มากมาย",
         imgbird : "c4.png",
         imgframe : "frame.png",
+        class : "justify-content-end",
           color: "#B3660B"
       }
   ]
