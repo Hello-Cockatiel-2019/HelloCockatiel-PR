@@ -268,7 +268,7 @@ export default class background extends Component {
 
   render () {
     return (
-      <Bg className="text-align-center">
+      <Bg>
         <Bird1 bgImgURL='../Objects/b1.png' />
         <Bird2 bgImgURL='../Objects/b2.png' />
         <Shadow bgImgURL='bg3.png' />
