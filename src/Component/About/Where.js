@@ -24,7 +24,7 @@ const Where1 = styled.div `
     padding-top:0.6em;
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-    background-image: url(/images/Objects/arrowplate3.png);
+    background-image: url(/images/Objects/arrowplate4.png);
     width:204px;
     height: 60px;
     padding-top:0.6em;
@@ -36,7 +36,7 @@ const Where1 = styled.div `
     padding-top:4em;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-    background-image: url(/images/Objects/arrowplate3.png);
+    background-image: url(/images/Objects/arrowplate4.png);
     width:204px;
     height: 60px;
     padding-top:0.6em;
@@ -56,7 +56,7 @@ const Where1 = styled.div `
     padding-top:4em;
   }
   
-    background-image: url(/images/Objects/arrowplate3.png);
+    background-image: url(/images/Objects/arrowplate4.png);
     background-repeat: no-repeat;
     background-size:100%;
     padding-left:1.5em;
