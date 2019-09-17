@@ -5,8 +5,23 @@ import Field from './Field'
 
 const AllContent = styled.div `
     transform: translate(7%,0%);
+    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
+    transform: translate(24%,0%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    transform: translate(24%,0%);
+    grid-template-columns: none;
+    display:grid;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     transform: translate(10%,20%);
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
+    transform: translate(-21%,-15%);
+    grid-template-columns: none;
+    display:grid;
     }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(-25%,-15%);
@@ -23,9 +38,15 @@ const AllContent = styled.div `
 `
 
 const Header = styled.div `
-    /* @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-      transform: translate(0%,-60%);
-    } */
+    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
+    transform: translate(2%,-30%);
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    transform: translate(2%,-30%);
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
+    transform: translate(2%,-80%);
+    }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(0%,-60%);
     }
@@ -43,8 +64,17 @@ const Header = styled.div `
 const SpaceBySpace = styled.div `
     padding-top:2em;
     padding-left:2em;
+    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
+      padding-top:2em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
+      padding-top:2em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
       padding-top:1em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+      padding-top:2em;
     }
     @media (max-width:770px) and (orientation: portrait){
       padding-top:2em;
