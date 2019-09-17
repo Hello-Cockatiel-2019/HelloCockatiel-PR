@@ -35,7 +35,7 @@ const Content = styled.div`
         top: 10vh;
     }
     @media screen and (max-width:960px) {
-        left: -30vw;
+        left: -25vw;
         top: 10vh;
     }
     @media screen and (max-width:800px) {
