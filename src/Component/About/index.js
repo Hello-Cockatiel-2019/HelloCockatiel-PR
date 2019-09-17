@@ -194,7 +194,7 @@ const AboutBox = () => (
   <HeaderDiv>
   <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
   </HeaderDiv>
-  <Layout class="container m-0">
+  <Layout className="container m-0">
     
     <Plate>
         <Title className = "text-center" >
