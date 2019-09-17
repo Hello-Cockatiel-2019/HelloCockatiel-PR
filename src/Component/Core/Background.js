@@ -134,7 +134,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media (min-width:320px) {
     right: 10%;
     max-width: 15%;
-    bottom:-5%;
+    bottom:0%;
   }
   @media (min-width:412px) {
     right: 10%;
@@ -144,12 +144,27 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:4%;
+    bottom:-37%;
+  }
+  @media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait)  {
+    right: 10%;
+    max-width: 15%;
+    bottom:-13%;
   }
   @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:4%;
+    bottom:-37%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 812px) and (orientation: portrait)  {
+    right: 10%;
+    max-width: 15%;
+    bottom:-24%;
+  }
+  @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait)  {
+    right: 10%;
+    max-width: 15%;
+    bottom:-13%;
   }
   @media (min-width:768px) {
     right: 10%;
@@ -165,7 +180,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media(min-width:1024px) {
     left: 24%;
     max-width: 10%;
-    bottom:3%;
+    bottom:-60%;
   }
   @media(min-width:1196px) {
     left: 24%;
@@ -175,7 +190,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     left: 24%;
     max-width: 7%;
-    bottom:20%;
+    bottom:6%;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     right: 10%;
@@ -190,7 +205,12 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     left: 24%;
     max-width: 6%;
-    bottom:20%;
+    bottom:10%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
+    right: 24%;
+    max-width: 10%;
+    bottom:-74%;
   }
 `
 const Bird2 = styled.img`
@@ -221,12 +241,12 @@ position: absolute;
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     left: 34%;
     max-width: 7%;
-    bottom:20%;
+    bottom:6%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     left: 37%;
-    max-width: 8%;
-    bottom:4%;
+    max-width: 9%;
+    bottom: -60%;
   }
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     left: 32%;
@@ -236,7 +256,12 @@ position: absolute;
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     left: 32%;
     max-width: 6%;
-    bottom:20%;
+    bottom:10%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
+    right: 32%;
+    max-width: 10%;
+    bottom:-74%;
   }
 `
 

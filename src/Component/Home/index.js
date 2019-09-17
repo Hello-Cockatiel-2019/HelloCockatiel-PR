@@ -13,11 +13,32 @@ const Woodplate = styled.div `
     padding-right: 1em;
     margin-left:2em;
     margin-right:1em;
-    
+    @media screen and (max-width:834px) {
+        background-size:contain;
+        width:190px;
+        height:150px;
+        padding-top:4.3em;
+        padding-left:${props => props.pt===0 ? 1.2 :
+                    props.pt===1 ? 0 : 0}em;
+    }
+    @media screen and (max-width:600px) {
+        width:168px;
+        height:127px;
+        padding-right: 1em;
+        padding-top:3.9em;
+        margin-left:2em;
+        margin-right:1em;
+    }
 `
 
 const HeadLogo = styled.img`
     width:90%;
+    @media screen and (max-width:834px) {
+        width:60%;
+    }
+    @media screen and (max-width:600px) {
+        width:90%;
+    }
     @media screen and (max-width:320px) {
         width:85%;
     }
@@ -45,6 +66,9 @@ const MenuDiv = styled.div`
         padding-left:10em;
         padding-right:10em;
     } 
+    @media screen and (max-width:833px) {
+        margin-top:-20px;
+    }
     @media screen and (max-width:320px) {
         margin-top:-20px;
     }
@@ -74,6 +98,9 @@ const A = styled.a`
 `
 
 const RegisDiv = styled.div `
+    @media only screen and (max-width:834px) {
+        margin-top: -10vh!important;
+    }
     @media only screen and (max-width:420px) {
         margin-top: -3vh!important;
     }
@@ -86,6 +113,11 @@ const RegisDiv = styled.div `
 `
 
 const WoodDiv = styled.div`
+    @media screen and (max-width:834px) {
+        transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+            props.mt === 1 ? -70 : -40}px
+    }
     @media screen and (max-width:420px) {
         transform: translateY(-40%);
         margin-top:${props => props.mt === 0 ? 0 :
@@ -146,8 +178,8 @@ export default class Home extends Component {
                                     <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
                                         <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
                                             <A href={data.link} key={i}>
-                                                <Woodplate source={data.imgURL}>
-                                                    <Title>{data.text}</Title>
+                                                <Woodplate source={data.imgURL} key={i} pt={i}>
+                                                    <Title key={i}>{data.text}</Title>
                                                 </Woodplate>
                                             </A>
                                         </button>
