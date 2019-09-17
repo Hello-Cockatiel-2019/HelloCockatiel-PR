@@ -5,6 +5,9 @@ import Field from './Field'
 
 const AllContent = styled.div `
     transform: translate(7%,0%);
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
+    transform: translate(10%,20%);
+    }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(-25%,-15%);
     }
@@ -20,6 +23,9 @@ const AllContent = styled.div `
 `
 
 const Header = styled.div `
+    /* @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+      transform: translate(0%,-60%);
+    } */
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(0%,-60%);
     }
@@ -37,6 +43,9 @@ const Header = styled.div `
 const SpaceBySpace = styled.div `
     padding-top:2em;
     padding-left:2em;
+    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+      padding-top:1em;
+    }
     @media (max-width:770px) and (orientation: portrait){
       padding-top:2em;
     }
