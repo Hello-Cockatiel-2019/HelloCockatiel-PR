@@ -6,13 +6,13 @@ import Woodsign from './Woodsign'
 const Sdiv = styled.div `
     transform: translate(0%,8%);
     @media only screen and (max-width:1024px) {
-        transform: translate(7%,0%);
+        transform: translate(15%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(0%,25%);
+        transform: translate(28%,-10%);
     }
     @media (max-width:500px) {
-        transform: translate(9%,30%);
+        transform: translate(5%,-8%);
     }
     @media (max-width:400px) {
         transform: translate(6%,-10%);
