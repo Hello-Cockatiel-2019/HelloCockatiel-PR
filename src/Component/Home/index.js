@@ -103,6 +103,9 @@ const LogoDiv = styled.div`
 const Facebook = styled.img `
     width: 44px;
     margin-top:.3em;
+     @media screen and (max-width:834px) and (orientation: landscape){
+        width: 70px; 
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         width: 70px;     
     }
