@@ -19,6 +19,10 @@ const Button = styled.div`
   height:auto;
   width:180px;
   display: ${props => props.displayButton === 3 ? 'none' : 'block'} ;
+    
+    @media screen and (max-width:834px) and (orientation: landscape){
+        ${ NavMobile}
+    }
     @media(max-width:576px) {
         ${ NavMobile}
     }
@@ -88,7 +92,7 @@ export default class componentName extends Component {
         {
           this.state.buttondata.map((data, i) => {
             return (
-              <div className="mb-lg-5 text-center" key={i}>
+              <div className="mb-lg-5" key={i}>
                 <A href={data.link} key={i}>
                   <Button className="btn pb-4 pt-4"
                     key={i}

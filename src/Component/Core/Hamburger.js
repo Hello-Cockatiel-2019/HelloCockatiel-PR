@@ -102,20 +102,47 @@ export const HamburgerDiv = styled.div`
       border-radius: 30px;
       background: ${color.Wood6};
       list-style-type: none;
-      
       transform-origin: 0% 0%;
       transform: translate(-220%, 0);
-  
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-      @media(max-width:320px) {
+      @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        width:400px;
+        left: -63vw;
+      }
+      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+        width: 500px;
+        left: -68vw;
+      }
+      @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+        width:500px;
+        left:-65vw;
+      }
+      @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        width:500px;
+        left:-64vw;
+      } 
+<<<<<<< HEAD
+      @media screen and (max-width:834px) and (orientation: landscape){
+        width:500px;
+        left:-68vw;
+      }
+=======
+>>>>>>> 6215be33442630b407877f57ef9a037811142248
+      @media(max-width:420px) {
         width:250px;
+        left:-60vw;
+      }
+      @media(max-width:400px) {
+        left:-62vw;
+      }
+      @media(max-width:320px) {
         top:3vh;
         left:-79vw;
       }
-
+      
     }
 
-    & ul li
+    & ul:active
     {
       padding: 10px 0;
       font-size: 22px;

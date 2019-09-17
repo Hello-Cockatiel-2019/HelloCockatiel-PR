@@ -13,7 +13,23 @@ const Woodplate = styled.div `
     padding-right: 1em;
     margin-left:2em;
     margin-right:1em;
-    @media screen and (max-width:834px) {
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        background-size:contain;
+        width:210px;
+        height:170px;
+        padding-top:5em;
+        padding-left:${props => props.pt === 0 ? 1.2 :
+            props.pt === 1 ? 0 : 0}em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+        background-size:contain;
+        width:210px;
+        height:170px;
+        padding-top:5em;
+        padding-left:${props => props.pt === 0 ? 1.2 :
+            props.pt === 1 ? 0 : 0}em;
+    }
+    @media screen and (max-width:834px) and (orientation: landscape){
         background-size:contain;
         width:190px;
         height:150px;
@@ -33,7 +49,7 @@ const Woodplate = styled.div `
 
 const HeadLogo = styled.img`
     width:90%;
-    @media screen and (max-width:834px) {
+    @media screen and (max-width:834px) and (orientation: landscape) {
         width:60%;
     }
     @media screen and (max-width:600px) {
@@ -66,7 +82,7 @@ const MenuDiv = styled.div`
         padding-left:10em;
         padding-right:10em;
     } 
-    @media screen and (max-width:833px) {
+    @media screen and (max-width:834px) and (orientation: landscape){
         margin-top:-20px;
     }
     @media screen and (max-width:320px) {
@@ -87,6 +103,21 @@ const LogoDiv = styled.div`
 const Facebook = styled.img `
     width: 44px;
     margin-top:.3em;
+     @media screen and (max-width:834px) and (orientation: landscape){
+        width: 70px; 
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        width: 70px;     
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+       width: 70px; 
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+        width: 70px; 
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        width: 70px; 
+    } 
 `
 
 const A = styled.a`
@@ -97,8 +128,20 @@ const A = styled.a`
   }
 `
 
+const TitleRes = styled(Title)`
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        font-size:2em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+       font-size:2em;
+    }
+`
+
 const RegisDiv = styled.div `
-    @media only screen and (max-width:834px) {
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        margin-top:0px!important;
+    }
+    @media only screen and (max-width:834px) and (orientation: landscape) {
         margin-top: -10vh!important;
     }
     @media only screen and (max-width:420px) {
@@ -179,7 +222,7 @@ export default class Home extends Component {
                                         <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
                                             <A href={data.link} key={i}>
                                                 <Woodplate source={data.imgURL} key={i} pt={i}>
-                                                    <Title key={i}>{data.text}</Title>
+                                                    <TitleRes key={i}>{data.text}</TitleRes>
                                                 </Woodplate>
                                             </A>
                                         </button>
