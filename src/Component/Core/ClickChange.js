@@ -9,6 +9,7 @@ import Major from '../Major'
 
 const PositionDesktop = styled(Desktop)`
     transform:translateY(50%);
+    overflow:hidden;
 `
 
 const MobileDiv = styled.div`
