@@ -13,6 +13,7 @@ const PositionDesktop = styled(Desktop)`
 
 const MobileDiv = styled.div`
     display : ${props => props.mobiledisplay ? props.mobiledisplay : 'none'};
+    overflow:hidden;
 `
 
 const MobileMap = styled.div`
