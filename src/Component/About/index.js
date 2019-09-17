@@ -7,17 +7,22 @@ import MobileHeader from '../Core/MobileHeader';
 import Where from './Where'
 
 const Plate = styled.div`
+margin-left:0em;
+      background-size:100%; 
+      background-repeat: no-repeat;
+      size:100%;
     @media(min-width:320px) {
         background-image: url(/images/Objects/small-plate.png);
         width:260px;
         height: 290px;
-        margin-left:0.8em;
+        transform: translate(-10%,-25%);
       }
       @media(min-width:375px) {
         background-image: url(/images/Objects/small-plate.png);
         width:271px;
         height: 302px;
         margin-left:1.5em;
+        transform: translate(-15%,-10%);
         }
       @media (min-width:410px) {
         background-image: url(/images/Objects/small-plate.png);
@@ -34,7 +39,7 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:579px;
         height: 645px;
-        transform: translate(0px,-50px);
+        transform: translate(-60px,-125px);
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
         background-image: url(/images/Objects/big-platebird.png);
@@ -45,6 +50,7 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:523px;
         height: 583px;
+        transform: translate(3%,0);
       }
       @media (min-width:960px) {
         background-image: url(/images/Objects/big-platebird.png);
@@ -60,12 +66,14 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:523px;
         height: 583px;
-        transform:translate(0px, 45px);
+        transform: translate(10%,0);
       }
-      margin-left:0em;
-      background-size:100%; 
-      background-repeat: no-repeat;
-      size:100%;
+      @media(min-width:1196px) and (orientation:landscape) {
+        background-image: url(/images/Objects/big-platebird.png);
+        width:510px;
+        height: 320px;
+        margin-left:14em;
+      }
          
 `
 const Title = styled(Subtitle)`
@@ -78,6 +86,7 @@ const Title = styled(Subtitle)`
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         padding-top:.5em;
         font-size:30px;
+        
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
         padding-top:1.5em;
@@ -165,7 +174,7 @@ grid-template-columns: none;
   grid-template-columns: none;
 }
 @media only screen and (max-width: 1024px){
-  transform: translate(7%,0%)
+  transform: translate(15%,0%);
 }
 `
 const LayoutWhere = styled.div`
@@ -173,7 +182,7 @@ align-self:end;
 `
 const HeaderDiv = styled.div `
     @media only screen and (max-width:1024px) {
-        transform: translate(210%,-15%);
+      transform: translate(175%,-50%);
     }
     @media (max-width:768px) {
         transform: translate(155%,-100%);
@@ -185,7 +194,7 @@ const HeaderDiv = styled.div `
         transform: translate(45%,-38%);
     }
     @media (max-width:320px) {
-        transform: translate(30%,-35%);
+      transform: translate(35%,-60%);
     }
 `
 
