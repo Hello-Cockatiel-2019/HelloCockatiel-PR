@@ -89,16 +89,16 @@ export default class componentName extends Component {
           this.state.buttondata.map((data, i) => {
             return (
               <div className="mb-lg-5 text-center" key={i}>
-                <Button className="btn pb-4 pt-4"
-                  key={i}
-                  displayButton={i}
-                  onClick={() => this.handleClick(i)}>
-                  <A href={data.link} key={i}>
-                    <Title key={i}>
-                      {data.text}
-                    </Title>
+                <A href={data.link} key={i}>
+                  <Button className="btn pb-4 pt-4"
+                    key={i}
+                    displayButton={i}
+                    onClick={() => this.handleClick(i)}>
+                      <Title key={i}>
+                        {data.text}
+                      </Title>
+                  </Button>
                   </A>
-                </Button>
                 <Hr visibleHr={i} />
               </div>
             )
