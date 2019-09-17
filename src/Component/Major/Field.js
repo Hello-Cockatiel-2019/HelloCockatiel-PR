@@ -9,6 +9,10 @@ const Box = styled.div`
     border-radius: 30px;
     width:65em;
     height: 12em;
+    @media (max-width:770px) and (orientation: portrait){
+        width:25em;
+        height:9em;
+    }
     @media (max-width:420px){
         width:22em;
         height:7em;
@@ -31,6 +35,12 @@ const TextContent = styled(Small) `
     color:${color.font2};
     line-height: 25px;
     letter-spacing: 0.05em;
+    @media (max-width:770px) and (orientation: portrait){
+        line-height: 25px;
+        margin-top:-8em;
+        padding-left:8em;
+        padding-right:2em;
+    }
     @media (max-width:420px){
         line-height: 16px;
         margin-top:-7em;
@@ -58,6 +68,13 @@ const TextTopic = styled(Small2) `
     margin-top:-2em;
     padding-left:${props => props.topic === 0 ? '2.8em' 
                 : props.topic === 1? '3.4em': '3.7em'};
+    @media (max-width:770px) and (orientation: portrait){
+        padding-left:${props => props.topic === 0 ? '3.1em' 
+                : props.topic === 1? '3.7em'
+                : props.topic === 3? '4em'
+                : '4em'};
+        margin-top:-1.8em;
+    }
     @media (max-width:420px){
         font-size:0.7em;
         padding-left:${props => props.topic === 0 ? '3.1em' 
@@ -92,6 +109,11 @@ const Frame = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
+    @media (max-width:770px) and (orientation: portrait){
+        width:17%;
+        margin-top:6em;
+        margin-left:-4.3em;
+    }
     @media (max-width:420px){
         width:17%;
         margin-top:4.5em;
@@ -118,6 +140,11 @@ const Bird = styled.img`
                 0px 7px 5px rgba(0, 0, 0, 0.25), 
                 0px 7px 5px rgba(0, 0, 0, 0.25);
     border-radius:100px;
+    @media (max-width:770px) and (orientation: portrait){
+        width:18%;
+        margin-top:-0.9em;
+        margin-left:1.5em;
+    }
     @media (max-width:420px){
         width:18%;
         margin-top:-1.3em;
