@@ -169,7 +169,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media (min-width:768px) {
     right: 10%;
     max-width: 10%;
-    bottom:6%;
+    bottom:-14%;
   }
   @media (min-width:960px) {
     z-index: -3;
