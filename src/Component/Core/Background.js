@@ -268,7 +268,7 @@ position: absolute;
 const Bg = styled.div`
   background-color:#FFFBC2;
   width:100%;
-  heght:100%;
+  height:100%;
 
 `
 export default class background extends Component {
