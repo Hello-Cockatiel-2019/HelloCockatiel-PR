@@ -33,6 +33,14 @@ const Box = styled.div`
         width:25em;
         height:9em;
     }
+    @media (max-width:570px){
+        width:22em;
+        height:7em;
+    }
+    @media (max-width:500px){
+        width:22em;
+        height:7em;
+    }
     @media (max-width:420px){
         width:22em;
         height:7em;
@@ -47,7 +55,7 @@ const Box = styled.div`
     }
 `
 
-const TextContent = styled(Small) `
+const TextContent = styled(Small)`
     margin-top:-7em;
     padding-left:8em;
     padding-right:1em;  
@@ -96,6 +104,20 @@ const TextContent = styled(Small) `
         padding-left:8em;
         padding-right:2em;
     }
+    @media (max-width:570px){
+        line-height: 16px;
+        margin-top:-6.5em;
+        padding-left:8em;
+        padding-right:2em;
+        font-size:0.9em;
+    }
+    @media (max-width:500px){
+        line-height: 16px;
+        margin-top:-6.5em;
+        padding-left:8em;
+        padding-right:2em;
+        font-size:0.9em;
+    }
     @media (max-width:420px){
         line-height: 16px;
         margin-top:-7em;
@@ -118,77 +140,93 @@ const TextContent = styled(Small) `
         font-size:0.3em;
     }
 `
-const TextTopic = styled(Small2) `
+const TextTopic = styled(Small2)`
     position: absolute;
     margin-top:-2em;
-    padding-left:${props => props.topic === 0 ? '2.8em' 
-                : props.topic === 1? '3.4em': '3.7em'};
+    padding-left:${props => props.topic === 0 ? '2.8em'
+        : props.topic === 1 ? '3.4em' : '3.7em'};
     @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '1.9em' 
-                : props.topic === 1? '2.5em'
-                : props.topic === 3? '2.7em'
+        padding-left:${props => props.topic === 0 ? '1.9em'
+        : props.topic === 1 ? '2.5em'
+            : props.topic === 3 ? '2.7em'
                 : '2.8em'};
         margin-top:-1.8em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '4.3em' 
-                : props.topic === 1? '5em'
-                : props.topic === 3? '5em'
+        padding-left:${props => props.topic === 0 ? '4.3em'
+        : props.topic === 1 ? '5em'
+            : props.topic === 3 ? '5em'
                 : '5.2em'};
         margin-top:-2em;
         font-size:1em;
     }            
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '4.3em' 
-                : props.topic === 1? '5em'
-                : props.topic === 3? '5em'
+        padding-left:${props => props.topic === 0 ? '4.3em'
+        : props.topic === 1 ? '5em'
+            : props.topic === 3 ? '5em'
                 : '5.2em'};
         margin-top:-2em;
         font-size:1em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '1.9em' 
-                : props.topic === 1? '2.5em'
-                : props.topic === 3? '2.7em'
+        padding-left:${props => props.topic === 0 ? '1.9em'
+        : props.topic === 1 ? '2.5em'
+            : props.topic === 3 ? '2.7em'
                 : '2.8em'};
         margin-top:-1.8em;
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '2.8em' 
-                : props.topic === 1? '3.4em'
-                : props.topic === 3? '3.4em'
+        padding-left:${props => props.topic === 0 ? '2.8em'
+        : props.topic === 1 ? '3.4em'
+            : props.topic === 3 ? '3.4em'
                 : '3.7em'};
         margin-top:-2em;
         font-size:1em;
     } 
     @media (max-width:770px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '3.1em' 
-                : props.topic === 1? '3.7em'
-                : props.topic === 3? '4em'
+        padding-left:${props => props.topic === 0 ? '3.1em'
+        : props.topic === 1 ? '3.7em'
+            : props.topic === 3 ? '4em'
+                : '4em'};
+        margin-top:-1.8em;
+    }
+    @media (max-width:570px){
+        font-size:0.7em;
+        padding-left:${props => props.topic === 0 ? '3.1em'
+        : props.topic === 1 ? '3.7em'
+            : props.topic === 3 ? '3.7em'
+                : '4em'};
+        margin-top:-1.8em;
+    }
+    @media (max-width:500px){
+        font-size:0.7em;
+        padding-left:${props => props.topic === 0 ? '3.1em'
+        : props.topic === 1 ? '3.7em'
+            : props.topic === 3 ? '3.7em'
                 : '4em'};
         margin-top:-1.8em;
     }
     @media (max-width:420px){
         font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '3.1em' 
-                : props.topic === 1? '3.7em'
-                : props.topic === 3? '3.7em'
+        padding-left:${props => props.topic === 0 ? '3.1em'
+        : props.topic === 1 ? '3.7em'
+            : props.topic === 3 ? '3.7em'
                 : '4em'};
         margin-top:-1.8em;
     }
     @media (max-width:380px){
         font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '1.6em' 
-                : props.topic === 1? '2.3em'
-                : props.topic === 3? '2.3em'
+        padding-left:${props => props.topic === 0 ? '1.6em'
+        : props.topic === 1 ? '2.3em'
+            : props.topic === 3 ? '2.3em'
                 : '2.7em'};
         margin-top:-1.8em;
     }
     @media (max-width:325px){
         font-size:0.1em;
-        padding-left:${props => props.topic === 0 ? '2.5em' 
-                : props.topic === 1? '3.1em'
-                : props.topic === 3? '3.2em'
+        padding-left:${props => props.topic === 0 ? '2.5em'
+        : props.topic === 1 ? '3.1em'
+            : props.topic === 3 ? '3.2em'
                 : '3.5em'};
         margin-top:-1.8em;
     }
@@ -231,6 +269,16 @@ const Frame = styled.img`
         width:17%;
         margin-top:6em;
         margin-left:-4.3em;
+    }
+    @media (max-width:570px){
+        width:17%;
+        margin-top:4.5em;
+        margin-left:-3.8em;
+    }
+    @media (max-width:500px){
+        width:17%;
+        margin-top:4.5em;
+        margin-left:-3.8em;
     }
     @media (max-width:420px){
         width:17%;
@@ -288,6 +336,16 @@ const Bird = styled.img`
         margin-top:-0.9em;
         margin-left:1.5em;
     }
+    @media (max-width:570px){
+        width:18%;
+        margin-top:-1.3em;
+        margin-left:1.5em;
+    }
+    @media (max-width:500px){
+        width:18%;
+        margin-top:-1.3em;
+        margin-left:1.5em;
+    }
     @media (max-width:420px){
         width:18%;
         margin-top:-1.3em;
@@ -308,12 +366,12 @@ const Bird = styled.img`
 export default class Field extends Component {
     render() {
         return (
-                <Box colorBox={this.props.colorBox} >
-                    <Bird src={`/images/Objects/${this.props.imgbird}`}></Bird>
-                    <TextTopic topic={this.props.keytopic}>{this.props.topic}</TextTopic>
-                    <TextContent>{this.props.content}</TextContent>
-                    <Frame src = "/images/Objects/frame.png" /> 
-                </Box>
+            <Box colorBox={this.props.colorBox} >
+                <Bird src={`/images/Objects/${this.props.imgbird}`}></Bird>
+                <TextTopic topic={this.props.keytopic}>{this.props.topic}</TextTopic>
+                <TextContent>{this.props.content}</TextContent>
+                <Frame src="/images/Objects/frame.png" />
+            </Box>
         )
     }
 }
