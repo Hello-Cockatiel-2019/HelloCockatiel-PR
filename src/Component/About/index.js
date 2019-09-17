@@ -104,7 +104,7 @@ const Title = styled(Subtitle)`
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `
 const Content = styled(Paragraph)`
-overflow:scroll;
+overflow:auto;
       @media(min-width:320px) {
         font-size:15px;
         margin-left:30px;
@@ -147,27 +147,41 @@ overflow:scroll;
       line-height: 27px;
 letter-spacing: 0.05em;
 `
+const Layout = styled.div`
+display:grid;
+grid-template-columns: none;
+
+@media (min-width:960px) {
+  grid-template-columns: 3fr 1fr;
+}
+@media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation:portrait)  {
+  grid-template-columns: none;
+}
+`
+const LayoutWhere = styled.div`
+align-self:end;
+`
+
 const AboutBox = () => (
-<div className="container">
-<div className="row align-items-end">
-      <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
-      <div className="col-sm-12 col-md-12 col-lg-8">
+<div className="row m-0">
+  <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" /> 
+  <Layout class="container m-0">
+    
     <Plate>
-      <Title className = "text-center" >
-        About us 
-      </Title>
-          <Content >
-          Hello World Cockatiel เป็นโครงการที่จัดขึ้นเพื่อแบ่งปันความรู้ทางด้านการสร้างเว็บไซต์ โดยจะมีการจัดการเรียนการสอนให้กับนักศึกษาที่เข้าร่วมโครงการ โดยแบ่งเป็น 4 สาขา ได้แก่ Front-End, Infra, Design, และ Game 
-   นอกจากนี้ ในช่วงท้ายของโครงการ นักศึกษาที่เข้าร่วมโครงการในแต่ละสาขา จะได้มาร่วมกันทำโปรเจคสร้างเว็บไซต์ที่เกิดขึ้นจากความสามารถของตัวนักศึกษาเอง 
-   Hello World Cockatiel มาในธีมของการอนุรักษ์ธรรมชาติ โดยมี mascot เป็น Cockatiel นกแก้วที่น่ารัก เลี้ยงง่าย และอยากรู้อยากเห็นที่เปรียบเสมือนนักศึกษาที่ ร่วมโครงการที่พร้อมจะรับ ความรู้ใหม่ ๆ ตลอดเวลา
-          </Content> 
-        </Plate>
-      </div>
-      <div className="col-sm-12 col-md-12 col-lg-4">
-        <Where/>
-      </div>
+        <Title className = "text-center" >
+          About us 
+        </Title>
+            <Content >
+            Hello World Cockatiel เป็นโครงการที่จัดขึ้นเพื่อแบ่งปันความรู้ทางด้านการสร้างเว็บไซต์ โดยจะมีการจัดการเรียนการสอนให้กับนักศึกษาที่เข้าร่วมโครงการ โดยแบ่งเป็น 4 สาขา ได้แก่ Front-End, Infra, Design, และ Game 
+     นอกจากนี้ ในช่วงท้ายของโครงการ นักศึกษาที่เข้าร่วมโครงการในแต่ละสาขา จะได้มาร่วมกันทำโปรเจคสร้างเว็บไซต์ที่เกิดขึ้นจากความสามารถของตัวนักศึกษาเอง 
+     Hello World Cockatiel มาในธีมของการอนุรักษ์ธรรมชาติ โดยมี mascot เป็น Cockatiel นกแก้วที่น่ารัก เลี้ยงง่าย และอยากรู้อยากเห็นที่เปรียบเสมือนนักศึกษาที่ ร่วมโครงการที่พร้อมจะรับ ความรู้ใหม่ ๆ ตลอดเวลา
+            </Content> 
+          </Plate>
+    <LayoutWhere>
+          <Where/>
+        </LayoutWhere>
+  </Layout>
     </div>
-  </div>
  
    
 )

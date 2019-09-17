@@ -109,7 +109,7 @@ export default class Home extends Component {
 
     render() {
         return (
-                <div className="row">
+                <div className="row m-0">
                     <div className="col-12 d-flex justify-content-end ">
                         <A href="https://www.facebook.com/ThisPz">
                             <Facebook src="/images/Objects/facebook.png" />

@@ -60,10 +60,11 @@ export default class NavBar extends Component {
         
     state = {
         id: 0,
+        blur: 0,
         displayham:'none',
         homedisplay: 'block',
         mobiledisplay: 'none',
-        blur: 0
+        slide:0
     }
 
     changeClick = (i) => {
@@ -77,7 +78,8 @@ export default class NavBar extends Component {
             id: i,
             mobiledisplay: 'block',
             homedisplay: 'none',
-            displayham: 'block'
+            displayham: 'block',
+            displaymenu:-220
         })
     }
     ChangeBlur = () => {
@@ -92,11 +94,14 @@ export default class NavBar extends Component {
         }
     }
 
+    Clicklistham = () => {
+       
+    }
 
     render() {
         return (
             <React.Fragment>
-                <Desktop className="container-fluid">
+                <Desktop>
                     <Background />
                     <div className="d-flex justify-content-center">
                         <Logo src="/images/Objects/Logo.png" />
@@ -115,15 +120,15 @@ export default class NavBar extends Component {
                 </Desktop>
                 <Mobile>
                     <div className="row justify-content-end">
-                        <HamburgerDiv displayham={this.state.displayham}>
+                        <HamburgerDiv displayham={this.state.displayham} slide={this.state.displaymenu}>
                             <input type="checkbox" onClick={this.ChangeBlur} />
                             {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
                             {/* Hamburger  */}
-                            <ul className="p-4 ">
-                                <li>
+                            <ul className="p-4">
+                                <li onClick={this.Clicklistham}>
                                     <NavButton changeClick={this.changeClick} />
                                 </li>
                                 <li>

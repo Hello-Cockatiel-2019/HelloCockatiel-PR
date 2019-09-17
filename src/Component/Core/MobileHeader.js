@@ -13,21 +13,6 @@ const HeaderDiv = styled.div`
     padding-top: 60px;
     padding-left: ${props => props.pl === 'FAQs' ? '50px' : '10px'};
     transform: translate(30vw,-15vh);
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      transform: translate(40vw,-15vh);
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      transform: translate(45vw,-40vh);
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-      transform: translate(40vw,-5vh);
-    } 
-    @media screen and (max-width:420px) {
-      transform: translate(30vw,-10vh);
-    }
-    @media screen and (max-width:320px) {
-      transform: translate(25vw,-15vh);
-    }
 `
 
 const MobileHeader = (props) => {

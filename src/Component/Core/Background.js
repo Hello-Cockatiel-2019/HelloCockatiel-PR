@@ -9,24 +9,25 @@ const Background = styled.div`
     background-attachment: fixed;
     padding:0;
     margin:0;
+    left:0;
 `
 const Grass = styled(Background)`
 position: absolute;
   z-index: -2;
   width:100%;
+  bottom:0;
   @media (min-width:320px) {
-    transform: translate(0,32%);
+    transform: translate(0,40%);
     background-size:190%;
-    width:120%;
   }
   @media (min-width:412px) {
     transform: translate(0,40%);
     background-size:190%;
   }
-  @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
-    transform: translate(0,32%);
-    background-size:190%;
-  }
+  // @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
+  //   transform: translate(0,32%);
+  //   background-size:190%;
+  // }
   @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
     transform: translate(0,32%);
     background-size:190%;
@@ -35,33 +36,32 @@ position: absolute;
     transform: translate(0,32%);
   background-size:130%;
   }
+  @media (min-width:834px) {
+  background-size:100%;
+  }
   @media (min-width:1024px) {
   transform: translate(0,32%);
-  background-size: 100%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     transform: translate(0,30%);
-  background-size: 100%;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(0,34%);
-  background-size: 100%;
   }
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     transform: translate(0,30%);
-  background-size: 100%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     transform: translate(0,34%);
-  background-size: 100%;
+  }
+  @media only screen and (min-width: 1467px) and (max-height: 1024px) and (orientation: landscape)  {
+    transform: translate(0,36%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     transform: translate(0,34%);
-  background-size: 100%;
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     transform: translate(0,30%);
-  background-size: 100%;
   }
 `
 const Tree = styled(Background)`
@@ -270,7 +270,7 @@ export default class background extends Component {
 
   render () {
     return (
-      <Bg className="text-align-center">
+      <Bg>
         <Bird1 bgImgURL='../Objects/b1.png' />
         <Bird2 bgImgURL='../Objects/b2.png' />
         <Shadow bgImgURL='bg3.png' />
