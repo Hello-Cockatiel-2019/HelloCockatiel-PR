@@ -4,6 +4,11 @@ import styled from 'styled-components'
 import { Small } from '../Core/Text'
 
 const Where1 = styled.div `
+background-image: url(/images/Objects/arrowplate3.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+    padding-left:1.5em;
+    margin-left:0.2em;
 @media(min-width:320px) {
   padding-top:0.2em;
     width:85px;
@@ -56,11 +61,7 @@ const Where1 = styled.div `
     padding-top:4em;
   }
   
-    background-image: url(/images/Objects/arrowplate4.png);
-    background-repeat: no-repeat;
-    background-size:100%;
-    padding-left:1.5em;
-    margin-left:0.2em;
+  
 `
 const Sit = styled.div `
     @media(min-width:320px) {
@@ -119,6 +120,12 @@ float: right;
     margin-top:3em;
     margin-right:2em;
   }
+  @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation: landscape)  {
+    visibility: hidden;
+      }
+      @media only screen and (min-width: 626px) and (max-height: 768px) and (orientation: portrait)  {
+        visibility: hidden;
+      }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     margin-top:5em;
     margin-right:2.5em;
