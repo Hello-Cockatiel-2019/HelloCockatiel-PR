@@ -5,6 +5,15 @@ import Field from './Field'
 
 const Div = styled.div `
     transform: translate(7%,0%);
+    @media (max-width:320px){
+      transform: translate(-6%,0%);
+    }
+    @media (max-width:375px){
+      transform: translate(-7%,12%);
+    }
+    @media (max-width:420px){
+      transform: translate(-7%,12%);
+    }
 `
 
 const Div1 = styled.div `
@@ -12,6 +21,15 @@ const Div1 = styled.div `
                 : props.mrl === 3? '0em' : '0'}; */
     padding-top:2em;
     padding-left:2em;
+    @media (max-width:320px){
+      padding-top:0.5em;
+    }
+    @media (max-width:375px){
+      padding-top:0.5em;
+    }
+    @media (max-width:420px){
+      padding-top:0.5em;
+    }
 `
 export default class index extends Component {
   state = {
@@ -22,7 +40,7 @@ export default class index extends Component {
           imgbird : "c1.png",
           imgframe : "frame.png",
           class : "justify-content-end",
-          colorBox: "#D8C355"
+          colorBox: "rgb(216, 195, 85,0.9)"
       },
       {
         topic: "Design",
@@ -30,7 +48,7 @@ export default class index extends Component {
         imgbird : "c2.png",
         imgframe : "frame.png",
         class : "justify-content-end",
-          colorBox: "#DB9B51"
+          colorBox: "rgb(219, 155, 81,0.9)"
       },
       {
         topic: "Infra",
@@ -38,7 +56,7 @@ export default class index extends Component {
         imgbird : "c3.png",
         imgframe : "frame.png",
         class : "justify-content-end",
-          colorBox: "#ACA89C"
+          colorBox: "rgb(172, 168, 156,0.9)"
       },
       {
         topic: "Game",
@@ -46,20 +64,19 @@ export default class index extends Component {
         imgbird : "c4.png",
         imgframe : "frame.png",
         class : "justify-content-end",
-          colorBox: "#B3660B"
+          colorBox: "rgb(179, 102, 11,0.9)"
       }
-  ]
+    ]
   }
   render() {
     return (
       <React.Fragment>
-           <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" />  
+           {/* <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" />   */}
            <Div className="row">
                {
                     this.state.data.map((TC,i) => {
                     return (
                         <Div1 className={`d-flex col-lg-6 col-md-6 col-12 ${TC.class}`} mrl={i} key={i} > 
-                        {console.log(i)}
                             <Field 
                               topic={TC.topic} 
                               content={TC.content} 
