@@ -72,14 +72,14 @@ export default class NavBar extends Component {
         })
     }
 
-    clickHome = () => {
+    clickHome = (i) => {
         this.setState({
+            id: i,
             mobiledisplay: 'block',
             homedisplay: 'none',
             displayham: 'block'
         })
     }
-
     ChangeBlur = () => {
         if(this.state.blur===2){
             this.setState({
