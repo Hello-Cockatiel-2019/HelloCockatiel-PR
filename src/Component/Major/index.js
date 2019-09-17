@@ -4,13 +4,14 @@ import MobileHeader from '../Core/MobileHeader';
 import Field from './Field'
 
 const Div = styled.div `
-    transform: translate(15%,0%);
+    transform: translate(7%,0%);
 `
 
 const Div1 = styled.div `
-    padding-left:${props => props.mrl === 1 ? '2em' 
-                : props.mrl === 3? '2em' : '0'};
+    /* padding-left:${props => props.mrl === 1 ? '0em' 
+                : props.mrl === 3? '0em' : '0'}; */
     padding-top:2em;
+    padding-left:2em;
 `
 export default class index extends Component {
   state = {
@@ -20,8 +21,8 @@ export default class index extends Component {
           content: "ในสาขานี้จะเริ่มสอนตั้งแต่พื้นฐาน HTML CSS และ JavaScript และยังลงลึกไปถึงการเขียนโค้ดที่เป็นระเบียบและง่ายต่อการใช้งาน นอกจากนี้ยังสอนการนำ Git มาใช้งานเพื่อ ช่วยให้การสร้างเว็บไซต์ของเราสะดวกยิ่งขึ้น",
           imgbird : "c1.png",
           imgframe : "frame.png",
-          class : "justify-content-center",
-          color: "#D8C355"
+          class : "justify-content-end",
+          colorBox: "#D8C355"
       },
       {
         topic: "Design",
@@ -29,15 +30,15 @@ export default class index extends Component {
         imgbird : "c2.png",
         imgframe : "frame.png",
         class : "justify-content-end",
-          color: "#DB9B51"
+          colorBox: "#DB9B51"
       },
       {
         topic: "Infra",
         content: "ในสาขานี้จะสอนตั้งแต่หลักการการ วางโครงสร้างพื้นฐานที่เป็นส่วนสำคัญของการสร้างและพัฒนาเว็บไซต์ของเรา ให้สามารถเข้าถึงได้จากทั่วโลก นอกจากนี้ยังมีการสอนการใช้เครื่องมือ และเรียนรู้การ Deploy เว็บไซต์ด้วยนะ",
         imgbird : "c3.png",
         imgframe : "frame.png",
-        class : "justify-content-center",
-          color: "#ACA89C"
+        class : "justify-content-end",
+          colorBox: "#ACA89C"
       },
       {
         topic: "Game",
@@ -45,7 +46,7 @@ export default class index extends Component {
         imgbird : "c4.png",
         imgframe : "frame.png",
         class : "justify-content-end",
-          color: "#B3660B"
+          colorBox: "#B3660B"
       }
   ]
   }
@@ -59,7 +60,14 @@ export default class index extends Component {
                     return (
                         <Div1 className={`d-flex col-lg-6 col-md-6 col-12 ${TC.class}`} mrl={i} key={i} > 
                         {console.log(i)}
-                            <Field topic={TC.topic} content={TC.content} color={TC.color} imgbird={TC.imgbird} imgframe={TC.imgframe}/>
+                            <Field 
+                              topic={TC.topic} 
+                              content={TC.content} 
+                              colorBox={TC.colorBox} 
+                              imgbird={TC.imgbird} 
+                              imgframe={TC.imgframe}
+                              keytopic={i}
+                              />
                         </Div1>
                         )
                     })
