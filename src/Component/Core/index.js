@@ -9,18 +9,7 @@ import GlobalStyle from './GlobalStyle'
 import NavBar from './NavBar'
 import ChangeSize from './ChangeSize'
 
-
-
 export default class Index extends Component {
-    state = {
-        blur: 0
-    }
-    
-    ChangeBlur = (i) => {
-        this.setState({
-            blur: i
-        })
-    }
     
     render() {
         return (
@@ -28,7 +17,7 @@ export default class Index extends Component {
                 <GlobalStyle />
                 <ChangeSize />
                 <div className="container-fluid p-0">
-                    <NavBar Blur={this.ChangeBlur} />
+                    <NavBar />
                 </div>
             </React.Fragment>
         )
