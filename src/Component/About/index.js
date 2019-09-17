@@ -34,7 +34,6 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:579px;
         height: 645px;
-        margin-left:4em;
         transform: translate(0px,-50px);
       }
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
@@ -61,7 +60,6 @@ const Plate = styled.div`
         background-image: url(/images/Objects/small-plate.png);
         width:523px;
         height: 583px;
-        margin-left:0em;
         transform:translate(0px, 45px);
       }
       margin-left:0em;
@@ -104,6 +102,7 @@ const Title = styled(Subtitle)`
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 `
 const Content = styled(Paragraph)`
+overflow:auto;
 line-height: 27px;
 letter-spacing: 0.05em;
 justify-self: center;
@@ -133,24 +132,27 @@ justify-self: center;
       }
        @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation:landscape)  {
         font-size: 20px;
-      margin-left: 36px;
-      margin-right: 36px;
-      height: 8em;
-      margin-top: 6px;
+    margin-left: 36px;
+    margin-right: 36px;
+    height: 8em;
+    margin-top: 6px;
+    overflow: auto;
        }
       @media (min-width:960px) {
         margin-left:44px;
         margin-right:44px;
         height:10em;
         margin-top:20px;
-        overflow:auto;
       }
       @media(min-width:1024px) {
         margin-left:50px;
         margin-right:50px;
         margin-top:24px;
       }
-      overflow:auto;
+      @media(min-height:1366px) {
+        height:auto;
+      }
+      
 `
 const Layout = styled.div`
 display:grid;
