@@ -108,7 +108,7 @@ overflow:auto;
       @media(min-width:320px) {
         font-size:15px;
         margin-left:30px;
-        margin-right:30px
+        margin-right:30px;
         margin-top:5px;
         height:15em;
       }
@@ -118,29 +118,29 @@ overflow:auto;
       @media (min-width:410px) {
         font-size:18px;
         margin-left:35px;
-        margin-right:35px
+        margin-right:35px;
         margin-top:10px;
         height:15em;
       }
       @media (min-width:768px) {
         font-size:20px;
         margin-left:65px;
-        margin-right:65px
+        margin-right:65px;
         height:20em;
         margin-top:28px;
       }
-      // @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-      //   font-size:20px;
-      // }
+       /* @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
+         font-size:20px;
+       } */
       @media (min-width:960px) {
         margin-left:44px;
-        margin-right:44px
+        margin-right:44px;
         height:10em;
         margin-top:20px;
       }
       @media(min-width:1024px) {
         margin-left:50px;
-        margin-right:50px
+        margin-right:50px;
         
         margin-top:24px;
       }
@@ -156,6 +156,9 @@ grid-template-columns: none;
 }
 @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation:portrait)  {
   grid-template-columns: none;
+}
+@media only screen and (max-width: 1024px){
+  transform: translate(7%,0%)
 }
 `
 const LayoutWhere = styled.div`
