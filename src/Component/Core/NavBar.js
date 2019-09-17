@@ -23,12 +23,24 @@ const SideBarSection = styled.div`
     @media screen and (max-width:1199px) {
         transform :  translateY(70%);
     }
+    @media screen and (max-width:800px) {
+        left: -5vw;
+        top: 7vh;
+    }
 `
 
 const Content = styled.div`
     @media screen and (max-width:1199px) {
         left: -20vw;
         top: 10vh;
+    }
+    @media screen and (max-width:960px) {
+        left: -25vw;
+        top: 10vh;
+    }
+    @media screen and (max-width:800px) {
+        left: -30vw;
+        top: 15vh;
     }
 `
 
@@ -38,6 +50,10 @@ const RegiserButton = styled.div`
         left: 80vw;
         top: -20vw;
     }
+    @media screen and (max-width:800px) {
+        left: 80vw;
+        top: -30vw;
+    }
 `
 
 const Logo = styled.img`
@@ -45,6 +61,10 @@ const Logo = styled.img`
     height: 262px;
     top: 19px;
     z-index: 100;
+    @media screen and (max-width:800px) {
+        width: 610px;
+        height: 220px; 
+    }
 `
 
 const HomeDiv = styled.div`
@@ -56,6 +76,7 @@ const HomeDiv = styled.div`
         transform:translateY(0%);
     }
 `
+
 export default class NavBar extends Component {
         
     state = {
@@ -95,7 +116,7 @@ export default class NavBar extends Component {
     }
 
     Clicklistham = () => {
-       
+        // window.location.reload(false);
     }
 
     render() {
@@ -122,11 +143,9 @@ export default class NavBar extends Component {
                     <div className="row justify-content-end">
                         <HamburgerDiv displayham={this.state.displayham} slide={this.state.displaymenu}>
                             <input type="checkbox" onClick={this.ChangeBlur} />
-                            {/* Hamburger  */}
                             <span></span>
                             <span></span>
                             <span></span>
-                            {/* Hamburger  */}
                             <ul className="p-4">
                                 <li onClick={this.Clicklistham}>
                                     <NavButton changeClick={this.changeClick} />

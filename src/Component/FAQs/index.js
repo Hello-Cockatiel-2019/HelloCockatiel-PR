@@ -9,7 +9,7 @@ const Sdiv = styled.div `
         transform: translate(7%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(27%,25%);
+        transform: translate(28%,-3%);
     }
     @media (max-width:500px) {
         transform: translate(7%,-10%);
