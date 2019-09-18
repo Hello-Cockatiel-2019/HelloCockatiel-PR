@@ -9,24 +9,35 @@ Required
 
 ### Installing
 
-if use yarn
+```
+git clone https://github.com/Hello-Cockatiel-2019/HelloCockatiel-PR.git
+```
+when clone finish
 
+if use yarn
 ```
 yarn 
 ```
 
 if use npm
-
 ```
 npm i
 ```
 
-## Running the tests
+## Start Project
 
+if use yarn
 ```
-yarn test
+yarn start
 ```
 
-## Contributors
+if use npm
+```
+npm start
+```
+
+## 
+
+## Authors
 
 HelloCockatiel Staff 🐦
