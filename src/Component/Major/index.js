@@ -45,10 +45,10 @@ const AllContent = styled.div`
     }
     @media (max-width:380px){
       height: 80vh;
-      transform: translate(-7%,-18%);
+      transform: translate(-7%,-22%);
     }
     @media (max-width:325px){
-      transform: translate(-6%,-25%);
+      transform: translate(-6%,-22%);
     }
 `
 
@@ -75,10 +75,7 @@ const Header = styled.div`
       transform: translate(0%,-60%);
     }
     @media (max-width:380px){
-      transform: translate(0%,-60%);
-    }
-    @media (max-width:325px){
-      transform: translate(0%,-60%);
+      transform: translate(0%,-120%);
     }
 `
 
@@ -130,7 +127,7 @@ export default class index extends Component {
         imgbird: "c1.png",
         imgframe: "frame.png",
         class: "justify-content-end",
-        colorBox: "rgb(216, 195, 85,0.9)"
+        colorBox: "#CEBA53"
       },
       {
         topic: "Design",
@@ -138,7 +135,7 @@ export default class index extends Component {
         imgbird: "c2.png",
         imgframe: "frame.png",
         class: "justify-content-end",
-        colorBox: "rgb(219, 155, 81,0.9)"
+        colorBox: "#D89E55"
       },
       {
         topic: "Infra",
@@ -146,7 +143,7 @@ export default class index extends Component {
         imgbird: "c3.png",
         imgframe: "frame.png",
         class: "justify-content-end",
-        colorBox: "rgb(172, 168, 156,0.9)"
+        colorBox: "#B4B1A6"
       },
       {
         topic: "Game",
@@ -154,7 +151,7 @@ export default class index extends Component {
         imgbird: "c4.png",
         imgframe: "frame.png",
         class: "justify-content-end",
-        colorBox: "rgb(179, 102, 11,0.9)"
+        colorBox: "#B36E16"
       }
     ]
   }

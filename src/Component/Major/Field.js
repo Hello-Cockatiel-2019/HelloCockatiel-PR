@@ -50,6 +50,7 @@ const Box = styled.div`
         height:7em;
     } 
     @media (max-width:325px){
+        background-color : ${props => props.colorBox};
         width:17em;
         height:6em;
     }
@@ -134,10 +135,10 @@ const TextContent = styled(Small)`
     }
     @media only screen and (max-width:325px){
         line-height: 16px;
-        margin-top:-8em;
-        padding-left:9em;
-        padding-right:4em;
-        font-size:0.3em;
+        margin-top:-6.5em;
+        padding-left:6.5em;
+        padding-right:2em;
+        font-size:0.7em;
     }
 `
 const TextTopic = styled(Small2)`

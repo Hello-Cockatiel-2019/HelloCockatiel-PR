@@ -7,13 +7,32 @@ import { Mobile } from './Hidden'
 const HeaderDiv = styled.div`
     background-image: url('/images/Objects/${props => props.HeaderURl}');
     background-repeat: no-repeat;
+    background-size:contain;
     height:136px;
     width: 170px;
     margin: 0;
     padding-top: 60px;
     padding-left: ${props => props.pl === 'FAQs' ? '50px' : '10px'};
-    /* transform: translate(30vw,-15vh); */
-    /* transform: translate(0%,-45%); */
+    @media screen and (max-width:380px) {
+      height:96px;
+      width: 130px;
+      padding-top: 45px;
+      padding-left: ${props => props.pl === 'FAQs' ? '40px' : '10px'};
+    }
+    @media screen and (max-width:320px) {
+      height:76px;
+      width: 110px;
+      padding-top: 37px;
+      padding-left: ${props => props.pl === 'FAQs' ? '30px' : '8.5px'};
+    }
+`
+const HeaderFont = styled(Header)`
+    @media screen and (max-width:380px) {
+      font-size:1.25em;
+    }
+    @media screen and (max-width:320px) {
+      font-size:1em;
+    }
 `
 
 const MobileHeader = (props) => {
@@ -21,9 +40,9 @@ const MobileHeader = (props) => {
     <Mobile>
     <div className="col-12 d-flex  justify-content-center">
       <HeaderDiv HeaderURl={ props.HeaderURl } pl={ props.text }>
-        <Header>
+        <HeaderFont>
           { props.text }
-        </Header>
+        </HeaderFont>
       </HeaderDiv>
       </div>
     </Mobile>
