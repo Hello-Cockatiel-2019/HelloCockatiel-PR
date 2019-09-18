@@ -1,6 +1,8 @@
 //Core
 export const changeSizeText = "กรุณาปรับจอด้วยครับ"
 export const register = "Register"
+export const contact = "Contact"
+
 //About
 export const aboutHeader = "ข้อมูลโครงการ"
 
