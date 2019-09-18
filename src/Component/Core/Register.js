@@ -11,12 +11,17 @@ const mobileShadow = css`
 const Button = styled.button`
     background-image: url('/images/Objects/frame.png');
     background-repeat: no-repeat;
-    background-size:100%;
+    background-size:contain;
     height:90px;
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
+    @media screen and (max-width:834px) and (orientation: landscape){
+      ${ mobileShadow }
+    }
     @media(max-width:576px) {
+      width:180px;
+      height:85px;
       ${ mobileShadow }
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
@@ -38,7 +43,6 @@ const Button = styled.button`
 
 const A = styled.a`
   text-decoration:none;
-  height:150px;
 
   &:hover{
     text-decoration:none;

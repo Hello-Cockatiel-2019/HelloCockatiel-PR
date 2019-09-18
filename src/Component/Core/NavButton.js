@@ -26,6 +26,12 @@ const Button = styled.div`
     @media(max-width:576px) {
         ${ NavMobile}
     }
+    @media(max-width:320px) {
+        margin-top:${props => props.pt ===0 ? -5 :0}px!important;
+        padding-top:${props => props.pt ===0 ? 0 :1}rem!important;
+        padding-bottom:1rem!important;
+        ${ NavMobile}
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         ${ NavMobile}
     }
@@ -97,7 +103,8 @@ export default class componentName extends Component {
                   <Button className="btn pb-4 pt-4"
                     key={i}
                     displayButton={i}
-                    onClick={() => this.handleClick(i)}>
+                    onClick={() => this.handleClick(i)}
+                    pt={i}>
                       <Title key={i}>
                         {data.text}
                       </Title>

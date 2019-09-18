@@ -7,6 +7,7 @@ import { Title } from '../Core/Text'
 const Woodplate = styled.div `
     background-image: url('/images/Objects/${props => props.source}');
     background-repeat: no-repeat;
+    background-size:contain;
     width:168px;
     height:127px;
     padding-top:3.9em;
@@ -14,7 +15,6 @@ const Woodplate = styled.div `
     margin-left:2em;
     margin-right:1em;
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        background-size:contain;
         width:210px;
         height:170px;
         padding-top:5em;
@@ -22,7 +22,6 @@ const Woodplate = styled.div `
             props.pt === 1 ? 0 : 0}em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        background-size:contain;
         width:210px;
         height:170px;
         padding-top:5em;
@@ -30,7 +29,6 @@ const Woodplate = styled.div `
             props.pt === 1 ? 0 : 0}em;
     }
     @media screen and (max-width:834px) and (orientation: landscape){
-        background-size:contain;
         width:190px;
         height:150px;
         padding-top:4.3em;
@@ -45,18 +43,57 @@ const Woodplate = styled.div `
         margin-left:2em;
         margin-right:1em;
     }
+    @media screen and (max-width:320px) {
+        width:148px;
+        height:107px;
+        padding-right: 1em;
+        padding-top:3.1em;
+        padding-left:${props => props.pt === 0 ? 0.5 : 0}em;
+        margin-right:1em;
+    }
 `
 
 const HeadLogo = styled.img`
-    width:90%;
+    width: 320px;
+    height: 120.93px;
     @media screen and (max-width:834px) and (orientation: landscape) {
         width:60%;
     }
     @media screen and (max-width:600px) {
-        width:90%;
+        width: 320px;
+        height: 120.93px;
     }
     @media screen and (max-width:320px) {
-        width:85%;
+        width: 300px;
+        height: 100px;
+    }
+`
+
+const LogoDiv = styled.div`
+    transform: translateY(-7vh);
+    @media screen and (max-width:375px) {
+        transform: translateY(-10vh);
+    }
+    @media screen and (max-width:320px) {
+        transform: translateY(-8vh);
+    }
+`
+
+const WoodDiv = styled.div`
+    @media screen and (max-width:834px) {
+        transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -70 : -40}px
+    }
+    @media screen and (max-width:420px) {
+        transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -40 : -10}px
+    }
+    @media screen and (max-width:320px) {
+        transform: translateY(-15%);
+        margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -40 : -10}px;
     }
 `
 
@@ -85,18 +122,11 @@ const MenuDiv = styled.div`
     @media screen and (max-width:834px) and (orientation: landscape){
         margin-top:-20px;
     }
-    @media screen and (max-width:320px) {
-        margin-top:-20px;
-    }
-`
-
-const LogoDiv = styled.div`
-    transform: translateY(-7vh);
     @media screen and (max-width:375px) {
-        transform: translateY(-7vh);
+        margin-top:-30px;
     }
     @media screen and (max-width:320px) {
-        transform: translateY(-4vh);
+        margin-top:-40px;
     }
 `
 
@@ -148,30 +178,13 @@ const RegisDiv = styled.div `
         margin-top: -3vh!important;
     }
     @media only screen and (max-width:380px) {
-        margin-top: -5vh!important;
+        margin-top: -7vh!important;
     }
     @media only screen and (max-width:320px) {
-        margin-top:0px!important;
+        margin-top:-20px!important;
     }
 `
 
-const WoodDiv = styled.div`
-    @media screen and (max-width:834px) {
-        transform: translateY(-40%);
-        margin-top:${props => props.mt === 0 ? 0 :
-            props.mt === 1 ? -70 : -40}px
-    }
-    @media screen and (max-width:420px) {
-        transform: translateY(-40%);
-        margin-top:${props => props.mt === 0 ? 0 :
-            props.mt === 1 ? -40 : -10}px
-    }
-    @media screen and (max-width:320px) {
-        transform: translateY(-15%);
-        margin-top:${props => props.mt===0 ? 0 :
-                props.mt === 1 ? -40 : -10}px;
-    }
-`
 export default class Home extends Component {
     state = {
         plate : [
@@ -205,7 +218,7 @@ export default class Home extends Component {
 
     render() {
         return (
-                <div className="row m-0">
+                <div className="row m-0 overflow-hidden">
                     <div className="col-12 d-flex justify-content-end ">
                         <A href="https://www.facebook.com/ThisPz">
                             <Facebook src="/images/Objects/facebook.png" />
