@@ -20,8 +20,12 @@ const DivBlur = styled.div`
 
 const SideBarSection = styled.div`
     transform :  translateY(65%);
+    
     @media screen and (max-width:1199px) {
         transform :  translateY(70%);
+    }
+    @media screen and (max-width:1024px) {
+      transform: translate(0%,60%);
     }
     @media screen and (max-width:800px) {
         left: -5vw;
@@ -49,6 +53,10 @@ const RegiserButton = styled.div`
     @media screen and (max-width:1199px) {
         left: 80vw;
         top: -20vw;
+    }
+    @media screen and (max-width:1024px) {
+        left: 80vw;
+        top: -45vw;
     }
     @media screen and (max-width:800px) {
         left: 80vw;
