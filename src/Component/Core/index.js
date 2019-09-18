@@ -111,9 +111,9 @@ export default class NavBar extends Component {
     state = {
         id: 0,
         blur: 0,
-        displayham:'none',
-        homedisplay: 'block',
-        mobiledisplay: 'none',
+        displayHamburger:'none',
+        homeDisplay: 'block',
+        mobileDisplay: 'none',
         slide:0
     }
 
@@ -126,13 +126,12 @@ export default class NavBar extends Component {
     clickHome = (i) => {
         this.setState({
             id: i,
-            mobiledisplay: 'block',
-            homedisplay: 'none',
-            displayham: 'block',
-            displaymenu:-220
+            mobileDisplay: 'block',
+            homeDisplay: 'none',
+            displayHamburger: 'block',
         })
     }
-    ChangeBlur = () => {
+    changeBlur = () => {
         if(this.state.blur===2){
             this.setState({
                 blur: 0
@@ -173,8 +172,8 @@ export default class NavBar extends Component {
                     </Desktop>
                     <Mobile>
                         <div className="row justify-content-end">
-                            <HamburgerDiv displayham={this.state.displayham} slide={this.state.displaymenu}>
-                                <input type="checkbox" onClick={this.ChangeBlur} />
+                            <HamburgerDiv displayham={this.state.displayHamburger} slide={this.state.displayMenu}>
+                                <input type="checkbox" onClick={this.changeBlur} />
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -192,10 +191,10 @@ export default class NavBar extends Component {
                         </div>
                         <DivBlur blur={this.state.blur}>
                             <Background />
-                            <HomeDiv homedisplay={this.state.homedisplay} >
+                            <HomeDiv homedisplay={this.state.homeDisplay} >
                                 <Home clickHome={this.clickHome} />
                             </HomeDiv>
-                            <ClickChange keyid={this.state.id} mobiledisplay={this.state.mobiledisplay}  />
+                            <ClickChange keyid={this.state.id} mobiledisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
                 </div>

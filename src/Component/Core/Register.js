@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import { Header } from './Text'
 import { register } from './Messages'
-import { datenow, dateStartResgis, dateEndRegis } from './Day'
+import { dateNow, dateStartResgis, dateEndRegis } from './Day'
 
 const mobileShadow = css`
   box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
@@ -16,7 +16,7 @@ const Button = styled.button`
     height:90px;
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
+    display:${ (dateStartResgis.isBefore(dateNow) && dateEndRegis.isAfter(dateNow) ? 'block' : 'none')};
     @media(max-width:1024px) {
       width:180px;
       height:85px;

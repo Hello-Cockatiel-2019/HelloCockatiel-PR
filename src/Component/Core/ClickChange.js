@@ -37,8 +37,8 @@ export default class ClickChage extends Component {
 
     state ={    
         key : 0,
-        Component: [<About />,<Major />,<FAQs />],
-        mobiledisplay:'none',
+        component: [<About />,<Major />,<FAQs />],
+        mobileDisplay:'none',
     }
    
 
@@ -64,7 +64,7 @@ export default class ClickChage extends Component {
                 }
             </PositionDesktop>
             <Mobile>
-                <MobileDiv mobiledisplay={this.props.mobiledisplay}>
+                <MobileDiv mobiledisplay={this.props.mobileDisplay}>
                     <MobileMap>
                         {
                             this.state.Component.map((data, i) => {
