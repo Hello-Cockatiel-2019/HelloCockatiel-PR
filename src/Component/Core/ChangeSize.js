@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import color from '../../Config/Color'
 import { BrownParagraph } from './Text'
+import { changeSizeText } from './Messages'
 
 const Minicon = styled.div`
   display:none;
@@ -29,7 +30,7 @@ const Minicon = styled.div`
 const index = () => (
     <Minicon>
         <img src="/images/Objects/rotate.png" width="100px" alt="ChangeSize" />
-        <BrownParagraph className="text-center mt-3">กรุณาปรับจอด้วยครับ</BrownParagraph>
+        <BrownParagraph className="text-center mt-3">{ changeSizeText }</BrownParagraph>
     </Minicon>
 )
 export default index

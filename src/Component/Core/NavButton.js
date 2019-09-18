@@ -5,6 +5,7 @@ import { datenow, dateStartResgis, dateEndRegis } from './Day'
 import { Mobile } from './Hidden'
 import { Title } from './Text'
 import color from '../../Config/Color'
+import { aboutHeader, majorHeader, faqsHeader, contact } from './Messages'
 
 const NavMobile = css`
   width:auto;
@@ -70,19 +71,19 @@ export default class componentName extends Component {
   state = {
     buttondata: [
       {
-        text: "ข้อมูลโครงการ",
+        text: `${ aboutHeader }`,
         link: "#About"
       },
       {
-        text: "สาขาที่รับสมัคร",
+        text: `${ majorHeader }`,
         link: "#Majors"
       },
       {
-        text: "FAQs",
+        text: `${ faqsHeader }`,
         link: "#FAQs"
       },
       {
-        text: "Contact",
+        text: `${ contact }`,
         link: "https://www.facebook.com/ThisPz"
       }
     ]
