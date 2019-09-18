@@ -38,6 +38,13 @@ const Woodplate = styled.div `
         padding-left:${props => props.pt===0 ? 1.2 :
                     props.pt===1 ? 0 : 0}em;
     }
+    @media screen and (max-width:768px) and (orientation: portrait){
+        width:190px;
+        height:150px;
+        padding-top:4.3em;
+        padding-left:${props => props.pt===0 ? 1.2 :
+                    props.pt===1 ? 0 : 0}em;
+    }
     @media screen and (max-width:600px) {
         width:168px;
         height:127px;
@@ -65,6 +72,9 @@ const HeadLogo = styled.img`
     @media screen and (max-width:834px) and (orientation: landscape) {
         width:60%;
     }
+    @media screen and (max-width:768px) and (orientation: portrait){
+        width:60%;
+    }
     @media screen and (max-width:600px) {
         width: 320px;
         height: 120.93px;
@@ -86,7 +96,12 @@ const LogoDiv = styled.div`
 `
 
 const WoodDiv = styled.div`
-    @media screen and (max-width:834px) {
+    @media screen and (max-width:768px) and (orientation: portrait){
+        transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -70 : -40}px
+    }
+    @media screen and (max-width:834px) and (orientation: landscape) {
         transform: translateY(-40%);
         margin-top:${props => props.mt === 0 ? 0 :
         props.mt === 1 ? -70 : -40}px
@@ -128,6 +143,9 @@ const MenuDiv = styled.div`
     @media screen and (max-width:834px) and (orientation: landscape){
         margin-top:-20px;
     }
+    @media screen and (max-width:768px) and (orientation: portrait){
+        margin-top:-20px;
+    }
     @media screen and (max-width:375px) {
         margin-top:-20px;
     }
@@ -140,6 +158,9 @@ const Facebook = styled.img `
     width: 44px;
     margin-top:.3em;
      @media screen and (max-width:834px) and (orientation: landscape){
+        width: 70px; 
+    }
+     @media screen and (max-width:768px) and (orientation: portrait){
         width: 70px; 
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
@@ -178,6 +199,9 @@ const RegisDiv = styled.div `
         margin-top:0px!important;
     }
     @media only screen and (max-width:834px) and (orientation: landscape) {
+        margin-top: -10vh!important;
+    }
+    @media screen and (max-width:768px) and (orientation: portrait){
         margin-top: -10vh!important;
     }
     @media only screen and (max-width:420px) {
