@@ -111,7 +111,7 @@ export default class FAQs extends Component {
         return (
             <React.Fragment>
                 <HeaderDiv>
-            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
+            <MobileHeader text="FAQs" headerURl="plate-m3.png" /> 
             </HeaderDiv>
                <Sdiv className="row m-0 p-0">
                    {

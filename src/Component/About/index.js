@@ -227,7 +227,7 @@ export default class About extends Component {
         return (
           <Div className="row m-0">
             <HeaderDiv>
-              <MobileHeader text="ข้อมูลโครงการ" HeaderURl="plate-m2.png" />
+              <MobileHeader text="ข้อมูลโครงการ" headerURl="plate-m2.png" />
             </HeaderDiv>
             <Layout className="m-0">
 

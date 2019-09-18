@@ -42,7 +42,7 @@ const MobileHeader = (props) => {
   return (
     <Mobile>
     <div className="col-12 d-flex  justify-content-center">
-      <HeaderDiv HeaderURl={ props.headerURl } pl={ props.text }>
+      <HeaderDiv headerURl={ props.headerURl } pl={ props.text }>
         <HeaderFont>
           { props.text }
         </HeaderFont>

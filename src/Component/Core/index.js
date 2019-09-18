@@ -94,7 +94,7 @@ const HomeDiv = styled.div`
     position:absolute;
     z-index:100;
     transform:translateY(5%);
-    display : ${props => props.homedisplay ? props.homedisplay : 'block'};
+    display : ${props => props.homeDisplay ? props.homeDisplay : 'block'};
     @media screen and (max-width:320px) {
         transform:translateY(0%);
     }
@@ -143,7 +143,7 @@ export default class NavBar extends Component {
         }
     }
 
-    Clicklistham = () => {
+    clickListHam = () => {
         // window.location.reload(false);
     }
 
@@ -163,7 +163,7 @@ export default class NavBar extends Component {
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
                             <Content className="col-7 d-inline-flex justify-content-center">
-                                <ClickChange keyid={this.state.id} />
+                                <ClickChange keyID={this.state.id} />
                             </Content>
                             <RegiserButton className="col-3 col-xl-2 d-inline-flex justify-content-end">
                                 <Register />
@@ -172,13 +172,13 @@ export default class NavBar extends Component {
                     </Desktop>
                     <Mobile>
                         <div className="row justify-content-end">
-                            <HamburgerDiv displayham={this.state.displayHamburger} slide={this.state.displayMenu}>
+                            <HamburgerDiv displayHamburger={this.state.displayHamburger} slide={this.state.displayMenu}>
                                 <input type="checkbox" onClick={this.changeBlur} />
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <ul className="p-4">
-                                    <li onClick={this.Clicklistham}>
+                                    <li onClick={this.clickListHam}>
                                         <NavButton changeClick={this.changeClick} />
                                     </li>
                                     <li>
@@ -191,10 +191,10 @@ export default class NavBar extends Component {
                         </div>
                         <DivBlur blur={this.state.blur}>
                             <Background />
-                            <HomeDiv homedisplay={this.state.homeDisplay} >
+                            <HomeDiv homeDisplay={this.state.homeDisplay} >
                                 <Home clickHome={this.clickHome} />
                             </HomeDiv>
-                            <ClickChange keyid={this.state.id} mobiledisplay={this.state.mobileDisplay}  />
+                            <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
                 </div>
