@@ -11,7 +11,7 @@ import Register from './Register';
 import ClickChange from './ClickChange';
 
 const Div = styled.div`
-    transform :  translateY(-50%);
+    transform :  translateY(-40%);
 `
 
 const DivBlur = styled.div`
@@ -25,7 +25,7 @@ const SideBarSection = styled.div`
         transform :  translateY(70%);
     }
     @media screen and (max-width:1024px) {
-      transform: translate(0%,60%);
+      transform: translate(0%,65%);
     }
     @media screen and (max-width:800px) {
         left: -5vw;
@@ -56,7 +56,7 @@ const RegiserButton = styled.div`
     }
     @media screen and (max-width:1024px) {
         left: 80vw;
-        top: -45vw;
+        top: -40vw;
     }
     @media screen and (max-width:800px) {
         left: 80vw;
@@ -82,6 +82,12 @@ const HomeDiv = styled.div`
     display : ${props => props.homedisplay ? props.homedisplay : 'block'};
     @media screen and (max-width:320px) {
         transform:translateY(0%);
+    }
+`
+
+const LogoDiv = styled.div`
+    @media screen and (max-width:1024px) {
+        transform:translateY(30%);
     }
 `
 
@@ -132,9 +138,9 @@ export default class NavBar extends Component {
             <React.Fragment>
                 <Desktop>
                     <Background />
-                    <div className="d-flex justify-content-center">
+                    <LogoDiv className="d-flex justify-content-center">
                         <Logo src="/images/Objects/Logo.png" />
-                    </div>
+                    </LogoDiv>
                     <Div className="row justify-content-between">
                         <SideBarSection className="col-2 d-inline-flex flex-column ml-5 justify-content-start">
                             <NavButton changeClick={this.changeClick} />

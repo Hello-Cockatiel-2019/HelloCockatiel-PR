@@ -184,7 +184,7 @@ const RegisDiv = styled.div `
         margin-top: -3vh!important;
     }
     @media only screen and (max-width:380px) {
-        margin-top: -8vh!important;
+        margin-top: -5vh!important;
     }
     @media only screen and (max-width:320px) {
         margin-top:-20px!important;
