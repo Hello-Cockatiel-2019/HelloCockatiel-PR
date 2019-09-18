@@ -27,9 +27,15 @@ const SideBarSection = styled.div`
     @media screen and (max-width:1024px) {
       transform: translate(0%,65%);
     }
-    @media screen and (max-width:800px) {
+    @media screen and (max-height:900px) {
+        transform: translate(0%,40%);
+    }
+    @media screen and (max-width:750px) {
         left: -5vw;
         top: 7vh;
+    }
+    @media screen and (mmax-width:900px) {
+        top: 5vh;
     }
 `
 

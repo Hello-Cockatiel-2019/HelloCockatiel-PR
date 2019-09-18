@@ -24,6 +24,9 @@ const Button = styled.button`
     @media screen and (max-width:834px) and (orientation: landscape){
       ${ mobileShadow }
     }
+    @media screen and (max-width:768px) and (orientation: portrait){
+      ${ mobileShadow }
+    }
     @media(max-width:576px) {
       width:180px;
       height:85px;

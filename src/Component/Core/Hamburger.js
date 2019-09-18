@@ -125,6 +125,10 @@ export const HamburgerDiv = styled.div`
         width:500px;
         left:-68vw;
       }
+      @media screen and (max-width:768px) and (orientation: portrait){
+        width:500px;
+        left:-68vw;
+      }
       @media(max-width:420px) {
         width:250px;
         left:-60vw;

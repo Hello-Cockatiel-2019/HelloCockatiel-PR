@@ -18,7 +18,7 @@ const Minicon = styled.div`
     align-items:center;
   }
   @media(orientation:landscape)
-  and (max-height: 550px){
+  and (max-height: 600px){
     display:flex;
     flex-direction: column;
     justify-content:center;

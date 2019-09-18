@@ -23,6 +23,9 @@ const Button = styled.div`
     @media screen and (max-width:834px) and (orientation: landscape){
         ${ NavMobile}
     }
+    @media screen and (max-width:768px) and (orientation: portrait){
+        ${ NavMobile}
+    }
     @media(max-width:576px) {
         ${ NavMobile}
     }

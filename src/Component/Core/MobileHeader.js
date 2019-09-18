@@ -27,6 +27,9 @@ const HeaderDiv = styled.div`
     }
 `
 const HeaderFont = styled(Header)`
+    @media screen and (max-width:768px) and (orientation: portrait){
+      font-size:1.75em;
+    }
     @media screen and (max-width:380px) {
       font-size:1.25em;
     }
