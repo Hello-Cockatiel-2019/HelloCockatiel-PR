@@ -35,11 +35,17 @@ const AllContent = styled.div`
     @media (max-width:500px){
       transform: translate(-15%,-20%);
     }
-    @media (max-width:420px){
-      transform: translate(-7%,-20%);
+    @media (max-width:420px) and (max-height:900px){
+      height: 70vh;
+      transform: translate(-7%,-15%);
+    }
+    @media (max-width:420px) and (max-height:812px) {
+      height: 70vh;
+      transform: translate(-7%,-17%);
     }
     @media (max-width:380px){
-      transform: translate(-7%,-20%);
+      height: 80vh;
+      transform: translate(-7%,-18%);
     }
     @media (max-width:325px){
       transform: translate(-6%,-25%);
@@ -104,9 +110,11 @@ const SpaceBySpace = styled.div`
       padding-top:0.5em;
     }
     @media (max-width:420px){
+      margin-top:${props => props.mrt === 0 ? 0 : -50}px;
       padding-top:0.5em;
     }
     @media (max-width:380px){
+      margin-top:${props => props.mrt === 0 ? -8 : -70}px;
       padding-top:0.5em;
     }
     @media (max-width:325px){
@@ -160,7 +168,7 @@ export default class index extends Component {
           {
             this.state.data.map((TC, i) => {
               return (
-                <SpaceBySpace className={`d-flex col-lg-6 col-md-12 col-12 ${TC.class}`} mrl={i} key={i} >
+                <SpaceBySpace className={`d-flex col-lg-6 col-md-12 col-12 ${TC.class}`} mrt={i} key={i} >
                   <Field
                     topic={TC.topic}
                     content={TC.content}
