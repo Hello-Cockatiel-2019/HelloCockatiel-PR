@@ -60,6 +60,10 @@ const Tree = styled(Background)`
   @media (min-width:320px) {
     background-size: 260%;
   }
+  @media (max-width:420px) {
+    background-size: cover;
+    height:200px;
+  }
   @media only screen and (max-width: 414px) and (min-height: 812px) and (orientation: portrait)  {
     background-size:290%;
   }
