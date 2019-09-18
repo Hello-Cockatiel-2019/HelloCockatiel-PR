@@ -6,14 +6,15 @@ const Background = styled.div`
     min-height: 100vh;
     background-repeat:no-repeat;
     background-position: bottom;
-    background-attachment: fixed;
+    
     position:fixed;
     width:100%;
 `
 const Grass = styled(Background)`
   z-index: -2;
   @media (min-width:320px) {
-    background-size:120%;
+    background-size:150%;
+    transform: translate(0, 3%);
   }
   @media (min-width:375px) {
     background-size:170%;
@@ -52,6 +53,7 @@ const Grass = styled(Background)`
   }
   @media (min-width:1500px) {
   background-size:100%;
+  transform: translate(0, 7%);
   }
 `
 const Tree = styled(Background)`
@@ -60,7 +62,7 @@ const Tree = styled(Background)`
   @media (min-width:320px) {
     background-size: 260%;
   }
-  @media (max-width:420px) {
+  @media (min-width:420px) {
     background-size: cover;
     height:200px;
   }
@@ -86,6 +88,7 @@ const Tree = styled(Background)`
     top: -10vh;
     height: 100%;
     background-size: 110%;
+    transform: translate(0, 10%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 834px) and (orientation: landscape)  {
     background-size: 110%;
@@ -98,6 +101,7 @@ const Tree = styled(Background)`
   }
   @media (min-width:1500px) {
   background-size:100%;
+  transform: translate(0, 10%);
   }
 `
 const Shadow = styled(Background)`
@@ -129,6 +133,7 @@ background-size: 100%;
     top: -10vh;
     height: 100%;
     background-size: 110%;
+    transform: translate(0, 10%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 834px) and (orientation: landscape)  {
     background-size: 110%;
@@ -141,6 +146,7 @@ background-size: 100%;
   }
   @media (min-width:1500px) {
   background-size:100%;
+  transform: translate(0, 10%);
   }
 `
 
@@ -153,43 +159,42 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media (min-width:320px) {
     right: 10%;
     max-width: 15%;
-    bottom: -10%;
-  }
-  @media (min-width:412px) {
-    right: 10%;
-    max-width: 15%;
-    bottom:-13%;
+    bottom: -5%;
   }
   @media only screen and (min-width: 375px) and (max-height: 812px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:-50%;
+    bottom:-67%;
   }
   @media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:-23%;
+    bottom:-38%;
   }
-  
+  @media (min-width:412px) {
+    right: 10%;
+    max-width: 15%;
+    bottom:-3%;
+  }
   @media only screen and (min-width: 414px) and (max-height: 900px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:-48%;
+    bottom:-52%;
   }
   @media only screen and (min-width: 414px) and (max-height: 812px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:-35%;
+    bottom:-38%;
   }
   @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait)  {
     right: 10%;
     max-width: 15%;
-    bottom:-22%;
+    bottom:-25%;
   }
   @media (min-width:768px) {
     right: 10%;
     max-width: 10%;
-    bottom: 6%;
+    bottom: 3%;
   }
   @media (min-width:960px) {
     z-index: -3;
@@ -215,7 +220,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     right: 10%;
     max-width: 10%;
-    bottom: 7%;
+    bottom: -21%;
   }
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     left: 24%;
