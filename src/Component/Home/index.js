@@ -72,7 +72,7 @@ const HeadLogo = styled.img`
 const LogoDiv = styled.div`
     transform: translateY(-7vh);
     @media screen and (max-width:375px) {
-        transform: translateY(-10vh);
+        transform: translateY(-8vh);
     }
     @media screen and (max-width:320px) {
         transform: translateY(-8vh);
@@ -123,7 +123,7 @@ const MenuDiv = styled.div`
         margin-top:-20px;
     }
     @media screen and (max-width:375px) {
-        margin-top:-30px;
+        margin-top:-20px;
     }
     @media screen and (max-width:320px) {
         margin-top:-40px;
@@ -178,7 +178,7 @@ const RegisDiv = styled.div `
         margin-top: -3vh!important;
     }
     @media only screen and (max-width:380px) {
-        margin-top: -7vh!important;
+        margin-top: -8vh!important;
     }
     @media only screen and (max-width:320px) {
         margin-top:-20px!important;
