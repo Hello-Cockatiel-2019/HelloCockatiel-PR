@@ -33,23 +33,18 @@ const Grass = styled(Background)`
   }
   @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation:landscape)  {
     background-size: 125%;
-    transform: translate(0,5%);
        }
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     background-size: 110%;
-    transform: translate(0,5%);
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     background-size: 100%;
-    transform: translate(0,2%);
   }
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     background-size: 105%;
-    transform: translate(0, 5%);
   }
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     background-size: 130%;
-    transform: translate(0, 0);
   }
   @media (min-width:1500px) {
   background-size:100%;
@@ -215,7 +210,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     left: 24%;
     max-width: 7%;
-    bottom:6%;
+    bottom:11%;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     right: 10%;
@@ -225,7 +220,7 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     left: 24%;
     max-width: 6%;
-    bottom: 7%;
+    bottom: 10%;
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     left: 24%;
@@ -235,17 +230,17 @@ content:url('/images/Background/${props => props.bgImgURL}');
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     right: 24%;
     max-width: 10%;
-    bottom:-47%;
+    bottom:-52%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     right: 24%;
     max-width: 10%;
-    bottom: -37%;
+    bottom: -42%;
   }
   @media(min-width:1500px) {
     right: 24%;
     max-width: 6%;
-    bottom: 11%;
+    bottom: 10%;
   }
 `
 const Bird2 = styled.img`
@@ -276,7 +271,7 @@ position: absolute;
   @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     left: 34%;
     max-width: 7%;
-    bottom:6%;
+    bottom:11%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     left: 37%;
@@ -286,7 +281,7 @@ position: absolute;
   @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
     left: 32%;
     max-width: 6%;
-    bottom: 7%;
+    bottom: 10%;
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape)  {
     left: 32%;
@@ -296,17 +291,17 @@ position: absolute;
   @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     right: 32%;
     max-width: 10%;
-    bottom:-47%;
+    bottom:-52%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     right: 32%;
     max-width: 10%;
-    bottom: -37%;
+    bottom: -42%;
   }
   @media(min-width:1500px) {
     right: 32%;
     max-width: 6%;
-    bottom: 11%;
+    bottom: 10%;
   }
 `
 
