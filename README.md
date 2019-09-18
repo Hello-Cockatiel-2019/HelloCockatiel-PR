@@ -36,7 +36,10 @@ if use npm
 npm start
 ```
 
-## 
+## Deployment
+```
+yarn build
+```
 
 ## Authors
 
