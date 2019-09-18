@@ -16,6 +16,11 @@ const Button = styled.button`
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
+    @media(max-width:1024px) {
+      width:180px;
+      height:85px;
+      ${ mobileShadow }
+    }
     @media screen and (max-width:834px) and (orientation: landscape){
       ${ mobileShadow }
     }
