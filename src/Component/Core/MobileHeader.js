@@ -5,7 +5,7 @@ import { Header } from './Text'
 import { Mobile } from './Hidden'
 
 const HeaderDiv = styled.div`
-    background-image: url('/images/Objects/${props => props.HeaderURl}');
+    background-image: url('/images/Objects/${props => props.headerURl}');
     background-repeat: no-repeat;
     background-size:contain;
     height:136px;
@@ -42,7 +42,7 @@ const MobileHeader = (props) => {
   return (
     <Mobile>
     <div className="col-12 d-flex  justify-content-center">
-      <HeaderDiv HeaderURl={ props.HeaderURl } pl={ props.text }>
+      <HeaderDiv HeaderURl={ props.headerURl } pl={ props.text }>
         <HeaderFont>
           { props.text }
         </HeaderFont>
