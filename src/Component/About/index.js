@@ -35,7 +35,7 @@ const Plate = styled.div`
     width:600px;
     height: 374px;
     padding-top: 2.5em;
-    margin-top: 2vh;
+    margin-top: 5vh;
     }
     @media only screen and (max-width: 1025px) and (orientation:landscape) {
       width:560px;
@@ -107,23 +107,23 @@ const Layout = styled.div`
     @media (max-width: 2560px){
       grid-template-columns: 2fr 1fr;
       margin-top: -4em;
-    margin-left: 11em;
+      transform: translateX(14%);
     }
     @media (max-width: 1537px){
       grid-template-columns: 2fr 1fr;
-      margin-top: -4em;
-    margin-left: 11em;
+      margin-top: -5em;
+      transform: translateX(10%);
     }
     @media (max-width: 1468px){
       margin-top: 3em;
     }
     @media (max-width: 1196px){
       margin-top: -6em;
-    margin-left: -9em;
+      transform: translateX(-12%);
     }
     @media(max-width:1025px) {
       margin-top: -5em;
-    margin-left: 14em;
+      transform: translateX(15%);
     } 
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
@@ -179,7 +179,7 @@ const LayoutWhere = styled.div`
     @media only screen and (max-width: 320px) and (orientation:portrait) {
       width: 250px;
     height: 279px;
-    margin-top: -7vh;
+    margin-top: -4vh;
     }        
 `
 const HeaderDiv = styled.div `
@@ -189,7 +189,6 @@ const HeaderDiv = styled.div `
     }
 `
 const Div = styled.div`
-height:100vh;
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
   justify-content: center;
     }
