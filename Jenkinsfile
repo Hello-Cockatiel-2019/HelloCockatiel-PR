@@ -3,14 +3,12 @@ pipeline{
   stages {
    	stage('dev'){
 			steps{
-				sh'echo /home/${JOB_NAME}'
-			sh 'echo "============= [ Step : Production. [3/3] ] ===================================="'
-			sh 'echo "============= [ Production [3/3] - Deleteing old project ] ===================="'
-			sh 'echo "============= [ Production [3/3] - Stoping Old Production ] ==================="'
-			sh 'echo "============= [ Production [3/3] - pull at Production Server ] ================"'
-			sh 'echo "============= [ Production [3/3] - Install at Production Server ] ================"'
-			sh 'echo "============= [ Production [3/3] - Starting Server ] =========================="'
-			sh 'echo "==============================================================================="'
+			sh' ssh cockatiel@103.86.50.70 && pm2 delete "${BRANCH_NAME}" '
+			sh' ssh cockatiel@103.86.50.70 && mkdir -p /home/cockatiel/${JOB_NAME}'
+			sh' ssh cockatiel@103.86.50.70 && rm -rf /home/cockatiel/${JOB_NAME}/* || :'
+			sh' scp -r * cockatiel@103.86.50.70:/home/cockatiel/${JOB_NAME}'
+			sh' ssh cockatiel@103.86.50.70 && cd /home/cockatiel/${JOB_NAME}/ '
+			sh' ssh cockatiel@103.86.50.70 && pm2 start yarn --name "${BRANCH_NAME}" -- dev'
 			}
     }
   }
