@@ -9,16 +9,19 @@ const Sdiv = styled.div `
         transform: translate(2%,-12%);
     }
     @media (max-width:1200px) {
-        transform: translate(-20%,-15%);
+        transform: translate(-20%,0%);
     }
     @media (max-width:1024px) {
         transform: translate(7%,-11%);
     }
     @media (max-width:999px) {
-        transform: translate(25%,-25%);
+        transform: translate(25%,-10%);
     }
     @media (max-width:999px) and (max-height:680px){
-        transform: translate(25%,-35%);
+        transform: translate(25%,-25%);
+    }
+    @media (max-width:834px) {
+        transform: translate(33%,-15%);
     }
     @media (max-width:768px) {
         transform: translate(28%,-18%);
@@ -43,6 +46,9 @@ const HeaderDiv = styled.div `
     @media only screen and (max-width:1024px) {
         transform: translate(0%,0%);
     }
+    @media (max-width:834px) {
+        transform: translate(0%,-85%);
+    }
     @media (max-width:768px) {
         transform: translate(0%,-90%);
     }
@@ -50,7 +56,7 @@ const HeaderDiv = styled.div `
         transform: translate(0%,-50%);
     }
     @media (max-width:400px) {
-        transform: translate(0%,-85%);
+        transform: translate(0%,-99%);
     }
     @media (max-width:320px) {
         transform: translate(0%,-125%);
@@ -73,6 +79,9 @@ const Div = styled.div `
     @media only screen and (max-width:998px) {
     height: 130px;
     }
+    @media only screen and (max-width:834px) {
+    height:${props => props.ml === 3 ? 250 : 135}px;
+    }
     @media only screen and (max-width:768px) {
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
@@ -85,7 +94,7 @@ const Div = styled.div `
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
-    @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:667px)  {
+    @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
     height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:320px) and (orientation: portrait) and (min-height:568px)  {

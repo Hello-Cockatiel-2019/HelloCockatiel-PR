@@ -57,7 +57,7 @@ const Awood = styled(Paragraph)`
         width: 370px;
     }
     @media only screen and (max-width:1320px) {
-        width: 320px;
+        width: 290px;
     }
     @media (max-width:1120px) {
         width: 290px;
