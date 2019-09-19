@@ -141,6 +141,7 @@ const WoodDiv = styled.div`
 
 const MenuDiv = styled.div`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        margin-top:20px;
         ${ paddingRightLeftFiveEM }
     }   
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
@@ -164,8 +165,8 @@ const MenuDiv = styled.div`
     @media screen and (max-width:768px) and (orientation: portrait){
         margin-top:-20px;
     }
-     @media screen and (max-width:900px) {
-        margin-top:-50px;
+     @media screen and (max-width:900px) and (orientation:landscape) {
+        margin-top:-45px;
     }
     @media screen and (max-width:420px) {
         margin-top: 10px;
