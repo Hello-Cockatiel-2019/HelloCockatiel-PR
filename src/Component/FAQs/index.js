@@ -146,7 +146,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 3 ? 250 : 115}px;
+    height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
