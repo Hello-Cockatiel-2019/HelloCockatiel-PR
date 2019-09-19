@@ -7,11 +7,35 @@ import {frontend,frontendContent,design,designContent,infra,infraContent,game,ga
 const AllContent = styled.div`
     transform: translate(7%,0%);
     
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
-    transform: translate(-7%,-5%);
-    }
-    @media (min-width: 1300px) and (orientation: landscape)  {
+    @media (max-width: 2500px) and (orientation: landscape)  {
     transform: translate(7%,0%);
+    }
+    @media (max-width: 2200px) and (orientation: landscape)  {
+    transform: translate(7%,0%);
+    }
+    @media (max-width: 2000px) and (orientation: landscape)  {
+    transform: translate(7%,0%);
+    }
+    @media (max-width: 1850px) and (orientation: landscape)  {
+    transform: translate(7%,0%);
+    }
+    @media (max-width: 1500px) and (orientation: landscape)  {
+    transform: translate(5%,0%);
+    }
+    @media (max-width: 1400px) and (orientation: landscape)  {
+    transform: translate(5%,20%);
+    }
+    @media only screen and (max-width: 1366px) and (orientation: landscape)  {
+    transform: translate(5%,30%);
+    }
+    @media (max-width: 1300px) and (orientation: landscape)  {
+    transform: translate(5%,30%);
+    }
+    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape)  {
+    transform: translate(-14%,-10%);
+    }
+    @media (max-width: 1200px) and (orientation: landscape)  {
+    transform: translate(-12%,-20%);
     }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     transform: translate(25%,-40%);
@@ -28,7 +52,10 @@ const AllContent = styled.div`
     padding-top:20em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
-    transform: translate(10%,-10%);
+    transform: translate(6%,-10%);
+    }
+    @media (max-height: 900px) and (orientation: landscape)  {
+    transform: translate(6%,20%);
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(-21%,-30%);
@@ -38,10 +65,11 @@ const AllContent = styled.div`
     padding-top:10em;
     }
     @media (max-width:770px) and (orientation: portrait){
-      transform: translate(-25%,-15%);
+      transform: translate(-23%,-42%);
     grid-template-columns: none;
     display:grid;
-    height: 80vh;
+    height: 90vh;
+    padding-top:15em;
     }
     @media (max-width:570px){
       transform: translate(-17%,-20%);
@@ -50,20 +78,26 @@ const AllContent = styled.div`
       transform: translate(-15%,-20%);
     }
     @media (max-width:420px) and (max-height:900px){
-      height: 70vh;
-      transform: translate(-7%,-15%);
+      height: 95vh;
+      transform: translate(-7%,-42%);
     }
     @media (max-width:420px) and (max-height:812px) {
-      height: 70vh;
-      transform: translate(-7%,-17%);
+      height: 95vh;
+      transform: translate(-7%,-46%);
     }
-    @media (max-width:380px){
-      height: 80vh;
-      transform: translate(-7%,-22%);
+    @media (max-width:420px) and (max-height:736px) {
+      height: 90vh;
+      transform: translate(-9%,-40%);
+      padding-top:8em;
     }
     @media (max-width:380px) and (max-height:820px){
       height: 80vh;
       transform: translate(-7%,-15%);
+    }
+    @media (max-width:380px){
+      height: 83vh;
+      transform: translate(-9%,-24%);
+      padding-top:1em;
     }
     @media (max-width:325px){
       transform: translate(-6%,-20%);
@@ -90,7 +124,7 @@ const Header = styled.div`
       transform: translate(0%,-60%);
     }
     @media (max-width:420px){
-      transform: translate(0%,-60%);
+      transform: translate(0%,-90%);
     }
     @media (max-width:380px){
       transform: translate(0%,-120%);
@@ -100,12 +134,29 @@ const Header = styled.div`
 const SpaceBySpace = styled.div`
     padding-top:2em;
     padding-left:2em;
-    
+    @media screen and (min-width: 2500px) and (orientation: landscape){
+      padding-top:2em;
+    }
+    @media (max-width: 2200px) and (orientation: landscape)  {
+      padding-top:2em;
+    }
+    @media (max-width: 2000px) and (orientation: landscape)  {
+      padding-top:2em;
+    }
+    @media screen and (max-width: 1850px) and (orientation: landscape){
+      padding-top:2em;
+    }
+    @media screen and (max-width: 1500px) and (orientation: landscape){
+      padding-top:2em;
+    }
+    @media (max-width: 1300px) and (orientation: landscape)  {
+      padding-top:2em;
+    }
+    @media screen and (max-width: 1200px) and (orientation: landscape){
+      padding-top:2em;
+    }
     @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
       padding-top:1em;
-    }
-    @media screen and (min-width: 1300px) and (orientation: landscape){
-      padding-top:2em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
       padding-top:2em;
