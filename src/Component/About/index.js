@@ -107,23 +107,24 @@ const Layout = styled.div`
     @media (max-width: 2560px){
       grid-template-columns: 2fr 1fr;
       margin-top: -4em;
-      transform: translateX(14%);
+      transform: translateX(3%);
     }
     @media (max-width: 1537px){
       grid-template-columns: 2fr 1fr;
       margin-top: -5em;
-      transform: translateX(10%);
+      transform: translateX(0%);
     }
     @media (max-width: 1468px){
       margin-top: 3em;
+      transform: translateX(2%);
     }
     @media (max-width: 1196px){
       margin-top: -6em;
-      transform: translateX(-12%);
+      transform: translateX(-17%);
     }
     @media(max-width:1025px) {
       margin-top: -5em;
-      transform: translateX(15%);
+      transform: translateX(7%);
     } 
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
@@ -151,7 +152,7 @@ const LayoutWhere = styled.div`
     @media only screen and (max-width: 1025px) and (orientation:landscape) {
       width:560px;
       height: 350px;
-      margin-left: -42vh;
+      margin-left: -49vh;
     }
     @media only screen and (max-width: 1024px) and (orientation:portrait) {
       width:600px;
@@ -190,6 +191,7 @@ const HeaderDiv = styled.div `
     }
 `
 const Div = styled.div`
+    width: 700px;
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
   justify-content: center;
     }
