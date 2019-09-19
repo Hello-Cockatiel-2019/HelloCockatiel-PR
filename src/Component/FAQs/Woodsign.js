@@ -32,19 +32,22 @@ const Qwood = styled(BrownParagraph) `
         width: 330px;
     }
     @media only screen and (max-width:768px) {
-        width: 300px;
+        width: 330px;
+    }
+    @media only screen and (max-width:600px) {
+        width: 330px;
     }
     @media only screen and (max-width:500px) {
-        width: 330px;
+        width: 300px;
+        font-size:1em;
     }
     @media only screen and (max-width:400px) {
         width: 300px;
         font-size:1em;
     }
     @media only screen and (max-width:320px) {
-        width: 250px;
-        margin: 0em 1em 0em 0em;
-        font-size:1em;
+        width: 230px;
+        font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         width: 250px;
@@ -78,18 +81,22 @@ const Awood = styled(Paragraph)`
         width: 330px;
     }
     @media only screen and (max-width:768px) {
-        width: 300px;
+        width: 330px;
+    }
+    @media only screen and (max-width:600px) {
+        width: 330px;
     }
     @media only screen and (max-width:500px) {
-        width: 330px;
+        width: 300px;
+        font-size:1em;
     }
     @media only screen and (max-width:400px) {
         width: 300px;
         font-size:1em;
     }
     @media only screen and (max-width:320px) {
-        width: 250px;
-        font-size:1em;
+        width: 230px;
+        font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         width: 250px;
