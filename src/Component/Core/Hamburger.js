@@ -103,7 +103,7 @@ export const HamburgerDiv = styled.div`
       background: ${color.Wood6};
       list-style-type: none;
       transform-origin: 0% 0%;
-      transform: translate(-220%, 0);
+      transform: translate(0%, -220%);
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
       @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         width:400px;
