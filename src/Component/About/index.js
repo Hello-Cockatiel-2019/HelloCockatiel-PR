@@ -17,16 +17,25 @@ const Plate = styled.div`
     width:620px;
     height: 387px;
     padding-top: 2.5em;
+    margin-top: 20vh;
     } 
     @media(max-width:1537px) {
     width:620px;
     height: 387px;
     padding-top: 2.5em;
+    margin-top: 19vh;
+    } 
+    @media(max-width:1467px) {
+    width:620px;
+    height: 387px;
+    padding-top: 2.5em;
+    margin-top: 14vh;
     } 
     @media(max-width:1196px) {
     width:600px;
     height: 374px;
     padding-top: 2.5em;
+    margin-top: 2vh;
     }
     @media only screen and (max-width: 1025px) and (orientation:landscape) {
       width:560px;
@@ -119,16 +128,59 @@ const Layout = styled.div`
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
       margin:0;
-      margin-top: -5em;
+      margin-top: -12em;
+    }
+    @media only screen and (max-width: 414px) and (orientation:portrait)  {
+      margin-top: -8em;
     }
     @media only screen and (max-width: 320px) and (orientation:portrait) {
-      margin-top: -3em;
+      margin-top: -6em;
     }    
 `
 const LayoutWhere = styled.div`
-  @media (orientation:landscape){
-    align-self:end;
-  }
+     @media(max-width:2560px) {
+      margin-top: 42vh;
+    } 
+    @media(max-width:1537px) {
+      margin-top: 50vh;
+    } 
+    @media(max-width:1196px) {
+      margin-top: 34vh;
+    }
+    @media only screen and (max-width: 1025px) and (orientation:landscape) {
+      width:560px;
+      height: 350px;
+      margin-left: -42vh;
+    }
+    @media only screen and (max-width: 1024px) and (orientation:portrait) {
+      width:600px;
+      height: 668px;
+      padding-top: 1em;
+      margin-top: 0vh;
+    }
+    @media only screen and (max-width: 834px) and (orientation:portrait) {
+      width: 530px;
+    height: 590px;
+    }
+    @media only screen and (max-width: 768px) and (orientation:portrait) {
+      margin-top: -7vh;
+    }
+    @media only screen and (max-width: 414px) and (orientation:portrait) {
+      padding:0;
+      width: 315px;
+    height: 381px;
+    margin-top: -7vh;
+    }
+    @media only screen and (max-width: 375px) and (orientation:portrait) {
+      width: 315px;
+    height: 390px;
+    margin-top: -7vh;
+    }
+    @media only screen and (max-width: 320px) and (orientation:portrait) {
+      width: 250px;
+    height: 279px;
+    margin-top: -7vh;
+    }        
 `
 const HeaderDiv = styled.div `
   display:none;
@@ -137,6 +189,7 @@ const HeaderDiv = styled.div `
     }
 `
 const Div = styled.div`
+height:100vh;
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
   justify-content: center;
     }
