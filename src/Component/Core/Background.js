@@ -10,11 +10,18 @@ const FixedBackground = styled.div`
   position:fixed;
   background-size:cover;
   background-image:url('/images/Background/1536x792.png');
+  
    @media (max-width: 960px) {
     background-image:url('/images/Background/768x1230.png');
    }
-   @media (max-width: 414px) {
+   @media only screen and (max-width: 375px) and (min-height: 568px) and (orientation:portrait) {
     background-image:url('/images/Background/414x896.png');
+    }
+   @media only screen and (min-width: 375px) and (max-height: 736px) and (orientation:portrait) {
+    background-image:url('/images/Background/375x632.png');
+    }
+    @media (max-width: 320px) {
+    background-image:url('/images/Background/375x632.png');
     }
 `
 export default class background extends Component {
