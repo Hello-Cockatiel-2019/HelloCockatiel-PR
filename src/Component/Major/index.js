@@ -94,12 +94,12 @@ const AllContent = styled.div`
       padding-top:8em;
     }
     @media (max-width:380px) and (max-height:820px){
-      height: 80vh;
-      transform: translate(-7%,-15%);
+      height: 95vh;
+      transform: translate(-7%,-40%);
     }
-    @media (max-width:380px){
-      height: 83vh;
-      transform: translate(-9%,-24%);
+    @media (max-width:380px) and (max-height:700px){
+      height: 90vh;
+      transform: translate(-9%,-23%);
       padding-top:1em;
     }
     @media (max-width:325px){
