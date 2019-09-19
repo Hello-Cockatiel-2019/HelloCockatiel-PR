@@ -332,19 +332,19 @@ const TextTopic = styled(Small2)`
         margin-top:-1.8em;
     }
     @media (max-width:380px){
-        font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '1.6em'
-        : props.topic === 1 ? '2.3em'
-            : props.topic === 3 ? '2.3em'
-                : '2.7em'};
+        font-size:10px;
+        padding-left:${props => props.topic === 0 ? '2.1em'
+        : props.topic === 1 ? '2.6em'
+            : props.topic === 3 ? '2.7em'
+                : '3em'};
         margin-top:-1.8em;
     }
     @media (max-width:325px){
-        font-size:0.1em;
-        padding-left:${props => props.topic === 0 ? '2.5em'
-        : props.topic === 1 ? '3.1em'
-            : props.topic === 3 ? '3.2em'
-                : '3.5em'};
+        font-size:10px;
+        padding-left:${props => props.topic === 0 ? '2.1em'
+        : props.topic === 1 ? '2.7em'
+            : props.topic === 3 ? '2.8em'
+                : '3em'};
         margin-top:-1.8em;
     }
 `
