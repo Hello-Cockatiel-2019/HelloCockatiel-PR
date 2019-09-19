@@ -43,6 +43,7 @@ const Button = styled.button`
        ${ mobileShadow }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      
       ${ mobileShadow }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {

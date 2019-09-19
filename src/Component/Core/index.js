@@ -26,7 +26,6 @@ const DivBlur = styled.div`
 
 const SideBarSection = styled.div`
     transform :  translateY(65%);
-    
     @media screen and (max-width:1199px) {
         transform :  translateY(70%);
     }
@@ -35,9 +34,6 @@ const SideBarSection = styled.div`
         top: 10vh;
     }
     @media screen and (max-width:1024px) {
-        top: 14vh;
-    }
-    @media screen and (max-width:990.5px) {
         top: 14vh;
     }
     @media screen and (max-width:960px) {
@@ -54,9 +50,6 @@ const SideBarSection = styled.div`
         transform: translate(0%,40%);
     }
     @media screen and (max-height:750px) and (orientation: landscape){
-        top: 3vh;
-    }
-    @media screen and (max-height:650px) and (orientation: landscape){
         top: 3vh;
     }
 `
@@ -96,7 +89,11 @@ const RegiserDiv = styled.div`
     @media screen and (max-width:1140px){
         top: -60vh;
     }
+    @media screen and (max-width:1024px){
+        left: 85vw;
+    }
     @media screen and (max-width : 991.5px){
+        left: 80vw;
         top: -350px;
     }
     @media screen and (max-width : 990px){

@@ -195,12 +195,15 @@ const A = styled.a`
   }
 `
 
-const TitleRes = styled(Title)`
-    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+const TitleResgister = styled(Title)`
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         font-size:2em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
        font-size:2em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        font-size:2em;
     }
     @media screen and (max-width:601px) {
         font-size:1.5em;
@@ -211,13 +214,16 @@ const TitleRes = styled(Title)`
 `
 
 const RegisDiv = styled.div `
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        margin-top:0px!important;
-    }
     @media only screen and (max-width:834px) and (orientation: landscape) {
         margin-top: -10vh!important;
     }
-    @media screen and (max-width:768px) and (orientation: portrait){
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        margin-top:0px!important;
+    }
+    @media screen and (max-width:768px) and (min-height: 1026px) and (orientation: portrait){
+        margin-top: -10vh!important;
+    }
+    @media screen and (max-width:768px) and (max-height: 1022px) and (orientation: portrait){
         margin-top: -10vh!important;
     }
     @media only screen and (max-width:650px) {
@@ -280,15 +286,15 @@ export default class Home extends Component {
                         {
                             this.state.plate.map((data,i) => {
                                 return (
-                                    <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
-                                        <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
-                                            <A href={data.link} key={i}>
-                                                <Woodplate source={data.imgURL} key={i} pt={i}>
-                                                    <TitleRes key={i}>{data.text}</TitleRes>
-                                                </Woodplate>
-                                            </A>
-                                        </button>
-                                    </WoodDiv>
+                                        <A href={data.link} key={i}>
+                                            <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
+                                                <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
+                                                        <Woodplate source={data.imgURL} key={i} pt={i}>
+                                                            <TitleResgister key={i}>{data.text}</TitleResgister>
+                                                        </Woodplate>
+                                                </button>
+                                            </WoodDiv>
+                                        </A>
 
                                 )
                             })
