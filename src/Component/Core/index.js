@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.min'
 import GlobalStyle from './GlobalStyle'
 import { Desktop, Mobile } from './Hidden'
 import { HamburgerDiv } from './Hamburger'
+import { Title } from './Text';
 
 import Home from '../Home'
 import Background from './Background'
@@ -87,8 +88,8 @@ const RegiserDiv = styled.div`
         left: 80vw;
         top: -400px;
     }
-    @media screen and (max-width : 991.5px){
-        top: -300px;
+    @media screen and (max-width : 991.5px) and (max-height:850px){
+        top: -420px;
     }
 `
 
@@ -115,6 +116,59 @@ const HomeDiv = styled.div`
     @media screen and (max-width:320px) {
         transform:translateY(0%);
     }
+`
+
+const Facebook = styled.img`
+    width: 44px;
+    height: 44px;
+`
+
+const FacebookDiv = styled(Desktop)`
+    padding-top:10vh;
+    @media screen and (max-width:1199px) and (max-height: 850px) {
+        padding-top:0;
+    }
+    @media screen and (max-width:1199px) and (max-height: 750px) {
+        margin-top: -40vh!important;
+    }
+    @media screen and (max-width:1199px) and (max-height: 705px) {
+        margin-top: -45vh!important;
+    }
+    @media screen and (max-width:991px) and (max-height: 850px) {
+        padding-top:25vh;
+    }
+    @media screen and (max-width:991px) and (max-height: 750px) {
+        margin-top: -60vh!important;
+    }
+    @media screen and (max-width:991px) and (max-height: 705px) {
+        margin-top: -65vh!important;
+    }
+    @media screen and (max-height:850px) {
+        margin-top:-5vh;
+    }
+    @media screen and (max-height:830px) {
+        margin-top:-10vh;
+    }
+    @media screen and (max-height:795px) {
+        margin-top:-15vh;
+    }
+    @media screen and (max-height:720px) {
+        margin-top:-17vh;
+    }
+    @media screen and (max-height:700px) {
+        margin-top:-19vh;
+    }
+    @media screen and (max-height:680px) {
+        margin-top:-23vh;
+    }
+`
+
+const A = styled.a`
+  text-decoration:none;;
+
+  &:hover{
+    text-decoration:none;
+  }
 `
 
 export default class NavBar extends Component {
@@ -182,6 +236,12 @@ export default class NavBar extends Component {
                                 <Register />
                             </RegiserDiv>
                         </Div>
+                        <FacebookDiv className="d-flex justify-content-end mr-5">
+                            <A href="https://www.facebook.com/ThisPz" className="d-flex flex-row">
+                                <Facebook src="/images/Objects/facebook.png" />
+                                <Title className="pt-1 pl-1"> Cockatiel</Title>
+                            </A>
+                        </FacebookDiv>
                     </Desktop>
                     <Mobile>
                         <div className="row justify-content-end">
