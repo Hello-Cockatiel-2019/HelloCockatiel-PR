@@ -12,7 +12,7 @@ const Sdiv = styled.div `
         transform: translate(-20%,0%);
     }
     @media (max-width:1024px) {
-        transform: translate(7%,-11%);
+        transform: translate(7%,0%);
     }
     @media (max-width:999px) {
         transform: translate(25%,-10%);
@@ -124,7 +124,7 @@ export default class FAQs extends Component {
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "ค่ายนี้จัดที่ไหน เมื่อไหร่ แล้วจะรบกวนเวลาเรียนไหม?",
+            q: "ค่ายนี้จัดที่ไหน แล้วจะรบกวนเวลาเรียนไหม?",
             a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถ",
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
