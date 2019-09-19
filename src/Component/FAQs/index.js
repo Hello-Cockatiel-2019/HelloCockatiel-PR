@@ -78,7 +78,7 @@ const Sdiv = styled.div `
         transform: translate(1%,35%);
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        transform: translate(14%,9%);
+        transform: translate(7%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
         transform: translate(1%,-17%);
