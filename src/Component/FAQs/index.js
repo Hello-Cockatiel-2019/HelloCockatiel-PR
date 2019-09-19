@@ -5,13 +5,37 @@ import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
     transform: translate(0%,0%);
+    @media (max-width:2600px) {
+        transform: translate(11%,20%);
+    }
     @media (max-width:2500px) {
-        transform: translate(10%,-5%);
+        transform: translate(7%,-5%);
+    }
+    @media (max-width:2434px) {
+        transform: translate(9%,-5%);
+    }
+    @media (max-width:1949px) {
+        transform: translate(7%,-5%);
+    }
+    @media (max-width:1679px) {
+        transform: translate(6%,-5%);
+    }
+    @media (max-width:1468px) {
+        transform: translate(1%,40%);
+    }
+    @media (max-width:1350px) {
+        transform: translate(1%,20%);
     }
     @media (max-width:1320px) {
-        transform: translate(2%,-12%);
+        transform: translate(1%,20%);
     }
     @media (max-width:1199px) {
+        transform: translate(-25%,-13%);
+    }
+    @media (max-width:1199px) {
+        transform: translate(1%,20%);
+    }
+    @media (max-width:1197px) {
         transform: translate(-20%,-15%);
     }
     @media (max-width:1024px) {
@@ -45,7 +69,7 @@ const Sdiv = styled.div `
         transform: translate(15%,-22%);
     }
     @media (max-width:400px) {
-        transform: translate(9%,-10%);
+        transform: translate(9%,-17%);
     }
     @media (max-width:320px) {
         transform: translate(10%,-17%);
@@ -122,7 +146,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 3 ? 250 : 115}px;
+    height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;

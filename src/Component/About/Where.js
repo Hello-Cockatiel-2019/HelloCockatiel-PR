@@ -4,12 +4,47 @@ import styled from 'styled-components'
 import { Small } from '../Core/Text'
 
 const Where1 = styled.div `
-background-image: url(/images/Objects/arrowplate3.png);
+background-image: url(/images/Objects/arrowplate4.png);
     background-repeat: no-repeat;
     background-size:100%;
     padding-left:1.5em;
     margin-left:0.2em;
-@media(min-width:320px) {
+    @media(max-width:2560px) {
+      width: 130px;
+    height: 95px;
+    padding-top: 3.6em;
+  }
+  @media only screen and (max-width: 1024px) and (orientation:portrait) {
+    background-image: url(/images/Objects/arrowplate3.png);
+    width: 174px;
+    height: 52px;
+    padding-top: 0.6em;
+    }
+  @media (max-width:960px) {
+    width: 164px;
+    height: 53px;
+    padding-top: 0em;
+  }
+  @media (max-width:768px) {
+    width:204px;
+    height: 60px;
+    padding-top:0.6em;
+  }
+  @media(max-width:576px) {
+    width:153px;
+    height: 45px;
+      }
+      @media (max-width:410px) {
+    padding-top:0.4em;
+    width:109px;
+    height: 32px;
+  }
+  @media(max-width:320px) {
+  padding-top:0.2em;
+    width:85px;
+    height: 25px;
+  }
+/* @media(min-width:320px) {
   padding-top:0.2em;
     width:85px;
     height: 25px;
@@ -59,7 +94,7 @@ background-image: url(/images/Objects/arrowplate3.png);
     width:142px;
     height: 99px;
     padding-top:4em;
-  }
+  } */
   
   
 `
@@ -79,16 +114,16 @@ const Sit = styled.div `
         height: 69px;
       }
       @media (min-width:768px) {
-        width:315px;
-        height: 92px;
+        width: 248px;
+        height: 72px;
       }
       @media (min-width:960px) {
-        width:165px;
-        height: 48px;
+        width: 243px;
+        height: 71px;
       }
       @media(min-width:1024px) {
-        width:176px;
-        height: 51px;
+        width: 204px;
+        height: 60px;
       }
         background-image: url(/images/Objects/arrowplate2.png);
         background-repeat: no-repeat;
@@ -104,7 +139,7 @@ const Text= styled(Small) `
       font-size:28px;
     }
       @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-      font-size: 16px;
+        font-size: 24px;
     } 
     letter-spacing: 0.05em;
     margin-bottom: -0.4em;
@@ -112,13 +147,13 @@ const Text= styled(Small) `
 const WhereIs = styled.div `
 float: right;
 @media(min-width:320px) {
-  margin-top:3em;
-  margin-right:1em;
+  margin-top: 2em;
+    margin-right: -2em;
   }
 
   @media (min-width:768px) {
     margin-top:3em;
-    margin-right:2em;
+    margin-right: -3em;
   }
   @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation: landscape)  {
     visibility: hidden;
@@ -131,11 +166,11 @@ float: right;
     margin-right:2.5em;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-    margin-top:5em;
-    margin-right:3.5em;
+    margin-top: 0em;
+    margin-right: -7.5em;
   }
   @media (min-width:960px) {
-    margin-top:3em;
+    margin-top: 0em;
     margin-left:2em;
   }
 `
