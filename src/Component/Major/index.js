@@ -22,6 +22,9 @@ const AllContent = styled.div`
     @media (max-width: 1500px) and (orientation: landscape)  {
     transform: translate(5%,0%);
     }
+    @media only screen and (min-width: 1467px) and (max-height: 1024px) and (orientation: landscape)  {
+    transform: translate(5%,30%);
+    }
     @media (max-width: 1400px) and (orientation: landscape)  {
     transform: translate(5%,20%);
     }
@@ -36,7 +39,7 @@ const AllContent = styled.div`
     }
     @media (max-width: 1200px) and (orientation: landscape)  {
     transform: translate(-12%,-20%);
-    }
+    } 
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     transform: translate(25%,-40%);
     grid-template-columns: none;
@@ -54,9 +57,9 @@ const AllContent = styled.div`
     @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     transform: translate(6%,-10%);
     }
-    @media (max-height: 900px) and (orientation: landscape)  {
+    /* @media (max-height: 900px) and (orientation: landscape)  {
     transform: translate(6%,20%);
-    }
+    } */
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(-21%,-30%);
     grid-template-columns: none;

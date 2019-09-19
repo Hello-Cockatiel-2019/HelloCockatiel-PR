@@ -49,8 +49,8 @@ const Qwood = styled(BrownParagraph) `
         font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 250px;
-        margin: 0em 0em 0em 0em;
+        width: 330px;
+        font-size:1.25em;
     }
 `
 const Awood = styled(Paragraph)`
@@ -97,12 +97,10 @@ const Awood = styled(Paragraph)`
         font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 250px;
+        width: 330px
+        font-size:1.25em;
     }
 `
-
-  
-
 export default class Woodsign extends Component {
     render() {
         return (
