@@ -17,8 +17,14 @@ const Sdiv = styled.div `
     @media (max-width:999px) {
         transform: translate(25%,-25%);
     }
+    @media (max-width:999px) and (max-height:680px){
+        transform: translate(25%,-35%);
+    }
     @media (max-width:768px) {
-        transform: translate(30%,-3%);
+        transform: translate(28%,-18%);
+    }
+    @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
+        transform: translate(30%,-3%)
     }
     @media (max-width:500px) {
         transform: translate(7%,-10%);
@@ -38,7 +44,7 @@ const HeaderDiv = styled.div `
         transform: translate(0%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(0%,-25%);
+        transform: translate(0%,-90%);
     }
     @media (max-width:500px) {
         transform: translate(0%,-50%);
@@ -47,7 +53,7 @@ const HeaderDiv = styled.div `
         transform: translate(0%,-85%);
     }
     @media (max-width:320px) {
-        transform: translate(0%,-75%);
+        transform: translate(0%,-125%);
     }
 `
 const Div = styled.div `
@@ -67,6 +73,9 @@ const Div = styled.div `
     @media only screen and (max-width:998px) {
     height: 130px;
     }
+    @media only screen and (max-width:768px) {
+    height:${props => props.ml === 3 ? 250 : 125}px;
+    }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
@@ -77,7 +86,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:667px)  {
-    height:${props => props.ml === 3 ? 250 : 140}px;
+    height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:320px) and (orientation: portrait) and (min-height:568px)  {
     height:${props => props.ml === 3 ? 250 : 90}px;
