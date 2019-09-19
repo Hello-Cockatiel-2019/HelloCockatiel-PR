@@ -14,12 +14,12 @@ const NavMobile = css`
 `
 
 const Button = styled.div`
-  background-image:url('/images/Objects/plate-d3.png');
+  background-image:url('/images/Objects/${props => props.imgURL}');
   background-repeat:no-repeat;
-  background-size:100%;
+  background-size:contain;
   height:auto;
   width:180px;
-  display: ${props => props.displayButton === 3 ? 'none' : 'block'} ;
+  display: ${props => props.index === 3 ? 'none' : 'block'} ;
     
     @media screen and (max-width:834px) and (orientation: landscape){
         ${ NavMobile }
@@ -31,8 +31,8 @@ const Button = styled.div`
         ${ NavMobile }
     }
     @media(max-width:320px) {
-        margin-top:${props => props.pt ===0 ? -5 :0}px!important;
-        padding-top:${props => props.pt ===0 ? 0 :1}rem!important;
+        margin-top:${props => props.index ===0 ? -5 :0}px!important;
+        padding-top:${props => props.index ===0 ? 0 :1}rem!important;
         padding-bottom:1rem!important;
         ${ NavMobile }
     }
@@ -68,6 +68,7 @@ const Hr = styled(Mobile)`
 `
 
 export default class componentName extends Component {
+  
   state = {
     buttonData: [
       {
@@ -86,13 +87,57 @@ export default class componentName extends Component {
         text: `${ contact }`,
         link: "https://www.facebook.com/ThisPz"
       }
-    ]
+    ],
+    imgURL: ['plate-d1.png', 'plate-d3.png', 'plate-d3.png']
   }
 
   handleClick = async (i) => {
     let number = await i
     if (number >= 0) {
       this.props.changeClick(number);
+      if(number === 0){
+        let a = this.state.imgURL.slice();
+        a[number] = 'plate-d1.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+      if(number !== 0){
+        let a = this.state.imgURL.slice();
+        a[0] = 'plate-d3.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+      if(number === 1){
+        let a = this.state.imgURL.slice();
+        a[number] = 'plate-d1.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+      if(number !== 1){
+        let a = this.state.imgURL.slice();
+        a[1] = 'plate-d3.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+      if(number === 2){
+        let a = this.state.imgURL.slice();
+        a[number] = 'plate-d1.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+      if(number !== 2){
+        let a = this.state.imgURL.slice();
+        a[2] = 'plate-d3.png';
+        this.setState({
+          imgURL: a
+        })
+      }
+    
     }
   }
 
@@ -103,17 +148,17 @@ export default class componentName extends Component {
           this.state.buttonData.map((data, i) => {
             return (
               <div className="mb-lg-5" key={i}>
-                <A href={data.link} key={i}>
                   <Button className="btn pb-4 pt-4"
                     key={i}
-                    displayButton={i}
                     onClick={() => this.handleClick(i)}
-                    pt={i}>
+                    imgURL={this.state.imgURL[i]}
+                    index={i}>
+                    <A href={data.link} key={i}>
                       <Title key={i}>
                         {data.text}
                       </Title>
+                    </A>
                   </Button>
-                  </A>
                 <Hr visibleHr={i} />
               </div>
             )
