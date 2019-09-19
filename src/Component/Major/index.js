@@ -36,7 +36,7 @@ const AllContent = styled.div`
     }
     @media (max-width: 1200px) and (orientation: landscape)  {
     transform: translate(-12%,-20%);
-    }
+    } 
     @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
     transform: translate(25%,-40%);
     grid-template-columns: none;
