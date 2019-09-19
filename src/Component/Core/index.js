@@ -17,7 +17,7 @@ import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
-    transform :  translateY(-40%);
+    transform :  translateY(-60%);
 `
 
 const DivBlur = styled.div`
@@ -27,39 +27,47 @@ const DivBlur = styled.div`
 const SideBarSection = styled.div`
     transform :  translateY(65%);
     @media screen and (max-width:1199px) {
-        top:10vh;
-    }
-    @media screen and (max-width:1024px) {
-        top: 14vh;
-    }
-    @media screen and (mmax-width:900px) {
+        left:-3vw;
         top: 5vh;
     }
-    @media screen and (max-width:750px) {
-        left: -5vw;
-        top: 7vh;
+    @media screen and (max-width:1024px) {
+        left:-4vw;
+        top: 5vh;
     }
-    @media screen and (max-height:900px) {
-        top: 0vh;
+    @media screen and (max-width:991.5px) {
+        top: 10.5vh;
     }
-    @media screen and (max-height:750px) and (orientation: landscape){
-        top: 3vh;
+    @media screen and (max-width:865px) {
+        left:-6vw;
     }
 `
 
 const Content = styled.div`
+    @media screen and (max-width:2500px) {
+        top: 10vh;
+    }
+    @media screen and (max-width:1469px) {
+        top: -5vh;
+    }
     @media screen and (max-width:1199px) {
         left: -20vw;
-        top: 10vh;
+        top: 2vh;
+    }
+    @media screen and (max-width:1196px) and (max-height:750px){
+        margin-top:50vh;
     }
     @media screen and (max-width:1196px) {
         left: -5vw;
+        top: 20vh;
     }
     @media screen and (max-width:1024px) {
         left: -20vw;
     }
+    @media screen and (max-width:980px) {
+        left: -18vw;
+    }
     @media screen and (max-width:960px) {
-        left: -25vw;
+        left: -10vw;
     }
     @media screen and (max-width:800px) {
         left: -30vw;
@@ -73,23 +81,14 @@ const Content = styled.div`
 const RegiserDiv = styled.div`
     transform:translate(-20%,20%);
     @media screen and (max-width:1201.5px) {
-        top: -100px;
+        top: -50px;
     }
     @media screen and (max-width:1199.5px) {
         left: 80vw;
-        top: -55vh;
-    }
-    @media screen and (max-width:1140px){
-        top: -60vh;
+        top: -400px;
     }
     @media screen and (max-width : 991.5px){
-        top: -350px;
-    }
-    @media screen and (max-width : 990px){
-        top: -380px;
-    }
-    @media screen and (max-width:959.5px) {
-        top: -510px;
+        top: -300px;
     }
 `
 
@@ -126,7 +125,9 @@ export default class NavBar extends Component {
         displayHamburger:'none',
         homeDisplay: 'block',
         mobileDisplay: 'none',
-        slide:0
+        slide:0,
+        width: '180',
+        height: 'auto'
     }
 
     changeClick = (i) => {
