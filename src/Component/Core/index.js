@@ -27,17 +27,10 @@ const DivBlur = styled.div`
 const SideBarSection = styled.div`
     transform :  translateY(65%);
     @media screen and (max-width:1199px) {
-        transform :  translateY(70%);
-    }
-    @media screen and (max-width:1196px) {
-        left: 0vw;
-        top: 10vh;
+        top:10vh;
     }
     @media screen and (max-width:1024px) {
         top: 14vh;
-    }
-    @media screen and (max-width:960px) {
-        transform: translate(0%,40%);
     }
     @media screen and (mmax-width:900px) {
         top: 5vh;
@@ -47,7 +40,7 @@ const SideBarSection = styled.div`
         top: 7vh;
     }
     @media screen and (max-height:900px) {
-        transform: translate(0%,40%);
+        top: 0vh;
     }
     @media screen and (max-height:750px) and (orientation: landscape){
         top: 3vh;
@@ -89,21 +82,14 @@ const RegiserDiv = styled.div`
     @media screen and (max-width:1140px){
         top: -60vh;
     }
-    @media screen and (max-width:1024px){
-        left: 85vw;
-    }
     @media screen and (max-width : 991.5px){
-        left: 80vw;
         top: -350px;
     }
     @media screen and (max-width : 990px){
-        top: -350px;
+        top: -380px;
     }
     @media screen and (max-width:959.5px) {
-        top: -500px;
-    }
-    @media screen and (max-width:900px) {
-        top: -500px;
+        top: -510px;
     }
 `
 
@@ -130,10 +116,6 @@ const HomeDiv = styled.div`
     @media screen and (max-width:320px) {
         transform:translateY(0%);
     }
-`
-
-const LogoDiv = styled.div`
-    transform:translateY(0%);
 `
 
 export default class NavBar extends Component {
@@ -185,9 +167,9 @@ export default class NavBar extends Component {
                 <div className="container-fluid p-0">
                     <Desktop>
                         <Background />
-                        <LogoDiv className="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center">
                             <Logo src="/images/Objects/Logo.png" />
-                        </LogoDiv>
+                        </div>
                         <Div className="row justify-content-between">
                             <SideBarSection className="col-2 d-inline-flex flex-column ml-5 justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
