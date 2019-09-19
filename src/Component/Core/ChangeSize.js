@@ -19,13 +19,6 @@ const Minicon = styled.div`
     justify-content:center;
     align-items:center;
   }
-  @media(orientation:portrait)
-  and (max-height: 530px){
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-  }
   @media(orientation:landscape)
   and (max-height: 600px){
     display:flex;
