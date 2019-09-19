@@ -1,10 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import color from '../../Config/Color'
 import { BrownParagraph } from './Text'
 import { changeSizeText } from './Messages'
 
+const layout = css`
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+`
 const Minicon = styled.div`
   display:none;
   width:100%;
@@ -14,17 +20,11 @@ const Minicon = styled.div`
   z-index:1000;
   @media(orientation:portrait)
   and (max-width: 319px){
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    ${ layout }
   }
   @media(orientation:landscape)
   and (max-height: 600px){
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    ${ layout }
   }
 `
 
