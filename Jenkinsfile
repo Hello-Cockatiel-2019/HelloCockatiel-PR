@@ -3,6 +3,7 @@ pipeline{
   stages {
    	stage('dev'){
 			steps{
+				sh('printenv | sort')
 			sh 'echo "============= [ Step : Production. [3/3] ] ===================================="'
 			sh 'echo "============= [ Production [3/3] - Deleteing old project ] ===================="'
 			sh 'echo "============= [ Production [3/3] - Stoping Old Production ] ==================="'
