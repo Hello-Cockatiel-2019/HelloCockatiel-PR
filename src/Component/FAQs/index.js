@@ -69,7 +69,7 @@ const Sdiv = styled.div `
         transform: translate(15%,-22%);
     }
     @media (max-width:400px) {
-        transform: translate(9%,-10%);
+        transform: translate(9%,-17%);
     }
     @media (max-width:320px) {
         transform: translate(10%,-17%);
@@ -146,7 +146,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 3 ? 250 : 115}px;
+    height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
