@@ -16,9 +16,6 @@ import Register from './Register';
 import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
-
-
-
 const Div = styled.div`
     transform :  translateY(-40%);
 `
@@ -33,8 +30,15 @@ const SideBarSection = styled.div`
     @media screen and (max-width:1199px) {
         transform :  translateY(70%);
     }
+    @media screen and (max-width:1196px) {
+        left: 0vw;
+        top: 10vh;
+    }
     @media screen and (max-width:1024px) {
-      transform: translate(0%,65%);
+        top: 14vh;
+    }
+    @media screen and (max-width:960px) {
+        transform: translate(0%,40%);
     }
     @media screen and (max-height:900px) {
         transform: translate(0%,40%);
@@ -53,9 +57,14 @@ const Content = styled.div`
         left: -20vw;
         top: 10vh;
     }
+    @media screen and (max-width:1196px) {
+        left: -5vw;
+    }
+    @media screen and (max-width:1024px) {
+        left: -20vw;
+    }
     @media screen and (max-width:960px) {
         left: -25vw;
-        top: 10vh;
     }
     @media screen and (max-width:800px) {
         left: -30vw;
@@ -63,19 +72,29 @@ const Content = styled.div`
     }
 `
 
-const RegiserButton = styled.div`
+const RegiserDiv = styled.div`
     transform:translate(-20%,20%);
-    @media screen and (max-width:1199px) {
-        left: 80vw;
-        top: -20vw;
+    @media screen and (max-width:1201.5px) {
+        top: -100px;
     }
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:1199.5px) {
         left: 80vw;
-        top: -40vw;
+        top: -55vh;
     }
-    @media screen and (max-width:800px) {
-        left: 80vw;
-        top: -30vw;
+    @media screen and (max-width:1140px) {
+        top: -65vh;
+    }
+    @media screen and (max-width : 991.5px) {
+        top: -400px;
+    }
+    @media screen and (max-width : 990.5px) {
+        top: -50vh;
+    }
+    @media screen and (max-width:960px) {
+        top: -67vh;
+    }
+    @media screen and (max-width:900px) {
+        top: -65vh;
     }
 `
 
@@ -84,7 +103,7 @@ const Logo = styled.img`
     height: 262px;
     top: 19px;
     z-index: 100;
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:900px) {
         width: 610px;
         height: 220px; 
     }
@@ -101,9 +120,7 @@ const HomeDiv = styled.div`
 `
 
 const LogoDiv = styled.div`
-    @media screen and (max-width:1024px) {
-        transform:translateY(30%);
-    }
+    transform:translateY(0%);
 `
 
 export default class NavBar extends Component {
@@ -165,9 +182,9 @@ export default class NavBar extends Component {
                             <Content className="col-7 d-inline-flex justify-content-center">
                                 <ClickChange keyID={this.state.id} />
                             </Content>
-                            <RegiserButton className="col-3 col-xl-2 d-inline-flex justify-content-end">
+                            <RegiserDiv className="col-3 col-xl-2 d-inline-flex justify-content-end">
                                 <Register />
-                            </RegiserButton>
+                            </RegiserDiv>
                         </Div>
                     </Desktop>
                     <Mobile>
