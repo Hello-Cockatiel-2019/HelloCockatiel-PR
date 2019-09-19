@@ -13,6 +13,11 @@ const Plate = styled.div`
     width: 100vh;
     height: 100vh;
     background-image: url(/images/Objects/big-platebird.png);
+    @media(max-width:2560px) {
+    width:620px;
+    height: 387px;
+    padding-top: 2.5em;
+    } 
     @media(max-width:1537px) {
     width:620px;
     height: 387px;
@@ -90,6 +95,11 @@ const Content = styled(Paragraph)`
 `
 const Layout = styled.div`
     display:grid;
+    @media (max-width: 2560px){
+      grid-template-columns: 2fr 1fr;
+      margin-top: -4em;
+    margin-left: 11em;
+    }
     @media (max-width: 1537px){
       grid-template-columns: 2fr 1fr;
       margin-top: -4em;
