@@ -1,10 +1,32 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Title } from '../Core/Text'
 import { aboutHeader, majorHeader, faqsHeader } from '../Core/Messages'
 
 import Register from '../Core/Register'
+
+const paddingRightLeftFiveEM = css`
+    padding-left: 5em;
+    padding-right: 5em;
+`
+
+const paddingRightLeftTenEM = css`
+    padding-left: 5em;
+    padding-right: 5em;
+`
+
+const woodDivMobile = css`
+    transform: translateY(-40%);
+    margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -40 : -10}px;
+`
+
+const woodDivDesktop = css`
+    transform: translateY(-40%);
+        margin-top:${props => props.mt === 0 ? 0 :
+        props.mt === 1 ? -70 : -40}px;
+`
 
 const Woodplate = styled.div `
     background-image: url('/images/Objects/${props => props.source}');
@@ -91,11 +113,11 @@ const HeadLogo = styled.img`
 
 const LogoDiv = styled.div`
     transform: translateY(-7vh);
-    @media screen and (max-width:375px) {
-        transform: translateY(-8vh);
+    @media screen and (max-width:420px) {
+        transform: translateY(-4vh);
     }
-    @media screen and (max-width:320px) {
-        transform: translateY(-8vh);
+    @media screen and (max-width:375px) {
+        transform: translateY(-5vh);
     }
     @media screen and (max-height:750px){
         margin-top:-20px;
@@ -104,48 +126,34 @@ const LogoDiv = styled.div`
 
 const WoodDiv = styled.div`
     @media screen and (max-width:768px) and (orientation: portrait){
-        transform: translateY(-40%);
-        margin-top:${props => props.mt === 0 ? 0 :
-        props.mt === 1 ? -70 : -40}px
+        ${ woodDivDesktop }
     }
     @media screen and (max-width:834px) and (orientation: landscape) {
-        transform: translateY(-40%);
-        margin-top:${props => props.mt === 0 ? 0 :
-        props.mt === 1 ? -70 : -40}px
+        ${ woodDivDesktop }
     }
     @media screen and (max-width:420px) {
-        transform: translateY(-40%);
-        margin-top:${props => props.mt === 0 ? 0 :
-        props.mt === 1 ? -40 : -10}px
+        ${ woodDivMobile }
     }
     @media screen and (max-width:320px) {
-        transform: translateY(-15%);
-        margin-top:${props => props.mt === 0 ? 0 :
-        props.mt === 1 ? -40 : -10}px;
+        ${ woodDivMobile }
     }
 `
 
 const MenuDiv = styled.div`
-
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        padding-left:5em;
-        padding-right:5em;
-    }
+        ${ paddingRightLeftFiveEM }
+    }   
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-        padding-left:5em;
-        padding-right:5em;
+        ${ paddingRightLeftFiveEM }
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-        padding-left:10em;
-        padding-right:10em;
+        ${ paddingRightLeftTenEM }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        padding-left:10em;
-        padding-right:10em;
+        ${ paddingRightLeftTenEM }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        padding-left:10em;
-        padding-right:10em;
+        ${ paddingRightLeftTenEM }
     } 
     @media screen and (max-width:834px) and (orientation: landscape){
         margin-top:-20px;
@@ -156,22 +164,31 @@ const MenuDiv = styled.div`
     @media screen and (max-width:768px) and (orientation: portrait){
         margin-top:-20px;
     }
+     @media screen and (max-width:900px) {
+        margin-top:-50px;
+    }
+    @media screen and (max-width:420px) {
+        margin-top: 10px;
+    }
     @media screen and (max-width:375px) {
-        margin-top:-20px;
+        margin-top:-5px;
     }
     @media screen and (max-width:320px) {
-        margin-top:-40px;
+        margin-top:-5px;
     }
 `
 
 const Facebook = styled.img `
     width: 44px;
     margin-top:.3em;
-     @media screen and (max-width:834px) and (orientation: landscape){
+    @media screen and (max-width:834px) and (orientation: landscape){
         width: 70px; 
     }
      @media screen and (max-width:768px) and (orientation: portrait){
         width: 70px; 
+    }
+     @media screen and (max-width:420px) and (orientation: portrait){
+        width: 44px; 
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         width: 70px;     
@@ -205,6 +222,9 @@ const TitleResgister = styled(Title)`
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
         font-size:2em;
     }
+    @media screen and (max-width:900px) {
+        font-size:1.75em;
+    }
     @media screen and (max-width:601px) {
         font-size:1.5em;
     }
@@ -236,7 +256,7 @@ const RegisDiv = styled.div `
         margin-top: -5vh!important;
     }
     @media only screen and (max-width:320px) {
-        margin-top:-20px!important;
+        margin-top:-40px!important;
     }
 `
 
