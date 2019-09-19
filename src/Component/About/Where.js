@@ -162,7 +162,7 @@ float: right;
         visibility: hidden;
       }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-    margin-top:5em;
+    margin-top:4em;
     margin-right:2.5em;
   }
   @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
