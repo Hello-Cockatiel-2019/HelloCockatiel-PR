@@ -72,10 +72,12 @@ const HeadLogo = styled.img`
      width: 500px;
     height: 220.93px;
     @media screen and (max-width:834px) and (orientation: landscape) {
-        width:60%;
+        width: 520px;
+        height: 220.93px;
     }
     @media screen and (max-width:768px) and (orientation: portrait){
-        width:60%;
+         width: 420px;
+        height: 180.93px;
     }
     @media screen and (max-width:600px) {
         width: 320px;
@@ -94,6 +96,9 @@ const LogoDiv = styled.div`
     }
     @media screen and (max-width:320px) {
         transform: translateY(-8vh);
+    }
+    @media screen and (max-height:750px){
+        margin-top:-20px;
     }
 `
 
@@ -145,6 +150,9 @@ const MenuDiv = styled.div`
     @media screen and (max-width:834px) and (orientation: landscape){
         margin-top:-20px;
     }
+    @media screen and (max-width:789px) and (orientation: portrait){
+        margin-top:-60px;
+    }
     @media screen and (max-width:768px) and (orientation: portrait){
         margin-top:-20px;
     }
@@ -194,6 +202,12 @@ const TitleRes = styled(Title)`
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
        font-size:2em;
     }
+    @media screen and (max-width:601px) {
+        font-size:1.5em;
+    }
+    @media only screen and (max-width:578px)  {
+        font-size:auto;
+    }
 `
 
 const RegisDiv = styled.div `
@@ -205,6 +219,9 @@ const RegisDiv = styled.div `
     }
     @media screen and (max-width:768px) and (orientation: portrait){
         margin-top: -10vh!important;
+    }
+    @media only screen and (max-width:650px) {
+        margin-top: -4vh!important;
     }
     @media only screen and (max-width:420px) {
         margin-top: -3vh!important;

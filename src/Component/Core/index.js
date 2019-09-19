@@ -37,18 +37,27 @@ const SideBarSection = styled.div`
     @media screen and (max-width:1024px) {
         top: 14vh;
     }
+    @media screen and (max-width:990.5px) {
+        top: 14vh;
+    }
     @media screen and (max-width:960px) {
         transform: translate(0%,40%);
     }
-    @media screen and (max-height:900px) {
-        transform: translate(0%,40%);
+    @media screen and (mmax-width:900px) {
+        top: 5vh;
     }
     @media screen and (max-width:750px) {
         left: -5vw;
         top: 7vh;
     }
-    @media screen and (mmax-width:900px) {
-        top: 5vh;
+    @media screen and (max-height:900px) {
+        transform: translate(0%,40%);
+    }
+    @media screen and (max-height:750px) and (orientation: landscape){
+        top: 3vh;
+    }
+    @media screen and (max-height:650px) and (orientation: landscape){
+        top: 3vh;
     }
 `
 
@@ -70,6 +79,9 @@ const Content = styled.div`
         left: -30vw;
         top: 15vh;
     }
+    @media screen and (max-height:750px) and (orientation: landscape){
+        top: 0vh;
+    }
 `
 
 const RegiserDiv = styled.div`
@@ -81,20 +93,20 @@ const RegiserDiv = styled.div`
         left: 80vw;
         top: -55vh;
     }
-    @media screen and (max-width:1140px) {
-        top: -65vh;
+    @media screen and (max-width:1140px){
+        top: -60vh;
     }
-    @media screen and (max-width : 991.5px) {
-        top: -400px;
+    @media screen and (max-width : 991.5px){
+        top: -350px;
     }
-    @media screen and (max-width : 990.5px) {
-        top: -50vh;
+    @media screen and (max-width : 990px){
+        top: -350px;
     }
-    @media screen and (max-width:960px) {
-        top: -67vh;
+    @media screen and (max-width:959.5px) {
+        top: -500px;
     }
     @media screen and (max-width:900px) {
-        top: -65vh;
+        top: -500px;
     }
 `
 
@@ -105,6 +117,10 @@ const Logo = styled.img`
     z-index: 100;
     @media screen and (max-width:900px) {
         width: 610px;
+        height: 220px; 
+    }
+    @media screen and (max-height:750px) and (orientation: landscape){
+        width: 560px;
         height: 220px; 
     }
 `
