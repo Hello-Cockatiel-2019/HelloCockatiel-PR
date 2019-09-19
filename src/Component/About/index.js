@@ -7,218 +7,138 @@ import MobileHeader from '../Core/MobileHeader';
 import Where from './Where'
 
 const Plate = styled.div`
-    margin-left:0em;
+    margin:0em;
     background-size:100%; 
     background-repeat: no-repeat;
-    size:100%;
-    @media(min-width:320px) {
-        background-image: url(/images/Objects/small-plate.png);
-        width:260px;
-        height: 290px;
-        transform: translate(-15%,-25%);
+    width: 100vh;
+    height: 100vh;
+    background-image: url(/images/Objects/big-platebird.png);
+    @media(max-width:2560px) {
+    width:620px;
+    height: 387px;
+    padding-top: 2.5em;
+    } 
+    @media(max-width:1537px) {
+    width:620px;
+    height: 387px;
+    padding-top: 2.5em;
+    } 
+    @media(max-width:1196px) {
+    width:600px;
+    height: 374px;
+    padding-top: 2.5em;
     }
-    @media(min-width:375px) {
+    @media only screen and (max-width: 1025px) and (orientation:landscape) {
+      width:560px;
+      height: 350px;
+    }
+    @media only screen and (max-width: 1024px) and (orientation:portrait) {
       background-image: url(/images/Objects/small-plate.png);
-      width:271px;
-      height: 302px;
-      margin-left:1.5em;
-      transform: translate(-20%,-10%);
-      }
-    @media (min-width:410px) {
-      background-image: url(/images/Objects/small-plate.png);
-      width:309px;
-      height: 344px;
-      margin-left:1.8em;
+      width:600px;
+      height: 668px;
+      padding-top: 1em;
     }
-    @media(min-width:576px) {
-      background-image: url(/images/Objects/small-plate.png);
-      width:434px;
-      height:484 px;
+    @media only screen and (max-width: 834px) and (orientation:portrait) {
+      width: 530px;
+    height: 590px;
     }
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      background-image: url(/images/Objects/small-plate.png);
-      width:479px;
-      height: 545px;
-      transform: translate(-50%,10%);
+    @media only screen and (max-width: 414px) and (orientation:portrait) {
+      padding:0;
+      width: 315px;
+    height: 381px;
     }
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
-      background-image: url(/images/Objects/big-platebird.png);
-      width:383px;
-      height: 240px;
+    @media only screen and (max-width: 375px) and (orientation:portrait) {
+      width: 315px;
+    height: 390px;
     }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-      background-image: url(/images/Objects/small-plate.png);
-      width:523px;
-      height: 583px;
-      transform: translate(3%,0);
-    }
-    @media (min-width:960px) {
-      background-image: url(/images/Objects/big-platebird.png);
-      width:478px;
-      height: 300px;
-    }
-    @media(min-width:1024px) {
-      background-image: url(/images/Objects/big-platebird.png);
-      width:510px;
-      height: 320px;
-      transform: translate(-15%,-10%);
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation:portrait)  {
-      background-image: url(/images/Objects/small-plate.png);
-      width:523px;
-      height: 583px;
-      transform: translate(10%,0);
-    }
-    @media(min-width:1196px) and (orientation:landscape) {
-      background-image: url(/images/Objects/big-platebird.png);
-      width:510px;
-      height: 320px;
-      margin-left:14em;
-    }
-         
+    @media only screen and (max-width: 320px) and (orientation:portrait) {
+      width: 250px;
+    height: 279px;
+    }    
 `
 const Title = styled(Subtitle)`
-      @media(min-width:320px) {
-        padding-top:.25em;
-      }
-      @media (min-width:410px) {
-        padding-top:.4em;
-      }
-      @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        padding-top:.5em;
-        font-size:30px;
-        
-      }
-      @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
-        padding-top:1.5em;
-      }
-      @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation: landscape)  {
-        padding-top:.8em;
-        font-size:25px;
-      }
-      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation:portrait)  {
-        padding-top:.3em;
-        font-size:30px;
-      }
-      @media (min-width:960px) {
-        margin-left:1px;
-        padding-top:1.1em;
-      }
-      @media(min-width:1024px) {
-        margin-left:3px;
-        padding-top:1.5em;
-        font-size:23px;
-      }
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    @media only screen and (min-width: 1024px) and (orientation: portrait) {
+      font-size:38px;
+    }
+    @media only screen and (max-width: 320px) and (orientation:portrait) {
+    font-size:19px;
+    margin: 3px;
+  }
 `
 const Content = styled(Paragraph)`
   overflow:auto;
   line-height: 27px;
   letter-spacing: 0.05em;
   justify-self: center;
-  @media(min-width:320px) {
+  margin: 2em;
+  margin-top: 1em;
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    height: 11em;
+    } 
+    @media only screen and (min-width: 1024px) and (orientation: portrait) {
+      font-size:24px;
+    } 
+  @media only screen and (max-width: 1024px) and (orientation:portrait) {
+    margin-top: 2em;
+    height: 13em;
+  }
+  @media only screen and (max-width: 414px) and (orientation:portrait) {
+    margin-top: 1em;
+  }
+  @media only screen and (max-width: 320px) and (orientation:portrait) {
+    margin: 1em;
+    margin-top: 9px;
+    height: 14em;
     font-size:15px;
-    margin-left:30px;
-    margin-right:30px;
-    margin-top:5px;
-    height:15em;
-  }
-  @media(min-width:320px) {
-    margin-top:10px;
-  }
-  @media (min-width:410px) {
-    font-size:18px;
-    margin-left:35px;
-    margin-right:35px;
-    margin-top:10px;
-    height:15em;
-  }
-  @media (min-width:768px) {
-    font-size:20px;
-    margin-left:65px;
-    margin-right:65px;
-    height:20em;
-    margin-top:28px;
-  }
-   @media only screen and (min-width: 768px) and (max-height: 626px) and (orientation:landscape)  {
-    font-size: 20px;
-    margin-left: 36px;
-    margin-right: 36px;
-    height: 8em;
-    margin-top: 6px;
-    overflow: auto;
-   }
-  @media (min-width:960px) {
-    margin-left:44px;
-    margin-right:44px;
-    height:10em;
-    margin-top:20px;
-  }
-  @media(min-width:1024px) {
-    margin-left:50px;
-    margin-right:50px;
-    margin-top:24px;
-  }
-  @media(min-height:1366px) {
-    height:auto;
-  }
-      
+  }      
 `
 const Layout = styled.div`
     display:grid;
-    grid-template-columns: none;
-
-    @media (min-width:960px) {
-      grid-template-columns: 3fr 1fr;
+    @media (max-width: 2560px){
+      grid-template-columns: 2fr 1fr;
+      margin-top: -4em;
+    margin-left: 11em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation:portrait)  {
+    @media (max-width: 1537px){
+      grid-template-columns: 2fr 1fr;
+      margin-top: -4em;
+    margin-left: 11em;
+    }
+    @media (max-width: 1468px){
+      margin-top: 3em;
+    }
+    @media (max-width: 1196px){
+      margin-top: -6em;
+    margin-left: -9em;
+    }
+    @media(max-width:1025px) {
+      margin-top: -5em;
+    margin-left: 14em;
+    } 
+     @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
+      margin:0;
+      margin-top: -5em;
     }
-    @media only screen and (max-width: 1024px){
-      transform: translate(15%,0%);
-    }
+    @media only screen and (max-width: 320px) and (orientation:portrait) {
+      margin-top: -3em;
+    }    
 `
 const LayoutWhere = styled.div`
-  align-self:end;
-  @media screen and (max-width:1024px) {
-      transform: translate(-35%,0%);
-    }
+  @media (orientation:landscape){
+    align-self:end;
+  }
 `
 const HeaderDiv = styled.div `
-   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      transform: translate(10%, 10);
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-      transform: translate(0%,0%);
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-      transform: translate(0%,0%);
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      transform: translate(0%,0%);
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-      transform: translate(0%,0%);
-    } 
-    @media only screen and (max-width:1024px) {
-      transform: translate(175%,-50%);
-    }
-    @media (max-width:768px) {
-      transform: translate(110%,-15%);
-    }
-    @media (max-width:500px) and (orientation: portrait) {
-        transform: translate(47%,-50%)
-    }
-    @media (max-width:400px) {
-        transform: translate(45%,-38%);
-    }
-    @media (max-width:320px) {
-      transform: translate(50%,-120%);
+  display:none;
+  @media only screen and (max-width: 1196px) and (orientation:portrait)  {
+      display:block;
     }
 `
 const Div = styled.div`
-    @media screen and (max-width:1024px) {
-      transform: translate(8%,0%);
+@media only screen and (max-width: 1196px) and (orientation:portrait)  {
+  justify-content: center;
     }
 `
 
@@ -226,11 +146,10 @@ export default class About extends Component {
     render() {
         return (
           <Div className="row m-0">
+            <Layout>
             <HeaderDiv>
               <MobileHeader text="ข้อมูลโครงการ" headerURl="plate-m2.png" />
             </HeaderDiv>
-            <Layout className="m-0">
-
               <Plate>
                 <Title className="text-center" >
                   About us
