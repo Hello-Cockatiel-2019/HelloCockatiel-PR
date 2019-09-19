@@ -129,6 +129,7 @@ const Layout = styled.div`
       grid-template-columns: none;
       margin:0;
       margin-top: -12em;
+      transform: translateX(0);
     }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin-top: -8em;
