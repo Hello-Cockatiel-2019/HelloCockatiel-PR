@@ -14,6 +14,13 @@ const Qwood = styled(BrownParagraph) `
         width: 370px;
         margin:0em 0em 0em 0em;
     }
+    @media only screen and (max-width:1320px) {
+        width: 320px;
+        margin:0em 0em 0em 0em;
+    }
+    @media only screen and (max-width:1320px) {
+        width: 290px;
+    }
     @media only screen and (max-width:1024px) {
         width: 270px;
         margin: 0em 0em 0em 0em;
@@ -47,6 +54,12 @@ const Awood = styled(Paragraph)`
 
     @media only screen and (max-width:1400px) {
         width: 370px;
+    }
+    @media only screen and (max-width:1320px) {
+        width: 320px;
+    }
+    @media (max-width:1120px) {
+        width: 290px;
     }
     @media only screen and (max-width:1024px) {
         width: 270px;

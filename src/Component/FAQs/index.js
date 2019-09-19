@@ -5,19 +5,26 @@ import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
     transform: translate(0%,0%);
+    @media (max-width:1320px) {
+        transform: translate(2%,-12%);
+    }
+    @media (max-width:1200px) {
+        transform: translate(-20%,-15%);
+    }
     @media (max-width:1024px) {
         transform: translate(7%,-11%);
-
+    }
+    @media (max-width:999px) {
+        transform: translate(25%,-25%);
     }
     @media (max-width:768px) {
         transform: translate(30%,-3%);
-
     }
     @media (max-width:500px) {
         transform: translate(7%,-10%);
     }
     @media (max-width:400px) {
-        transform: translate(9%,-10 %);
+        transform: translate(9%,-10%);
     }
     @media (max-width:320px) {
         transform: translate(10%,-17%);
@@ -48,11 +55,17 @@ const Div = styled.div `
     @media only screen and (max-width:1400px) and (orientation: landscape) and (min-height:1024px) {
     height:150px;
     }
+    @media only screen and (max-width:1300px) {
+    height: 140px;
+    }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
     height:140px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
+    }
+    @media only screen and (max-width:998px) {
+    height: 130px;
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
