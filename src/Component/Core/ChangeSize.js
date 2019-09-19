@@ -11,8 +11,16 @@ const Minicon = styled.div`
   height: 100vh;
   padding : 2vw;
   background-color:${color.Background};
+  z-index:1000;
   @media(orientation:portrait)
   and (max-width: 319px){
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+  @media(orientation:portrait)
+  and (max-height: 530px){
     display:flex;
     flex-direction: column;
     justify-content:center;
