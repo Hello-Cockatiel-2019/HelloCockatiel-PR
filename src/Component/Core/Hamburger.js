@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import color from '../../Config/Color'
 
 export const HamburgerDiv = styled.div`
-    display: ${props => props.displayham ? props.displayham : 'none'};
+    display: ${props => props.displayHamburger ? props.displayHamburger : 'none'};
     position: absolute;
     top: 3vh;
     right: 5vw;

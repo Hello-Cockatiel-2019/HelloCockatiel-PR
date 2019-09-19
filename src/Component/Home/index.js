@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Register from '../Core/Register'
 import { Title } from '../Core/Text'
+import { aboutHeader, majorHeader, faqsHeader } from '../Core/Messages'
+
+import Register from '../Core/Register'
 
 const Woodplate = styled.div `
     background-image: url('/images/Objects/${props => props.source}');
@@ -220,19 +222,19 @@ export default class Home extends Component {
         plate : [
             {
                 imgURL: 'Group 6.png',
-                text: 'ข้อมูลโครงการ',
+                text: `${ aboutHeader }`,
                 class: 'justify-content-start',
                 link: "#About"
             },
             {
                 imgURL: 'Group 5.png',
-                text: 'สาขาที่รับสมัคร',
+                text: `${ majorHeader }`,
                 class: 'justify-content-end',
                 link: "#Majors"
             },
             {
                 imgURL:'Group 7.png',
-                text: 'FAQs',
+                text: `${ faqsHeader }`,
                 class: 'justify-content-start',
                 link: "#FAQs"
             }

@@ -2,7 +2,8 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Header } from './Text'
-import { datenow, dateStartResgis, dateEndRegis } from './Day'
+import { register } from './Messages'
+import { dateNow, dateStartResgis, dateEndRegis } from './Day'
 
 const mobileShadow = css`
   box-shadow: 0px 0px 4px #000000, 0px 0px 4px #000000;
@@ -11,11 +12,11 @@ const mobileShadow = css`
 const Button = styled.button`
     background-image: url('/images/Objects/frame.png');
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     height:90px;
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display:${ (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow) ? 'block' : 'none')};
+    display:${ (dateStartResgis.isBefore(dateNow) && dateEndRegis.isAfter(dateNow) ? 'block' : 'none')};
     @media(max-width:1024px) {
       width:180px;
       height:85px;
@@ -64,11 +65,11 @@ const A = styled.a`
 
 const Register = () => {
     return (
-      <Button className="btn pt-3 pb-3 pl-2 pr-2 ">
         <A href="https://www.figma.com/file/u9GXnItjXKKPwDws9nusxX/Hello-Cockatiel?node-id=218%3A619"  >
-            <Header> Register </Header>
+          <Button className="btn pt-3 pb-3 pl-2 pr-2 ">
+            <Header> { register } </Header>
+          </Button>
         </A>
-      </Button>
     )
   }
 

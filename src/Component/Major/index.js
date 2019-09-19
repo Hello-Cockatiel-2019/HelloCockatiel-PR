@@ -159,7 +159,7 @@ export default class index extends Component {
     return (
       <React.Fragment>
         <Header>
-          <MobileHeader text="สาขาที่รับสมัคร" HeaderURl="plate-m2.png" />
+          <MobileHeader text="สาขาที่รับสมัคร" headerURl="plate-m2.png" />
         </Header>
         <AllContent className="row">
           {

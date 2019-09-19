@@ -12,7 +12,7 @@ const PositionDesktop = styled(Desktop)`
 `
 
 const MobileDiv = styled.div`
-    display : ${props => props.mobiledisplay ? props.mobiledisplay : 'none'};
+    display : ${props => props.mobileDisplay ? props.mobileDisplay : 'none'};
     overflow:hidden;
 `
 
@@ -28,17 +28,17 @@ const Div = styled.div`
 export default class ClickChage extends Component {
     
     componentDidUpdate(prevProps){
-        if(prevProps.keyid !== this.props.keyid){
+        if(prevProps.keyID !== this.props.keyID){
             this.setState({
-                key: this.props.keyid
+                key: this.props.keyID
             })
         }
     }
 
     state ={    
         key : 0,
-        Component: [<About />,<Major />,<FAQs />],
-        mobiledisplay:'none',
+        component: [<About />,<Major />,<FAQs />],
+        mobileDisplay:'none',
     }
    
 
@@ -52,32 +52,32 @@ export default class ClickChage extends Component {
     render() {
         return (
             <React.Fragment>
-            <PositionDesktop>
-                {
-                    this.state.Component.map((data, i) => {
-                        return (
-                            <Div key={i} display={this.state.key===i?'block':'none'}>
-                                {data}
-                            </Div>
-                        )
-                    })
-                }
-            </PositionDesktop>
-            <Mobile>
-                <MobileDiv mobiledisplay={this.props.mobiledisplay}>
-                    <MobileMap>
-                        {
-                            this.state.Component.map((data, i) => {
-                                return (
-                                    <Div key={i} display={this.state.key === i ? 'block' : 'none'} >
-                                        {data}
-                                    </Div>
-                                )
-                            })
-                        }
-                    </MobileMap>
-                </MobileDiv>
-            </Mobile>
+                <PositionDesktop>
+                    {
+                        this.state.component.map((data, i) => {
+                            return (
+                                <Div key={i} display={this.state.key===i?'block':'none'}>
+                                    {data}
+                                </Div>
+                            )
+                        })
+                    }
+                </PositionDesktop>
+                <Mobile>
+                    <MobileDiv mobileDisplay={this.props.mobileDisplay}>
+                        <MobileMap>
+                            {
+                                this.state.component.map((data, i) => {
+                                    return (
+                                        <Div key={i} display={this.state.key === i ? 'block' : 'none'} >
+                                            {data}
+                                        </Div>
+                                    )
+                                })
+                            }
+                        </MobileMap>
+                    </MobileDiv>
+                </Mobile>
             </React.Fragment>
         )
     }

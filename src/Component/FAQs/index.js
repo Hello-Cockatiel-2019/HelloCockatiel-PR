@@ -4,20 +4,33 @@ import MobileHeader from '../Core/MobileHeader';
 import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
-    transform: translate(0%,8%);
+    transform: translate(0%,0%);
+    @media (max-width:1320px) {
+        transform: translate(2%,-12%);
+    }
+    @media (max-width:1200px) {
+        transform: translate(-20%,-15%);
+    }
     @media (max-width:1024px) {
-        transform: translate(7%,0%);
-
+        transform: translate(7%,-11%);
+    }
+    @media (max-width:999px) {
+        transform: translate(25%,-25%);
+    }
+    @media (max-width:999px) and (max-height:680px){
+        transform: translate(25%,-35%);
     }
     @media (max-width:768px) {
-        transform: translate(30%,-3%);
-
+        transform: translate(28%,-18%);
+    }
+    @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
+        transform: translate(30%,-3%)
     }
     @media (max-width:500px) {
         transform: translate(7%,-10%);
     }
     @media (max-width:400px) {
-        transform: translate(9%,-18%);
+        transform: translate(9%,-10%);
     }
     @media (max-width:320px) {
         transform: translate(10%,-17%);
@@ -31,7 +44,7 @@ const HeaderDiv = styled.div `
         transform: translate(0%,0%);
     }
     @media (max-width:768px) {
-        transform: translate(0%,-25%);
+        transform: translate(0%,-90%);
     }
     @media (max-width:500px) {
         transform: translate(0%,-50%);
@@ -40,17 +53,27 @@ const HeaderDiv = styled.div `
         transform: translate(0%,-85%);
     }
     @media (max-width:320px) {
-        transform: translate(0%,-75%);
+        transform: translate(0%,-125%);
     }
 `
 const Div = styled.div `
+    height: 120px;
     @media only screen and (max-width:1400px) and (orientation: landscape) and (min-height:1024px) {
     height:150px;
+    }
+    @media only screen and (max-width:1300px) {
+    height: 140px;
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
     height:140px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
+    height:${props => props.ml === 3 ? 250 : 125}px;
+    }
+    @media only screen and (max-width:998px) {
+    height: 130px;
+    }
+    @media only screen and (max-width:768px) {
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
@@ -63,7 +86,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 125}px;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:667px)  {
-    height:${props => props.ml === 3 ? 250 : 120}px;
+    height:${props => props.ml === 3 ? 250 : 100}px;
     }
     @media only screen and (max-width:320px) and (orientation: portrait) and (min-height:568px)  {
     height:${props => props.ml === 3 ? 250 : 90}px;
@@ -76,32 +99,32 @@ export default class FAQs extends Component {
     state = {
         data:[
         {
-            q: "ไข่กับไก่อะไรเกิดก่อนกันอ่ะคับ",
+            q: "ใครสมัครได้บ้าง สมัครแล้วได้เข้าทุกคนไหม?",
             a: "ไดโนเสาร์ค้าบ",
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "ไข่กับไก้อะไรเกิดก่อนกันอ่ะคับ",
-            a: "แมวค้าบ",
+            q: "มีค่าใช้จ่ายไหม?",
+            a: "ฟรี ไม่มีค่าใช้จ่าย",
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "วาดรูปไม่เป็นเข้าได้ม้าย",
+            q: "ค่ายนี้จัดที่ไหน เมื่อไหร่ แล้วจะรบกวนเวลาเรียนไหม?",
             a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถ",
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "what",
+            q: "ได้ชั่วโมงกิจกรรมไหม?",
             a: "WHAT",
             class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "what",
+            q: "มีสาขาอะไรให้ลงบ้าง แล้วแต่ละสาขาทำหน้าที่อ่ะไร?",
             a: "WHAT!?",
             class: "d-none d-lg-block col-lg-6 m-0 p-0"
         },
         {
-            q: "what",
+            q: "มีของกินไหมครับ?",
             a: "WHAT!?2",
             class: "d-none d-lg-block col-lg-6 m-0 p-0"
         }
@@ -111,7 +134,7 @@ export default class FAQs extends Component {
         return (
             <React.Fragment>
                 <HeaderDiv>
-            <MobileHeader text="FAQs" HeaderURl="plate-m3.png" /> 
+            <MobileHeader text="FAQs" headerURl="plate-m3.png" /> 
             </HeaderDiv>
                <Sdiv className="row m-0 p-0">
                    {
