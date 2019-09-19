@@ -5,13 +5,37 @@ import Woodsign from './Woodsign'
 
 const Sdiv = styled.div `
     transform: translate(0%,0%);
+    @media (max-width:2600px) {
+        transform: translate(11%,20%);
+    }
     @media (max-width:2500px) {
-        transform: translate(10%,-5%);
+        transform: translate(7%,-5%);
+    }
+    @media (max-width:2434px) {
+        transform: translate(9%,-5%);
+    }
+    @media (max-width:1949px) {
+        transform: translate(7%,-5%);
+    }
+    @media (max-width:1679px) {
+        transform: translate(6%,-5%);
+    }
+    @media (max-width:1468px) {
+        transform: translate(1%,40%);
+    }
+    @media (max-width:1350px) {
+        transform: translate(1%,20%);
     }
     @media (max-width:1320px) {
-        transform: translate(2%,-12%);
+        transform: translate(1%,20%);
     }
     @media (max-width:1199px) {
+        transform: translate(-25%,-13%);
+    }
+    @media (max-width:1199px) {
+        transform: translate(1%,20%);
+    }
+    @media (max-width:1197px) {
         transform: translate(-20%,-15%);
     }
     @media (max-width:1024px) {
@@ -33,7 +57,7 @@ const Sdiv = styled.div `
         transform: translate(28%,-18%);
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-        transform: translate(30%,-3%)
+        transform: translate(30%,-15%)
     }
     @media (max-width:600px) {
         transform: translate(20%,-20%);
@@ -42,7 +66,7 @@ const Sdiv = styled.div `
         transform: translate(20%,-20%);
     }
     @media (max-width:490px) {
-        transform: translate(20%,-22%);
+        transform: translate(15%,-22%);
     }
     @media (max-width:400px) {
         transform: translate(9%,-10%);
@@ -50,11 +74,14 @@ const Sdiv = styled.div `
     @media (max-width:320px) {
         transform: translate(10%,-17%);
     }
+    @media only screen and (max-width:1367px) and (orientation: landscape) and (min-height:1024px)  {
+        transform: translate(1%,35%);
+    }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         transform: translate(14%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        transform: translate(14%,-17%);
+        transform: translate(1%,-17%);
     }
 `
 const HeaderDiv = styled.div `
