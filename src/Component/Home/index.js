@@ -280,15 +280,15 @@ export default class Home extends Component {
                         {
                             this.state.plate.map((data,i) => {
                                 return (
-                                    <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
-                                        <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
-                                            <A href={data.link} key={i}>
-                                                <Woodplate source={data.imgURL} key={i} pt={i}>
-                                                    <TitleRes key={i}>{data.text}</TitleRes>
-                                                </Woodplate>
-                                            </A>
-                                        </button>
-                                    </WoodDiv>
+                                        <A href={data.link} key={i}>
+                                            <WoodDiv className={`d-inline-flex col-12 ${data.class}`} key={i} mt={i}>
+                                                <button className="btn p-0" key={i} onClick={() => this.handleCilck(i)}>
+                                                        <Woodplate source={data.imgURL} key={i} pt={i}>
+                                                            <TitleRes key={i}>{data.text}</TitleRes>
+                                                        </Woodplate>
+                                                </button>
+                                            </WoodDiv>
+                                        </A>
 
                                 )
                             })

@@ -96,7 +96,11 @@ const RegiserDiv = styled.div`
     @media screen and (max-width:1140px){
         top: -60vh;
     }
+    @media screen and (max-width:1024px){
+        left: 85vw;
+    }
     @media screen and (max-width : 991.5px){
+        left: 80vw;
         top: -350px;
     }
     @media screen and (max-width : 990px){
