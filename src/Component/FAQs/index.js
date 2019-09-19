@@ -30,7 +30,7 @@ const Sdiv = styled.div `
         transform: translate(30%,-3%)
     }
     @media (max-width:500px) {
-        transform: translate(15%,-20%);
+        transform: translate(10%,-20%);
     }
     @media (max-width:400px) {
         transform: translate(9%,-10%);
@@ -59,7 +59,7 @@ const HeaderDiv = styled.div `
         transform: translate(0%,-99%);
     }
     @media (max-width:320px) {
-        transform: translate(0%,-125%);
+        transform: translate(0%,-145%);
     }
 `
 const Div = styled.div `
@@ -77,7 +77,7 @@ const Div = styled.div `
     height:140px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-    height:${props => props.ml === 3 ? 250 : 125}px;
+    height:${props => props.ml === 3 ? 250 : 145}px;
     }
     @media only screen and (max-width:998px) {
     height: 130px;
@@ -89,7 +89,7 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 140}px;
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-    height:${props => props.ml === 3 ? 250 : 125}px;
+    height:${props => props.ml === 3 ? 250 : 140}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
     height:${props => props.ml === 3 ? 250 : 125}px;
@@ -98,13 +98,13 @@ const Div = styled.div `
     height:${props => props.ml === 3 ? 250 : 135}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 3 ? 250 : 125}px;
+    height:${props => props.ml === 3 ? 250 : 135}px;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
     height:${props => props.ml === 3 ? 250 : 100}px;
     }
-    @media only screen and (max-width:320px) and (orientation: portrait) and (min-height:568px)  {
-    height:${props => props.ml === 3 ? 250 : 90}px;
+    @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
+    height:${props => props.ml === 3 ? 250 : 115}px;
     }
 `
     
