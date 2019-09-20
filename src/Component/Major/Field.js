@@ -202,7 +202,7 @@ const TextContent = styled(Small)`
     }
     @media (max-width:380px){
         line-height: 16px;
-        margin-top:-5em;
+        margin-top:-5.5em;
         padding-left:6em;
         padding-right:2em;
         
