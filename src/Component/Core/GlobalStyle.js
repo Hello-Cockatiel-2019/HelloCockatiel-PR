@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         font-family:"Quark";
         overflow-x:hidden;
-        overflow-y:hidden;
+        /* overflow-y:hidden; */
     }
 
 `

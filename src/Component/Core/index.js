@@ -18,7 +18,7 @@ import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
-    transform :  translateY(-30%);
+    /* transform :  translateY(-30%); */
 `
 
 const DivBlur = styled.div`
@@ -27,12 +27,12 @@ const DivBlur = styled.div`
 
 const SideBarSection = styled.div`
     @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-        transform :  translateY(75%);
+        /* transform :  translateY(75%); */
     }
     @media only screen and (min-width: 1370px) and (max-height: 850px) {
-        transform :  translateY(55%);
+        /* transform :  translateY(55%); */
     }
-    @media screen and (max-width:1199px) {
+    /* @media screen and (max-width:1199px) {
         left:-3vw;
         top: 5vh;
     }
@@ -45,11 +45,12 @@ const SideBarSection = styled.div`
     }
     @media screen and (max-width:865px) {
         left:-6vw;
-    }
+    } */
 `
 
 const Content = styled.div`
-    @media screen and (max-width:2500px) {
+    transform: translateY(-70%);
+    /* @media screen and (max-width:2500px) {
         left: 10vw;
         top: -50vh;
     }
@@ -82,7 +83,7 @@ const Content = styled.div`
     }
     @media screen and (max-height:750px) and (orientation: landscape){
         top: 0vh;
-    }
+    } */
 `
 
 const RegiserDiv = styled.div`
@@ -130,9 +131,9 @@ const Facebook = styled.img`
 `
 
 const FacebookDiv = styled(Desktop)`
-    padding-top:10vh;
-    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-        transform :  translateY(75%);
+    /* padding-top:10vh; */
+        transform :  translateY(-100%);
+    /* @media only screen and (min-width: 1366px) and (max-height: 1024px) {
     }
     @media only screen and (min-width: 1366px) and (max-height: 850px) {
         margin-top: -16vh!important;
@@ -178,7 +179,7 @@ const FacebookDiv = styled(Desktop)`
     }
     @media screen and (max-height:680px) {
         margin-top:-23vh;
-    }
+    } */
 `
 
 const A = styled.a`
@@ -251,27 +252,25 @@ export default class NavBar extends Component {
                     <Desktop>
                         <Background />
                         <div className="row justify-content-center">
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex col-10 justify-content-center">
                                 <Logo src="/images/Objects/Logo.png" />
                             </div>
-                            <RegiserDiv className="d-flex justify-content-end">
+                            <RegiserDiv className="d-flex col-2 justify-content-end">
                                     <Register />
                             </RegiserDiv>
-                        </div>
-                        <Div className="row justify-content-start">
-                            <SideBarSection className="col-2 d-inline-flex flex-column ml-5 justify-content-start">
+                            <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
-                            <Content className="col-10 d-inline-flex justify-content-center">
+                            <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
                             </Content>
-                        </Div>
-                        <FacebookDiv className="d-flex justify-content-end mr-5">
-                            <A href="https://www.facebook.com/ThisPz" className="d-flex flex-row">
-                                <Facebook src="/images/Objects/facebook.png" />
-                                <Title className="pt-1 pl-1"> Cockatiel</Title>
-                            </A>
-                        </FacebookDiv>
+                            <FacebookDiv className="d-flex col-12 justify-content-end mr-5">
+                                <A href="https://www.facebook.com/ThisPz" className="d-flex flex-row">
+                                    <Facebook src="/images/Objects/facebook.png" />
+                                    <Title className="pt-1 pl-1"> Cockatiel</Title>
+                                </A>
+                            </FacebookDiv>
+                        </div>
                     </Desktop>
                     <Mobile>
                         <div className="row justify-content-end">

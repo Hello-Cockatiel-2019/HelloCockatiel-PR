@@ -12,7 +12,7 @@ const mobileShadow = css`
 const Button = styled.button`
     background-image: url('/images/Objects/frame.png');
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:contain;
     height:90px;
     width:200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
