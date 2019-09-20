@@ -27,6 +27,12 @@ const DivBlur = styled.div`
 
 const SideBarSection = styled.div`
     transform :  translateY(65%);
+    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+        transform :  translateY(75%);
+    }
+    @media only screen and (min-width: 1370px) and (max-height: 850px) {
+        transform :  translateY(65%);
+    }
     @media screen and (max-width:1199px) {
         left:-3vw;
         top: 5vh;
@@ -125,6 +131,18 @@ const Facebook = styled.img`
 
 const FacebookDiv = styled(Desktop)`
     padding-top:10vh;
+    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+        transform :  translateY(75%);
+    }
+    @media only screen and (min-width: 1366px) and (max-height: 850px) {
+        margin-top: -16vh!important;
+    }
+    @media only screen and (min-width: 1366px) and (max-height: 830px) {
+        margin-top: -20vh!important;
+    }
+    @media only screen and (min-width: 1366px) and (max-height: 800px) {
+        margin-top: -25vh!important;
+    }
     @media screen and (max-width:1199px) and (max-height: 850px) {
         padding-top:0;
     }

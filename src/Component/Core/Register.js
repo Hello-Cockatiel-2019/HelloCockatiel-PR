@@ -66,11 +66,11 @@ const A = styled.a`
 
 const Register = () => {
     return (
-        <A href="https://www.figma.com/file/u9GXnItjXKKPwDws9nusxX/Hello-Cockatiel?node-id=218%3A619"  >
-          <Button className="btn pt-3 pb-3 pl-2 pr-2 ">
+      <Button className="btn pt-3 pb-3 pl-2 pr-2 ">
+          <A href="https://www.figma.com/file/u9GXnItjXKKPwDws9nusxX/Hello-Cockatiel?node-id=218%3A619"  >
             <Header> { register } </Header>
-          </Button>
         </A>
+      </Button>
     )
   }
 
