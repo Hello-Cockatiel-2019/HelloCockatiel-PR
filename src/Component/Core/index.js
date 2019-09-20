@@ -18,7 +18,7 @@ import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
-    transform :  translateY(-60%);
+    transform :  translateY(-30%);
 `
 
 const DivBlur = styled.div`
@@ -26,12 +26,11 @@ const DivBlur = styled.div`
 `
 
 const SideBarSection = styled.div`
-    transform :  translateY(65%);
     @media only screen and (min-width: 1366px) and (max-height: 1024px) {
         transform :  translateY(75%);
     }
     @media only screen and (min-width: 1370px) and (max-height: 850px) {
-        transform :  translateY(65%);
+        transform :  translateY(55%);
     }
     @media screen and (max-width:1199px) {
         left:-3vw;
@@ -51,10 +50,11 @@ const SideBarSection = styled.div`
 
 const Content = styled.div`
     @media screen and (max-width:2500px) {
-        top: 10vh;
+        left: 10vw;
+        top: -50vh;
     }
     @media screen and (max-width:1469px) {
-        top: -5vh;
+        top: -75vh;
     }
     @media screen and (max-width:1199px) {
         left: -20vw;
@@ -189,6 +189,16 @@ const A = styled.a`
   }
 `
 
+const Hidden = styled.div`
+
+    @media(orientation:portrait) and (max-width: 319px){
+        display: none;
+    }
+    @media(orientation:landscape) and (max-height: 600px){
+        display: none;
+    }
+`
+
 export default class NavBar extends Component {
         
     state = {
@@ -237,22 +247,24 @@ export default class NavBar extends Component {
             <React.Fragment>
                 <GlobalStyle />
                 <ChangeSize />
-                <div className="container-fluid p-0">
+                <Hidden className="container-fluid p-0">
                     <Desktop>
                         <Background />
-                        <div className="d-flex justify-content-center">
-                            <Logo src="/images/Objects/Logo.png" />
+                        <div className="row justify-content-center">
+                            <div className="d-flex justify-content-center">
+                                <Logo src="/images/Objects/Logo.png" />
+                            </div>
+                            <RegiserDiv className="d-flex justify-content-end">
+                                    <Register />
+                            </RegiserDiv>
                         </div>
-                        <Div className="row justify-content-between">
+                        <Div className="row justify-content-start">
                             <SideBarSection className="col-2 d-inline-flex flex-column ml-5 justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
-                            <Content className="col-7 d-inline-flex justify-content-center">
+                            <Content className="col-10 d-inline-flex justify-content-center">
                                 <ClickChange keyID={this.state.id} />
                             </Content>
-                            <RegiserDiv className="col-3 col-xl-2 d-inline-flex justify-content-end">
-                                <Register />
-                            </RegiserDiv>
                         </Div>
                         <FacebookDiv className="d-flex justify-content-end mr-5">
                             <A href="https://www.facebook.com/ThisPz" className="d-flex flex-row">
@@ -288,7 +300,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
-                </div>
+                </Hidden>
             </React.Fragment>
 
         )   
