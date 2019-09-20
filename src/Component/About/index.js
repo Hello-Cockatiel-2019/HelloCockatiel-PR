@@ -112,10 +112,11 @@ const Layout = styled.div`
     @media (max-width: 1537px){
       grid-template-columns: 2fr 1fr;
       margin-top: -5em;
-      transform: translateX(10%);
+      transform: translate(12%, -20%);
     }
     @media (max-width: 1468px){
       margin-top: 3em;
+      transform: translate(9%,-13%);
     }
     @media (max-width: 1196px){
       margin-top: -6em;
@@ -125,6 +126,9 @@ const Layout = styled.div`
       margin-top: -5em;
       transform: translateX(15%);
     } 
+    @media only screen and (max-width: 768px) and (orientation:landscape)  {
+      grid-template-columns: none;
+    }
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
       margin:0;
@@ -185,6 +189,9 @@ const LayoutWhere = styled.div`
 `
 const HeaderDiv = styled.div `
   display:none;
+  @media only screen and (max-width: 768px) and (orientation:landscape)  {
+      display:block;
+    }
   @media only screen and (max-width: 1196px) and (orientation:portrait)  {
       display:block;
     }
@@ -194,6 +201,11 @@ const Div = styled.div`
   justify-content: center;
     }
 `
+const MobileHeader2 = styled(MobileHeader)`
+@media only screen and (min-width: 768px) and (orientation:landscape)  {
+      font-size: 28px;
+    }
+`
 
 export default class About extends Component {
     render() {
@@ -201,7 +213,7 @@ export default class About extends Component {
           <Div className="row m-0">
             <Layout>
             <HeaderDiv>
-              <MobileHeader text="ข้อมูลโครงการ" headerURl="plate-m2.png" />
+              <MobileHeader2 text="ข้อมูลโครงการ" headerURl="plate-m2.png" />
             </HeaderDiv>
               <Plate>
                 <Title className="text-center" >
