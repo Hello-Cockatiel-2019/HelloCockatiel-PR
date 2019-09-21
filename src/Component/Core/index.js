@@ -18,7 +18,7 @@ import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
-    /* transform :  translateY(-30%); */
+   margin-top:-5em;
 `
 
 const DivBlur = styled.div`
@@ -26,6 +26,12 @@ const DivBlur = styled.div`
 `
 
 const SideBarSection = styled.div`
+    @media screen and (max-width:1680px) {
+        margin-top:5em;
+    }
+    @media screen and (max-width:1540px) {
+        margin-top:0;
+    }
     @media only screen and (min-width: 1366px) and (max-height: 1024px) {
         /* transform :  translateY(75%); */
     }
@@ -50,51 +56,20 @@ const SideBarSection = styled.div`
 
 const Content = styled.div`
     transform: translateY(-70%);
-    /* @media screen and (max-width:2500px) {
-        left: 10vw;
-        top: -50vh;
-    }
-    @media screen and (max-width:1469px) {
-        top: -75vh;
-    }
-    @media screen and (max-width:1199px) {
-        left: -20vw;
-        top: 2vh;
-    }
-    @media screen and (max-width:1196px) and (max-height:750px){
-        margin-top:50vh;
-    }
     @media screen and (max-width:1196px) {
-        left: -5vw;
-        top: 20vh;
+        transform: translateY(-35%);
     }
-    @media screen and (max-width:1024px) {
-        left: -20vw;
-    }
-    @media screen and (max-width:980px) {
-        left: -18vw;
-    }
-    @media screen and (max-width:960px) {
-        left: -10vw;
-    }
-    @media screen and (max-width:800px) {
-        left: -30vw;
-        top: 15vh;
-    }
-    @media screen and (max-height:750px) and (orientation: landscape){
-        top: 0vh;
-    } */
 `
 
 const RegiserDiv = styled.div`
-    transform:translate(-20%,20%);
-    @media screen and (max-width:1201.5px) {
+    transform:translate(-5%,20%);
+    /* @media screen and (max-width:1201.5px) {
         top: -50px;
     }
     @media screen and (max-width:1199.5px) {
     }
     @media screen and (max-width : 991.5px) and (max-height:850px){
-    }
+    } */
 `
 
 const Logo = styled.img`
@@ -128,8 +103,8 @@ const Facebook = styled.img`
 `
 
 const FacebookDiv = styled(Desktop)`
+    transform :  translateY(-100%);
     /* padding-top:10vh; */
-        transform :  translateY(-100%);
     /* @media only screen and (min-width: 1366px) and (max-height: 1024px) {
     }
     @media only screen and (min-width: 1366px) and (max-height: 850px) {
@@ -248,13 +223,13 @@ export default class NavBar extends Component {
                 <Hidden className="container-fluid p-0">
                     <Desktop>
                         <Background />
-                        <div className="row justify-content-center">
-                            <div className="d-flex col-10 justify-content-center">
+                        <RegiserDiv className="d-flex justify-content-end">
+                            <Register />
+                        </RegiserDiv>
+                        <Div className="row justify-content-center">
+                            <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/Logo.png" />
                             </div>
-                            <RegiserDiv className="d-flex col-2 justify-content-end">
-                                    <Register />
-                            </RegiserDiv>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
@@ -267,7 +242,7 @@ export default class NavBar extends Component {
                                     <Title className="pt-1 pl-1"> Cockatiel</Title>
                                 </A>
                             </FacebookDiv>
-                        </div>
+                        </Div>
                     </Desktop>
                     <Mobile>
                         <div className="row justify-content-end">
