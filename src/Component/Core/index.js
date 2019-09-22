@@ -25,50 +25,20 @@ const DivBlur = styled.div`
 `
 
 const SideBarSection = styled.div`
-    @media screen and (max-width:1680px) {
-        margin-top:5em;
+    @media only screen and (max-height: 731px) {
+        margin-top:0em;
     }
-    @media screen and (max-width:1540px) {
-        margin-top:-1em;
+    @media only screen and (max-height: 671px) {
+        margin-top:-6em;
     }
-    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-        /* transform :  translateY(75%); */
-    }
-    @media only screen and (min-width: 1370px) and (max-height: 850px) {
-        /* transform :  translateY(55%); */
-    }
-    /* @media screen and (max-width:1199px) {
-        left:-3vw;
-        top: 5vh;
-    }
-    @media screen and (max-width:1024px) {
-        left:-4vw;
-        top: 5vh;
-    }
-    @media screen and (max-width:991.5px) {
-        top: 10.5vh;
-    }
-    @media screen and (max-width:865px) {
-        left:-6vw;
-    } */
 `
 
 const Content = styled.div`
     transform: translateY(-50%);
-    /* @media screen and (max-width:1196px) {
-        transform: translateY(-35%);
-    } */
 `
 
 const RegiserDiv = styled.div`
     transform:translate(-5%,20%);
-    /* @media screen and (max-width:1201.5px) {
-        top: -50px;
-    }
-    @media screen and (max-width:1199.5px) {
-    }
-    @media screen and (max-width : 991.5px) and (max-height:850px){
-    } */
 `
 
 const Logo = styled.img`
@@ -76,6 +46,10 @@ const Logo = styled.img`
     height: 229px;
     top: 19px;
     z-index: 100;
+    @media screen and (max-width:1198px){
+        width: 460px;   
+        height: 184px;
+    }
 `
 
 const HomeDiv = styled.div`
@@ -89,7 +63,6 @@ const HomeDiv = styled.div`
 `
 
 const Hidden = styled.div`
-
     @media(orientation:portrait) and (max-width: 319px){
         display: none;
     }
