@@ -156,7 +156,6 @@ export default class NavBar extends Component {
                         <Div className="row justify-content-center">
                             <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/logo_web.png" />
-                                <VersionENV><small>{process.env.GIT_VER}</small></VersionENV>
                             </div>
                             <div className="d-flex col-12 justify-content-center">
                                 <img src="/images/Objects/ci.png" width="241px" height="79px" />
@@ -183,6 +182,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
+                <VersionENV>v. : <small>{process.env.GIT_VER}</small></VersionENV>
                 </Hidden>
             </React.Fragment>
 
