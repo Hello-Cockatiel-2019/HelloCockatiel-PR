@@ -100,11 +100,6 @@ const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
 `
 
-const VersionENV = styled.div`
-    position: fixed;
-    left: 0;
-    bottom: 0;
-`
 export default class NavBar extends Component {
         
     state = {
@@ -182,7 +177,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
-                <VersionENV>v. : <small>{process.env.GIT_VER}</small></VersionENV>
+                <div>v. : <small>{process.env.GIT_VER}</small></div>
                 </Hidden>
             </React.Fragment>
 
