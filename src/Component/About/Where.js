@@ -147,7 +147,7 @@ const Text= styled(Small) `
 const WhereIs = styled.div `
 float: right;
 @media(min-width:320px) {
-  margin-top: 2em;
+  margin-top: 1em;
     margin-right: -2em;
   }
 

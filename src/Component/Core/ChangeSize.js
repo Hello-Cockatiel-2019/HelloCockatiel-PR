@@ -23,7 +23,7 @@ const Minicon = styled.div`
     ${ layout }
   }
   @media(orientation:landscape)
-  and (max-height: 620px){
+  and (max-height: 550px){
     ${ layout }
   }
 `
