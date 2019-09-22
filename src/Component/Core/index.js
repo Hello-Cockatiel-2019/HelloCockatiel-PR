@@ -11,7 +11,7 @@ import { HamburgerDiv } from './Hamburger'
 
 import Home from '../Home'
 import Background from './Background'
-import NavButton from './NavButton';
+import SlideButton from './SideButton';
 import Register from './Register';
 import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
@@ -85,9 +85,16 @@ export default class NavBar extends Component {
     }
 
     changeClick = (i) => {
-        this.setState({
-            id: i
-        })
+        if(i===0){
+            this.setState({
+                homeDisplay: 'block',
+                mobileDisplay: 'none',
+            })
+        }else{
+            this.setState({
+                id: i
+            })
+        }
     }
 
     clickHome = (i) => {
@@ -130,7 +137,7 @@ export default class NavBar extends Component {
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
-                                <NavButton changeClick={this.changeClick} />
+                                <SlideButton changeClick={this.changeClick} />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
@@ -146,7 +153,7 @@ export default class NavBar extends Component {
                                 <span></span>
                                 <ul className="p-4">
                                     <li onClick={this.clickListHam}>
-                                        <NavButton changeClick={this.changeClick} />
+                                        <SlideButton changeClick={this.changeClick} />
                                     </li>
                                 </ul>
                             </HamburgerDiv>
