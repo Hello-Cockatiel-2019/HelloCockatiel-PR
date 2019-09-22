@@ -170,17 +170,14 @@ const MenuDiv = styled.div`
         margin-top:100px!important;
         ${ paddingRightLeftTenEM }
     } 
-    @media screen and (max-width:834px) and (orientation: landscape){
-        margin-top:-20px;
-    }
     @media screen and (max-width:789px) and (orientation: portrait){
-        margin-top:-60px;
-    }
-    @media screen and (max-width:768px) and (orientation: portrait){
-        margin-top:-20px;
+        margin-top:55px;
     }
      @media screen and (max-width:900px) and (orientation:landscape) {
-        margin-top:-45px;
+        margin-top:50px;
+    }
+    @media screen and (max-width:834px) and (orientation: landscape){
+        margin-top:50px;
     }
     @media screen and (max-width:420px) {
         margin-top: 60px;
