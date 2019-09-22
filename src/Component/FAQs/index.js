@@ -6,16 +6,16 @@ import Woodsign from './Woodsign'
 const Sdiv = styled.div `
     transform: translate(0%,0%);
     @media (max-width:2600px) {
-        transform: translate(11%,20%);
+        transform: translate(26%,0%);
     }
     @media (max-width:2500px) {
-        transform: translate(7%,-5%);
+        transform: translate(25%,0%);
     }
     @media (max-width:2434px) {
-        transform: translate(9%,-5%);
+        transform: translate(23%,0%);
     }
     @media (max-width:1949px) {
-        transform: translate(7%,-5%);
+        transform: translate(18%,3%);
     }
     @media (max-width:1679px) {
         transform: translate(19%,0%);
@@ -24,37 +24,37 @@ const Sdiv = styled.div `
         transform: translate(16%,0%);
     }
     @media (max-width:1468px) {
-        transform: translate(18%,-2%);
+        transform: translate(15%,0%);
     }
     @media (max-width:1350px) {
-        transform: translate(18%,-2%);
+        transform: translate(18%,0%);
     }
     @media (max-width:1320px) {
-        transform: translate(22%,-5%);
+        transform: translate(22%,0%);
     }
     @media (max-width:1199px) {
-        transform: translate(21%,-6%);
+        transform: translate(21%,3%);
     }
     @media (max-width:1099px) {
-        transform: translate(18%,-6%);
+        transform: translate(18%,2%);
     }
     @media (max-width:1024px) {
-        transform: translate(18%,-5%);
+        transform: translate(18%,0%);
     }
     @media (max-width:999px) {
-        transform: translate(18%,-5%);
+        transform: translate(18%,-1%);
     }
     @media (max-width:999px) and (max-height:680px){
         transform: translate(25%,-25%);
     }
     @media (max-width:950px) {
-        transform: translate(18%,-5%);
+        transform: translate(18%,-2%);
     }
     @media (max-width:900px) and (max-height:680px) {
         transform: translate(20%,-15%);
     }
     @media (max-width:900px){
-        transform: translate(18%,-5%);
+        transform: translate(18%,-2%);
     }
     @media (max-width:834px) {
         transform: translate(33%,-15%);
