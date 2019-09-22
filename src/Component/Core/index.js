@@ -54,10 +54,10 @@ const SideBarSection = styled.div`
 `
 
 const Content = styled.div`
-    transform: translateY(-70%);
-    @media screen and (max-width:1196px) {
+    transform: translateY(-50%);
+    /* @media screen and (max-width:1196px) {
         transform: translateY(-35%);
-    }
+    } */
 `
 
 const RegiserDiv = styled.div`
@@ -164,7 +164,7 @@ export default class NavBar extends Component {
                             <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
-                            <SideBarSection className="d-flex col-12 pl-5 flex-column justify-content-start">
+                            <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
