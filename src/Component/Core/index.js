@@ -8,7 +8,6 @@ import 'bootstrap/dist/js/bootstrap.min'
 import GlobalStyle from './GlobalStyle'
 import { Desktop, Mobile } from './Hidden'
 import { HamburgerDiv } from './Hamburger'
-import { Title } from './Text';
 
 import Home from '../Home'
 import Background from './Background'
@@ -30,7 +29,7 @@ const SideBarSection = styled.div`
         margin-top:5em;
     }
     @media screen and (max-width:1540px) {
-        margin-top:0;
+        margin-top:-1em;
     }
     @media only screen and (min-width: 1366px) and (max-height: 1024px) {
         /* transform :  translateY(75%); */
@@ -95,71 +94,6 @@ const HomeDiv = styled.div`
     @media screen and (max-width:320px) {
         transform:translateY(0%);
     }
-`
-
-const Facebook = styled.img`
-    width: 44px;
-    height: 44px;
-`
-
-const FacebookDiv = styled(Desktop)`
-    transform :  translateY(-100%);
-    /* padding-top:10vh; */
-    /* @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-    }
-    @media only screen and (min-width: 1366px) and (max-height: 850px) {
-        margin-top: -16vh!important;
-    }
-    @media only screen and (min-width: 1366px) and (max-height: 830px) {
-        margin-top: -20vh!important;
-    }
-    @media only screen and (min-width: 1366px) and (max-height: 800px) {
-        margin-top: -25vh!important;
-    }
-    @media screen and (max-width:1199px) and (max-height: 850px) {
-        padding-top:0;
-    }
-    @media screen and (max-width:1199px) and (max-height: 750px) {
-        margin-top: -40vh!important;
-    }
-    @media screen and (max-width:1199px) and (max-height: 705px) {
-        margin-top: -45vh!important;
-    }
-    @media screen and (max-width:991px) and (max-height: 850px) {
-        padding-top:25vh;
-    }
-    @media screen and (max-width:991px) and (max-height: 750px) {
-        margin-top: -60vh!important;
-    }
-    @media screen and (max-width:991px) and (max-height: 705px) {
-        margin-top: -65vh!important;
-    }
-    @media screen and (max-height:850px) {
-        margin-top:-5vh;
-    }
-    @media screen and (max-height:830px) {
-        margin-top:-10vh;
-    }
-    @media screen and (max-height:795px) {
-        margin-top:-15vh;
-    }
-    @media screen and (max-height:720px) {
-        margin-top:-17vh;
-    }
-    @media screen and (max-height:700px) {
-        margin-top:-19vh;
-    }
-    @media screen and (max-height:680px) {
-        margin-top:-23vh;
-    } */
-`
-
-const A = styled.a`
-  text-decoration:none;;
-
-  &:hover{
-    text-decoration:none;
-  }
 `
 
 const Hidden = styled.div`
@@ -228,20 +162,14 @@ export default class NavBar extends Component {
                         </RegiserDiv>
                         <Div className="row justify-content-center">
                             <div className="d-flex col-12 justify-content-center">
-                                <Logo src="/images/Objects/Logo.png" />
+                                <Logo src="/images/Objects/logo_web.png" />
                             </div>
-                            <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
+                            <SideBarSection className="d-flex col-12 pl-5 flex-column justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
-                            <Content className="d-flex col-10 justify-content-center">
+                            {/* <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
-                            </Content>
-                            <FacebookDiv className="d-flex col-12 justify-content-end mr-5">
-                                <A href="https://www.facebook.com/ThisPz" className="d-flex flex-row">
-                                    <Facebook src="/images/Objects/facebook.png" />
-                                    <Title className="pt-1 pl-1"> Cockatiel</Title>
-                                </A>
-                            </FacebookDiv>
+                            </Content> */}
                         </Div>
                     </Desktop>
                     <Mobile>
@@ -254,11 +182,6 @@ export default class NavBar extends Component {
                                 <ul className="p-4">
                                     <li onClick={this.clickListHam}>
                                         <NavButton changeClick={this.changeClick} />
-                                    </li>
-                                    <li>
-                                        <div className="d-flex justify-content-center mt-3">
-                                            <Register />
-                                        </div>
                                     </li>
                                 </ul>
                             </HamburgerDiv>

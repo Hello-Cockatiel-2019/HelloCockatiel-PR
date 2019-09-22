@@ -36,8 +36,8 @@ export default class ClickChage extends Component {
     }
 
     state ={    
-        key : 0,
-        component: [<About />,<Major />,<FAQs />],
+        key : 1,
+        component: ['',<About />,<Major />,<FAQs />],
         mobileDisplay:'none',
     }
    
