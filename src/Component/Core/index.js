@@ -36,13 +36,28 @@ const SideBarSection = styled.div`
     @media only screen and (max-height: 900px) {
         margin-top:0em;
     }
+    @media only screen and (max-height: 780px) {
+        margin-top:-2em;
+    }
+    @media only screen and (max-height: 750px) {
+        margin-top:-3em;
+    }
+    @media only screen and (max-height: 730px) {
+        margin-top:-5em;
+    }
     @media only screen and (max-height: 671px) {
-        margin-top:-6em;
+        margin-top:-9em;
     }
 `
 
 const Content = styled.div`
     transform: translateY(-50%);
+     @media only screen and (max-height: 730px) {
+        transform: translateY(-60%);
+    }
+    @media only screen and (max-height: 671px) {
+        transform: translateY(-64%);
+    }
 `
 
 const RegiserDiv = styled.div`
@@ -76,7 +91,7 @@ const Hidden = styled.div`
     @media(orientation:portrait) and (max-width: 319px){
         display: none;
     }
-    @media(orientation:landscape) and (max-height: 600px){
+    @media(orientation:landscape) and (max-height: 550px){
         display: none;
     }
 `

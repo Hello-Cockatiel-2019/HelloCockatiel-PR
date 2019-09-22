@@ -230,6 +230,9 @@ const RegisDiv = styled.div `
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         margin-top: 0!important;
     }
+    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+        margin-top: 0!important;
+    }
     @media screen and (max-width:768px) and (min-height: 1026px) and (orientation: portrait){
         margin-top: -10vh!important;
     }
