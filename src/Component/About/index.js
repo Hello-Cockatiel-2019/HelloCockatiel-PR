@@ -129,11 +129,14 @@ const Layout = styled.div`
     display:grid;
     @media (max-width: 2560px){
       grid-template-columns: 3fr 1fr;
-      margin-top: 3.5em;
+      margin-top: 2.5em;
+    }
+    @media only screen and (max-width: 1467px) and (orientation:landscape)  {
+      margin-top: 4em;
     }
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
-      margin-top: -9em;
+      margin-top: -6em;
     }
 `
 const HeaderDiv = styled.div `
