@@ -158,7 +158,7 @@ export default class componentName extends Component {
                   <Desktop>
                     <Parrot src="/images/Objects/parrot.png" index={i} display={this.state.display[i]} />
                   </Desktop>
-                  <Button className="btn pb-4 pt-4"
+                  <Button className="btn pb-4 pt-4 pl-3 pr-4"
                     key={i}
                     onClick={() => this.handleClick(i)}
                     imgURL={this.state.imgURL[i]}
