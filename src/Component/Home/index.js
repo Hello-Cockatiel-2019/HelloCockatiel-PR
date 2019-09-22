@@ -253,9 +253,9 @@ const RegisDiv = styled.div `
 const CIImg = styled.img`
     width:200px;
     height:65.5px;
-    @media screen and (max-width:768) {
-        width:115px;
-        height:38px;
+    @media screen and (max-width:768px) {
+        width:90px;
+        height:29.5px;
     }
 `
 

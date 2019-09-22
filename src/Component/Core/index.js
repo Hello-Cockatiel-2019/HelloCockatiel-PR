@@ -100,11 +100,6 @@ const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
 `
 
-const VersionENV = styled.div`
-    position: fixed;
-    left: 0;
-    bottom: 0;
-`
 export default class NavBar extends Component {
         
     state = {
@@ -158,7 +153,7 @@ export default class NavBar extends Component {
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
                             <div className="d-flex col-12 justify-content-center">
-                                <img src="/images/Objects/ci.png" width="241px" height="79px" />
+                                <img src="/images/Objects/ci.png" width="150px" height="49.2px" />
                             </div>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
@@ -168,7 +163,7 @@ export default class NavBar extends Component {
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
-                        <VersionENV><small>{process.env.GIT_VER}</small></VersionENV>
+                        
                     </Desktop>
                     <Mobile>
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
@@ -182,6 +177,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
+                <div>v. : <small>{process.env.GIT_VER}</small></div>
                 </Hidden>
             </React.Fragment>
 
