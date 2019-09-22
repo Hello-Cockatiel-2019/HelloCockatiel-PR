@@ -78,20 +78,22 @@ const Content = styled(Paragraph)`
   line-height: 27px;
   letter-spacing: 0.05em;
   justify-self: center;
-  margin: 3em;
-  height: 20em;
+  margin: 2em;
+    height: 11em;
   
   @media (max-width: 1196px){
-    margin:2em;
+    margin: 1.5em;
     height: 11em;
+    }
+    @media (max-width: 1024px){
+    height: 9em;
     }
     @media only screen and (max-width: 1196px) and (min-height:834px) {
       height: 14em;
     }
   @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       margin: 1.5em;
-      height: 21em;
-      
+      height: 21em; 
     }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin: 1.5em;
@@ -115,6 +117,7 @@ const Content = styled(Paragraph)`
     line-height: 36px;
     height: 20em;
     }
+
     
     
 `
