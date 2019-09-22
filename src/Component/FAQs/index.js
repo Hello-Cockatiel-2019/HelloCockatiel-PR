@@ -149,34 +149,34 @@ const Div = styled.div `
     height: 100px;
     }
     @media only screen and (max-width:900px) {
-    height:${props => props.ml === 4 ? 200 : 100}px;
+    height:${props => props.ml === 4 ? 180 : 100}px;
     }
     @media only screen and (max-width:834px) {
-    height:${props => props.ml === 4 ? 200 : 110}px;
+    height:${props => props.ml === 4 ? 180 : 110}px;
     }
     @media only screen and (max-width:768px) {
-    height:${props => props.ml === 4 ? 200 : 110}px;
+    height:${props => props.ml === 4 ? 180 : 110}px;
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-    height:${props => props.ml === 4 ? 200 : 110}px;
+    height:${props => props.ml === 4 ? 180 : 110}px;
     }
     @media only screen and (max-width:600px){
-    height:${props => props.ml === 4 ? 200 : 110}px;
+    height:${props => props.ml === 4 ? 180 : 110}px;
     }
     @media only screen and (max-width:500px){
-    height:${props => props.ml === 4 ? 200 : 100}px;
+    height:${props => props.ml === 4 ? 180 : 100}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 4 ? 200 : 100}px;
+    height:${props => props.ml === 4 ? 180 : 100}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
-    height:${props => props.ml === 4 ? 200 : 125}px;
+    height:${props => props.ml === 4 ? 180 : 125}px;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
-    height:${props => props.ml === 4 ? 200 : 80}px;
+    height:${props => props.ml === 4 ? 180 : 80}px;
     }
     @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
-    height:${props => props.ml === 4 ? 200 : 65}px;
+    height:${props => props.ml === 4 ? 180 : 65}px;
     }
 `
     
