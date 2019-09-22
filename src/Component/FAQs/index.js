@@ -128,10 +128,15 @@ const Div = styled.div `
     @media (max-width:1500px) and (max-height:700px) {
         visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
+    @media only screen and (max-width:1400px) {
+        height:120px;
+        visibility:visible;
+    }
     @media only screen and (max-width:1400px) and (orientation: landscape) and (min-height:1024px) {
         height:100px;
         visibility:visible;
     }
+    
     @media only screen and (max-width:1350px) and (max-height:700px) {
         height: 95px;
         visibility:${props => props.ml === 4 ? "hidden" : "visible"};
@@ -180,7 +185,7 @@ const Div = styled.div `
     visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 4 ? 250 : 100}px;
+    height:${props => props.ml === 4 ? 250 : 125}px;
     visibility:visible;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
@@ -188,11 +193,11 @@ const Div = styled.div `
     visibility:visible;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
-    height:${props => props.ml === 4 ? 180 : 80}px;
+    height:${props => props.ml === 4 ? 180 : 100}px;
     visibility:visible;
     }
     @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
-    height:${props => props.ml === 4 ? 180 : 65}px;
+    height:${props => props.ml === 4 ? 180 : 90}px;
     visibility:visible;
     }
 `
@@ -202,7 +207,7 @@ export default class FAQs extends Component {
         data:[
         {
             q: "ใครสมัครได้บ้าง สมัครแล้วได้เข้าทุกคนไหม?",
-            a: "ไดโนเสาร์ค้าบ",
+            a: "พี่ๆจะมีการคัดเลือกน้องในแต่ละสาขา โดยพิจารณาจากการ ตอบคำถามตอนรับสมัคร",
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
@@ -212,17 +217,17 @@ export default class FAQs extends Component {
         },
         {
             q: "ค่ายนี้จัดที่ไหน แล้วจะรบกวนเวลาเรียนไหม?",
-            a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถ",
+            a: "ทุกเย็นวันอังคารและวันพฤหัสบดี โดยแต่ละสาขาจะใช้สถานที่ต่างกัน",
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "ได้ชั่วโมงกิจกรรมไหม?",
-            a: "WHAT",
+            q: "จำเป็นต้องมีความรู้มาก่อนไหม?",
+            a: "ไม่จำเป็น เพียงแค่มีความตั้งใจ น้องๆก็สามารถเข้าร่วมกิจกรรมและเรียนรู้จากพี่ๆได้",
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "มีของกินไหม?",
-            a: "WHAT!?2",
+            q: "ต้องเตรียมตัวอย่างไรบ้าง?",
+            a: "เตรียมพร้อมรับความรู้จากพี่ๆและที่สำคัญควรมาให้ตรงเวลา",
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         }
     ]
