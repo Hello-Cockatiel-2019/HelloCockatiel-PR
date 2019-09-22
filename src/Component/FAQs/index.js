@@ -23,6 +23,9 @@ const Sdiv = styled.div `
     @media (max-width:1500px) {
         transform: translate(16%,0%);
     }
+    @media (max-width:1500px) and (min-height:690px) {
+        transform: translate(16%,0%);
+    }
     @media (max-width:1468px) {
         transform: translate(15%,0%);
     }
@@ -90,7 +93,7 @@ const Sdiv = styled.div `
         transform: translate(33%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        transform: translate(18%,-3%);
+        transform: translate(16%,3%);
     }
 `
 const HeaderDiv = styled.div `
@@ -118,6 +121,15 @@ const HeaderDiv = styled.div `
 `
 const Div = styled.div `
     height: 100px;
+    
+    @media (max-width:1500px) {
+        height:100px;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
+    }
+    @media (max-width:1500px) and (min-height:700px) {
+        height:100px;
+        visibility:visible;
+    }
     @media only screen and (max-width:1400px) and (orientation: landscape) and (min-height:1024px) {
     height:100px;
     }
