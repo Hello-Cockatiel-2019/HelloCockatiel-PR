@@ -21,8 +21,11 @@ margin-bottom:2em;
 `
 const Div = styled.div`
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
-  height:500px;
+  height:400px;
 text-align: center;
+    }
+    @media only screen and (max-width: 414px) and (orientation:portrait)  {
+      height: 350px;
     }
 `
 
@@ -32,10 +35,14 @@ export default class Footer extends Component {
     return (
       <React.Fragment>
         <Div>
-          <FbButton src="/images/Objects/fb.png"/>
+          <a href="https://www.facebook.com/SITHelloWorld">
+            <FbButton src="/images/Objects/fb.png"/>
+          </a>
         </Div>
         <Desktop>
-          <GameButton src="/images/Objects/game.png"/>
+          <a>
+            <GameButton src="/images/Objects/game.png"/>
+          </a>
         </Desktop>
       </React.Fragment>
     )

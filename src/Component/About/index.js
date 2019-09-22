@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 import {Paragraph} from '../Core/Text'
-
+import { contentAbout } from '../Core/Messages'
 import MobileHeader from '../Core/MobileHeader';
 import Footer from './Footer'
 
@@ -28,8 +28,8 @@ const Plate = styled.div`
     height: 44vh;
     margin-left: 4em;
     }
-    @media only screen and (max-width: 1366x) and (min-height:1024px) {
-      width: 75vh;
+    @media only screen and (max-width: 1366px) and (min-height:1024px) {
+         width: 74vh;
     height: 41vh;
     margin-left: 2em;
     }
@@ -78,32 +78,63 @@ const Content = styled(Paragraph)`
   line-height: 27px;
   letter-spacing: 0.05em;
   justify-self: center;
-  margin: 3em;
+  margin: 2em;
+    height: 11em;
+  
+  @media (max-width: 1196px){
+    margin: 1.5em;
+    height: 11em;
+    }
+    @media (max-width: 1024px){
+    height: 9em;
+    }
+    @media only screen and (max-width: 1196px) and (min-height:834px) {
+      height: 14em;
+    }
+  @media only screen and (max-width: 1024px) and (orientation:portrait)  {
+      margin: 1.5em;
+      height: 21em; 
+    }
+    @media only screen and (max-width: 626px) and (orientation:portrait)  {
+      margin: 1em;
+      height: 13em; 
+    }
+    @media only screen and (max-width: 414px) and (orientation:portrait)  {
+      margin: 1.5em;
+      height: 14em;
+    }
+    @media only screen and (max-width: 320px) and (orientation:portrait)  {
+      margin: 1em;
+      height: 11em;
+    }
+    @media (min-width: 830px){
+      font-size: 24px;
+      line-height: 29px;
+    }
+    @media only screen and (max-width: 1024px) and (min-height:1196px){
+      font-size: 30px;
+    line-height: 36px;
+    height: 16em;
+    }
+    @media only screen and (max-width: 1024px) and (min-height:1366px){
+      font-size: 30px;
+    line-height: 36px;
+    height: 20em;
+    }
 
+    
+    
 `
 const Layout = styled.div`
     display:grid;
     @media (max-width: 2560px){
       grid-template-columns: 3fr 1fr;
+      margin-top: 3.5em;
     }
-    @media (max-width: 1537px){
-    }
-    @media (max-width: 1468px){
-    }
-    @media (max-width: 1196px){
-    }
-    @media(max-width:1025px) {
-    } 
-    @media(max-width:960px) {
-    } 
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
       margin-top: -9em;
     }
-    @media only screen and (max-width: 414px) and (orientation:portrait)  {
-    }
-    @media only screen and (max-width: 320px) and (orientation:portrait) {
-    }    
 `
 const HeaderDiv = styled.div `
   display:none;
@@ -123,11 +154,7 @@ export default class About extends Component {
             </HeaderDiv>
               <Plate>
                 <Content >
-                  Hello World Cockatiel เป็นโครงการที่จัดขึ้นเพื่อแบ่งปันความรู้ทางด้านการสร้างเว็บไซต์ 
-                  โดยจะมีการจัดการเรียนการสอนให้กับนักศึกษาที่เข้าร่วมโครงการ โดยแบ่งเป็น 4 สาขา ได้แก่ Front-End, Infra, Design, และ Game
-                   นอกจากนี้ ในช่วงท้ายของโครงการ นักศึกษาที่เข้าร่วมโครงการในแต่ละสาขา จะได้มาร่วมกันทำโปรเจคสร้างเว็บไซต์ที่เกิดขึ้นจากความสามารถของ
-                   ตัวนักศึกษาเองHello World Cockatiel มาในธีมของการอนุรักษ์ธรรมชาติ โดยมี mascot เป็น Cockatiel นกแก้วที่น่ารัก เลี้ยงง่าย 
-                   และอยากรู้อยากเห็นที่เปรียบเสมือนนักศึกษาที่ ร่วมโครงการที่พร้อมจะรับ ความรู้ใหม่ ๆ ตลอดเวลา
+                  {contentAbout}
                 </Content>
               </Plate>
               <div>
