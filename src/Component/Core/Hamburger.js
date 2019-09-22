@@ -9,8 +9,8 @@ import SideButton from './SideButton'
 const styles = {
   bmBurgerButton: {
     position: 'fixed',
-    width: '36px',
-    height: '30px',
+    width: '44px',
+    height: '44px',
     right: '36px',
     top: '36px',
   },
@@ -71,6 +71,7 @@ export default class componentName extends Component {
           isOpen={this.state.menuOpen} 
           width={'60%'}
           onStateChange={(state) => this.handleStateChange(state)}
+          customBurgerIcon={<img src="/images/Objects/ham.png" />} 
           right
            >
           <SideButton changeClick={this.changeClick} clickToClose={this.clickButton} />
