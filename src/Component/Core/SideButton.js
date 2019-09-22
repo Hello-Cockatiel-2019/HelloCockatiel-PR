@@ -9,7 +9,6 @@ import { home, aboutHeader, majorHeader, faqsHeader } from './Messages'
 const NavMobile = css`
   width:auto;
   background-image:url('');
-  display: block;
 `
 
 const Button = styled.div`
@@ -74,6 +73,42 @@ const Parrot = styled.img`
 
 const Div = styled.div`
   display: ${props => props.index === 0 ? 'none' : props.display};
+   @media screen and (max-width:834px) and (orientation: landscape){
+      display: block;
+      text-align:center;
+    }
+    @media screen and (max-width:768px) and (orientation: portrait){
+      display: block;
+      text-align:center;
+    }
+    @media(max-width:576px) {
+      display: block;
+      text-align:center;
+    }
+    @media(max-width:320px) {
+      display: block;
+      text-align:center;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      display: block;
+      text-align:center;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+      display: block;
+      text-align:center;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+      display: block;
+      text-align:center;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      display: block;
+      text-align:center;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+      display: block;
+      text-align:center;
+    } 
 `
 export default class componentName extends Component {
   
@@ -104,6 +139,7 @@ export default class componentName extends Component {
     let number = await i
     if (number >= 0) {
       this.props.changeClick(number);
+      this.clickToClose();
       if(number === 1 || number === 2 || number === 3){
         let img = this.state.imgURL.slice();
         let display = this.state.display.slice();
@@ -144,9 +180,15 @@ export default class componentName extends Component {
           display: display
         })
       }
-    
     }
+    
   }
+
+  clickToClose = () => {
+    const close = false
+    this.props.clickToClose(close);
+  }
+
 
   render() {
     return (

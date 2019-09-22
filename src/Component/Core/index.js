@@ -7,8 +7,8 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
 import { Desktop, Mobile } from './Hidden'
-import { HamburgerDiv } from './Hamburger'
 
+import Hamburger from './Hamburger'
 import Home from '../Home'
 import Background from './Background'
 import SlideButton from './SideButton';
@@ -71,6 +71,10 @@ const Hidden = styled.div`
     }
 `
 
+const HamburgerDiv = styled.div`
+    display:${props => props.displayHamburger};
+`
+
 export default class NavBar extends Component {
         
     state = {
@@ -78,10 +82,7 @@ export default class NavBar extends Component {
         blur: 0,
         displayHamburger:'none',
         homeDisplay: 'block',
-        mobileDisplay: 'none',
-        slide:0,
-        width: '180',
-        height: 'auto'
+        mobileDisplay: 'none'
     }
 
     changeClick = (i) => {
@@ -89,6 +90,7 @@ export default class NavBar extends Component {
             this.setState({
                 homeDisplay: 'block',
                 mobileDisplay: 'none',
+                displayHamburger: 'none',
             })
         }else{
             this.setState({
@@ -117,10 +119,6 @@ export default class NavBar extends Component {
         }
     }
 
-    clickListHam = () => {
-        // window.location.reload(false);
-    }
-
     render() {
         return (
             <React.Fragment>
@@ -145,19 +143,9 @@ export default class NavBar extends Component {
                         </Div>
                     </Desktop>
                     <Mobile>
-                        <div className="row justify-content-end">
-                            <HamburgerDiv displayHamburger={this.state.displayHamburger} slide={this.state.displayMenu}>
-                                <input type="checkbox" onClick={this.changeBlur} />
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <ul className="p-4">
-                                    <li onClick={this.clickListHam}>
-                                        <SlideButton changeClick={this.changeClick} />
-                                    </li>
-                                </ul>
-                            </HamburgerDiv>
-                        </div>
+                        <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
+                            <Hamburger changeClick={this.changeClick} />
+                        </HamburgerDiv>
                         <DivBlur blur={this.state.blur}>
                             <Background />
                             <HomeDiv homeDisplay={this.state.homeDisplay} >

@@ -1,157 +1,81 @@
-import styled from 'styled-components'
+import React, { Component } from 'react'
+import { slide as Menu } from 'react-burger-menu'
 
 import color from '../../Config/Color'
+import { Mobile } from './Hidden'
 
-export const HamburgerDiv = styled.div`
-    display: ${props => props.displayHamburger ? props.displayHamburger : 'none'};
-    position: absolute;
-    top: 3vh;
-    right: 5vw;
-    z-index: 1;
-    padding-top:19px;
-    padding-left:14px;
-    background-color:${color.Wood5};
-    background-size:cover;
-    border-radius:30px;
-    width: 60px;
-    height: 60px;
-    user-select: none;
-    @media(max-width:320px) {
-        right: 1vw;
-      }
-    & a
-    {
-      text-decoration: none;
-      color: #232323;
-    
-      transition: color 0.3s ease;
+import SideButton from './SideButton'
+
+const styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '36px',
+    height: '30px',
+    right: '36px',
+    top: '36px',
+  },
+  bmBurgerBars: {
+    background: `${color.font1}`
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%'
+  },
+  bmMenu: {
+    background: `${color.Wood6}`,
+    padding: '2.5em 1.5em 0',
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
+
+export default class componentName extends Component {
+  state = {
+    id: 0,
+    menuOpen : false
+  }
+
+  changeClick = (i) => {
+    let number = i
+    if (number >= 0) {
+      this.props.changeClick(number);
     }
+  }
 
-    & a:hover
-    {
-      color: tomato;
-    }
+  onClick = () => {
+    this.setState({
+      menuOpen: true
+    })
+  }
 
-    & input
-    {
-      display: block;
-      width: 40px;
-      height: 32px;
-      position: absolute;
-      top: -7px;
-      left: -5px;
-      cursor: pointer;
-      opacity: 0;
-      z-index: 2; 
-    }
+  clickButton = (i) => {
+    this.setState({
+      menuOpen: i
+    })
+    console.log(i)
+  }
 
-   
-    & span
-    {
-      display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
-      position: relative;
-      background: ${color.font1};
-      border-radius: 3px;
-      z-index: 1;
-      transform-origin: 4px 0px;
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  opacity 0.55s ease;
-    }
+  handleStateChange(state) {
+    this.setState({ 
+      menuOpen: state.isOpen 
+    })
+  }
 
-
-    & span:first-child
-    {
-      transform-origin: 0% 0%;
-    }
-
-    & span:nth-last-child(2)
-    {
-        transform-origin: 0% 100%;
-    }
-
-    & input:checked ~ span
-    {
-        opacity: 1;
-        transform: rotate(45deg) translate(5px, -1px);
-        background: ${color.font1};
-    }
-
-    & input:checked ~ span:nth-last-child(3)
-    {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-
-    & input:checked ~ span:nth-last-child(2)
-    {
-        transform: rotate(-45deg) translate(0px, 6px);
-    }
-
-    & ul
-    {
-      position: absolute;
-      top:10vh;
-      left:-65vw;
-      width: 300px;
-      height:auto;
-      box-shadow: 0px 0px 10px #000000;
-      border-radius: 30px;
-      background: ${color.Wood6};
-      list-style-type: none;
-      transform-origin: 0% 0%;
-      transform: translate(0%, -220%);
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-      @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        width:400px;
-        left: -63vw;
-      }
-      @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-        width: 500px;
-        left: -68vw;
-      }
-      @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        width:500px;
-        left:-65vw;
-      }
-      @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        width:500px;
-        left:-64vw;
-      } 
-      @media screen and (max-width:834px) and (orientation: landscape){
-        width:500px;
-        left:-68vw;
-      }
-      @media screen and (max-width:768px) and (orientation: portrait){
-        width:500px;
-        left:-68vw;
-      }
-      @media(max-width:420px) {
-        width:250px;
-        left:-60vw;
-      }
-      @media(max-width:400px) {
-        top:2vh;
-        left:-69vw;
-      }
-      @media(max-width:320px) {
-        top:0vh;
-        left:-79vw;
-      }
-      
-    }
-
-    & ul:active
-    {
-      padding: 10px 0;
-      font-size: 22px;
-    }
-
-    & input:checked ~ ul
-    {
-      transform: none;
-    }
-`
+  render() {
+    return (
+      <Mobile className="row justify-content-end">
+        <Menu 
+          styles={styles} 
+          onClick={this.onClick}
+          isOpen={this.state.menuOpen} 
+          width={'60%'}
+          onStateChange={(state) => this.handleStateChange(state)}
+          right
+           >
+          <SideButton changeClick={this.changeClick} clickToClose={this.clickButton} />
+        </Menu>
+    </Mobile>
+    )
+  }
+}
