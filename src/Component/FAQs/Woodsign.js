@@ -4,14 +4,14 @@ import { Paragraph, BrownParagraph } from '../Core/Text'
 
 const Qwood = styled(BrownParagraph) `
     background-color :#DB9B51;
-    width: 400px;
+    width: 520px;
     /* height: 38px; */
     padding-left:0.7em;
     padding-top:0.3em;
     box-shadow: 5px 5px 8px black;
     margin: 0em 0em 0em 0em;
     @media only screen and (max-width:1400px) {
-        width: 370px;
+        width: 500px;
         margin:0em 0em 0em 0em;
     }
     @media only screen and (max-width:1320px) {
@@ -49,7 +49,7 @@ const Qwood = styled(BrownParagraph) `
         font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        width: 330px;
+        width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         width: 330px;
@@ -58,14 +58,14 @@ const Qwood = styled(BrownParagraph) `
 `
 const Awood = styled(Paragraph)`
     background-color:#987245;
-    width: 400px;
+    width: 520px;
     padding-top:0.4em;
     padding-bottom:0.4em;
     padding-left:0.7em;
     box-shadow: 5px 5px 8px black;
 
     @media only screen and (max-width:1400px) {
-        width: 370px;
+        width: 500px;
     }
     @media only screen and (max-width:1320px) {
         width: 290px;
@@ -100,7 +100,7 @@ const Awood = styled(Paragraph)`
         font-size:0.75em;
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        width: 330px;
+        width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         width: 330px;
