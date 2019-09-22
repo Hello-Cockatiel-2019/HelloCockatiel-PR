@@ -25,8 +25,8 @@ const Box = styled.div`
         height:11em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        width:26em;
-        height: 11em;
+        width:22em;
+        height: 10em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:30em;
@@ -93,11 +93,10 @@ const TextContent = styled(Small)`
         font-size:1.2em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        line-height: 17px;
-        margin-top:-6.5em;
-        padding-left:7em;
+        line-height: 18px;
+        margin-top:-6em;
+        padding-left:6em;
         padding-right:1em;
-        font-size:1em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         line-height: 25px;
@@ -162,23 +161,23 @@ const Bird = styled.img`
         margin-left:1em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
-        width:18%;
-        margin-top:-1.6em;
-        margin-left:3.5em;
+        width:22%;
+        margin-top:1em;
+        margin-left:2em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        width:18%;
-        margin-top:-1.6em;
-        margin-left:3.5em;
+        width:22%;
+        margin-top:1em;
+        margin-left:2em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        width:22%;
-        margin-top:-2em;
-        margin-left:1.5em;
+        width:26%;
+        margin-top:1em;
+        margin-left:0.5em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
-        width:18%;
-        margin-top:-2em;
+        width:22%;
+        margin-top:1.5em;
         margin-left:2em;
     }
     @media (max-width:770px) and (orientation: portrait){
