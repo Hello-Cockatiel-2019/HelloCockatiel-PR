@@ -167,9 +167,9 @@ export default class NavBar extends Component {
                             <SideBarSection className="d-flex col-12 pl-5 flex-column justify-content-start">
                                 <NavButton changeClick={this.changeClick} />
                             </SideBarSection>
-                            {/* <Content className="d-flex col-10 justify-content-center">
+                            <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
-                            </Content> */}
+                            </Content>
                         </Div>
                     </Desktop>
                     <Mobile>
