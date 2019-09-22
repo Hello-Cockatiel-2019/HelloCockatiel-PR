@@ -168,7 +168,7 @@ export default class NavBar extends Component {
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
-                        <VersionENV>{process.env.NODE_ENV}</VersionENV>
+                        <VersionENV><small>{process.env.GIT_VER}</small></VersionENV>
                     </Desktop>
                     <Mobile>
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
