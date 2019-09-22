@@ -60,6 +60,18 @@ const Hr = styled(Mobile)`
   background-color:${color.font1};
   border: solid ${color.font1} 1px;
   visibility:${ props => props.visibleHr <=  2? 'visible' : 'hidden' };
+    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+      margin-top:.25em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+      margin-top:.25em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      margin-top:2em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+      margin-top:2em;
+    } 
 `
 
 const Parrot = styled.img`
