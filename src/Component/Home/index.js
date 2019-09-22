@@ -186,7 +186,7 @@ const MenuDiv = styled.div`
         margin-top:50px;
     }
     @media screen and (max-width:320px) {
-        margin-top:60px;
+        margin-top:40px;
     }
 `
 
@@ -247,6 +247,15 @@ const RegisDiv = styled.div `
     }
 `
 
+const CIImg = styled.img`
+    width:200px;
+    height:65.5px;
+    @media screen and (max-width:768) {
+        width:115px;
+        height:38px;
+    }
+`
+
 export default class Home extends Component {
     state = {
         plate : [
@@ -284,6 +293,9 @@ export default class Home extends Component {
                     <LogoDiv className="col-12 d-flex justify-content-center">
                         <HeadLogo src="/images/Objects/logo_web.png" />
                     </LogoDiv>
+                    <div className="d-flex col-12 mt-2 justify-content-center">
+                        <CIImg src="/images/Objects/ci.png"  />
+                    </div>
                     <MenuDiv>
                         {
                             this.state.plate.map((data,i) => {

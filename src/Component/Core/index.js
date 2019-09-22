@@ -142,10 +142,14 @@ export default class NavBar extends Component {
                             <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
+                            <div className="d-flex col-12 justify-content-center">
+                                <img src="/images/Objects/ci.png" width="241px" height="79px" />
+                            </div>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
+                                
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
