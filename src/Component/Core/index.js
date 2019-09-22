@@ -107,16 +107,9 @@ export default class NavBar extends Component {
             displayHamburger: 'block',
         })
     }
-    changeBlur = () => {
-        if(this.state.blur===2){
-            this.setState({
-                blur: 0
-            })
-        }else{
-            this.setState({
-                blur: 2
-            })
-        }
+
+    clickToClose = () => {
+        //notthing fixed bug
     }
 
     render() {
@@ -135,7 +128,7 @@ export default class NavBar extends Component {
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
-                                <SlideButton changeClick={this.changeClick} />
+                                <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
