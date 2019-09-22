@@ -85,6 +85,11 @@ const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
 `
 
+const VersionENV = styled.div`
+    position: fixed;
+    left: 0;
+    bottom: 0;
+`
 export default class NavBar extends Component {
         
     state = {
@@ -144,6 +149,7 @@ export default class NavBar extends Component {
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
+                        <VersionENV>{process.env.NODE_ENV}</VersionENV>
                     </Desktop>
                     <Mobile>
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
