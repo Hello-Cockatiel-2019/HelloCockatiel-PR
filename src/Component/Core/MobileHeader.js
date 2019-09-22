@@ -11,19 +11,19 @@ const HeaderDiv = styled.div`
     height:136px;
     width: 170px;
     margin: 0;
-    padding-top: 60px;
-    padding-left: ${props => props.pl === 'FAQs' ? '50px' : '10px'};
+    padding-top: ${props => props.pl === 'FAQs' ? '65px' : '60px'};
+    padding-left: ${props => props.pl === 'FAQs' ? '50px' : props.pl === 'Teams' ? '50px' : '10px'};
     @media screen and (max-width:380px) {
       height:96px;
       width: 130px;
-      padding-top: 45px;
-      padding-left: ${props => props.pl === 'FAQs' ? '40px' : '10px'};
+      padding-top: 47px;
+      padding-left: ${props => props.pl === 'FAQs' ? '38px' : props.pl === 'Teams' ? '38px' : '12px'};
     }
     @media screen and (max-width:320px) {
       height:76px;
       width: 110px;
       padding-top: 37px;
-      padding-left: ${props => props.pl === 'FAQs' ? '30px' : '8.5px'};
+      padding-left: ${props => props.pl === 'FAQs' ? '30px' : props.pl === 'Teams' ? '30px' :  '8.5px'};
     }
 `
 const HeaderFont = styled(Header)`

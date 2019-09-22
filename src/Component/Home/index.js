@@ -91,7 +91,7 @@ const Woodplate = styled.div `
         height:107px;
         padding-right: 1em;
         padding-top:3.1em;
-        padding-left:${props => props.pt === 0 ? 0.75 : 0}em;
+        padding-left:${props => props.pt === 0 ? 0.5 : 0}em;
         margin-right:1em;
     }
     @media screen and (max-width:320px) {
