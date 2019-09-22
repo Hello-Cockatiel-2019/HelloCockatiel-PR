@@ -4,7 +4,7 @@ import { Paragraph, BrownParagraph } from '../Core/Text'
 
 const Qwood = styled(BrownParagraph) `
     background-color :#DB9B51;
-    width: 520px;
+    width: 600px;
     /* height: 38px; */
     padding-left:0.7em;
     padding-top:0.3em;
@@ -15,18 +15,13 @@ const Qwood = styled(BrownParagraph) `
         margin:0em 0em 0em 0em;
     }
     @media only screen and (max-width:1320px) {
-        width: 320px;
-        margin:0em 0em 0em 0em;
-    }
-    @media only screen and (max-width:1320px) {
-        width: 290px;
+        width: 390px;
     }
     @media only screen and (max-width:1024px) {
-        width: 270px;
-        margin: 0em 0em 0em 0em;
+        width: 390px;
     }
     @media only screen and (max-width:999px) {
-        width: 260px;
+        width: 330px;
     }
     @media only screen and (max-width:991px) {
         width: 330px;
@@ -58,7 +53,7 @@ const Qwood = styled(BrownParagraph) `
 `
 const Awood = styled(Paragraph)`
     background-color:#987245;
-    width: 520px;
+    width: 600px;
     padding-top:0.4em;
     padding-bottom:0.4em;
     padding-left:0.7em;
@@ -68,16 +63,16 @@ const Awood = styled(Paragraph)`
         width: 500px;
     }
     @media only screen and (max-width:1320px) {
-        width: 290px;
+        width: 390px;
     }
     @media (max-width:1120px) {
-        width: 290px;
+        width: 390px;
     }
     @media only screen and (max-width:1024px) {
-        width: 270px;
+        width: 390px;
     }
     @media only screen and (max-width:999px) {
-        width: 260px;
+        width: 330px;
     }
     @media only screen and (max-width:991px) {
         width: 330px;
