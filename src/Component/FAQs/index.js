@@ -18,7 +18,7 @@ const Sdiv = styled.div `
         transform: translate(7%,-5%);
     }
     @media (max-width:1679px) {
-        transform: translate(6%,-5%);
+        transform: translate(23%,-5%);
     }
     @media (max-width:1468px) {
         transform: translate(1%,40%);
@@ -66,22 +66,22 @@ const Sdiv = styled.div `
         transform: translate(20%,-20%);
     }
     @media (max-width:490px) {
-        transform: translate(15%,-22%);
+        transform: translate(10%,-19%);
     }
     @media (max-width:400px) {
-        transform: translate(9%,-17%);
+        transform: translate(9%,-14%);
     }
     @media (max-width:320px) {
-        transform: translate(10%,-17%);
+        transform: translate(12%,-15%);
     }
     @media only screen and (max-width:1367px) and (orientation: landscape) and (min-height:1024px)  {
-        transform: translate(1%,35%);
+        transform: translate(23%,5%);
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         transform: translate(7%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        transform: translate(1%,-17%);
+        transform: translate(20%,-8%);
     }
 `
 const HeaderDiv = styled.div `
@@ -104,13 +104,13 @@ const HeaderDiv = styled.div `
         transform: translate(0%,-99%);
     }
     @media (max-width:320px) {
-        transform: translate(0%,-145%);
+        transform: translate(0%,-115%);
     }
 `
 const Div = styled.div `
-    height: 120px;
+    height: 100px;
     @media only screen and (max-width:1400px) and (orientation: landscape) and (min-height:1024px) {
-    height:155px;
+    height:110px;
     }
     @media only screen and (max-width:1350px) {
     height: 165px;
@@ -118,81 +118,74 @@ const Div = styled.div `
     @media only screen and (max-width:1300px) {
     height: 150px;
     }
-    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-    height:140px;
-    }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-    height:${props => props.ml === 3 ? 250 : 145}px;
+    height:${props => props.ml === 4 ? 200 : 100}px;
+    }
+    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
+    height:95px;
     }
     @media only screen and (max-width:998px) {
-    height: 130px;
+    height: 100px;
     }
     @media only screen and (max-width:900px) {
-        height:${props => props.ml === 3 ? 250 : 110}px;
+    height:${props => props.ml === 4 ? 200 : 100}px;
     }
     @media only screen and (max-width:834px) {
-    height:${props => props.ml === 3 ? 250 : 110}px;
+    height:${props => props.ml === 4 ? 200 : 110}px;
     }
     @media only screen and (max-width:768px) {
-    height:${props => props.ml === 3 ? 250 : 110}px;
+    height:${props => props.ml === 4 ? 200 : 110}px;
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-    height:${props => props.ml === 3 ? 250 : 140}px;
+    height:${props => props.ml === 4 ? 200 : 140}px;
     }
     @media only screen and (max-width:600px){
-    height:${props => props.ml === 3 ? 250 : 110}px;
+    height:${props => props.ml === 4 ? 200 : 110}px;
     }
     @media only screen and (max-width:500px){
-    height:${props => props.ml === 3 ? 250 : 100}px;
+    height:${props => props.ml === 4 ? 200 : 100}px;
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 3 ? 250 : 100}px;
+    height:${props => props.ml === 4 ? 200 : 100}px;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
-    height:${props => props.ml === 3 ? 250 : 125}px;
+    height:${props => props.ml === 4 ? 200 : 125}px;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
-    height:${props => props.ml === 3 ? 250 : 100}px;
+    height:${props => props.ml === 4 ? 200 : 90}px;
     }
     @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
-    height:${props => props.ml === 3 ? 250 : 70}px;
+    height:${props => props.ml === 4 ? 200 : 70}px;
     }
 `
     
-
-
 export default class FAQs extends Component {
     state = {
         data:[
         {
             q: "ใครสมัครได้บ้าง สมัครแล้วได้เข้าทุกคนไหม?",
             a: "ไดโนเสาร์ค้าบ",
-            class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
+            class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
             q: "มีค่าใช้จ่ายไหม?",
             a: "ฟรี ไม่มีค่าใช้จ่าย",
-            class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
+            class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
             q: "ค่ายนี้จัดที่ไหน แล้วจะรบกวนเวลาเรียนไหม?",
             a: "นี่ก็วาดไม่เป็น ถถถถถถถถถถถถถถ",
-            class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
+            class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
             q: "ได้ชั่วโมงกิจกรรมไหม?",
             a: "WHAT",
-            class: "d-block col-lg-6 col-md-12 col-sm-12 m-0 p-0"
+            class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "มีสาขาอะไรให้ลงบ้าง แล้วแต่ละสาขาทำหน้าที่อ่ะไร?",
-            a: "WHAT!?",
-            class: "d-none d-lg-block col-lg-6 m-0 p-0"
-        },
-        {
-            q: "มีของกินไหมครับ?",
+            q: "มีของกินไหม?",
             a: "WHAT!?2",
-            class: "d-none d-lg-block col-lg-6 m-0 p-0"
+            class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         }
     ]
 }
@@ -200,7 +193,7 @@ export default class FAQs extends Component {
         return (
             <React.Fragment>
                 <HeaderDiv>
-            <MobileHeader text="FAQs" headerURl="plate-m3.png" /> 
+            <MobileHeader text="FAQs" headerURl="Group-3.png" /> 
             </HeaderDiv>
                <Sdiv className="row m-0 p-0">
                    {

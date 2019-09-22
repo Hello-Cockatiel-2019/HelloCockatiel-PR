@@ -38,15 +38,18 @@ const Qwood = styled(BrownParagraph) `
         width: 330px;
     }
     @media only screen and (max-width:500px) {
-        width: 300px;
-        font-size:1em;
+        width: 320px;
     }
     @media only screen and (max-width:400px) {
         width: 300px;
+        font-size:1em;
     }
     @media only screen and (max-width:320px) {
         width: 230px;
         font-size:0.75em;
+    }
+    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
+        width: 330px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         width: 330px;
@@ -56,8 +59,8 @@ const Qwood = styled(BrownParagraph) `
 const Awood = styled(Paragraph)`
     background-color:#987245;
     width: 400px;
-    padding-top:0.5em;
-    padding-bottom: 1em;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
     padding-left:0.7em;
     box-shadow: 5px 5px 8px black;
 
@@ -86,18 +89,21 @@ const Awood = styled(Paragraph)`
         width: 330px;
     }
     @media only screen and (max-width:500px) {
-        width: 300px;
-        font-size:1em;
+        width: 320px;
     }
     @media only screen and (max-width:400px) {
         width: 300px;
+        font-size:1em;
     }
     @media only screen and (max-width:320px) {
         width: 230px;
         font-size:0.75em;
     }
+    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
+        width: 330px;
+    }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 330px
+        width: 330px;
         font-size:1.25em;
     }
 `
