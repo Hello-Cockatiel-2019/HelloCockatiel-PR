@@ -121,10 +121,8 @@ const HeaderDiv = styled.div `
 `
 const Div = styled.div `
     height: 100px;
-    
-    
     @media (max-width:1500px) and (max-height:800px){
-        height:100px;
+        height:92px;
         visibility:visible;
     }
     @media (max-width:1500px) and (max-height:700px) {
@@ -134,13 +132,13 @@ const Div = styled.div `
         height:100px;
         visibility:visible;
     }
-    @media only screen and (max-width:1350px) {
+    @media only screen and (max-width:1350px) and (max-height:700px) {
         height: 95px;
-        visibility:visible;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
-    @media only screen and (max-width:1300px) {
+    @media only screen and (max-width:1300px) and (max-height:700px) {
         height: 95px;
-        visibility:visible;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         height:${props => props.ml === 4 ? 350 : 100}px;
@@ -150,40 +148,43 @@ const Div = styled.div `
         height:95px;
         visibility:visible;
     }
-    @media only screen and (max-width:998px) {
+    @media only screen and (max-width:998px) and (max-height:700px) {
         height: 100px;
-        visibility:visible;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
-    @media only screen and (max-width:900px) {
-        height:${props => props.ml === 4 ? 180 : 100}px;
-        visibility:visible;
+    @media only screen and (max-width:900px) and (max-height:500px) {
+        height:${props => props.ml === 4 ? 200 : 100}px;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
-    @media only screen and (max-width:834px) {
-        height:${props => props.ml === 4 ? 180 : 110}px;
-        visibility:visible;
+    @media only screen and (max-width:834px) and (max-height:700px) {
+        height:${props => props.ml === 4 ? 350 : 110}px;
+        visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
-    @media only screen and (max-width:768px) {
-    height:${props => props.ml === 4 ? 180 : 110}px;
-    visibility:visible;
+    @media only screen and (max-width:834px){
+        height:${props => props.ml === 4 ? 200 : 110}px;
+    }
+    @media only screen and (max-width:768px) and (max-height:700px) {
+    height:${props => props.ml === 4 ? 350 : 110}px;
+    visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-    height:${props => props.ml === 4 ? 180 : 110}px;
+    height:${props => props.ml === 4 ? 250 : 110}px;
     visibility:visible;
     }
-    @media only screen and (max-width:600px){
-    height:${props => props.ml === 4 ? 180 : 110}px;
-    visibility:visible;
+    @media only screen and (max-width:600px) and (max-height:700px){
+    height:${props => props.ml === 4 ? 250 : 110}px;
+    visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
-    @media only screen and (max-width:500px){
-    height:${props => props.ml === 4 ? 180 : 100}px;
-    visibility:visible;
+    @media only screen and (max-width:500px) and (max-height:700px){
+    height:${props => props.ml === 4 ? 250 : 100}px;
+    visibility:${props => props.ml === 4 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:440px) and (orientation: portrait) and (min-height:736px)  {
-    height:${props => props.ml === 4 ? 180 : 100}px;
+    height:${props => props.ml === 4 ? 250 : 100}px;
     visibility:visible;
     }
     @media only screen and (max-width:390px) and (orientation: portrait) and (min-height:812px)  {
-    height:${props => props.ml === 4 ? 180 : 125}px;
+    height:${props => props.ml === 4 ? 250 : 125}px;
     visibility:visible;
     }
     @media only screen and (max-width:380px) and (orientation: portrait) and (min-height:600px)  {
