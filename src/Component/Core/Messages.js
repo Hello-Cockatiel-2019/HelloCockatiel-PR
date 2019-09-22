@@ -1,10 +1,9 @@
 //Core
 export const changeSizeText = "กรุณาปรับจอด้วยครับ"
-export const register = "Register"
-export const contact = "Contact"
+export const home = "Home"
 
 //About
-export const aboutHeader = "ข้อมูลโครงการ"
+export const aboutHeader = "About"
 
 export const aboutEnglish = "About us"
 
@@ -33,7 +32,7 @@ export const questionSix = "what"
 export const answerSix = "WHAT!?"
 
 //Major 
-export const majorHeader = "สาขาที่รับสมัคร"
+export const majorHeader = "Teams"
 
 export const frontend = "Front-End"
 export const design = "Design"

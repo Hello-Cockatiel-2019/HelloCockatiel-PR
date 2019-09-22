@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
-import { dateNow, dateStartResgis, dateEndRegis } from './Day'
 import { Mobile } from './Hidden'
 import { Title } from './Text'
 import color from '../../Config/Color'
-import { aboutHeader, majorHeader, faqsHeader, contact } from './Messages'
+import { home, aboutHeader, majorHeader, faqsHeader } from './Messages'
 
 const NavMobile = css`
   width:auto;
@@ -19,8 +18,6 @@ const Button = styled.div`
   background-size:contain;
   height:auto;
   width:180px;
-  display: ${props => props.index === 3 ? 'none' : 'block'} ;
-    
     @media screen and (max-width:834px) and (orientation: landscape){
         ${ NavMobile }
     }
@@ -63,14 +60,29 @@ const A = styled.a`
 const Hr = styled(Mobile)`
   background-color:${color.font1};
   border: solid ${color.font1} 1px;
-  visibility:${dateStartResgis.isBefore(dateNow) && dateEndRegis.isAfter(dateNow) ? 'visible'
-    : props => props.visibleHr <= 2 ? 'visible' : 'hidden'};
+  visibility:${ props => props.visibleHr <=  2? 'visible' : 'hidden' };
 `
 
+const Parrot = styled.img`
+  display: ${props => props.display};
+  width:80px;
+  height:79px;
+  margin-right: 0px;
+  margin-left: 120px;
+  margin-bottom: -18px;
+`
+
+const Div = styled.div`
+  display: ${props => props.index === 0 ? 'none' : props.display};
+`
 export default class componentName extends Component {
   
   state = {
     buttonData: [
+      {
+        text: `${ home }`,
+        link: "#"
+      },
       {
         text: `${ aboutHeader }`,
         link: "#About"
@@ -82,59 +94,54 @@ export default class componentName extends Component {
       {
         text: `${ faqsHeader }`,
         link: "#FAQs"
-      },
-      {
-        text: `${ contact }`,
-        link: "https://www.facebook.com/ThisPz"
       }
     ],
-    imgURL: ['plate-d1.png', 'plate-d3.png', 'plate-d3.png']
+    imgURL: ['','plate-active.png', 'plate-normal.png', 'plate-normal.png'],
+    display: ['','block', 'none', 'none']
   }
 
   handleClick = async (i) => {
     let number = await i
     if (number >= 0) {
       this.props.changeClick(number);
-      if(number === 0){
-        let a = this.state.imgURL.slice();
-        a[number] = 'plate-d1.png';
+      if(number === 1 || number === 2 || number === 3){
+        let img = this.state.imgURL.slice();
+        let display = this.state.display.slice();
+        img[number] = 'plate-active.png';
+        display[number] = 'block';
         this.setState({
-          imgURL: a
-        })
-      }
-      if(number !== 0){
-        let a = this.state.imgURL.slice();
-        a[0] = 'plate-d3.png';
-        this.setState({
-          imgURL: a
-        })
-      }
-      if(number === 1){
-        let a = this.state.imgURL.slice();
-        a[number] = 'plate-d1.png';
-        this.setState({
-          imgURL: a
+          imgURL: img,
+          display: display
         })
       }
       if(number !== 1){
-        let a = this.state.imgURL.slice();
-        a[1] = 'plate-d3.png';
+        let img = this.state.imgURL.slice();
+        let display = this.state.display.slice();
+        img[1] = 'plate-normal.png';
+        display[1] = 'none';
         this.setState({
-          imgURL: a
-        })
-      }
-      if(number === 2){
-        let a = this.state.imgURL.slice();
-        a[number] = 'plate-d1.png';
-        this.setState({
-          imgURL: a
+          imgURL: img,
+          display: display
         })
       }
       if(number !== 2){
-        let a = this.state.imgURL.slice();
-        a[2] = 'plate-d3.png';
+        let img = this.state.imgURL.slice();
+        let display = this.state.display.slice();
+        img[2] = 'plate-normal.png';
+        display[2] = 'none';
         this.setState({
-          imgURL: a
+          imgURL: img,
+          display: display
+        })
+      }
+      if(number !== 3){
+        let img = this.state.imgURL.slice();
+        let display = this.state.display.slice();
+        img[3] = 'plate-normal.png';
+        display[3] = 'none';
+        this.setState({
+          imgURL: img,
+          display: display
         })
       }
     
@@ -147,7 +154,10 @@ export default class componentName extends Component {
         {
           this.state.buttonData.map((data, i) => {
             return (
-              <div className="mb-lg-5" key={i}>
+              <Div className="mb-lg-5" key={i} index={i}>
+                  <div>
+                    <Parrot src="/images/Objects/parrot.png" index={i} display={this.state.display[i]} />
+                  </div>
                   <Button className="btn pb-4 pt-4"
                     key={i}
                     onClick={() => this.handleClick(i)}
@@ -160,7 +170,7 @@ export default class componentName extends Component {
                     </A>
                   </Button>
                 <Hr visibleHr={i} />
-              </div>
+              </Div>
             )
           })
         }

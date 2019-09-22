@@ -114,10 +114,10 @@ const HeadLogo = styled.img`
 const LogoDiv = styled.div`
     transform: translateY(-7vh);
     @media screen and (max-width:420px) {
-        transform: translateY(-4vh);
+        transform: translateY(2vh);
     }
-    @media screen and (max-width:375px) {
-        transform: translateY(-5vh);
+    @media screen and (max-width:320px) {
+        transform: translateY(5vh);
     }
     @media screen and (max-height:750px){
         margin-top:-20px;
@@ -169,40 +169,14 @@ const MenuDiv = styled.div`
         margin-top:-45px;
     }
     @media screen and (max-width:420px) {
-        margin-top: 10px;
+        margin-top: 60px;
     }
-    @media screen and (max-width:375px) {
-        margin-top:-5px;
+    @media screen and (max-width:380px) {
+        margin-top:50px;
     }
     @media screen and (max-width:320px) {
-        margin-top:-5px;
+        margin-top:60px;
     }
-`
-
-const Facebook = styled.img `
-    width: 44px;
-    margin-top:.3em;
-    @media screen and (max-width:834px) and (orientation: landscape){
-        width: 70px; 
-    }
-     @media screen and (max-width:768px) and (orientation: portrait){
-        width: 70px; 
-    }
-     @media screen and (max-width:420px) and (orientation: portrait){
-        width: 44px; 
-    }
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        width: 70px;     
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-       width: 70px; 
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        width: 70px; 
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        width: 70px; 
-    } 
 `
 
 const A = styled.a`
@@ -235,6 +209,7 @@ const TitleResgister = styled(Title)`
 `
 
 const RegisDiv = styled.div `
+    border:none;
     @media only screen and (max-width:834px) and (orientation: landscape) {
         margin-top: -10vh!important;
     }
@@ -262,19 +237,19 @@ export default class Home extends Component {
     state = {
         plate : [
             {
-                imgURL: 'Group 6.png',
+                imgURL: 'Group-1.png',
                 text: `${ aboutHeader }`,
                 class: 'justify-content-start',
                 link: "#About"
             },
             {
-                imgURL: 'Group 5.png',
+                imgURL: 'Group-2.png',
                 text: `${ majorHeader }`,
                 class: 'justify-content-end',
                 link: "#Majors"
             },
             {
-                imgURL:'Group 7.png',
+                imgURL:'Group-3.png',
                 text: `${ faqsHeader }`,
                 class: 'justify-content-start',
                 link: "#FAQs"
@@ -291,14 +266,9 @@ export default class Home extends Component {
 
     render() {
         return (
-                <div className="row m-0 overflow-hidden">
-                    <div className="col-12 d-flex justify-content-end ">
-                        <A href="https://www.facebook.com/ThisPz">
-                            <Facebook src="/images/Objects/facebook.png" />
-                        </A>
-                    </div>
+                <div className="row m-0">
                     <LogoDiv className="col-12 d-flex justify-content-center">
-                        <HeadLogo src="/images/Objects/Logo.png" />
+                        <HeadLogo src="/images/Objects/logo_web.png" />
                     </LogoDiv>
                     <MenuDiv>
                         {
