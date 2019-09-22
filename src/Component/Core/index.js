@@ -17,7 +17,8 @@ import ClickChange from './ClickChange';
 import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
-   margin-top:-5em;
+    z-index:10;
+    margin-top:-5em;
 `
 
 const DivBlur = styled.div`
@@ -38,6 +39,8 @@ const Content = styled.div`
 `
 
 const RegiserDiv = styled.div`
+    position:relative;
+    z-index:50;
     transform:translate(-5%,20%);
 `
 
@@ -45,7 +48,7 @@ const Logo = styled.img`
     width: 573px;   
     height: 229px;
     top: 19px;
-    z-index: 100;
+    z-index: 50;
     @media screen and (max-width:1198px){
         width: 460px;   
         height: 184px;
