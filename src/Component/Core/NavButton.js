@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
-import { Mobile } from './Hidden'
+import { Mobile, Desktop } from './Hidden'
 import { Title } from './Text'
 import color from '../../Config/Color'
 import { home, aboutHeader, majorHeader, faqsHeader } from './Messages'
@@ -155,9 +155,9 @@ export default class componentName extends Component {
           this.state.buttonData.map((data, i) => {
             return (
               <Div className="mb-lg-5" key={i} index={i}>
-                  <div>
+                  <Desktop>
                     <Parrot src="/images/Objects/parrot.png" index={i} display={this.state.display[i]} />
-                  </div>
+                  </Desktop>
                   <Button className="btn pb-4 pt-4"
                     key={i}
                     onClick={() => this.handleClick(i)}
