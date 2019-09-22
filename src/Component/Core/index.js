@@ -72,18 +72,10 @@ const RegiserDiv = styled.div`
 `
 
 const Logo = styled.img`
-    width: 693.28px;
-    height: 262px;
+    width: 573px;   
+    height: 229px;
     top: 19px;
     z-index: 100;
-    @media screen and (max-width:900px) {
-        width: 610px;
-        height: 220px; 
-    }
-    @media screen and (max-height:750px) and (orientation: landscape){
-        width: 560px;
-        height: 220px; 
-    }
 `
 
 const HomeDiv = styled.div`
