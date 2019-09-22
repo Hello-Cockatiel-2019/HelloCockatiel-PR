@@ -95,6 +95,10 @@ const Content = styled(Paragraph)`
       margin: 1.5em;
       height: 21em; 
     }
+    @media only screen and (max-width: 626px) and (orientation:portrait)  {
+      margin: 1em;
+      height: 13em; 
+    }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin: 1.5em;
       height: 14em;
