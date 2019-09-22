@@ -38,22 +38,31 @@ const Woodplate = styled.div `
     padding-right: 1em;
     margin-left:2em;
     margin-right:1em;
-      @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-         padding-left:${props => props.pt === 0 ? 0.75 : 0}em;
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+        padding-top:3.8em;
+        margin-bottom:2em;
+        padding-left:${props => props.pt === 0 ? 0.75 : 0}em;
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
+        width:250px;
+        height:180px;
+        padding-top:5.5em;
+        padding-right:${props => props.pt === 0 ? 1 :
+                        props.pt === 1 ? 2 : 2}em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        width:210px;
-        height:170px;
-        padding-top:5em;
-        padding-left:${props => props.pt === 0 ? 1.2 :
-            props.pt === 1 ? 0 : 0}em;
+        width:270px;
+        height:200px;
+        padding-top:6em;
+        padding-right:${props => props.pt === 0 ? 1 :
+        props.pt === 1 ? 2 : 2}em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-        width:210px;
-        height:170px;
-        padding-top:5em;
-        padding-left:${props => props.pt === 0 ? 1.2 :
-            props.pt === 1 ? 0 : 0}em;
+        width:270px;
+        height:200px;
+        padding-top:6em;
+        padding-right:${props => props.pt === 0 ? 1 :
+        props.pt === 1 ? 2 : 2}em;
     }
     @media screen and (max-width:834px) and (orientation: landscape){
         width:190px;
@@ -62,7 +71,7 @@ const Woodplate = styled.div `
         padding-left:${props => props.pt===0 ? 1.2 :
                     props.pt===1 ? 0 : 0}em;
     }
-    @media screen and (max-width:768px) and (orientation: portrait){
+    @media screen and (max-width:767px) and (orientation: portrait){
         width:190px;
         height:150px;
         padding-top:4.3em;
@@ -91,31 +100,32 @@ const Woodplate = styled.div `
 `
 
 const HeadLogo = styled.img`
-     width: 500px;
-    height: 220.93px;
+    width: 600px;
+    height: 240px;
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        width: 600px;
+        height: 240px;
+    } 
     @media screen and (max-width:834px) and (orientation: landscape) {
         width: 520px;
-        height: 220.93px;
+        height: 208px;
     }
     @media screen and (max-width:768px) and (orientation: portrait){
-         width: 420px;
-        height: 180.93px;
+        width: 420px;
+        height: 168px;
     }
     @media screen and (max-width:600px) {
         width: 320px;
-        height: 120.93px;
+        height: 128px;
     }
     @media screen and (max-width:320px) {
         width: 300px;
-        height: 100px;
+        height: 120px;
     }
 `
 
 const LogoDiv = styled.div`
-    transform: translateY(-7vh);
-    @media screen and (max-width:420px) {
-        transform: translateY(2vh);
-    }
+    transform: translateY(2vh);
     @media screen and (max-width:320px) {
         transform: translateY(5vh);
     }
@@ -141,19 +151,23 @@ const WoodDiv = styled.div`
 
 const MenuDiv = styled.div`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-        margin-top:20px;
+        margin-top:100px!important;
         ${ paddingRightLeftFiveEM }
     }   
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+        margin-top:100px!important;
         ${ paddingRightLeftFiveEM }
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+        margin-top:60px!important;
         ${ paddingRightLeftTenEM }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+        margin-top:100px!important;
         ${ paddingRightLeftTenEM }
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+        margin-top:100px!important;
         ${ paddingRightLeftTenEM }
     } 
     @media screen and (max-width:834px) and (orientation: landscape){
@@ -191,13 +205,16 @@ const TitleResgister = styled(Title)`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         font-size:2em;
     }
+     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
+        font-size:2.25em;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
        font-size:2em;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-        font-size:2em;
+        font-size:2.75em;
     }
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:900px) and (max-height: 1080px) {
         font-size:1.75em;
     }
     @media screen and (max-width:601px) {
@@ -258,7 +275,7 @@ export default class Home extends Component {
     }
 
     handleCilck = async (i) => {
-        let number = await i
+        let number = await i+1
         if (number >= 0) {
             this.props.clickHome(number);
         }

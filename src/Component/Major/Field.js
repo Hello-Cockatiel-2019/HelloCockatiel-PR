@@ -1,63 +1,30 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Small, Small2 } from '../Core/Text'
+import {Small} from '../Core/Text'
 import color from '../../Config/Color'
 
 const Box = styled.div`
     background-color : ${props => props.colorBox};
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    width:65em;
-    height: 12em;
-    @media screen and (max-width: 2500px) and (orientation: landscape){
-        width:65em;
-        height: 12em;
+    width:26em;
+    height: 11em;
+    @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+        width:26em;
+        height: 11em;
     }
-    @media screen and (max-width: 2200px) and (orientation: landscape){
-        width:65em;
-        height: 12em;
-    }
-    @media screen and (max-width: 2000px) and (orientation: landscape){
-        width:65em;
-        height: 12em;
-    }
-    @media screen and (max-width: 1850px) and (orientation: landscape){
-        width:65em;
-        height: 12em;
-    }
-    @media screen and (max-width: 1500px) and (orientation: landscape){
-        width:65em;
-        height: 12em;
-    }
-    @media screen and (max-width: 1300px) and (orientation: landscape){
-        width:58em;
-        height:11em;
-    }
-    @media screen and (max-width: 1200px) and (orientation: landscape){
-        width:54em;
-        height:11em;
-    }
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
-        width:54em;
-        height:11em;
-    }
-    @media (min-width: 1025px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:45em;
         height:11em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
         width:45em;
         height:11em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        width:45em;
-        height:11em;
+    @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+        width:26em;
+        height: 11em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        width:45em;
-        height:9em;
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+    @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:30em;
         height:11em;
     }
@@ -74,99 +41,54 @@ const Box = styled.div`
         height:7em;
     }
     @media (max-width:420px){
-        width:22em;
+        width:20em;
         height:7em;
     }
     @media (max-width:380px){
         width:20em;
         height:7em;
     } 
-    @media (max-width:325px){
-        background-color : ${props => props.colorBox};
-        width:17em;
-        height:6em;
+    @media (max-width:330px){
+        width:18em;
+        height:6.5em;
     }
 `
 
 const TextContent = styled(Small)`
     margin-top:-7em;
-    padding-left:8em;
-    padding-right:1em;  
-    position: absolute;
+    padding-left:7em;
+    padding-right:2em;  
     color:${color.font2};
     line-height: 25px;
-    letter-spacing: 0.05em;
-    @media screen and (max-width: 2500px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:9em;
-        padding-right:2em;
-    } 
-    @media screen and (max-width: 2200px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:9em;
-        padding-right:2em;
-    }
-    @media screen and (max-width: 2000px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:9em;
-        padding-right:2em;
-    } 
-    @media screen and (max-width: 1850px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:8em;
-        padding-right:1em;
-    }  
-    @media screen and (max-width: 1500px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:8em;
-        padding-right:1em;
-    }
-    @media screen and (max-width: 1300px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-7em;
-        padding-left:8em;
-        padding-right:1em;
-    }
-    @media screen and (max-width: 1200px) and (orientation: landscape){
-        line-height: 25px;
-        margin-top:-8em;
-        padding-left:8em;
-        padding-right:1em;
-    }
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+    @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
         line-height: 20px;
         margin-top:-6.5em;
         padding-left:7em;
         padding-right:1em;
         font-size:1.2em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-7em;
         padding-left:9em;
         padding-right:1em;
         font-size:1.2em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-7em;
         padding-left:9em;
         padding-right:1em;
         font-size:1.2em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+    @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
         line-height: 17px;
         margin-top:-6.5em;
         padding-left:7em;
         padding-right:1em;
         font-size:1em;
     }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+    @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-7em;
         padding-left:8em;
@@ -196,304 +118,49 @@ const TextContent = styled(Small)`
     @media (max-width:420px){
         line-height: 16px;
         margin-top:-7em;
-        padding-left:8em;
-        padding-right:2em;
-        font-size:0.8em;
+        padding-left:7em;
+        padding-right:1em;
     }
     @media (max-width:380px){
-        line-height: 16px;
-        margin-top:-5.5em;
-        padding-left:6em;
-        padding-right:2em;
-        
-    }
-    @media only screen and (max-width:325px){
         line-height: 16px;
         margin-top:-6.5em;
-        padding-left:6.5em;
-        padding-right:2em;
-        font-size:0.7em;
+        padding-left:7em;
+        padding-right:1em;
+        
     }
-`
-const TextTopic = styled(Small2)`
-    position: absolute;
-    margin-top:-2em;
-    padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em' : '3.7em'};
-    @media screen and (max-width: 2500px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2em;
-    }
-    @media screen and (max-width: 2200px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2.2em;
-    }
-    @media screen and (max-width: 2000px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2em;
-    }
-    @media screen and (max-width: 1850px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2em;
-    }
-    @media screen and (max-width: 1500px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2em;
-    }
-    @media screen and (max-width: 1200px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.5em'
-                : '3.8em'};
-        margin-top:-2em;
-    }
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '1.9em'
-        : props.topic === 1 ? '2.5em'
-            : props.topic === 3 ? '2.7em'
-                : '2.8em'};
-        margin-top:-1.8em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '4.3em'
-        : props.topic === 1 ? '5em'
-            : props.topic === 3 ? '5em'
-                : '5.2em'};
-        margin-top:-2em;
-        font-size:1em;
-    }            
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '4.3em'
-        : props.topic === 1 ? '5em'
-            : props.topic === 3 ? '5em'
-                : '5.2em'};
-        margin-top:-2em;
-        font-size:1em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        padding-left:${props => props.topic === 0 ? '1.9em'
-        : props.topic === 1 ? '2.5em'
-            : props.topic === 3 ? '2.7em'
-                : '2.8em'};
-        margin-top:-1.8em;
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '2.8em'
-        : props.topic === 1 ? '3.4em'
-            : props.topic === 3 ? '3.4em'
-                : '3.7em'};
-        margin-top:-2em;
-        font-size:1em;
-    } 
-    @media (max-width:770px) and (orientation: portrait){
-        padding-left:${props => props.topic === 0 ? '3.1em'
-        : props.topic === 1 ? '3.7em'
-            : props.topic === 3 ? '4em'
-                : '4em'};
-        margin-top:-1.8em;
-    }
-    @media (max-width:570px){
-        font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '3.1em'
-        : props.topic === 1 ? '3.7em'
-            : props.topic === 3 ? '3.7em'
-                : '4em'};
-        margin-top:-1.8em;
-    }
-    @media (max-width:500px){
-        font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '3.1em'
-        : props.topic === 1 ? '3.7em'
-            : props.topic === 3 ? '3.7em'
-                : '4em'};
-        margin-top:-1.8em;
-    }
-    @media (max-width:420px){
-        font-size:0.7em;
-        padding-left:${props => props.topic === 0 ? '3.1em'
-        : props.topic === 1 ? '3.7em'
-            : props.topic === 3 ? '3.7em'
-                : '4em'};
-        margin-top:-1.8em;
-    }
-    @media (max-width:380px){
-        font-size:10px;
-        padding-left:${props => props.topic === 0 ? '2.1em'
-        : props.topic === 1 ? '2.6em'
-            : props.topic === 3 ? '2.7em'
-                : '3em'};
-        margin-top:-1.8em;
-    }
-    @media (max-width:325px){
-        font-size:10px;
-        padding-left:${props => props.topic === 0 ? '2.1em'
-        : props.topic === 1 ? '2.7em'
-            : props.topic === 3 ? '2.8em'
-                : '3em'};
-        margin-top:-1.8em;
-    }
-`
-
-const Frame = styled.img`
-    margin-top : 7em;
-    width :20%;
-    margin-left:-6em;
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25),   
-                0px 7px 5px rgba(0, 0, 0, 0.25), 
-                0px 7px 5px rgba(0, 0, 0, 0.25), 
-                0px 7px 5px rgba(0, 0, 0, 0.25);
-    @media screen and (max-width: 2500px) and (orientation: landscape){
-        width :15%;
-        margin-top : 7em;
-        margin-left:-5.8em;
-    }
-    @media screen and (max-width: 2200px) and (orientation: landscape){
-        width :18%;
-        margin-top : 7em;
-        margin-left:-6em;
-    }
-    @media screen and (max-width: 2000px) and (orientation: landscape){
-        width :18%;
-        margin-top : 7em;
-        margin-left:-6em;
-    }
-    @media screen and (max-width: 1850px) and (orientation: landscape){
-        width :20%;
-        margin-top : 7em;
-        margin-left:-6em;
-    }
-    @media screen and (max-width: 1500px) and (orientation: landscape){
-        width :20%;
-        margin-top : 7em;
-        margin-left:-6em;
-    }
-    @media screen and (max-width: 1200px) and (orientation: landscape){
-        width :20%;
-        margin-top : 7em;
-        margin-left:-6em;
-    }
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
-        width:24%;
-        margin-top:6.8em;
-        margin-left:-5.8em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
-        width:19%;
-        margin-top:6.5em;
-        margin-left:-5.5em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-        width:19%;
-        margin-top:6.5em;
-        margin-left:-5.5em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
-        width:24%;
-        margin-top:5.3em;
-        margin-left:-4.8em;
-    }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
-        width:19%;
-        margin-top:7em;
-        margin-left:-5.5em;
-    }
-    @media (max-width:770px) and (orientation: portrait){
-        width:17%;
-        margin-top:6em;
-        margin-left:-4.3em;
-    }
-    @media (max-width:570px){
-        width:17%;
-        margin-top:4.5em;
-        margin-left:-3.8em;
-    }
-    @media (max-width:500px){
-        width:17%;
-        margin-top:4.5em;
-        margin-left:-3.8em;
-    }
-    @media (max-width:420px){
-        width:17%;
-        margin-top:4.5em;
-        margin-left:-3.8em;
-    }
-    @media (max-width:380px){
-        width:17%;
-        margin-top:3.5em;
-        margin-left:-3.2em;
-    }
-    @media only screen and (max-width:325px){
-        width:3em;
-        margin-top:3.5em;
-        margin-left:-3em;
+    @media (max-width:330px){
+        line-height: 16px;
+        margin-top:-5.5em;
+        padding-left:5em;
+        padding-right:0.5em;
     }
 `
 
 const Bird = styled.img`
-    margin-top:-2em;
-    margin-left:2em;
+    margin-top:2em;
+    margin-left:1em;
     width : 90px;
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.25),   
-                0px 7px 5px rgba(0, 0, 0, 0.25), 
-                0px 7px 5px rgba(0, 0, 0, 0.25), 
-                0px 7px 5px rgba(0, 0, 0, 0.25);
-    border-radius:100px;
-    @media screen and (max-width: 2500px) and (orientation: landscape){
-        width : 90px;
-        margin-top:-2em;
-        margin-left:2em;;
-    }
-    @media screen and (max-width: 1850px) and (orientation: landscape){
-        width : 90px;
-        margin-top:-2em;
-        margin-left:2em;;
-    }
-    @media screen and (max-width: 1500px) and (orientation: landscape){
-        width : 90px;
-        margin-top:-2em;
-        margin-left:2em;;
-    }
-    @media screen and (max-width: 1200px) and (orientation: landscape){
-        width : 90px;
-        margin-top:-2em;
-        margin-left:2em;;
-    }
-    @media only screen and (min-width: 1196px) and (max-height: 834px) and (orientation: landscape){
+    @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
         width:22%;
         margin-top:-1.8em;
         margin-left:1.5em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:18%;
         margin-top:-1.6em;
         margin-left:3.5em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
+    @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
         width:18%;
         margin-top:-1.6em;
         margin-left:3.5em;
     }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) and (orientation: landscape){
+    @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
         width:22%;
         margin-top:-2em;
         margin-left:1.5em;
     }
-    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait){
+    @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:18%;
         margin-top:-2em;
         margin-left:2em;
@@ -514,19 +181,19 @@ const Bird = styled.img`
         margin-left:1.5em;
     }
     @media (max-width:420px){
-        width:18%;
-        margin-top:-1.3em;
-        margin-left:1.5em;
+        width:5em;
+        margin-top:0.5em;
+        margin-left:0.5em;
     }
     @media (max-width:380px){
-        width:3em; 
-        margin-top:-1em;
-        margin-left:1em;
+        width:5em;
+        margin-top:0.5em;
+        margin-left:0.5em;
     }
-    @media (max-width:325px){
-        width:3em;
-        margin-top:-1em;
-        margin-left:1em;
+    @media (max-width:330px){
+        width:4em;
+        margin-top:0.5em;
+        margin-left:0.5em;
     }
 `
 
@@ -535,9 +202,7 @@ export default class Field extends Component {
         return (
             <Box colorBox={this.props.colorBox} >
                 <Bird src={`/images/Objects/${this.props.imgbird}`}></Bird>
-                <TextTopic topic={this.props.keytopic}>{this.props.topic}</TextTopic>
                 <TextContent>{this.props.content}</TextContent>
-                <Frame src="/images/Objects/frame.png" />
             </Box>
         )
     }
