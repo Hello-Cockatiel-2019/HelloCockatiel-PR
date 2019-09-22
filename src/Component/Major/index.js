@@ -43,23 +43,23 @@ const AllContent = styled.div`
     @media (max-width: 1500px) {
     transform: translate(5%,10%);
     }
+    @media (max-width: 1467px) {
+      transform: translate(5%,10%);
+    }
     @media only screen and (max-width: 1467px) and (max-height: 1024px) and (orientation: landscape)  {
-    transform: translate(5%,30%);
+    transform: translate(5%,20%);
     }
     @media only screen and (max-width: 1467px) and (max-height: 900px) and (orientation: landscape){
       transform: translate(8%,3%);
     }
-    @media (max-width: 1467px) {
-      transform: translate(5%,10%);
-    }
     @media (max-width: 1400px) {
     transform: translate(5%,10%);
     }
-    @media only screen and (max-width: 1366px) and (orientation: landscape)  {
+    @media (max-width: 1366px) {
     transform: translate(5%,10%);
     }
     @media (max-width: 1300px){
-    transform: translate(5%,0%);
+    transform: translate(5%,10%);
     }
     @media (max-width: 1200px){
     transform: translate(5%,0%);
@@ -71,31 +71,27 @@ const AllContent = styled.div`
     transform: translate(5%,15%);
     }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
-    transform: translate(25%,-40%);
+    transform: translate(24%,-55%);
     grid-template-columns: none;
     display:grid;
-    height: 90vh;
-    padding-top:25em;
+    height: 100vh;
+    padding-top:40em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(26%,-40%);
+    transform: translate(25%,-58%);
     grid-template-columns: none;
     display:grid;
-    height: 90vh;
-    padding-top:20em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
-    transform: translate(6%,-10%);
+    transform: translate(0%,5%);
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-    transform: translate(-21%,-30%);
+    transform: translate(20%,-68%);
     grid-template-columns: none;
     display:grid;
-    height: 90vh;
-    padding-top:10em;
     }
     @media (max-width:770px) and (orientation: portrait){
-      transform: translate(16%,-30%);
+      transform: translate(18%,-75%);
     grid-template-columns: none;
     display:grid;
     }
@@ -106,37 +102,37 @@ const AllContent = styled.div`
       transform: translate(-15%,-20%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(12%,-40%);
+      transform: translate(11%,-90%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(11%,-45%);
+      transform: translate(12%,-100%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(11%,-50%);
+      transform: translate(11%,-110%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(7%,-45%);
+      transform: translate(7%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(7%,-55%);
+      transform: translate(7%,-115%);
     }
     @media (max-width:325px){
-      transform: translate(5%,-58%);
+      transform: translate(5%,-120%);
     }
 `
 
 const Header = styled.div`
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
-    transform: translate(2%,-90%);
+    transform: translate(0%,-120%);
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(2%,-120%);
+    transform: translate(0%,-120%);
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-    transform: translate(2%,-120%);
+    transform: translate(-2%,-120%);
     }
     @media (max-width:770px) and (orientation: portrait){
-      transform: translate(-2%,-90%);
+      transform: translate(0%,-90%);
     }
     @media (max-width:570px){
       transform: translate(4%,-60%);
@@ -145,33 +141,41 @@ const Header = styled.div`
       transform: translate(0%,-60%);
     }
     @media (max-width:420px){
-      transform: translate(1%,-90%);
+      transform: translate(1%,-120%);
     }
     @media (max-width:380px){
       transform: translate(0%,-120%);
+    }
+    @media (max-width:330px){
+      transform: translate(0%,-160%);
     }
 `
 
 const SpaceBySpace = styled.div`
     padding-top:1.5em;
     margin-right:-8em;
+    @media (max-width:1280px){
+      padding-top:1em;
+      margin-left:2em;
+    }
     @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
       padding-top:1em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
-      padding-top:2em;
+      padding-top:1em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait){
-      margin-top:${props => props.mrt === 0 ? 0 : -50}px;
+      padding-top:1em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape){
       padding-top:1em;
+      margin-left:4em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
-      padding-top:1em;
+      padding-top:2em;
     }
     @media (max-width:770px) and (orientation: portrait){
-      padding-top:0.5em;
+      padding-top:1em;
     }
     @media (max-width:570px){
       padding-top:0.5em;
@@ -180,13 +184,13 @@ const SpaceBySpace = styled.div`
       padding-top:0.5em;
     }
     @media (max-width:420px){
-      padding-top:4em;
+      padding-top:1em;
     }
     @media (max-width:380px){
-      padding-top:4em;
+      padding-top:1em;
     }
     @media (max-width:330px){
-      padding-top:3.5em;
+      padding-top:0.5em;
     }
 `
 export default class index extends Component {
