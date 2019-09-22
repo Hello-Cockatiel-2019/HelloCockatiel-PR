@@ -100,6 +100,11 @@ const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
 `
 
+const DivBuildID = styled.div`
+    position : fixed; 
+    bottom: 0px;
+`
+
 export default class NavBar extends Component {
         
     state = {
@@ -177,7 +182,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
-                <div>v. : <small>{process.env.GIT_VER}</small></div>
+                <DivBuildID>v. : <small>{process.env.GIT_VER}</small></DivBuildID>
                 </Hidden>
             </React.Fragment>
 
