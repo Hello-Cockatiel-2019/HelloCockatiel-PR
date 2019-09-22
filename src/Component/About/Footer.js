@@ -40,7 +40,7 @@ export default class Footer extends Component {
           </a>
         </Div>
         <Desktop>
-          <a>
+          <a href="https://game.hellocockatiel.com">
             <GameButton src="/images/Objects/game.png"/>
           </a>
         </Desktop>
