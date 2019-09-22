@@ -20,38 +20,47 @@ const Sdiv = styled.div `
     @media (max-width:1679px) {
         transform: translate(19%,0%);
     }
+    @media (max-width:1500px) {
+        transform: translate(16%,0%);
+    }
     @media (max-width:1468px) {
-        transform: translate(1%,40%);
+        transform: translate(18%,-2%);
     }
     @media (max-width:1350px) {
-        transform: translate(1%,20%);
+        transform: translate(18%,-2%);
     }
     @media (max-width:1320px) {
-        transform: translate(1%,20%);
+        transform: translate(22%,-5%);
     }
     @media (max-width:1199px) {
-        transform: translate(-25%,-13%);
+        transform: translate(21%,-6%);
     }
-    @media (max-width:1199px) {
-        transform: translate(1%,20%);
-    }
-    @media (max-width:1197px) {
-        transform: translate(-20%,-15%);
+    @media (max-width:1099px) {
+        transform: translate(18%,-6%);
     }
     @media (max-width:1024px) {
-        transform: translate(7%,0%);
+        transform: translate(18%,-5%);
     }
     @media (max-width:999px) {
-        transform: translate(28%,-10%);
+        transform: translate(18%,-5%);
     }
     @media (max-width:999px) and (max-height:680px){
         transform: translate(25%,-25%);
     }
+    @media (max-width:950px) {
+        transform: translate(18%,-5%);
+    }
     @media (max-width:900px) and (max-height:680px) {
         transform: translate(20%,-15%);
     }
+    @media (max-width:900px){
+        transform: translate(18%,-5%);
+    }
     @media (max-width:834px) {
         transform: translate(33%,-15%);
+    }
+    @media (max-width:810px) {
+        transform: translate(28%,-15%);
     }
     @media (max-width:768px) {
         transform: translate(28%,-18%);
@@ -113,10 +122,10 @@ const Div = styled.div `
     height:100px;
     }
     @media only screen and (max-width:1350px) {
-    height: 165px;
+    height: 95px;
     }
     @media only screen and (max-width:1300px) {
-    height: 150px;
+    height: 95px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         height:${props => props.ml === 4 ? 350 : 100}px;
