@@ -12,6 +12,10 @@ const Box = styled.div`
         width:26em;
         height: 11em;
     }
+    @media (max-width: 1196px) and (max-height: 840px){
+        width:23em;
+        height: 10em;
+    }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:45em;
         height:11em;
@@ -29,7 +33,7 @@ const Box = styled.div`
         height:11em;
     }
     @media (max-width:770px) and (orientation: portrait){
-        width:25em;
+        width:30em;
         height:9em;
     }
     @media (max-width:570px){
@@ -67,6 +71,13 @@ const TextContent = styled(Small)`
         padding-right:1em;
         font-size:1.2em;
     }
+    @media (max-width: 1196px) and (max-height: 840px){
+        line-height: 20px;
+        margin-top:-6.5em;
+        padding-left:6em;
+        padding-right:1em;
+        font-size:1.2em;
+    }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-7em;
@@ -97,9 +108,9 @@ const TextContent = styled(Small)`
     }
     @media (max-width:770px) and (orientation: portrait){
         line-height: 25px;
-        margin-top:-8em;
-        padding-left:8em;
-        padding-right:2em;
+        margin-top:-6.5em;
+        padding-left:7em;
+        padding-right:1em;
     }
     @media (max-width:570px){
         line-height: 16px;
@@ -145,6 +156,11 @@ const Bird = styled.img`
         margin-top:-1.8em;
         margin-left:1.5em;
     }
+    @media (max-width: 1196px) and (max-height: 840px){
+        width:26%;
+        margin-top:1.5em;
+        margin-left:1em;
+    }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
         width:18%;
         margin-top:-1.6em;
@@ -166,8 +182,8 @@ const Bird = styled.img`
         margin-left:2em;
     }
     @media (max-width:770px) and (orientation: portrait){
-        width:18%;
-        margin-top:-0.9em;
+        width:6em;
+        margin-top:1em;
         margin-left:1.5em;
     }
     @media (max-width:570px){
