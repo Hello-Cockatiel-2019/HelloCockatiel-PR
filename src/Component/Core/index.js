@@ -182,7 +182,7 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </DivBlur>
                     </Mobile>
-                <DivBuildID>v. : <small>{process.env.GIT_VER}</small></DivBuildID>
+                <DivBuildID>><a>build : {process.env.REACT_APP_GIT_VERSION}</a></DivBuildID>
                 </Hidden>
             </React.Fragment>
 
