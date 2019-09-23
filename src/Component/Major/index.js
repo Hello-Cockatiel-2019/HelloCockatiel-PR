@@ -127,11 +127,33 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
-    @media (max-width:570px){
-      transform: translate(-17%,-20%);
+    @media (max-width:740px) and (max-height:920px) and (orientation: portrait){
+      transform: translate(9%,-85%);
+    grid-template-columns: none;
+    display:grid;
     }
-    @media (max-width:500px){
-      transform: translate(-15%,-20%);
+    @media (max-width:740px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(9%,-110%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    @media (max-width:700px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(6%,-100%);
+    }
+    @media (max-width:650px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(3%,-100%);
+    }
+    @media (max-width:600px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(0%,-100%);
+    }
+    @media (max-width:590px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(-1%,-100%);
+    }
+    @media (max-width:550px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(3%,-105%);
+    }
+    @media (max-width:500px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(3%,-100%);
     }
     @media (max-width:420px) and (max-height:900px){
       transform: translate(-5%,-90%);
@@ -172,8 +194,14 @@ const Header = styled.div`
     @media (max-width:570px){
       transform: translate(4%,-60%);
     }
+    @media (max-width:550px){
+      transform: translate(0%,-110%);
+    }
     @media (max-width:500px){
       transform: translate(0%,-60%);
+    }
+    @media (max-width:500px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(0%,-100%);
     }
     @media (max-width:420px){
       transform: translate(1%,-120%);
@@ -260,7 +288,7 @@ export default class index extends Component {
         content: `${infraContent}`,
         imgbird: "g2.png",
         class: "justify-content-start",
-        colorBox: `${Color.Wood3}`
+        colorBox: `${Color.new3}`
       },
       {
         content:  `${gameContent}`,
