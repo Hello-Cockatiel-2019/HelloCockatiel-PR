@@ -91,6 +91,9 @@ const Content = styled(Paragraph)`
   @media (max-width: 1536px){
     margin: 1.5em;
     }
+    @media (max-width: 1366px){
+    margin: 2.5em;
+    }
   @media (max-width: 1196px){
     margin: 1.5em;
     height: 11em;
@@ -128,13 +131,13 @@ const Content = styled(Paragraph)`
     @media (min-width: 1536px){
       height:13em;
     }
-    @media only screen and (min-width: 830px) and (max-height:700px){
+    @media only screen and (min-width: 830px) and (max-height:800px){
       height: 8em;
     }
-    @media only screen and (min-width: 1024px) and (max-height:700px){
+    @media only screen and (min-width: 1024px) and (max-height:800px){
       height: 9em;
     }
-    @media only screen and (min-width: 1197px) and (max-height:700px){
+    @media only screen and (min-width: 1197px) and (max-height:800px){
       height: 10em;
     }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
