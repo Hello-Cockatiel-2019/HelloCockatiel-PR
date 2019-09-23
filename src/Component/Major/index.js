@@ -117,6 +117,11 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
+    @media (max-height:777px){
+      transform: translate(10%,-28%);
+    grid-template-columns: none;
+    display:grid;
+    }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(9%,-75%);
     grid-template-columns: none;
@@ -157,6 +162,9 @@ const Header = styled.div`
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(-2%,-120%);
+    }
+    @media (max-height:777px){
+      transform: translate(0%,-110%);
     }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(0%,-90%);
