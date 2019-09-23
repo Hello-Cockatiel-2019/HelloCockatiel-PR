@@ -7,25 +7,25 @@ import { faqsHeader ,questionOne,answerOne,questionTwo,answerTwo,questionThree,a
 const Sdiv = styled.div `
     transform: translate(27%,5%);
     @media (max-width:2600px) {
-        transform: translate(26%,0%);
+        transform: translate(26%,13%);
     }
     @media (max-width:2500px) {
-        transform: translate(25%,5%);
+        transform: translate(25%,13%);
     }
     @media (max-width:2434px) {
-        transform: translate(23%,5%);
+        transform: translate(23%,13%);
     }
     @media (max-width:1949px) {
-        transform: translate(18%,3%);
+        transform: translate(18%,13%);
     }
     @media (max-width:1679px) {
-        transform: translate(19%,6%);
+        transform: translate(19%,13%);
     }
     @media (max-width:1500px) {
         transform: translate(16%,15%);
     }
     @media (max-width:1500px) and (max-height:800px) {
-        transform: translate(16%,10%);
+        transform: translate(16%,13%);
     }
     @media (max-width:1500px) and (max-height:700px) {
         transform: translate(16%,15%);
@@ -55,7 +55,7 @@ const Sdiv = styled.div `
         transform: translate(10%,15%);
     }
     @media (max-width:1014px) {
-        transform: translate(15%,3%);
+        transform: translate(11%,13%);
     }
     @media (max-width:999px){
         transform: translate(12%,18%);
@@ -64,10 +64,10 @@ const Sdiv = styled.div `
         transform: translate(12%,18%);
     }
     @media (max-width:950px) {
-        transform: translate(10%,10%);
+        transform: translate(15%,15%);
     }
     @media (max-width:900px) and (max-height:680px) {
-        transform: translate(20%,-15%);
+        transform: translate(25%,-15%);
     }
     @media (max-width:900px){
         transform: translate(15%,-15%);
