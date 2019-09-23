@@ -13,6 +13,7 @@ margin-bottom:4em;
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
   width: 35%;
   height:auto;
+  margin:0;
     }
 `
 const GameButton = styled(Button)`
@@ -35,12 +36,12 @@ export default class Footer extends Component {
     return (
       <React.Fragment>
         <Div>
-          <a href="https://www.facebook.com/SITHelloWorld">
+          <a href="https://www.facebook.com/SITHelloWorld" target="_blank">
             <FbButton src="/images/Objects/fb.png"/>
           </a>
         </Div>
         <Desktop>
-          <a href="https://game.hellocockatiel.com">
+          <a href="https://game.hellocockatiel.com" target="_blank">
             <GameButton src="/images/Objects/game.png"/>
           </a>
         </Desktop>
