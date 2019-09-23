@@ -15,7 +15,7 @@ const Plate = styled.div`
     background-image: url(/images/Objects/big1.png);
     margin-right: 4em;
     margin-top: 1em;
-     @media(max-width:1420px) {
+     @media(max-width:1440px) {
       width: 88vh;
     height: 48vh;
     margin-right:1em;
