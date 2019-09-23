@@ -144,6 +144,7 @@ const Content = styled(Paragraph)`
       height: 10em;
     }
     @media only screen and (min-width: 830px) and (max-height:960px){
+      margin: 2em;
       height: 18em;
     }
     @media (min-width: 1536px){
@@ -156,7 +157,8 @@ const Content = styled(Paragraph)`
       height: 10em;
     }
     @media only screen and (min-width: 1197px) and (max-height:800px){
-      height: 13em;
+      margin: 1.5em;
+    height: 13em;
     }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
       font-size: 30px;
