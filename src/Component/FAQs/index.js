@@ -108,10 +108,10 @@ const Sdiv = styled.div `
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         transform: translate(18%,9%);
     }
-    @media only screen and (max-width:1024px) and (orientation: landscape) and (max-height:769px) {
+    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
         transform: translate(10%,9%);
     }
-    @media only screen and (max-width:835px) and (orientation: portrait) and (max-height:1197px) {
+    @media only screen and (max-width:835px) and (orientation: portrait) and (min-height:1196px) {
         transform: translate(16%,-10%);
     }
 `

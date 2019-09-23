@@ -29,6 +29,9 @@ const Qwood = styled(BrownParagraph) `
     @media only screen and (max-width:768px) {
         width: 550px;
     }
+    @media only screen and (max-width:680px) {
+        width: 490px;
+    }
     @media only screen and (max-width:600px) {
         width: 330px;
     }
@@ -76,6 +79,9 @@ const Awood = styled(Paragraph)`
     }
     @media only screen and (max-width:768px) {
         width: 550px;
+    }
+    @media only screen and (max-width:680px) {
+        width: 490px;
     }
     @media only screen and (max-width:600px) {
         width: 330px;
