@@ -27,6 +27,9 @@ const DivBlur = styled.div`
 
 const SideBarSection = styled.div`
     margin-top:5em;
+    @media only screen and (max-width: 991px) {
+        margin-top:0em;
+    }
     @media only screen and (max-height: 1050px) {
         margin-top:5em;
     }
@@ -38,6 +41,9 @@ const SideBarSection = styled.div`
     }
     @media only screen and (max-height: 780px) {
         margin-top:-2em;
+    }
+    @media only screen and (max-width: 992px) and (max-height: 780px) {
+        margin-top:2em;
     }
     @media only screen and (max-height: 750px) {
         margin-top:-3em;
