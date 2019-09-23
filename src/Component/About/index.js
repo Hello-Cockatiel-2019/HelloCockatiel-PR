@@ -18,7 +18,8 @@ const Plate = styled.div`
     margin-right: 4em;
     margin-top: 1em;
      }
-     @media(max-width:1800px) {
+     @media(max-width:1920px) {
+      padding: 3em;
       width: 44vw;
     height: 51vh;
      }
@@ -101,6 +102,12 @@ const Content = styled(Paragraph)`
   color:#3D3030;
   @media only screen and (max-width: 1025px) and (orientation:landscape) {
     height: 12em;
+    }
+    @media only screen and (max-width: 1196px) and (orientation:landscape) {
+    height: 12em;
+    }
+    @media only screen and (max-width: 1196px) and (max-height:700px){
+    height: 11em;
     }
     @media only screen and (max-width: 960px) and (orientation:landscape) {
     height: 10em;
