@@ -85,9 +85,12 @@ const Content = styled(Paragraph)`
   letter-spacing: 0.05em;
   justify-self: center;
   margin: 2em;
-  margin-top:1.5em;
+  margin-top:2em;
     height: 11em;
   color:#3D3030;
+  @media (max-width: 1536px){
+    margin: 1.5em;
+    }
   @media (max-width: 1196px){
     margin: 1.5em;
     height: 11em;
