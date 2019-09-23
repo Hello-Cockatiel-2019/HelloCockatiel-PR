@@ -94,6 +94,10 @@ const Woodplate = styled.div `
         margin-left:2em;
         margin-right:1em;
     }
+    @media screen and (max-width:500px) {
+        padding-left:0em;
+        margin-right:1em;
+    }
     @media screen and (max-width:375px) {
         width:148px;
         height:107px;
