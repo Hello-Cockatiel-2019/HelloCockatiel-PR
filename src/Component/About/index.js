@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import {Paragraph} from '../Core/Text'
+import { Paragraph } from '../Core/Text'
 import { contentAbout } from '../Core/Messages'
 import MobileHeader from '../Core/MobileHeader';
 import Footer from './Footer'
@@ -91,104 +91,111 @@ const Content = styled(Paragraph)`
   justify-self: center;
   margin: 3em;
   margin-top:2em;
-    height: 11em;
+  height: 11em;
   color:#3D3030;
+  margin-bottom:0;
   @media (max-width: 2755px){
     line-height: 37px;
     font-size:37px;
-    }
+  }
+  @media (min-width: 1536px) and (max-height: 1100px){
+    height: 8em!important;
+  }
+  @media (min-width: 1536px) and (max-height: 968px){
+    height: 9em!important;
+  }
   @media (max-width: 1536px){
     margin: 1.5em;
     font-size:27px;
     line-height:27px;
-    }
-    @media (max-width: 1366px){
-    margin: 2.5em;
-    }
-  @media (max-width: 1196px){
+  }
+  @media (min-width: 1536px){
+    height:13em;
+  }
+  @media (max-width: 1366px){
+  margin: 2.5em;
+  }
+  @media only screen and (min-width: 1280px) and (max-height:800px){
+  height: 11em;
+  }
+  @media only screen and (max-width: 1197px) and (max-height:835px){
     margin: 1.5em;
+    height: 9em!important;
+  }
+  @media (max-width: 1196px){
+  margin: 1.5em;
+  height: 11em;
+  }
+  @media only screen and (min-width: 1100px) and (max-height:800px){
+    margin: 1.5em;
+  height: 9em;
+  }
+  @media only screen and (max-width: 1196px) and (min-height:834px) {
+    height: 14em;
+  }
+  @media only screen and (max-width: 1024px) and (min-height:1366px){
+    font-size: 30px;
+  line-height: 36px;
+  height: 20em;
+  }
+  @media only screen and (max-width: 1024px) and (min-height:1196px){
+    font-size: 30px;
+  line-height: 36px;
+  height: 16em;
+  }
+  @media only screen and (max-width: 1024px) and (max-height:900px){
+    height: 9em!important;
+  }
+  @media only screen and (min-width: 1024px) and (max-height:800px){
+    height: 10em;
+  }
+  @media (max-width: 1024px){
+  height: 9em;
+  }
+  @media only screen and (max-width: 1024px) and (orientation:portrait)  {
+    margin: 1.5em;
+    height: 21em; 
+    font-size:20px;
+  }
+  @media only screen and (max-width: 960px) and (orientation:portrait)  {
+    height: 18em; 
+  }
+  @media only screen and (max-width: 834px) and (orientation:landscape) {
+    height: 10em;
+  }
+  @media only screen and (min-width: 830px) and (max-height:960px){
+    margin: 2em;
+    height: 18em;
+  }
+  @media only screen and (min-width: 830px) and (max-height:800px){
+    margin:1em;
+    font-size: 24px;
+    line-height: 29px;
+    height: 7em;
+  }
+  @media only screen and (min-width: 830px) and (max-height:600px){
+    margin:1em;
+    height: 7em;
+  }
+  @media only screen and (max-width: 800px) and (orientation:portrait)  {
+    margin: 1.5em;
+    height: 13em; 
+  }
+  @media only screen and (max-width: 768px) and (orientation:portrait)  {
+    height: 16em; 
+  }
+  @media only screen and (max-width: 700px) and (min-height:600px) and (orientation:portrait)  {
+    margin: 1em;
+    height: 15em; 
+  }
+  @media only screen and (max-width: 414px) and (orientation:portrait)  {
+    margin: 1em;
+  height: 15em;
+  }
+  @media only screen and (max-width: 320px) and (orientation:portrait)  {
+    margin: 1em;
     height: 11em;
-    }
-    @media (max-width: 1024px){
-    height: 9em;
-    }
-    @media only screen and (max-width: 1196px) and (min-height:834px) {
-      height: 14em;
-    }
-    @media only screen and (max-width: 1024px) and (orientation:portrait)  {
-      margin: 1.5em;
-      height: 21em; 
-      font-size:20px;
-    }
-    @media only screen and (max-width: 960px) and (orientation:portrait)  {
-      height: 18em; 
-    }
-    @media only screen and (max-width: 834px) and (orientation:landscape) {
-      height: 10em;
-    }
-    @media only screen and (max-width: 800px) and (orientation:portrait)  {
-      margin: 1.5em;
-      height: 13em; 
-    }
-    @media only screen and (max-width: 768px) and (orientation:portrait)  {
-      height: 16em; 
-    }
-    @media only screen and (max-width: 700px) and (min-height:600px) and (orientation:portrait)  {
-      margin: 1em;
-      height: 15em; 
-    }
-    @media only screen and (max-width: 414px) and (orientation:portrait)  {
-      margin: 1em;
-    height: 15em;
-    }
-    @media only screen and (max-width: 320px) and (orientation:portrait)  {
-      margin: 1em;
-      height: 11em;
-    }
-    @media only screen and (min-width: 830px) and (max-height:960px){
-      margin: 2em;
-      height: 18em;
-    }
-    @media only screen and (min-width: 830px) and (max-height:800px){
-      margin:1em;
-      font-size: 24px;
-      line-height: 29px;
-      height: 7em;
-    }
-    @media only screen and (min-width: 830px) and (max-height:600px){
-      margin:1em;
-      height: 7em;
-    }
-    @media (min-width: 1536px){
-      height:13em;
-    }
-    @media only screen and (min-width: 1024px) and (max-height:800px){
-      height: 10em;
-    }
-    @media only screen and (min-width: 1100px) and (max-height:800px){
-      margin: 1.5em;
-    height: 9em;
-    }
-    @media only screen and (min-width: 1197px) and (max-height:800px){
-      margin: 1.5em;
-    height: 13em;
-    }
-    @media only screen and (min-width: 1280px) and (max-height:800px){
-    height: 11em;
-    }
-    @media only screen and (max-width: 1024px) and (min-height:1196px){
-      font-size: 30px;
-    line-height: 36px;
-    height: 16em;
-    }
-    @media only screen and (max-width: 1024px) and (min-height:1366px){
-      font-size: 30px;
-    line-height: 36px;
-    height: 20em;
-    }
-
-    margin-bottom:0;
-    
+  }
 `
 const Layout = styled.div`
     display:grid;
@@ -207,34 +214,31 @@ const Layout = styled.div`
       margin-top: -7em;
     }
 `
-const HeaderDiv = styled.div `
+const HeaderDiv = styled.div`
   display:none;
   @media only screen and (max-width: 1196px) and (orientation:portrait)  {
       display:block;
     }
 `
 
-
 export default class About extends Component {
-    render() {
-        return (
+  render() {
+    return (
+      <div>
+        <Layout>
+          <HeaderDiv>
+            <MobileHeader text="ข้อมูลโครงการ" headerURl="Group-2.png" />
+          </HeaderDiv>
+          <Plate>
+            <Content >
+              {contentAbout}
+            </Content>
+          </Plate>
           <div>
-            <Layout>
-            <HeaderDiv>
-              <MobileHeader text="ข้อมูลโครงการ" headerURl="Group-2.png" />
-            </HeaderDiv>
-              <Plate>
-                <Content >
-                  {contentAbout}
-                </Content>
-              </Plate>
-              <div>
-                <Footer />
-              </div>
-            </Layout>
+            <Footer />
           </div>
-
-  
-           )
-    }
+        </Layout>
+      </div>
+    )
+  }
 }
