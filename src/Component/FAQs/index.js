@@ -109,7 +109,7 @@ const Sdiv = styled.div `
         transform: translate(18%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (max-height:769px) {
-        transform: translate(16%,3%);
+        transform: translate(10%,9%);
     }
     @media only screen and (max-width:835px) and (orientation: portrait) and (max-height:1197px) {
         transform: translate(16%,-10%);
@@ -178,7 +178,7 @@ const Div = styled.div `
         visibility:visible;
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
-        height:120px;
+        height:100px;
         visibility:visible;
     }
     @media only screen and (max-width:998px) and (max-height:660px) {
