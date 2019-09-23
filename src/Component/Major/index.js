@@ -231,7 +231,7 @@ const AllContent = styled.div`
       transform: translate(-4%,-20%);
     }
     @media (max-width:420px) and (max-height:680px) and (orientation: portrait){
-      transform: translate(-3%,-120%);
+      transform: translate(-3%,-20%);
     }
     @media (max-width:380px) and (max-height:820px){
       transform: translate(-9%,-15%);
