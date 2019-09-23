@@ -44,6 +44,10 @@ const Box = styled.div`
         width:30em;
         height:11em;
     }
+    @media (max-width:780px){
+        width:30em;
+        height:9em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         width:30em;
         height:9em;
@@ -135,6 +139,12 @@ const TextContent = styled(Small)`
         padding-right:1em;
         font-size:1.2em;
     }
+    @media (max-width:780px){
+        line-height: 25px;
+        margin-top:-6.5em;
+        padding-left:7em;
+        padding-right:1em;
+    }
     @media (max-width:770px) and (orientation: portrait){
         line-height: 25px;
         margin-top:-6.5em;
@@ -224,6 +234,11 @@ const Bird = styled.img`
         width:22%;
         margin-top:1.5em;
         margin-left:2em;
+    }
+    @media (max-width:780px){
+        width:20%;
+        margin-top:1em;
+        margin-left:1em;
     }
     @media (max-width:770px) and (orientation: portrait){
         width:6em;
