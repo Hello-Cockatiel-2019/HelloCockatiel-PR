@@ -125,22 +125,22 @@ const Div = styled.div`
 
 const TitleMenuMobile = styled(Title)`
     @media(max-width:576px) {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     }
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     }
     @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-      color:${props => props.font ? color.font2 : color.f1};
+      color:${props => props.font ? color.font2 : color.new1};
     } 
 `
 export default class componentName extends Component {
