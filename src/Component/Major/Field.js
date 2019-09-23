@@ -44,9 +44,18 @@ const Box = styled.div`
         width:35em;
         height: 8em;
     }
+    @media (max-width:850px) and (max-height:850px){
+        width:35em;
+        height: 10em;
+    }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:30em;
         height:11em;
+    }
+    @media (max-width:834px) and (max-height:900px){
+        margin-top:${props => props.mt === 0 ? -20
+                        : props.mt === 1 ? -100 
+                        : props.mt === 2 ? -100  :  -100 }px;
     }
     @media (max-width:834px) and (max-height:680px){
         width:34em;
@@ -152,6 +161,12 @@ const TextContent = styled(Small)`
     @media (max-width:991px) {
         line-height: 18px;
         margin-top:-5.5em;
+        padding-left:7em;
+        padding-right:1em;
+    }
+    @media (max-width:850px) and (max-height:850px){
+        line-height: 25px;
+        margin-top:-6em;
         padding-left:7em;
         padding-right:1em;
     }
