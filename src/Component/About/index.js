@@ -10,13 +10,14 @@ const Plate = styled.div`
     margin:0em;
     background-size:100%; 
     background-repeat: no-repeat;
-    width: 100vh;
-    height: 55vh;
+    width: 91vh;
+    height: 50vh;
     background-image: url(/images/Objects/big1.png);
-    margin-right:4em;
+    margin-right: 4em;
+    margin-top: 1em;
      @media(max-width:1420px) {
-      width: 83vh;
-    height: 46vh;
+      width: 88vh;
+    height: 48vh;
     margin-right:1em;
      }
      @media only screen and (max-width: 1468px) and (min-height:925px) {
@@ -111,6 +112,12 @@ const Content = styled(Paragraph)`
       font-size: 24px;
       line-height: 29px;
     }
+    @media only screen and (min-width: 830px) and (max-height:700px){
+      height: 8em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height:700px){
+      height: 9em;
+    }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
       font-size: 30px;
     line-height: 36px;
@@ -122,7 +129,7 @@ const Content = styled(Paragraph)`
     height: 20em;
     }
 
-    
+    margin-bottom:0;
     
 `
 const Layout = styled.div`
@@ -136,7 +143,10 @@ const Layout = styled.div`
     }
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
-      margin-top: -6em;
+      margin-top: -8em;
+    }
+    @media only screen and (max-width: 320px) and (orientation:portrait)  {
+      margin-top: -7em;
     }
 `
 const HeaderDiv = styled.div `

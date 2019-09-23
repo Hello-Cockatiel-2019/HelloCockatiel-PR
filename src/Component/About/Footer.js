@@ -13,6 +13,7 @@ margin-bottom:4em;
 @media only screen and (max-width: 1196px) and (orientation:portrait)  {
   width: 35%;
   height:auto;
+  margin:0;
     }
 `
 const GameButton = styled(Button)`
