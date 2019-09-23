@@ -15,6 +15,8 @@ pipeline{
         stage('master'){
             when {branch 'master'}
             steps{
+            sh' source ~/.bashrc '
+            sh' source ~/.bash_profile '
             sh' npm install '
             sh' npm build '
             sh' ssh cockatiel@103.86.50.70 " pm2 delete ${JOB_NAME} || : " '
