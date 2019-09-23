@@ -118,6 +118,9 @@ const Content = styled(Paragraph)`
     @media only screen and (min-width: 1024px) and (max-height:700px){
       height: 9em;
     }
+    @media only screen and (min-width: 1197px) and (max-height:700px){
+      height: 10em;
+    }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
       font-size: 30px;
     line-height: 36px;
