@@ -240,7 +240,7 @@ const Div = styled.div `
         height:${props => props.ml === 3 ? 250: 130}px;
         visibility:visible;
     }
-    @media only screen and (max-width:500px) and (max-height:660px){
+    @media only screen and (max-width:500px) and (min-height:660px){
         height:${props => props.ml === 3 ? 250 : 130}px;
     visibility:${props => props.ml === 3 ? "hidden" : "visible"};
     }
