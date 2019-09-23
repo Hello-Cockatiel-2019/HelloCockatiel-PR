@@ -80,18 +80,18 @@ const Box = styled.div`
         width:20em;
         height:7em;
         margin-top:${props => props.mt === 0 ? -20
-                        : props.mt === 1 ? -170 
-                        : props.mt === 2 ? -230  :  -290 }px;
+                        : props.mt === 1 ? -150 
+                        : props.mt === 2 ? -190  :  -230 }px;
     }
     @media (max-width:380px){
         margin-top:${props => props.mt === 0 ? 0 
                         : props.mt === 1 ? -130 
-                        : props.mt === 2 ? -150  :  -180 }px;
+                        : props.mt === 2 ? -150  :  -170 }px;
         width:20em;
         height:7em;
     } 
     @media (max-width:330px){
-        margin-bottom:0px;
+        margin-top:${props => props.mt === 0 ? 0 : -100 }px;
         width:18em;
         height:6.5em;
     }
