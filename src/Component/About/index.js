@@ -79,8 +79,10 @@ const Plate = styled.div`
     justify-self: center;
     padding: 3em;
     }
-    @media only screen and (max-width: 414px) and (orientation:portrait) {
+    @media only screen and (max-width: 750px) and (orientation:portrait) {
       padding: 2em;
+    }
+    @media only screen and (max-width: 414px) and (orientation:portrait) {
     width: 315px;
     height: 335px;
     }
@@ -112,11 +114,14 @@ const Content = styled(Paragraph)`
     @media only screen and (max-width: 960px) and (orientation:landscape) {
     height: 10em;
     }
-    @media only screen and (max-width: 960px) and (orientation:portrait) {
-      height: 16em;
-    }
     @media only screen and (min-height: 1024px) and (orientation:portrait) {
       height: auto
+    }
+    @media only screen and (max-width: 960px) and (orientation:portrait) {
+      height: 15em;
+    }
+    @media only screen and (min-height: 700px) and (orientation:portrait) {
+      height: 16em;
     }
   @media only screen and (max-width: 414px) and (orientation:portrait) {
     font-size:16px;
