@@ -15,10 +15,11 @@ pipeline{
         stage('master'){
             when {branch 'master'}
             steps{
-            sh' source ~/.bashrc '
-            sh' source ~/.bash_profile '
-            sh' npm install '
-            sh' npm build '
+            sh' export NVM_DIR="$HOME/.nvm" '
+            sh' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" '
+            sh' [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" '
+            sh' yarn '
+            sh' yarn build '
             sh' ssh cockatiel@103.86.50.70 " pm2 delete ${JOB_NAME} || : " '
             sh' ssh cockatiel@103.86.50.70 " mkdir -p /home/cockatiel/${JOB_NAME} " '
             sh' ssh cockatiel@103.86.50.70 " rm -rf /home/cockatiel/${JOB_NAME}/* || : " '
