@@ -52,7 +52,7 @@ const SideBarSection = styled.div`
         margin-top:-5em;
     }
     @media only screen and (max-height: 671px) {
-        margin-top:-9em;
+        margin-top:-4em;
     }
 `
 
