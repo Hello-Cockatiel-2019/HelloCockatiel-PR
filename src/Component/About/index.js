@@ -50,6 +50,11 @@ const Plate = styled.div`
     height: 36vh;
     margin-left: 3em;
     }
+    @media only screen and (max-width: 834px) and (orientation:landscape) {
+      width: 73vh;
+    height: 51vh;
+    margin-left: 3em;
+    }
     @media only screen and (max-width: 1197px) and (max-height:700px){
       margin-left: 5em;
     }
@@ -111,16 +116,19 @@ const Content = styled(Paragraph)`
     @media only screen and (max-width: 960px) and (orientation:portrait)  {
       height: 18em; 
     }
-    @media only screen and (max-width: 800px) and (orientation:portrait)  {
-      height: 17em; 
+    @media only screen and (max-width: 834px) and (orientation:landscape) {
+      height: 10em;
     }
     @media only screen and (max-width: 800px) and (orientation:portrait)  {
       margin: 1em;
       height: 13em; 
     }
-    @media only screen and (max-width: 700px) and (min-height:650px) and (orientation:portrait)  {
+    @media only screen and (max-width: 768px) and (orientation:portrait)  {
+      height: 16em; 
+    }
+    @media only screen and (max-width: 700px) and (min-height:600px) and (orientation:portrait)  {
       margin: 1em;
-      height: 20em; 
+      height: 16em; 
     }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin: 1.5em;
@@ -145,7 +153,7 @@ const Content = styled(Paragraph)`
       height: 8em;
     }
     @media only screen and (min-width: 1024px) and (max-height:800px){
-      height: 9em;
+      height: 10em;
     }
     @media only screen and (min-width: 1197px) and (max-height:800px){
       height: 13em;
