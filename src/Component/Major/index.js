@@ -73,28 +73,47 @@ const AllContent = styled.div`
     @media (max-width: 1196px) and (max-height: 840px){
     transform: translate(5%,15%);
     }
+    @media (max-width: 1090px) and (max-height: 630px){
+    transform: translate(1%,15%);
+    }
+    @media (max-width: 1080px){
+    transform: translate(1%,15%);
+    }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait)  {
-    transform: translate(22%,-55%);
+    transform: translate(18%,-55%);
     grid-template-columns: none;
     display:grid;
     height: 100vh;
     padding-top:40em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(22%,-58%);
+    transform: translate(18%,-58%);
     grid-template-columns: none;
     display:grid;
     }
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     transform: translate(0%,5%);
     }
+    @media (max-width: 1024px) and (max-height: 630px){
+    transform: translate(1%,13%);
+    }
+    @media (max-width:1010px) {
+      transform: translate(13%,0%);
+      grid-template-columns: none;
+      display:grid;
+    }
+    @media (max-width:990px) {
+      transform: translate(-15%,0%);
+      grid-template-columns: none;
+      display:grid;
+    }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-    transform: translate(17%,-68%);
+    transform: translate(12%,-68%);
     grid-template-columns: none;
     display:grid;
     }
     @media (max-width:770px) and (orientation: portrait){
-      transform: translate(15%,-75%);
+      transform: translate(9%,-75%);
     grid-template-columns: none;
     display:grid;
     }
@@ -105,22 +124,22 @@ const AllContent = styled.div`
       transform: translate(-15%,-20%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(4%,-90%);
+      transform: translate(-5%,-90%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(4%,-100%);
+      transform: translate(-5%,-100%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(3%,-110%);
+      transform: translate(-5%,-110%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(-1%,-90%);
+      transform: translate(-10%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-1%,-115%);
+      transform: translate(-10%,-115%);
     }
     @media (max-width:325px){
-      transform: translate(-5%,-120%);
+      transform: translate(-15%,-120%);
     }
 `
 
@@ -167,6 +186,12 @@ const SpaceBySpace = styled.div`
     }
     @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
       padding-top:1em;
+    }
+    @media (max-width: 1090px) and (max-height: 630px){
+      margin-left:4em;
+    }
+    @media (max-width: 1080px){
+      margin-left:4em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1467px) and (orientation: portrait){
       padding-top:1em;

@@ -32,6 +32,14 @@ const Box = styled.div`
         width:22em;
         height: 10em;
     }
+    @media (max-width:1010px) {
+        width:60em;
+        height: 8em;
+    }
+    @media (max-width:990px) {
+        width:35em;
+        height: 8em;
+    }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:30em;
         height:11em;
@@ -106,6 +114,18 @@ const TextContent = styled(Small)`
         line-height: 18px;
         margin-top:-6em;
         padding-left:6em;
+        padding-right:1em;
+    }
+    @media (max-width:1010px) {
+        line-height: 18px;
+        margin-top:-6em;
+        padding-left:7em;
+        padding-right:1em;
+    }
+    @media (max-width:990px) {
+        line-height: 18px;
+        margin-top:-5.5em;
+        padding-left:7em;
         padding-right:1em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
@@ -189,6 +209,16 @@ const Bird = styled.img`
         width:26%;
         margin-top:1em;
         margin-left:0.5em;
+    }
+    @media (max-width:1010px) {
+        width:22%;
+        margin-top:0.5em;
+        margin-left:1em;
+    }
+    @media (max-width:990px) {
+        width:20%;
+        margin-top:0.5em;
+        margin-left:1em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:22%;
