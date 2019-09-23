@@ -74,6 +74,9 @@ const Sdiv = styled.div `
     @media (max-width:810px) {
         transform: translate(20%,-20%);
     }
+    @media (max-width:799px) {
+        transform: translate(15%,-20%);
+    }
     @media (max-width:768px) {
         transform: translate(15%,-20%);
     }

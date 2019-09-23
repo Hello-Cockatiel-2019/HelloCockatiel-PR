@@ -14,6 +14,7 @@ margin-bottom:4em;
   width: 35%;
   height:auto;
   margin:0;
+  margin-top: 2em;
     }
 `
 const GameButton = styled(Button)`
