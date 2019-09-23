@@ -10,14 +10,15 @@ const Plate = styled.div`
     margin:0em;
     background-size:100%; 
     background-repeat: no-repeat;
-    width: 100vh;
-    height: 55vh;
+    width: 91vh;
+    height: 50vh;
     background-image: url(/images/Objects/big1.png);
-    margin-right:4em;
-     @media(max-width:1420px) {
-      width: 83vh;
-    height: 46vh;
-    margin-right:1em;
+    margin-right: 4em;
+    margin-top: 1em;
+     @media(max-width:1440px) {
+      width: 88vh;
+    height: 48vh;
+    margin-right:2em;
      }
      @media only screen and (max-width: 1468px) and (min-height:925px) {
       width: 80vh;
@@ -49,7 +50,17 @@ const Plate = styled.div`
     height: 36vh;
     margin-left: 3em;
     }
-  
+    @media only screen and (max-width: 834px) and (orientation:landscape) {
+      width: 73vh;
+    height: 51vh;
+    margin-left: 3em;
+    }
+    @media only screen and (max-width: 1197px) and (max-height:700px){
+      margin-left: 5em;
+    }
+    @media only screen and (max-width: 1024px) and (max-height:700px){
+      margin-left: 7em;
+    }
     @media only screen and (max-width: 1024px) and (orientation:portrait) {
       background-image: url(/images/Objects/big2.png);
       padding: 0;
@@ -78,9 +89,20 @@ const Content = styled(Paragraph)`
   line-height: 27px;
   letter-spacing: 0.05em;
   justify-self: center;
-  margin: 2em;
+  margin: 3em;
+  margin-top:2em;
     height: 11em;
-  
+  color:#3D3030;
+  @media (max-width: 2755px){
+    line-height: 37px;
+    font-size:37px;
+    }
+  @media (max-width: 1536px){
+    margin: 1.5em;
+    }
+    @media (max-width: 1366px){
+    margin: 2.5em;
+    }
   @media (max-width: 1196px){
     margin: 1.5em;
     height: 11em;
@@ -91,13 +113,26 @@ const Content = styled(Paragraph)`
     @media only screen and (max-width: 1196px) and (min-height:834px) {
       height: 14em;
     }
-  @media only screen and (max-width: 1024px) and (orientation:portrait)  {
+    @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       margin: 1.5em;
       height: 21em; 
     }
-    @media only screen and (max-width: 626px) and (orientation:portrait)  {
-      margin: 1em;
+    @media only screen and (max-width: 960px) and (orientation:portrait)  {
+      height: 18em; 
+    }
+    @media only screen and (max-width: 834px) and (orientation:landscape) {
+      height: 10em;
+    }
+    @media only screen and (max-width: 800px) and (orientation:portrait)  {
+      margin: 1.5em;
       height: 13em; 
+    }
+    @media only screen and (max-width: 768px) and (orientation:portrait)  {
+      height: 16em; 
+    }
+    @media only screen and (max-width: 700px) and (min-height:600px) and (orientation:portrait)  {
+      margin: 1em;
+      height: 16em; 
     }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin: 1.5em;
@@ -107,9 +142,36 @@ const Content = styled(Paragraph)`
       margin: 1em;
       height: 11em;
     }
-    @media (min-width: 830px){
+    @media only screen and (min-width: 830px) and (max-height:960px){
+      margin: 2em;
+      height: 18em;
+    }
+    @media only screen and (min-width: 830px) and (max-height:800px){
+      margin:1em;
       font-size: 24px;
       line-height: 29px;
+      height: 7em;
+    }
+    @media only screen and (min-width: 830px) and (max-height:600px){
+      margin:1em;
+      height: 7em;
+    }
+    @media (min-width: 1536px){
+      height:13em;
+    }
+    @media only screen and (min-width: 1024px) and (max-height:800px){
+      height: 10em;
+    }
+    @media only screen and (min-width: 1100px) and (max-height:800px){
+      margin: 1.5em;
+    height: 9em;
+    }
+    @media only screen and (min-width: 1197px) and (max-height:800px){
+      margin: 1.5em;
+    height: 13em;
+    }
+    @media only screen and (min-width: 1280px) and (max-height:800px){
+    height: 11em;
     }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
       font-size: 30px;
@@ -122,12 +184,12 @@ const Content = styled(Paragraph)`
     height: 20em;
     }
 
-    
+    margin-bottom:0;
     
 `
 const Layout = styled.div`
     display:grid;
-    @media (max-width: 2560px){
+    @media (max-width: 2755px){
       grid-template-columns: 3fr 1fr;
       margin-top: 2.5em;
     }
@@ -136,7 +198,10 @@ const Layout = styled.div`
     }
      @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       grid-template-columns: none;
-      margin-top: -6em;
+      margin-top: -8em;
+    }
+    @media only screen and (max-width: 320px) and (orientation:portrait)  {
+      margin-top: -7em;
     }
 `
 const HeaderDiv = styled.div `

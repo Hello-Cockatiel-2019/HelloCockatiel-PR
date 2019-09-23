@@ -106,9 +106,13 @@ const HeadLogo = styled.img`
         width: 600px;
         height: 240px;
     } 
+    @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
+        width: 420px;
+        height: 168px;
+    }   
     @media screen and (max-width:834px) and (orientation: landscape) {
-        width: 520px;
-        height: 208px;
+        width: 420px;
+        height: 168px;
     }
     @media screen and (max-width:768px) and (orientation: portrait){
         width: 420px;
@@ -126,7 +130,10 @@ const HeadLogo = styled.img`
 
 const LogoDiv = styled.div`
     transform: translateY(2vh);
-    @media screen and (max-width:320px) {
+    @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
+        transform: translateY(-3vh);
+    }  
+    @media screen and (max-width:768px) {
         transform: translateY(5vh);
     }
     @media screen and (max-height:750px){
@@ -138,6 +145,12 @@ const WoodDiv = styled.div`
     @media screen and (max-width:768px) and (orientation: portrait){
         ${ woodDivDesktop }
     }
+    @media only screen and (max-width: 829px) and (max-height: 673px){
+        margin-top: 0vh;
+    } 
+    @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
+        margin-top: -3vh;
+    } 
     @media screen and (max-width:834px) and (orientation: landscape) {
         ${ woodDivDesktop }
     }
@@ -150,8 +163,12 @@ const WoodDiv = styled.div`
 `
 
 const MenuDiv = styled.div`
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    @media only screen and (min-width: 767px) and (max-height: 1024px) and (orientation: portrait)  {
         margin-top:100px!important;
+        ${ paddingRightLeftFiveEM }
+    }   
+    @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
+        margin-top:0px!important;
         ${ paddingRightLeftFiveEM }
     }   
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
@@ -230,11 +247,17 @@ const RegisDiv = styled.div `
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
         margin-top: 0!important;
     }
+    @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
+        margin-top: -4vh!important;
+    } 
     @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
         margin-top: 0!important;
     }
     @media screen and (max-width:768px) and (min-height: 1026px) and (orientation: portrait){
         margin-top: -10vh!important;
+    }
+    @media only screen and (max-width:776px) {
+        margin-top: -6vh!important;
     }
     @media only screen and (max-width:650px) {
         margin-top: -4vh!important;

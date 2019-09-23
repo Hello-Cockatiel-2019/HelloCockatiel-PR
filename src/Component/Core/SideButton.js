@@ -122,8 +122,35 @@ const Div = styled.div`
       text-align:center;
     } 
 `
+
+const TitleMenuMobile = styled(Title)`
+    @media(max-width:576px) {
+      color:${props => props.font ? color.font2 : color.new1};
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      color:${props => props.font ? color.font2 : color.new1};
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+      color:${props => props.font ? color.font2 : color.new1};
+    }
+    @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+      color:${props => props.font ? color.font2 : color.new1};
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      color:${props => props.font ? color.font2 : color.new1};
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
+      color:${props => props.font ? color.font2 : color.new1};
+    } 
+`
 export default class componentName extends Component {
   
+  componentDidUpdate(prevProps) {
+    if (prevProps.keyID !== this.props.keyID) {
+      this.handleClick(this.props.keyID)
+    }
+  }
+
   state = {
     buttonData: [
       {
@@ -144,7 +171,8 @@ export default class componentName extends Component {
       }
     ],
     imgURL: ['','plate-active.png', 'plate-normal.png', 'plate-normal.png'],
-    display: ['','block', 'none', 'none']
+    display: ['','block', 'none', 'none'],
+    textActive: [false, false, false, false ]
   }
 
   handleClick = async (i) => {
@@ -155,41 +183,53 @@ export default class componentName extends Component {
       if(number === 1 || number === 2 || number === 3){
         let img = this.state.imgURL.slice();
         let display = this.state.display.slice();
+        let text = this.state.textActive.slice();
         img[number] = 'plate-active.png';
         display[number] = 'block';
+        text[number] = true;
         this.setState({
           imgURL: img,
-          display: display
+          display: display,
+          textActive: text
         })
       }
       if(number !== 1){
         let img = this.state.imgURL.slice();
         let display = this.state.display.slice();
+        let text = this.state.textActive.slice();
         img[1] = 'plate-normal.png';
         display[1] = 'none';
+        text[1] = false;
         this.setState({
           imgURL: img,
-          display: display
+          display: display,
+          textActive: text
         })
       }
       if(number !== 2){
         let img = this.state.imgURL.slice();
         let display = this.state.display.slice();
+        let text = this.state.textActive.slice();
         img[2] = 'plate-normal.png';
         display[2] = 'none';
+        text[2] = false;
         this.setState({
           imgURL: img,
-          display: display
+          display: display,
+          textActive: text
         })
       }
       if(number !== 3){
         let img = this.state.imgURL.slice();
         let display = this.state.display.slice();
+        let text = this.state.textActive.slice();
         img[3] = 'plate-normal.png';
         display[3] = 'none';
+        text[3] = false;
         this.setState({
           imgURL: img,
-          display: display
+          display: display,
+          textActive: text
         })
       }
     }
@@ -218,9 +258,9 @@ export default class componentName extends Component {
                       onClick={() => this.handleClick(i)}
                       imgURL={this.state.imgURL[i]}
                       index={i}>
-                        <Title key={i}>
+                        <TitleMenuMobile key={i} font={this.state.textActive[i]}>
                           {data.text}
-                        </Title>
+                        </TitleMenuMobile>
                     </Button>
                   </A>
                 <Hr visibleHr={i} />

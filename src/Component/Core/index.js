@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
 import { Desktop, Mobile } from './Hidden'
+import { dateNow, dateStartResgis, dateEndRegis } from './Day'
 
 import Hamburger from './Hamburger'
 import Home from '../Home'
@@ -18,15 +19,14 @@ import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
     z-index:10;
-    margin-top:-5em;
-`
-
-const DivBlur = styled.div`
-    filter :  blur(${props => props.blur ? props.blur : 0}px);
+    margin-top: ${(dateStartResgis.isBefore(dateNow) && dateEndRegis.isAfter(dateNow)) ? -5 : 1 }em;
 `
 
 const SideBarSection = styled.div`
     margin-top:5em;
+    @media only screen and (max-width: 991px) {
+        margin-top:0em;
+    }
     @media only screen and (max-height: 1050px) {
         margin-top:5em;
     }
@@ -39,6 +39,12 @@ const SideBarSection = styled.div`
     @media only screen and (max-height: 780px) {
         margin-top:-2em;
     }
+    @media only screen and (max-width: 992px) and (max-height: 780px) {
+        margin-top:2em;
+    }
+    @media only screen and (max-width: 992px) and (max-height: 750px) {
+        margin-top:2em;
+    }
     @media only screen and (max-height: 750px) {
         margin-top:-3em;
     }
@@ -46,7 +52,7 @@ const SideBarSection = styled.div`
         margin-top:-5em;
     }
     @media only screen and (max-height: 671px) {
-        margin-top:-9em;
+        margin-top:-4em;
     }
 `
 
@@ -64,6 +70,7 @@ const RegiserDiv = styled.div`
     position:relative;
     z-index:50;
     transform:translate(-5%,20%);
+
 `
 
 const Logo = styled.img`
@@ -98,6 +105,12 @@ const Hidden = styled.div`
 
 const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
+`
+
+const CIDiv = styled.div`
+    @media screen and (max-height:700px) {
+        margin-top:-2em;
+    }
 `
 
 export default class NavBar extends Component {
@@ -152,14 +165,16 @@ export default class NavBar extends Component {
                             <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
-                            <div className="d-flex col-12 justify-content-center">
-                                <img src="/images/Objects/ci.png" width="150px" height="49.2px" />
-                            </div>
+                            <CIDiv className="d-flex col-12 justify-content-center">
+                                <img src="/images/Objects/ci.png" alt="CI" width="150px" height="49.2px" />
+                            </CIDiv>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
-                                <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
+                                <SlideButton 
+                                    changeClick={this.changeClick} 
+                                    clickToClose={this.clickToClose} 
+                                    keyID={this.state.id}  />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
-                                
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
@@ -167,15 +182,15 @@ export default class NavBar extends Component {
                     </Desktop>
                     <Mobile>
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
-                            <Hamburger changeClick={this.changeClick} />
+                            <Hamburger changeClick={this.changeClick} keyID={this.state.id} />
                         </HamburgerDiv>
-                        <DivBlur blur={this.state.blur}>
+                        <div>
                             <Background />
                             <HomeDiv homeDisplay={this.state.homeDisplay} >
                                 <Home clickHome={this.clickHome} />
                             </HomeDiv>
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
-                        </DivBlur>
+                        </div>
                     </Mobile>
                 </Hidden>
             </React.Fragment>
