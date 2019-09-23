@@ -88,7 +88,7 @@ const Box = styled.div`
     @media (max-width:420px){
         width:20em;
         height:7em;
-        margin-top:${props => props.mt === 0 ? -20
+        margin-top:${props => props.mt === 0 ? -30
                         : props.mt === 1 ? -150 
                         : props.mt === 2 ? -190  :  -230 }px;
     }
