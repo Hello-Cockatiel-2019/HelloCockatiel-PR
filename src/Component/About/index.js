@@ -15,10 +15,10 @@ const Plate = styled.div`
     background-image: url(/images/Objects/big1.png);
     margin-right: 4em;
     margin-top: 1em;
-     @media(max-width:1420px) {
+     @media(max-width:1440px) {
       width: 88vh;
     height: 48vh;
-    margin-right:1em;
+    margin-right:2em;
      }
      @media only screen and (max-width: 1468px) and (min-height:925px) {
       width: 80vh;
@@ -117,6 +117,9 @@ const Content = styled(Paragraph)`
     }
     @media only screen and (min-width: 1024px) and (max-height:700px){
       height: 9em;
+    }
+    @media only screen and (min-width: 1197px) and (max-height:700px){
+      height: 10em;
     }
     @media only screen and (max-width: 1024px) and (min-height:1196px){
       font-size: 30px;

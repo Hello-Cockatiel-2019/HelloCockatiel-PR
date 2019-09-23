@@ -8,6 +8,10 @@ const Box = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width:26em;
     height: 11em;
+    @media (max-width: 1550px) and (max-height: 750px) and (orientation: landscape)  {
+        width:27em;
+        height: 10em;
+    }
     @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
         width:26em;
         height: 11em;
@@ -64,6 +68,12 @@ const TextContent = styled(Small)`
     padding-right:2em;  
     color:${color.font2};
     line-height: 25px;
+    @media (max-width: 1550px) and (max-height: 750px) and (orientation: landscape)  {
+        line-height: 25px;
+        margin-top:-6.5em;
+        padding-left:6em;
+        padding-right:1em;
+    }
     @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
         line-height: 20px;
         margin-top:-6.5em;
@@ -150,6 +160,11 @@ const Bird = styled.img`
     margin-top:2em;
     margin-left:1em;
     width : 90px;
+    @media (max-width: 1550px) and (max-height: 750px) and (orientation: landscape)  {
+        width:22%;
+        margin-top:1em;
+        margin-left:0.5em;
+    }
     @media only screen and (max-width: 1196px) and (max-height: 834px) and (orientation: landscape){
         width:22%;
         margin-top:-1.8em;
