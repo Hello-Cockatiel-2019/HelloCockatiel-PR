@@ -6,7 +6,7 @@ const FixedBackground = styled.div`
   width:100%;
   height: 100vh;
   background-repeat:no-repeat;
-  background-position: bottom;
+  background-position: center;
   position:fixed;
   background-size:cover;
   background-image:url('/images/Background/bg1536x900.png');
@@ -18,6 +18,7 @@ const FixedBackground = styled.div`
       background-image:url('/images/Background/bg768x1000.png');
     }
     @media only screen and (max-width: 414px){
+      background-position: bottom;
       background-image:url('/images/Background/bg414x896.png');
     }
 `
