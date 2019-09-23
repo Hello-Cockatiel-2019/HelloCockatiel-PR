@@ -124,13 +124,18 @@ const AllContent = styled.div`
       grid-template-columns: none;
       display:grid;
     }
+    @media (max-width:833px) and (max-height:748px) {
+      transform: translate(8%,-30%);
+      grid-template-columns: none;
+      display:grid;
+    }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(12%,-68%);
     grid-template-columns: none;
     display:grid;
     }
     @media (max-width:780px){
-      transform: translate(10%,-105%);
+      transform: translate(10%,-25%);
     grid-template-columns: none;
     display:grid;
     }
@@ -140,7 +145,7 @@ const AllContent = styled.div`
     display:grid;
     }
     @media (max-width:740px) and (max-height:920px) and (orientation: portrait){
-      transform: translate(9%,-85%);
+      transform: translate(9%,0%);
     grid-template-columns: none;
     display:grid;
     }

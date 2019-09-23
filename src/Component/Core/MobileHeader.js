@@ -13,6 +13,9 @@ const HeaderDiv = styled.div`
     margin: 0;
     padding-top: ${props => props.pl === 'FAQs' ? '65px' : '60px'};
     padding-left: ${props => props.pl === 'FAQs' ? '50px' : props.pl === 'Teams' ? '50px' : '10px'};
+    @media (max-width:833px) and (max-height:748px) {
+      padding-left: ${props => props.pl === 'FAQs' ? '40px' : props.pl === 'Teams' ? '40px' : '10px'};
+    }
     @media screen and (max-width:380px) {
       height:96px;
       width: 130px;
