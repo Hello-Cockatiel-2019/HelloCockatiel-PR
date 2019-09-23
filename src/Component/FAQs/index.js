@@ -57,8 +57,11 @@ const Sdiv = styled.div `
     @media (max-width:1014px) {
         transform: translate(15%,3%);
     }
-    @media (max-width:999px) and (max-height:680px){
-        transform: translate(25%,-25%);
+    @media (max-width:999px){
+        transform: translate(12%,18%);
+    }
+    @media (max-width:999px) and (max-height:671px){
+        transform: translate(12%,18%);
     }
     @media (max-width:950px) {
         transform: translate(10%,10%);
@@ -85,7 +88,7 @@ const Sdiv = styled.div `
         transform: translate(15%,-20%);
     }
     @media (max-width:768px) {
-        transform: translate(15%,-20%);
+        transform: translate(15%,-15%);
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
         transform: translate(15%,-13%)
@@ -105,8 +108,11 @@ const Sdiv = styled.div `
     @media (max-width:400px) {
         transform: translate(9%,-14%);
     }
-    @media (max-width:320px) {
-        transform: translate(12%,-15%);
+    @media (max-width:376px) and (max-height:813px) {
+        transform: translate(11%,-14%)!important;
+    }
+    @media (max-width:320px) and (min-height:567px) {
+        transform: translate(14%,-15%);
     }
     
     @media only screen and (max-width:1367px) and (orientation: landscape) and (min-height:1024px)  {
@@ -217,7 +223,7 @@ const Div = styled.div `
     visibility:visible;
     }
     @media only screen and (max-width:768px) and (max-height:660px) {
-    height:${props => props.ml === 3 ? 350 : 110}px;
+    height:${props => props.ml === 3 ? 350 : 120}px;
     visibility:${props => props.ml === 3 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
@@ -257,7 +263,7 @@ const Div = styled.div `
     visibility:visible;
     }
     @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
-    height:${props => props.ml === 3 ? 180 : 90}px;
+    height:${props => props.ml === 3 ? 120 : 90}px;
     visibility:visible;
     }
 `

@@ -7,6 +7,9 @@ import Color from '../../Config/Color'
 
 const AllContent = styled.div`
     transform: translateY(-30%);
+    @media (max-width: 2600px) {
+    transform: translate(5%,10%);
+    }
     @media (max-width: 2500px) {
     transform: translate(5%,10%);
     }
@@ -55,6 +58,12 @@ const AllContent = styled.div`
     @media only screen and (max-width: 1467px) and (max-height: 900px) and (orientation: landscape){
       transform: translate(8%,3%);
     }
+    @media (max-width: 1440px) and (max-height:730px){
+    transform: translate(5%,15%);
+    }
+    @media (max-width: 1440px) and (max-height:690px){
+    transform: translate(5%,15%);
+    }
     @media (max-width: 1400px) {
     transform: translate(5%,10%);
     }
@@ -90,7 +99,7 @@ const AllContent = styled.div`
     padding-top:40em;
     }
     @media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(18%,-58%);
+    transform: translate(19%,-58%);
     grid-template-columns: none;
     display:grid;
     }
@@ -99,7 +108,7 @@ const AllContent = styled.div`
     }
     @media (max-width: 1024px) and (max-height: 630px){
     transform: translate(1%,13%);
-    }
+    }    
     @media (max-width:1010px) {
       transform: translate(13%,0%);
       grid-template-columns: none;
@@ -107,6 +116,11 @@ const AllContent = styled.div`
     }
     @media (max-width:990px) {
       transform: translate(-15%,0%);
+      grid-template-columns: none;
+      display:grid;
+    }
+    @media (max-width:1010px) and (max-height:680px) {
+      transform: translate(-15%,10%);
       grid-template-columns: none;
       display:grid;
     }
@@ -120,13 +134,8 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
-    /* @media (max-height:777px){
-      transform: translate(10%,-28%);
-    grid-template-columns: none;
-    display:grid;
-    } */
     @media (max-width:770px) and (orientation: portrait){
-      transform: translate(9%,-75%);
+      transform: translate(10%,-75%);
     grid-template-columns: none;
     display:grid;
     }
@@ -164,22 +173,22 @@ const AllContent = styled.div`
       transform: translate(3%,-100%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(-5%,-90%);
+      transform: translate(-4%,-90%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(-5%,-100%);
+      transform: translate(-4%,-100%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(-5%,-110%);
+      transform: translate(-4%,-110%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(-10%,-90%);
+      transform: translate(-9%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-10%,-113%);
+      transform: translate(-9%,-113%);
     }
     @media (max-width:325px){
-      transform: translate(-15%,-120%);
+      transform: translate(-14%,-120%);
     }
 `
 
@@ -191,7 +200,7 @@ const Header = styled.div`
     transform: translate(0%,-120%);
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
-    transform: translate(-2%,-120%);
+    transform: translate(0%,-120%);
     }
     @media (max-height:777px){
       transform: translate(0%,-110%);
