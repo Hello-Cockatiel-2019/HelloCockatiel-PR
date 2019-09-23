@@ -106,20 +106,23 @@ const AllContent = styled.div`
     @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape)  {
     transform: translate(0%,5%);
     }
+    @media (max-width: 1024px) and (max-height: 680px){
+    transform: translate(1%,17%);
+    } 
     @media (max-width: 1024px) and (max-height: 630px){
     transform: translate(1%,13%);
-    }    
+    }   
     @media (max-width:1010px) {
       transform: translate(13%,0%);
       grid-template-columns: none;
       display:grid;
     }
-    @media (max-width:990px) {
-      transform: translate(-15%,0%);
+    @media (max-width:1010px) and (max-height:680px) {
+      transform: translate(10%,10%);
       grid-template-columns: none;
       display:grid;
     }
-    @media (max-width:1010px) and (max-height:680px) {
+    @media (max-width:991px) {
       transform: translate(-15%,10%);
       grid-template-columns: none;
       display:grid;
@@ -134,11 +137,17 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
-    @media (max-width:780px){
+    @media (max-width:834px) and (max-height: 680px){
       transform: translate(10%,-25%);
     grid-template-columns: none;
     display:grid;
     }
+    @media (max-width:780px){
+      transform: translate(10%,-20%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(10%,-75%);
     grid-template-columns: none;
@@ -165,35 +174,41 @@ const AllContent = styled.div`
     @media (max-width:650px) and (max-height:760px) and (orientation: portrait){
       transform: translate(3%,-100%);
     }
-    @media (max-width:600px) and (max-height:760px) and (orientation: portrait){
-      transform: translate(0%,-100%);
+    @media (max-width:600px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(-1%,-115%);
     }
-    @media (max-width:590px) and (max-height:760px) and (orientation: portrait){
-      transform: translate(-1%,-100%);
+    @media (max-width:590px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(-2%,-115%);
     }
-    @media (max-width:550px) and (max-height:760px) and (orientation: portrait){
-      transform: translate(3%,-105%);
+    @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(8%,-115%);
     }
-    @media (max-width:500px) and (max-height:760px) and (orientation: portrait){
-      transform: translate(3%,-100%);
+    @media (max-width:550px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(6%,-115%);
+    }
+    @media (max-width:500px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(3%,-115%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(-4%,-90%);
+      transform: translate(-6%,-90%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(-4%,-100%);
+      transform: translate(-6%,-100%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(-4%,-110%);
+      transform: translate(-7%,-110%);
+    }
+    @media (max-width:420px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(-3%,-120%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(-9%,-90%);
+      transform: translate(-11%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-9%,-113%);
+      transform: translate(-11%,-113%);
     }
     @media (max-width:325px){
-      transform: translate(-14%,-120%);
+      transform: translate(-16%,-120%);
     }
 `
 
@@ -210,11 +225,17 @@ const Header = styled.div`
     @media (max-height:777px){
       transform: translate(0%,-110%);
     }
+    @media (max-width: 834px) and (max-height: 680px){
+    transform: translate(0%,-90%);
+    }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(0%,-90%);
     }
     @media (max-width:570px){
       transform: translate(4%,-60%);
+    }
+    @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
+      transform: translate(0%,-100%);
     }
     @media (max-width:550px){
       transform: translate(0%,-110%);
