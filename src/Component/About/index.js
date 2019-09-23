@@ -10,12 +10,18 @@ const Plate = styled.div`
     margin:0em;
     background-size:100%; 
     background-repeat: no-repeat;
-    width: 44vw;
-    height: 51vh;
     background-image: url(/images/Objects/big1.png);
+    padding: 4em;
+    @media(max-width:2560px) {
+      width: 33vw;
+    height: 46vh;
     margin-right: 4em;
     margin-top: 1em;
-    padding: 4em;
+     }
+     @media(max-width:1800px) {
+      width: 44vw;
+    height: 51vh;
+     }
      @media(max-width:1440px) {
       width: 88vh;
     height: 48vh;
@@ -40,6 +46,8 @@ const Plate = styled.div`
     height: 41vh;
     margin-right:0em;
     margin-left: 3em;
+    padding: 2em;
+    
     }
     @media only screen and (max-width: 1025px) and (orientation:landscape) {
       width: 70vh;
@@ -91,6 +99,18 @@ const Content = styled(Paragraph)`
   letter-spacing: 0.05em;
   justify-self: center;
   color:#3D3030;
+  @media only screen and (max-width: 1025px) and (orientation:landscape) {
+    height: 12em;
+    }
+    @media only screen and (max-width: 960px) and (orientation:landscape) {
+    height: 10em;
+    }
+    @media only screen and (max-width: 960px) and (orientation:portrait) {
+      height: 16em;
+    }
+    @media only screen and (min-height: 1024px) and (orientation:portrait) {
+      height: auto
+    }
   @media only screen and (max-width: 414px) and (orientation:portrait) {
     font-size:16px;
     height: 17em;
