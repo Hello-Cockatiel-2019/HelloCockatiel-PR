@@ -111,6 +111,9 @@ const Sdiv = styled.div `
     @media only screen and (max-width:1024px) and (orientation: landscape) and (max-height:769px) {
         transform: translate(16%,3%);
     }
+    @media only screen and (max-width:835px) and (orientation: portrait) and (max-height:1197px) {
+        transform: translate(16%,-10%);
+    }
 `
 const HeaderDiv = styled.div `
     @media only screen and (max-width:1024px) {
@@ -190,9 +193,13 @@ const Div = styled.div `
         height:${props => props.ml === 3 ? 200 : 100}px;
         visibility:${props => props.ml === 3 ? "hidden" : "visible"};
     }
-    
+    @media only screen and (max-width:835px) and (orientation: portrait) and (max-height:1197px) {
+        height:${props => props.ml === 3 ? 270 : 120}px;
+        visibility:visible;
+    }
     @media only screen and (max-width:834px){
         height:${props => props.ml === 3 ? 200 : 125}px;
+        visibility:visible;
     }
     @media only screen and (max-width:834px) and (max-height:660px) {
         height:${props => props.ml === 3 ? 350 : 110}px;

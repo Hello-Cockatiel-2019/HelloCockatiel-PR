@@ -112,6 +112,16 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
+    @media (max-width:780px){
+      transform: translate(10%,-105%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    @media (max-height:777px){
+      transform: translate(10%,-28%);
+    grid-template-columns: none;
+    display:grid;
+    }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(9%,-75%);
     grid-template-columns: none;
@@ -136,7 +146,7 @@ const AllContent = styled.div`
       transform: translate(-10%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-10%,-115%);
+      transform: translate(-10%,-113%);
     }
     @media (max-width:325px){
       transform: translate(-15%,-120%);
@@ -152,6 +162,9 @@ const Header = styled.div`
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(-2%,-120%);
+    }
+    @media (max-height:777px){
+      transform: translate(0%,-110%);
     }
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(0%,-90%);
@@ -206,6 +219,9 @@ const SpaceBySpace = styled.div`
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
       padding-top:2em;
     }
+    @media (max-width:780px) {
+      padding-top:0.5em;
+    }
     @media (max-width:770px) and (orientation: portrait){
       padding-top:1em;
     }
@@ -219,7 +235,7 @@ const SpaceBySpace = styled.div`
       padding-top:1em;
     }
     @media (max-width:380px){
-      padding-top:1em;
+      padding-top:0.5em;
     }
     @media (max-width:330px){
       padding-top:0.5em;
