@@ -52,6 +52,10 @@ const Box = styled.div`
         width:34em;
         height:7em;
     }
+    @media (max-width:800px) and (max-height:800px){
+        width:30em;
+        height:10em;
+    }
     @media (max-width:780px){
         width:30em;
         height:9em;
@@ -75,12 +79,19 @@ const Box = styled.div`
     @media (max-width:420px){
         width:20em;
         height:7em;
+        margin-top:${props => props.mt === 0 ? -20
+                        : props.mt === 1 ? -170 
+                        : props.mt === 2 ? -230  :  -290 }px;
     }
     @media (max-width:380px){
+        margin-top:${props => props.mt === 0 ? 0 
+                        : props.mt === 1 ? -130 
+                        : props.mt === 2 ? -150  :  -180 }px;
         width:20em;
         height:7em;
     } 
     @media (max-width:330px){
+        margin-bottom:0px;
         width:18em;
         height:6.5em;
     }
@@ -151,12 +162,24 @@ const TextContent = styled(Small)`
         padding-right:1em;
         font-size:1.2em;
     }
+    @media (max-width:834px) and (max-height: 800px){
+        line-height: 25px;
+        margin-top:-6em;
+        padding-left:8em;
+        padding-right:1em;
+    }
     @media (max-width: 834px) and (max-height: 680px) {
         line-height: 25px;
         margin-top:-5em;
         padding-left:5em;
         padding-right:1em;
         font-size:1.2em;
+    }
+    @media (max-width: 800px) and (max-height: 800px) {
+        line-height: 25px;
+        margin-top:-6em;
+        padding-left:7em;
+        padding-right:1em;
     }
     @media (max-width:780px){
         line-height: 25px;
@@ -176,6 +199,12 @@ const TextContent = styled(Small)`
         padding-left:8em;
         padding-right:2em;
         font-size:0.9em;
+    }
+    @media (max-width:570px) and (max-height:800px) and (orientation: portrait){
+        line-height: 16px;
+        margin-top:-6em;
+        padding-left:8em;
+        padding-right:2em;  
     }
     @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
         line-height: 16px;
@@ -267,9 +296,19 @@ const Bird = styled.img`
         margin-top:1.5em;
         margin-left:2em;
     }
+    @media (max-width:834px) and (max-height: 800px){
+        width:16%;
+        margin-top:0.5em;
+        margin-left:2em;
+    }
     @media (max-width:834px) and (max-height:680px){
         width:14%;
         margin-top:0.5em;
+        margin-left:1em;
+    }
+    @media (max-width: 800px) and (max-height: 800px) {
+        width:18%;
+        margin-top:2em;
         margin-left:1em;
     }
     @media (max-width:780px){
@@ -286,6 +325,11 @@ const Bird = styled.img`
         width:18%;
         margin-top:-1.3em;
         margin-left:1.5em;
+    }
+    @media (max-width:570px) and (max-height:800px) and (orientation: portrait){
+        width:18%;
+        margin-top:1em;
+        margin-left:1.5em;  
     }
     @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
         width:18%;
@@ -322,7 +366,7 @@ const Bird = styled.img`
 export default class Field extends Component {
     render() {
         return (
-            <Box colorBox={this.props.colorBox} >
+            <Box colorBox={this.props.colorBox} mt={this.props.mt}>
                 <Bird src={`/images/Objects/${this.props.imgbird}`}></Bird>
                 <TextContent>{this.props.content}</TextContent>
             </Box>
