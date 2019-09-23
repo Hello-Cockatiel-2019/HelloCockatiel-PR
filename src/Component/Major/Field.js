@@ -40,13 +40,17 @@ const Box = styled.div`
         width:60em;
         height: 8em;
     }
-    @media (max-width:990px) {
+    @media (max-width:991px) {
         width:35em;
         height: 8em;
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
         width:30em;
         height:11em;
+    }
+    @media (max-width:834px) and (max-height:680px){
+        width:34em;
+        height:7em;
     }
     @media (max-width:780px){
         width:30em;
@@ -134,7 +138,7 @@ const TextContent = styled(Small)`
         padding-left:7em;
         padding-right:1em;
     }
-    @media (max-width:990px) {
+    @media (max-width:991px) {
         line-height: 18px;
         margin-top:-5.5em;
         padding-left:7em;
@@ -144,6 +148,13 @@ const TextContent = styled(Small)`
         line-height: 25px;
         margin-top:-7em;
         padding-left:8em;
+        padding-right:1em;
+        font-size:1.2em;
+    }
+    @media (max-width: 834px) and (max-height: 680px) {
+        line-height: 25px;
+        margin-top:-5em;
+        padding-left:5em;
         padding-right:1em;
         font-size:1.2em;
     }
@@ -162,6 +173,13 @@ const TextContent = styled(Small)`
     @media (max-width:570px){
         line-height: 16px;
         margin-top:-6.5em;
+        padding-left:8em;
+        padding-right:2em;
+        font-size:0.9em;
+    }
+    @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
+        line-height: 16px;
+        margin-top:-6em;
         padding-left:8em;
         padding-right:2em;
         font-size:0.9em;
@@ -239,7 +257,7 @@ const Bird = styled.img`
         margin-top:0.5em;
         margin-left:1em;
     }
-    @media (max-width:990px) {
+    @media (max-width:991px) {
         width:20%;
         margin-top:0.5em;
         margin-left:1em;
@@ -248,6 +266,11 @@ const Bird = styled.img`
         width:22%;
         margin-top:1.5em;
         margin-left:2em;
+    }
+    @media (max-width:834px) and (max-height:680px){
+        width:14%;
+        margin-top:0.5em;
+        margin-left:1em;
     }
     @media (max-width:780px){
         width:20%;
@@ -262,6 +285,11 @@ const Bird = styled.img`
     @media (max-width:570px){
         width:18%;
         margin-top:-1.3em;
+        margin-left:1.5em;
+    }
+    @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
+        width:18%;
+        margin-top:1em;
         margin-left:1.5em;
     }
     @media (max-width:500px){

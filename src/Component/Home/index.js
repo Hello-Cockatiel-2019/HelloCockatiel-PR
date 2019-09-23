@@ -43,6 +43,10 @@ const Woodplate = styled.div `
         margin-bottom:2em;
         padding-left:${props => props.pt === 0 ? 0.75 : 0}em;
     }
+    @media (max-width:834px) and (max-height:750px) {
+        padding-right:${props => props.pt === 0 ? 2 :
+            props.pt === 1 ? 1 : 2}em;
+    }
     @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
         width:250px;
         height:180px;
@@ -67,7 +71,7 @@ const Woodplate = styled.div `
     @media screen and (max-width:834px) and (orientation: landscape){
         width:190px;
         height:150px;
-        padding-top:4.3em;
+        padding-top:4.6em;
         padding-left:${props => props.pt===0 ? 1.2 :
                     props.pt===1 ? 0 : 0}em;
     }
@@ -75,8 +79,12 @@ const Woodplate = styled.div `
         width:190px;
         height:150px;
         padding-top:4.3em;
-        padding-left:${props => props.pt===0 ? 1.2 :
-                    props.pt===1 ? 0 : 0}em;
+        padding-left:0em;
+    }
+    @media screen and (max-width:748px) and (orientation: portrait){
+        padding-top:4.5em;
+        padding-left:${props => props.pt === 0 ? 1 :
+        props.pt === 1 ? 0 : 1}em;
     }
     @media screen and (max-width:600px) {
         width:168px;
@@ -84,6 +92,10 @@ const Woodplate = styled.div `
         padding-right: 1em;
         padding-top:3.9em;
         margin-left:2em;
+        margin-right:1em;
+    }
+    @media screen and (max-width:500px) {
+        padding-left:0em;
         margin-right:1em;
     }
     @media screen and (max-width:375px) {

@@ -12,20 +12,27 @@ const HeaderDiv = styled.div`
     width: 170px;
     margin: 0;
     padding-top: ${props => props.pl === 'FAQs' ? '65px' : '60px'};
-    padding-left: ${props => props.pl === 'FAQs' ? '50px' : props.pl === 'Teams' ? '50px' : '10px'};
+    padding-left: ${props => props.pl === 'ข้อมูลโครงการ' ? '10px' : '50px'};
+    @media (max-width:833px) and (max-height:748px) {
+      padding-left: ${props => props.pl === 'ข้อมูลโครงการ' ? '10px' : '40px'};
+    }
+    @media (max-width:748px) {
+      padding-left: ${props => props.pl === 'ข้อมูลโครงการ' ? '13px' : '50px'};
+    }
     @media screen and (max-width:380px) {
       height:96px;
       width: 130px;
       padding-top: 47px;
-      padding-left: ${props => props.pl === 'FAQs' ? '38px' : props.pl === 'Teams' ? '38px' : '12px'};
+      padding-left: ${props => props.pl === 'ข้อมูลโครงการ' ? '12px': '38px'};
     }
     @media screen and (max-width:320px) {
       height:76px;
       width: 110px;
       padding-top: 37px;
-      padding-left: ${props => props.pl === 'FAQs' ? '30px' : props.pl === 'Teams' ? '30px' :  '8.5px'};
+      padding-left: ${props => props.pl === 'ข้อมูลโครงการ' ? '8.5px' : '30px'   };
     }
 `
+
 const HeaderFont = styled(Header)`
     @media screen and (max-width:768px) and (orientation: portrait){
       font-size:1.75em;
