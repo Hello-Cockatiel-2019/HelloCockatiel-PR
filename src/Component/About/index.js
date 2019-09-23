@@ -99,6 +99,8 @@ const Content = styled(Paragraph)`
     }
   @media (max-width: 1536px){
     margin: 1.5em;
+    font-size:27px;
+    line-height:27px;
     }
     @media (max-width: 1366px){
     margin: 2.5em;
