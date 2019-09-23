@@ -36,12 +36,12 @@ export default class Footer extends Component {
     return (
       <React.Fragment>
         <Div>
-          <a href="https://www.facebook.com/SITHelloWorld" target="_blank">
+          <a href="https://www.facebook.com/SITHelloWorld" target="_blank" rel="noopener noreferrer">
             <FbButton src="/images/Objects/fb.png"/>
           </a>
         </Div>
         <Desktop>
-          <a href="https://game.hellocockatiel.com" target="_blank">
+          <a href="https://game.hellocockatiel.com" target="_blank" rel="noopener noreferrer">
             <GameButton src="/images/Objects/game.png"/>
           </a>
         </Desktop>
