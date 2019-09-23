@@ -32,7 +32,6 @@ const styles = {
 
 export default class componentName extends Component {
   state = {
-    id: 0,
     menuOpen : false
   }
 
@@ -53,7 +52,6 @@ export default class componentName extends Component {
     this.setState({
       menuOpen: i
     })
-    console.log(i)
   }
 
   handleStateChange(state) {
@@ -71,10 +69,10 @@ export default class componentName extends Component {
           isOpen={this.state.menuOpen} 
           width={'60%'}
           onStateChange={(state) => this.handleStateChange(state)}
-          customBurgerIcon={<img src="/images/Objects/ham.png" />} 
+          customBurgerIcon={<img src="/images/Objects/ham.png" alt="hamburger" />} 
           right
            >
-          <SideButton changeClick={this.changeClick} clickToClose={this.clickButton} />
+          <SideButton changeClick={this.changeClick} clickToClose={this.clickButton} keyID={this.props.keyID} />
         </Menu>
     </Mobile>
     )

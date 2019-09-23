@@ -11,23 +11,23 @@ const Qwood = styled(BrownParagraph) `
     box-shadow: 5px 5px 8px black;
     margin: 0em 0em 0em 0em;
     @media only screen and (max-width:1400px) {
-        width: 500px;
+        width: 650px;
         margin:0em 0em 0em 0em;
     }
     @media only screen and (max-width:1320px) {
-        width: 390px;
+        width: 600px;
     }
     @media only screen and (max-width:1024px) {
-        width: 390px;
-    }
-    @media only screen and (max-width:999px) {
-        width: 330px;
+        width: 600px;
     }
     @media only screen and (max-width:991px) {
-        width: 330px;
+        width: 580px;
+    }
+    @media only screen and (max-width:850px) {
+        width: 580px;
     }
     @media only screen and (max-width:768px) {
-        width: 330px;
+        width: 550px;
     }
     @media only screen and (max-width:600px) {
         width: 330px;
@@ -47,7 +47,7 @@ const Qwood = styled(BrownParagraph) `
         width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 330px;
+        width: 630px;
         font-size:1.25em;
     }
 `
@@ -60,25 +60,22 @@ const Awood = styled(Paragraph)`
     box-shadow: 5px 5px 8px black;
 
     @media only screen and (max-width:1400px) {
-        width: 500px;
+        width: 650px;
     }
     @media only screen and (max-width:1320px) {
-        width: 390px;
+        width: 600px;
     }
     @media (max-width:1120px) {
-        width: 390px;
+        width: 600px;
     }
     @media only screen and (max-width:1024px) {
-        width: 390px;
-    }
-    @media only screen and (max-width:999px) {
-        width: 330px;
+        width: 600px;
     }
     @media only screen and (max-width:991px) {
-        width: 330px;
+        width: 580px;
     }
     @media only screen and (max-width:768px) {
-        width: 330px;
+        width: 550px;
     }
     @media only screen and (max-width:600px) {
         width: 330px;
@@ -98,7 +95,7 @@ const Awood = styled(Paragraph)`
         width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 330px;
+        width: 630px;
         font-size:1.25em;
     }
 `

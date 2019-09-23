@@ -164,13 +164,12 @@ export default class NavBar extends Component {
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
                             <CIDiv className="d-flex col-12 justify-content-center">
-                                <img src="/images/Objects/ci.png" width="150px" height="49.2px" />
+                                <img src="/images/Objects/ci.png" alt="CI" width="150px" height="49.2px" />
                             </CIDiv>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
-                                
                                 <ClickChange keyID={this.state.id} />
                             </Content>
                         </Div>
@@ -178,7 +177,7 @@ export default class NavBar extends Component {
                     </Desktop>
                     <Mobile>
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
-                            <Hamburger changeClick={this.changeClick} />
+                            <Hamburger changeClick={this.changeClick} keyID={this.state.id} />
                         </HamburgerDiv>
                         <DivBlur blur={this.state.blur}>
                             <Background />
