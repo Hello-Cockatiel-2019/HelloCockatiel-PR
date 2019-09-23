@@ -109,7 +109,7 @@ const Sdiv = styled.div `
         transform: translate(9%,-14%);
     }
     @media (max-width:376px) and (max-height:813px) {
-        transform: translate(9%,-14%)!important;
+        transform: translate(11%,-14%)!important;
     }
     @media (max-width:320px) and (min-height:567px) {
         transform: translate(14%,-15%);
@@ -263,7 +263,7 @@ const Div = styled.div `
     visibility:visible;
     }
     @media only screen and (max-width:330px) and (orientation: portrait) and (min-height:550px)  {
-    height:${props => props.ml === 3 ? 180 : 90}px;
+    height:${props => props.ml === 3 ? 120 : 90}px;
     visibility:visible;
     }
 `

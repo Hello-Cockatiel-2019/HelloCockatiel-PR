@@ -107,11 +107,6 @@ const HamburgerDiv = styled.div`
     display:${props => props.displayHamburger};
 `
 
-const DivBuildID = styled.div`
-    position : fixed; 
-    bottom: 0px;
-`
-
 const CIDiv = styled.div`
     @media screen and (max-height:700px) {
         margin-top:-2em;
@@ -197,7 +192,6 @@ export default class NavBar extends Component {
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
                         </div>
                     </Mobile>
-                <DivBuildID>><a>build : {process.env.REACT_APP_GIT_VERSION}</a></DivBuildID>
                 </Hidden>
             </React.Fragment>
 
