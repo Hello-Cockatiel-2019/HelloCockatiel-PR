@@ -190,25 +190,25 @@ const AllContent = styled.div`
       transform: translate(3%,-115%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(-4%,-90%);
+      transform: translate(-6%,-90%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(-4%,-100%);
+      transform: translate(-6%,-100%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(-4%,-110%);
+      transform: translate(-7%,-110%);
     }
     @media (max-width:420px) and (max-height:680px) and (orientation: portrait){
       transform: translate(-3%,-120%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(-9%,-90%);
+      transform: translate(-11%,-90%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-9%,-113%);
+      transform: translate(-11%,-113%);
     }
     @media (max-width:325px){
-      transform: translate(-14%,-120%);
+      transform: translate(-16%,-120%);
     }
 `
 
