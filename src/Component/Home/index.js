@@ -286,13 +286,13 @@ export default class Home extends Component {
     state = {
         plate : [
             {
-                imgURL: 'Group-1.png',
+                imgURL: 'Group-3.png',
                 text: `${ aboutHeader }`,
                 class: 'justify-content-start',
                 link: "#About"
             },
             {
-                imgURL: 'Group-2.png',
+                imgURL: 'Group-3.png',
                 text: `${ majorHeader }`,
                 class: 'justify-content-end',
                 link: "#Majors"
