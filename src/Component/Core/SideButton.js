@@ -124,7 +124,7 @@ const Div = styled.div`
 `
 
 const TitleMenuMobile = styled(Title)`
-    @media(max-width:576px) {
+    @media(max-width:834px) {
       color:${props => props.font ? color.new1 : color.font1 };
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
