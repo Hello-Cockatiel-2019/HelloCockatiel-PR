@@ -15,11 +15,7 @@ pipeline{
         stage('master'){
             when {branch 'master'}
             steps{
-            sh' export NVM_DIR="$HOME/.nvm" '
-            sh' [ -s "/var/lib/jenkins/.nvm/nvm.sh" ]  && \\. "/var/lib/jenkins/.nvm/nvm.sh"  '
-            sh' [ -s "/var/lib/jenkins/.nvm/bash_completion" ]  && \\. "/var/lib/jenkins/.nvm/bash_completion"  '
-            sh' yarn '
-            sh' yarn build '
+            sh' export NVM_DIR="$HOME/.nvm" &&[ -s "/var/lib/jenkins/.nvm/nvm.sh" ]  && \\. "/var/lib/jenkins/.nvm/nvm.sh" && [ -s "/var/lib/jenkins/.nvm/bash_completion" ]  && \\. "/var/lib/jenkins/.nvm/bash_completion" && yarn && yarn build '
             sh' ssh cockatiel@103.86.50.70 " pm2 delete ${JOB_NAME} || : " '
             sh' ssh cockatiel@103.86.50.70 " mkdir -p /home/cockatiel/${JOB_NAME} " '
             sh' ssh cockatiel@103.86.50.70 " rm -rf /home/cockatiel/${JOB_NAME}/* || : " '
