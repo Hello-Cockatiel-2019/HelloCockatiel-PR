@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import MobileHeader from '../Core/MobileHeader';
 import Woodsign from './Woodsign'
+import { faqsHeader ,questionOne,answerOne,questionTwo,answerTwo,questionThree,answerThree,questionFour,answerFour } from '../Core/Messages';
 
 const Sdiv = styled.div `
     transform: translate(27%,5%);
@@ -69,7 +70,7 @@ const Sdiv = styled.div `
         transform: translate(15%,10%);
     }
     @media (max-width:850px) and (min-height:768px){
-        transform: translate(15%,-20%)!important;
+        transform: translate(15%,-15%)!important;
     }
     @media (max-width:834px){
         transform: translate(15%,-20%);
@@ -262,23 +263,23 @@ export default class FAQs extends Component {
     state = {
         data:[
         {
-            q: "ใครสมัครได้บ้าง สมัครแล้วได้เข้าทุกคนไหม?",
-            a: "พี่ๆจะมีการคัดเลือกน้องในแต่ละสาขา โดยพิจารณาจากการ ตอบคำถามตอนรับสมัคร",
+            q: `${questionOne}`,
+            a: `${answerOne}`,
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "ต้องเตรียมตัวอย่างไรบ้าง?",
-            a: "เตรียมพร้อมรับความรู้จากพี่ๆและที่สำคัญควรมาให้ตรงเวลา",
+            q: `${questionTwo}`,
+            a: `${answerTwo}`,
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "ค่ายนี้จัดที่ไหน แล้วจะรบกวนเวลาเรียนไหม?",
-            a: "ทุกเย็นวันอังคารและวันพฤหัสบดี โดยแต่ละสาขาจะใช้สถานที่ต่างกัน",
+            q: `${questionThree}`,
+            a: `${answerThree}`,
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         {
-            q: "จำเป็นต้องมีความรู้มาก่อนไหม?",
-            a: "ไม่จำเป็น เพียงแค่มีความตั้งใจ น้องๆก็สามารถเข้าร่วมกิจกรรมและเรียนรู้จากพี่ๆได้",
+            q: `${questionFour}`,
+            a: `${answerFour}`,
             class: "d-block col-lg-12 col-md-12 col-sm-12 m-0 p-0"
         },
         ]
@@ -287,7 +288,7 @@ export default class FAQs extends Component {
         return (
             <React.Fragment>
                 <HeaderDiv>
-            <MobileHeader text="FAQs" headerURl="Group-3.png" /> 
+            <MobileHeader text={faqsHeader} headerURl="Group-3.png" /> 
             </HeaderDiv>
                <Sdiv className="row m-0 p-0">
                    {
