@@ -105,6 +105,12 @@ const DivBuildID = styled.div`
     bottom: 0px;
 `
 
+const CIDiv = styled.div`
+    @media screen and (max-height:700px) {
+        margin-top:-2em;
+    }
+`
+
 export default class NavBar extends Component {
         
     state = {
@@ -157,9 +163,9 @@ export default class NavBar extends Component {
                             <div className="d-flex col-12 justify-content-center">
                                 <Logo src="/images/Objects/logo_web.png" />
                             </div>
-                            <div className="d-flex col-12 justify-content-center">
+                            <CIDiv className="d-flex col-12 justify-content-center">
                                 <img src="/images/Objects/ci.png" width="150px" height="49.2px" />
-                            </div>
+                            </CIDiv>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
                                 <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
                             </SideBarSection>
