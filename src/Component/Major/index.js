@@ -55,6 +55,12 @@ const AllContent = styled.div`
     @media only screen and (max-width: 1467px) and (max-height: 900px) and (orientation: landscape){
       transform: translate(8%,3%);
     }
+    @media (max-width: 1440px) and (max-height:730px){
+    transform: translate(5%,15%);
+    }
+    @media (max-width: 1440px) and (max-height:690px){
+    transform: translate(5%,15%);
+    }
     @media (max-width: 1400px) {
     transform: translate(5%,10%);
     }
@@ -99,7 +105,7 @@ const AllContent = styled.div`
     }
     @media (max-width: 1024px) and (max-height: 630px){
     transform: translate(1%,13%);
-    }
+    }    
     @media (max-width:1010px) {
       transform: translate(13%,0%);
       grid-template-columns: none;
@@ -107,6 +113,11 @@ const AllContent = styled.div`
     }
     @media (max-width:990px) {
       transform: translate(-15%,0%);
+      grid-template-columns: none;
+      display:grid;
+    }
+    @media (max-width:1010px) and (max-height:680px) {
+      transform: translate(-15%,10%);
       grid-template-columns: none;
       display:grid;
     }
@@ -120,11 +131,6 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
-    /* @media (max-height:777px){
-      transform: translate(10%,-28%);
-    grid-template-columns: none;
-    display:grid;
-    } */
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(9%,-75%);
     grid-template-columns: none;
