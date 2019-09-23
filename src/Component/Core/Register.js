@@ -72,7 +72,7 @@ const ImgRegister = styled.img`
 const Register = () => {
     return (
       <Button className="btn">
-        <A href="https://www.figma.com/file/u9GXnItjXKKPwDws9nusxX/Hello-Cockatiel?node-id=218%3A619"  >
+        <A href="https://forms.gle/V8ZUgNZkG5btrFQi6" target="_blank">
           <ImgRegister src="/images/Objects/register.png" alt="register" />
         </A>
       </Button>
