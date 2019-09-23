@@ -118,6 +118,7 @@ const Content = styled(Paragraph)`
     @media only screen and (max-width: 1024px) and (orientation:portrait)  {
       margin: 1.5em;
       height: 21em; 
+      font-size:20px;
     }
     @media only screen and (max-width: 960px) and (orientation:portrait)  {
       height: 18em; 
@@ -134,15 +135,15 @@ const Content = styled(Paragraph)`
     }
     @media only screen and (max-width: 700px) and (min-height:600px) and (orientation:portrait)  {
       margin: 1em;
-      height: 11em; 
+      height: 15em; 
     }
     @media only screen and (max-width: 414px) and (orientation:portrait)  {
       margin: 1em;
-      height: 10em;
+    height: 15em;
     }
     @media only screen and (max-width: 320px) and (orientation:portrait)  {
       margin: 1em;
-      height: 8em;
+      height: 11em;
     }
     @media only screen and (min-width: 830px) and (max-height:960px){
       margin: 2em;
