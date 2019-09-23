@@ -138,20 +138,22 @@ const Content = styled(Paragraph)`
       margin: 1em;
       height: 11em;
     }
-    @media only screen and (min-width: 830px) and (max-height:800px){
-      font-size: 24px;
-      line-height: 29px;
-      height: 10em;
-    }
     @media only screen and (min-width: 830px) and (max-height:960px){
       margin: 2em;
       height: 18em;
     }
+    @media only screen and (min-width: 830px) and (max-height:800px){
+      margin:1em;
+      font-size: 24px;
+      line-height: 29px;
+      height: 7em;
+    }
+    @media only screen and (min-width: 830px) and (max-height:600px){
+      margin:1em;
+      height: 7em;
+    }
     @media (min-width: 1536px){
       height:13em;
-    }
-    @media only screen and (min-width: 830px) and (max-height:800px){
-      height: 8em;
     }
     @media only screen and (min-width: 1024px) and (max-height:800px){
       height: 10em;
