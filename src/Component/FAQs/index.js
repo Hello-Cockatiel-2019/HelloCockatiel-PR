@@ -24,10 +24,13 @@ const Sdiv = styled.div `
     @media (max-width:1500px) {
         transform: translate(16%,15%);
     }
+    @media (max-width:1500px) and (max-height:800px) {
+        transform: translate(16%,10%);
+    }
     @media (max-width:1500px) and (max-height:700px) {
         transform: translate(16%,15%);
     }
-    @media (max-width:1500px) and (max-height:800px) {
+    @media (max-width:1500px) and (max-height:669px) {
         transform: translate(16%,15%);
     }
     @media (max-width:1468px) {
@@ -190,7 +193,7 @@ const Div = styled.div `
         visibility:${props => props.ml === 3 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:900px){
-        height:${props => props.ml === 3 ? 200 : 120}px;
+        height:${props => props.ml === 3 ? 200 : 110}px;
         visibility:visible;
     }
     @media only screen and (max-width:900px) and (max-height:660px) {
