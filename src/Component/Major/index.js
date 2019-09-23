@@ -64,6 +64,9 @@ const AllContent = styled.div`
     @media (max-width: 1300px){
     transform: translate(5%,10%);
     }
+    @media (max-width: 1280px) and (max-height:680px){
+    transform: translate(5%,13%);
+    }
     @media (max-width: 1200px){
     transform: translate(5%,0%);
     }
@@ -117,11 +120,11 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
-    @media (max-height:777px){
+    /* @media (max-height:777px){
       transform: translate(10%,-28%);
     grid-template-columns: none;
     display:grid;
-    }
+    } */
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(9%,-75%);
     grid-template-columns: none;
@@ -129,6 +132,11 @@ const AllContent = styled.div`
     }
     @media (max-width:740px) and (max-height:920px) and (orientation: portrait){
       transform: translate(9%,-85%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    @media (max-width:770px) and (max-height:800px) and (orientation: portrait){
+      transform: translate(10%,-100%);
     grid-template-columns: none;
     display:grid;
     }
