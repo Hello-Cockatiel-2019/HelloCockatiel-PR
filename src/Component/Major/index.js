@@ -7,6 +7,9 @@ import Color from '../../Config/Color'
 
 const AllContent = styled.div`
     transform: translateY(-30%);
+    @media (max-width: 2600px) {
+    transform: translate(5%,10%);
+    }
     @media (max-width: 2500px) {
     transform: translate(5%,10%);
     }
