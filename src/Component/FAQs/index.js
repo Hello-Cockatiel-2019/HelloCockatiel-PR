@@ -68,6 +68,9 @@ const Sdiv = styled.div `
     @media (max-width:899px){
         transform: translate(15%,10%);
     }
+    @media (max-width:850px) and (min-height:768px){
+        transform: translate(15%,-20%)!important;
+    }
     @media (max-width:834px){
         transform: translate(15%,-20%);
     }
@@ -108,10 +111,10 @@ const Sdiv = styled.div `
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
         transform: translate(18%,9%);
     }
-    @media only screen and (max-width:1024px) and (orientation: landscape) and (max-height:769px) {
+    @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
         transform: translate(10%,9%);
     }
-    @media only screen and (max-width:835px) and (orientation: portrait) and (max-height:1197px) {
+    @media only screen and (max-width:835px) and (orientation: portrait) and (min-height:1196px) {
         transform: translate(16%,-10%);
     }
 `
