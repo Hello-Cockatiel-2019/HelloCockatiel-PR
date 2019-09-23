@@ -127,13 +127,28 @@ const AllContent = styled.div`
       grid-template-columns: none;
       display:grid;
     }
+    
+    @media (max-width:850px) and (max-height:850px){
+      padding-top:0em;
+      transform: translate(9%,-20%);
+    }
+    
     @media (max-width:833px) and (max-height:748px) {
       transform: translate(8%,-30%);
       grid-template-columns: none;
       display:grid;
     }
+    
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait)  {
     transform: translate(12%,-68%);
+    grid-template-columns: none;
+    display:grid;
+    }
+    @media (max-width:834px) and (max-height:850px){
+      transform: translate(13%,-20%);
+    }
+    @media (max-width:834px) and (max-height: 800px){
+      transform: translate(10%,-25%);
     grid-template-columns: none;
     display:grid;
     }
@@ -142,24 +157,29 @@ const AllContent = styled.div`
     grid-template-columns: none;
     display:grid;
     }
+    @media (max-width:800px) and (max-height:800px){
+      transform: translate(10%,-98%);
+    grid-template-columns: none;
+    display:grid;
+    }
     @media (max-width:780px){
       transform: translate(10%,-20%);
     grid-template-columns: none;
     display:grid;
     }
-    
     @media (max-width:770px) and (orientation: portrait){
       transform: translate(10%,-75%);
     grid-template-columns: none;
     display:grid;
     }
-    @media (max-width:740px) and (max-height:920px) and (orientation: portrait){
-      transform: translate(9%,0%);
+    @media (max-width:800px) and (max-height:920px) and (orientation: portrait){
+      transform: translate(9%,-18%);
     grid-template-columns: none;
     display:grid;
+    padding-top:0em;
     }
     @media (max-width:770px) and (max-height:800px) and (orientation: portrait){
-      transform: translate(10%,-100%);
+      transform: translate(10%,-20%);
     grid-template-columns: none;
     display:grid;
     }
@@ -171,6 +191,9 @@ const AllContent = styled.div`
     @media (max-width:700px) and (max-height:760px) and (orientation: portrait){
       transform: translate(6%,-100%);
     }
+    @media (max-width:650px) and (max-height:800px) and (orientation: portrait){
+      transform: translate(2%,-19%);
+    }
     @media (max-width:650px) and (max-height:760px) and (orientation: portrait){
       transform: translate(3%,-100%);
     }
@@ -180,35 +203,44 @@ const AllContent = styled.div`
     @media (max-width:590px) and (max-height:680px) and (orientation: portrait){
       transform: translate(-2%,-115%);
     }
+    @media (max-width:570px) and (max-height:800px) and (orientation: portrait){
+      transform: translate(8%,-20%);
+    }
     @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
       transform: translate(8%,-115%);
     }
     @media (max-width:550px) and (max-height:680px) and (orientation: portrait){
       transform: translate(6%,-115%);
     }
+    @media (max-width:500px) and (max-height:800px) and (orientation: portrait){
+      transform: translate(3%,-80%);
+    }
+    @media (max-width:500px) and (max-height:760px) and (orientation: portrait){
+      transform: translate(3%,-18%);
+    }
     @media (max-width:500px) and (max-height:680px) and (orientation: portrait){
-      transform: translate(3%,-115%);
+      transform: translate(3%,-20%);
     }
     @media (max-width:420px) and (max-height:900px){
-      transform: translate(-6%,-90%);
+      transform: translate(-4%,-15%);
     }
     @media (max-width:420px) and (max-height:820px) {
-      transform: translate(-6%,-100%);
+      transform: translate(-6%,-18%);
     }
     @media (max-width:420px) and (max-height:740px) {
-      transform: translate(-7%,-110%);
+      transform: translate(-4%,-20%);
     }
     @media (max-width:420px) and (max-height:680px) and (orientation: portrait){
       transform: translate(-3%,-120%);
     }
     @media (max-width:380px) and (max-height:820px){
-      transform: translate(-11%,-90%);
+      transform: translate(-9%,-15%);
     }
     @media (max-width:380px) and (max-height:700px){
-      transform: translate(-11%,-113%);
+      transform: translate(-9%,-17%);
     }
     @media (max-width:325px){
-      transform: translate(-16%,-120%);
+      transform: translate(-13%,-20%);
     }
 `
 
@@ -225,14 +257,23 @@ const Header = styled.div`
     @media (max-height:777px){
       transform: translate(0%,-110%);
     }
+    @media (max-width: 834px) and (max-height: 800px){
+    transform: translate(0%,-100%);
+    }
     @media (max-width: 834px) and (max-height: 680px){
     transform: translate(0%,-90%);
     }
-    @media (max-width:770px) and (orientation: portrait){
-      transform: translate(0%,-90%);
+    @media (max-width: 834px) and (max-height: 800px){
+    transform: translate(0%,-100%);
+    }
+    @media (max-width:770px) and (max-height: 800px) and (orientation: portrait){
+      transform: translate(0%,-100%);
     }
     @media (max-width:570px){
       transform: translate(4%,-60%);
+    }
+    @media (max-width:570px) and (max-height:800px) and (orientation: portrait){
+      transform: translate(0%,-120%);
     }
     @media (max-width:570px) and (max-height:680px) and (orientation: portrait){
       transform: translate(0%,-100%);
@@ -289,6 +330,9 @@ const SpaceBySpace = styled.div`
     }
     @media only screen and (max-width: 834px) and (max-height: 1196px) and (orientation: portrait){
       padding-top:2em;
+    }
+    @media (max-width: 800px) and (max-height: 800px){
+      padding-top:0.5em;
     }
     @media (max-width:780px) {
       padding-top:0.5em;
@@ -356,6 +400,7 @@ export default class index extends Component {
                     content={TC.content}
                     colorBox={TC.colorBox}
                     imgbird={TC.imgbird}
+                    mt={i}
                     keytopic={i}
                   />
                 </SpaceBySpace>

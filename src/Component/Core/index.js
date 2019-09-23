@@ -39,14 +39,14 @@ const SideBarSection = styled.div`
     @media only screen and (max-height: 780px) {
         margin-top:-2em;
     }
+    @media only screen and (max-height: 750px) {
+        margin-top:-3em;
+    }
     @media only screen and (max-width: 992px) and (max-height: 780px) {
         margin-top:2em;
     }
     @media only screen and (max-width: 992px) and (max-height: 750px) {
-        margin-top:2em;
-    }
-    @media only screen and (max-height: 750px) {
-        margin-top:-3em;
+        margin-top:3em;
     }
     @media only screen and (max-height: 730px) {
         margin-top:-5em;
