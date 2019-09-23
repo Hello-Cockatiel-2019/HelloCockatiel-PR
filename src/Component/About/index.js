@@ -18,7 +18,7 @@ const Plate = styled.div`
      @media(max-width:1440px) {
       width: 88vh;
     height: 48vh;
-    margin-right:1em;
+    margin-right:2em;
      }
      @media only screen and (max-width: 1468px) and (min-height:925px) {
       width: 80vh;
