@@ -47,7 +47,7 @@ const Qwood = styled(BrownParagraph) `
         width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 330px;
+        width: 630px;
         font-size:1.25em;
     }
 `
@@ -95,7 +95,7 @@ const Awood = styled(Paragraph)`
         width: 400px;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        width: 330px;
+        width: 630px;
         font-size:1.25em;
     }
 `

@@ -78,7 +78,7 @@ const Sdiv = styled.div `
         transform: translate(15%,-20%);
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-        transform: translate(28%,-13%)
+        transform: translate(15%,-13%)
     }
     @media (max-width:700px) {
         transform: translate(8%,-20%);
@@ -100,10 +100,10 @@ const Sdiv = styled.div `
     }
     
     @media only screen and (max-width:1367px) and (orientation: landscape) and (min-height:1024px)  {
-        transform: translate(18%,5%);
+        transform: translate(13%,5%);
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        transform: translate(33%,9%);
+        transform: translate(18%,9%);
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (max-height:769px) {
         transform: translate(16%,3%);
@@ -168,7 +168,7 @@ const Div = styled.div `
         visibility:visible;
     }
     @media only screen and (max-width:1024px) and (orientation: portrait) and (min-height:1366px)  {
-        height:${props => props.ml === 3 ? 350 : 100}px;
+        height:${props => props.ml === 3 ? 350 : 120}px;
         visibility:visible;
     }
     @media only screen and (max-width:1024px) and (orientation: landscape) and (min-height:768px) {
@@ -204,7 +204,7 @@ const Div = styled.div `
     visibility:${props => props.ml === 3 ? "hidden" : "visible"};
     }
     @media only screen and (max-width:768px) and (orientation: portrait) and (min-height:1024px)  {
-    height:${props => props.ml === 3 ? 250 : 110}px;
+        height:${props => props.ml === 0 ? 130 : props => props.ml === 3 ? 250: 100}px;
     visibility:visible;
     }
     @media only screen and (max-width:700px){
