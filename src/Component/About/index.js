@@ -89,10 +89,14 @@ const Content = styled(Paragraph)`
   line-height: 27px;
   letter-spacing: 0.05em;
   justify-self: center;
-  margin: 2em;
+  margin: 3em;
   margin-top:2em;
     height: 11em;
   color:#3D3030;
+  @media (max-width: 2755px){
+    line-height: 37px;
+    font-size:37px;
+    }
   @media (max-width: 1536px){
     margin: 1.5em;
     }
@@ -185,7 +189,7 @@ const Content = styled(Paragraph)`
 `
 const Layout = styled.div`
     display:grid;
-    @media (max-width: 2560px){
+    @media (max-width: 2755px){
       grid-template-columns: 3fr 1fr;
       margin-top: 2.5em;
     }
