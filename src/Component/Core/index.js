@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import GlobalStyle from './GlobalStyle'
 import { Desktop, Mobile } from './Hidden'
+import { dateNow, dateStartResgis, dateEndRegis } from './Day'
 
 import Hamburger from './Hamburger'
 import Home from '../Home'
@@ -18,11 +19,7 @@ import ChangeSize from './ChangeSize'
 
 const Div = styled.div`
     z-index:10;
-    margin-top:-5em;
-`
-
-const DivBlur = styled.div`
-    filter :  blur(${props => props.blur ? props.blur : 0}px);
+    margin-top: ${(dateStartResgis.isBefore(dateNow) && dateEndRegis.isAfter(dateNow)) ? -5 : 1 }em;
 `
 
 const SideBarSection = styled.div`
@@ -43,6 +40,9 @@ const SideBarSection = styled.div`
         margin-top:-2em;
     }
     @media only screen and (max-width: 992px) and (max-height: 780px) {
+        margin-top:2em;
+    }
+    @media only screen and (max-width: 992px) and (max-height: 750px) {
         margin-top:2em;
     }
     @media only screen and (max-height: 750px) {
@@ -70,6 +70,7 @@ const RegiserDiv = styled.div`
     position:relative;
     z-index:50;
     transform:translate(-5%,20%);
+
 `
 
 const Logo = styled.img`
@@ -173,7 +174,10 @@ export default class NavBar extends Component {
                                 <img src="/images/Objects/ci.png" alt="CI" width="150px" height="49.2px" />
                             </CIDiv>
                             <SideBarSection className="d-flex col-2 pl-5 flex-column justify-content-start">
-                                <SlideButton changeClick={this.changeClick} clickToClose={this.clickToClose} />
+                                <SlideButton 
+                                    changeClick={this.changeClick} 
+                                    clickToClose={this.clickToClose} 
+                                    keyID={this.state.id}  />
                             </SideBarSection>
                             <Content className="d-flex col-10 justify-content-center">
                                 <ClickChange keyID={this.state.id} />
@@ -185,13 +189,13 @@ export default class NavBar extends Component {
                         <HamburgerDiv displayHamburger={this.state.displayHamburger} className="row justify-content-end">
                             <Hamburger changeClick={this.changeClick} keyID={this.state.id} />
                         </HamburgerDiv>
-                        <DivBlur blur={this.state.blur}>
+                        <div>
                             <Background />
                             <HomeDiv homeDisplay={this.state.homeDisplay} >
                                 <Home clickHome={this.clickHome} />
                             </HomeDiv>
                             <ClickChange keyID={this.state.id} mobileDisplay={this.state.mobileDisplay}  />
-                        </DivBlur>
+                        </div>
                     </Mobile>
                 <DivBuildID>><a>build : {process.env.REACT_APP_GIT_VERSION}</a></DivBuildID>
                 </Hidden>
