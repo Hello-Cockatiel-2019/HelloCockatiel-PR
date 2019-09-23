@@ -111,8 +111,8 @@ const HeadLogo = styled.img`
         height: 168px;
     }   
     @media screen and (max-width:834px) and (orientation: landscape) {
-        width: 520px;
-        height: 208px;
+        width: 420px;
+        height: 168px;
     }
     @media screen and (max-width:768px) and (orientation: portrait){
         width: 420px;
@@ -145,6 +145,9 @@ const WoodDiv = styled.div`
     @media screen and (max-width:768px) and (orientation: portrait){
         ${ woodDivDesktop }
     }
+    @media only screen and (max-width: 829px) and (max-height: 673px){
+        margin-top: 0vh;
+    } 
     @media only screen and (min-width: 769px) and (max-height: 784px) and (orientation: portrait)  {
         margin-top: -3vh;
     } 
