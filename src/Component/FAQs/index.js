@@ -42,6 +42,9 @@ const Sdiv = styled.div `
     @media (max-width:1320px) {
         transform: translate(13%,12%);
     }
+    @media (max-width:1300px) and (max-height:600px) {
+        transform: translate(13%,20%);
+    }
     @media (max-width:1199px) {
         transform: translate(10%,15%);
     }
