@@ -76,6 +76,9 @@ const AllContent = styled.div`
     @media (max-width: 1280px) and (max-height:680px){
     transform: translate(5%,13%);
     }
+    @media (max-width: 1280px) and (max-height:580px){
+    transform: translate(5%,18%);
+    }
     @media (max-width: 1200px){
     transform: translate(5%,0%);
     }
@@ -241,6 +244,12 @@ const AllContent = styled.div`
     }
     @media (max-width:325px){
       transform: translate(-13%,-20%);
+    }
+    @media (max-width:320px) and (max-height:850px){
+      transform: translate(-13%,-12%);
+    }
+    @media (max-width:320px) and (max-height:590px){
+      transform: translate(-13%,-19%);
     }
 `
 

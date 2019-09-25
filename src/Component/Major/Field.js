@@ -104,6 +104,13 @@ const Box = styled.div`
         width:18em;
         height:6.5em;
     }
+    @media (max-width:320px){
+        margin-top:${props => props.mt === 0 ? 0 
+                        : props.mt === 1 ? -130 
+                        : props.mt === 2 ? -150  :  -170 }px;
+        width:18em;
+        height:6.5em;
+    }
 `
 
 const TextContent = styled(Small)`
