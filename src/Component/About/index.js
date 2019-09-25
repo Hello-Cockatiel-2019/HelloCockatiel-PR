@@ -101,15 +101,24 @@ const Content = styled(Paragraph)`
   overflow:auto;
   letter-spacing: 0.05em;
   justify-self: center;
-  color:#3D3030;
-  @media only screen and (max-width: 1025px) and (orientation:landscape) {
+  color:#3D3030; 
+  @media only screen and (max-width: 1280px) and (min-height:551px) {
+    height: 10em;
+    }
+    @media only screen and (max-width: 1280px) and (min-height:650px) {
     height: 12em;
     }
-    @media only screen and (max-width: 1196px) and (orientation:landscape) {
-    height: 12em;
+    @media only screen and (max-width: 1196px) and (min-height:551px) {
+    height: 9em;
     }
-    @media only screen and (max-width: 1196px) and (max-height:700px){
+    @media only screen and (max-width: 1196px) and (min-height:650px) {
     height: 11em;
+    }
+    @media only screen and (max-width: 1196px) and (min-height:750px) {
+    height: 13em;
+    }
+    @media only screen and (max-width: 1025px) and (orientation:landscape) {
+    height: 12em;
     }
     @media only screen and (max-width: 960px) and (orientation:landscape) {
     height: 10em;
