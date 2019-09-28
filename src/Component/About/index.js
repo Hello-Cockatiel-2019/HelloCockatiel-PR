@@ -139,7 +139,9 @@ const Content = styled(Paragraph)`
     @media only screen and (max-width: 320px) and (orientation:portrait) {
       height: 14em;
     }
-    
+    @media only screen and (min-width: 1280px) and (max-height:668px) {
+    height: 10em;
+    }
   
 `
 const Layout = styled.div`
