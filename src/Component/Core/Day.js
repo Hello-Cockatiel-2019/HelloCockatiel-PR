@@ -8,4 +8,4 @@ export const dateNow = dayjs().format()
 
 export const dateStartResgis = dayjs('2019-09-23')
 
-export const dateEndRegis = dayjs('2019-09-30')
+export const dateEndRegis = dayjs('2019-10-1')
