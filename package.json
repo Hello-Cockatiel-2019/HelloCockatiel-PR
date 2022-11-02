@@ -37,6 +37,6 @@
     ]
   },
   "devDependencies": {
-    "webfont": "^9.0.0"
+    "webfont": "^11.2.26"
   }
 }
